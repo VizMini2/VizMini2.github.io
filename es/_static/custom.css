@@ -1,0 +1,30 @@
+/* VizMini2: colores de la app sobre el tema de Read the Docs. */
+.wy-side-nav-search .wy-dropdown > a, .wy-side-nav-search > a { color: #fff; }
+.wy-side-nav-search > a img.logo { width: 88px; border-radius: 20px; padding: 0; margin-bottom: 6px; background: transparent; }
+.wy-side-nav-search > div.version { color: #9fd9de; }
+.wy-nav-top { background: #0F2C44; }
+a, a:visited { color: #0b7f86; }
+.wy-menu-vertical a { color: #d9d9d9; }
+.wy-menu-vertical p.caption { color: #6fd0d6; }
+.rst-versions .rst-current-version { color: #6fd0d6; }
+.rst-versions .rst-other-versions dd a { color: #fcfcfc; }
+.rst-versions .rst-other-versions dd strong { color: #6fd0d6; }
+
+/* Vídeos de la app */
+figure.vm-clip { margin: 0 0 1.5em 1.8em; text-align: center; }
+figure.vm-clip video { width: 260px; max-width: 100%; aspect-ratio: 4 / 5; border-radius: 16px;
+  box-shadow: 0 6px 22px rgba(10, 22, 38, .35); background: #15181c; }
+figure.vm-clip figcaption { font-size: 90%; color: #5b6470; margin-top: .4em; }
+figure.vm-right { float: right; }
+figure.vm-center { margin: 1em auto 1.5em; }
+@media (max-width: 768px) { figure.vm-right { float: none; margin: 1em auto; } }
+.vm-clear { clear: both; }
+
+/* Portada: tarjetas de funciones */
+.vm-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 1em 0 1.5em; }
+.vm-card { border: 1px solid #e1e4e5; border-radius: 12px; padding: 12px 14px; background: #fcfcfc; }
+.vm-card b { display: block; margin-bottom: 4px; color: #0F2C44; }
+.vm-card a { font-weight: 600; }
+
+/* Tablas: el texto de las celdas salta de línea (el tema lo impide por defecto). */
+.wy-table-responsive table td, .wy-table-responsive table th { white-space: normal; }

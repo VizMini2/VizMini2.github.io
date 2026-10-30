@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RViz &mdash; Documentación de VizMini2</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Cámara" href="camera.html" />
+    <link rel="prev" title="Visualizar" href="visualize.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutoriales</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/drive-demo.html">Conducir el robot de la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/visualize-robot.html">Ver tu robot en 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="visualize.html">Visualizar</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">RViz</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#al-crearla">Al crearla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#displays">Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vistas-y-gestos">Vistas y gestos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#goal-y-pose">Goal y Pose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importar-un-fichero-rviz">Importar un fichero .rviz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mallas-del-robot">Mallas del robot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="camera.html">Cámara</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard.html">Dashboard</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inspect.html">Inspeccionar la red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="record.html">Grabar</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuración</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Solución de problemas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requisitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Limitaciones conocidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contacto y apoyo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Registro de cambios</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="visualize.html">Visualizar</a></li>
+      <li class="breadcrumb-item active">RViz</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rviz">
+<h1>RViz<a class="headerlink" href="#rviz" title="Link to this heading"></a></h1>
+<figure class="vm-clip vm-right"><video src="../_static/clips/clip_rviz.mp4" poster="../_static/shots/shot_rviz.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Una vista 3D de tu robot, como RViz: TF, mapas, láseres, nubes de puntos, markers, rutas, poses y
+el modelo del robot, con las herramientas de meta y pose inicial de Nav2.</p>
+<section id="al-crearla">
+<h2>Al crearla<a class="headerlink" href="#al-crearla" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Fixed frame:</strong> déjalo vacío para que se elija solo (<code class="docutils literal notranslate"><span class="pre">map</span></code>, <code class="docutils literal notranslate"><span class="pre">odom</span></code>… o la raíz del árbol TF).</p></li>
+<li><p><strong>Añadir los displays de mapa, láser, modelo del robot y ruta</strong> (activado por defecto): añade
+<em>Map</em>, <em>RobotModel</em>, <em>LaserScan</em> y un <em>Path</em> llamado <em>Plan</em> en <code class="docutils literal notranslate"><span class="pre">/plan</span></code>, listo para un robot
+típico con Nav2.</p></li>
+</ul>
+</section>
+<section id="displays">
+<h2>Displays<a class="headerlink" href="#displays" title="Link to this heading"></a></h2>
+<p>Los displays aparecen como chips abajo. Pulsa <strong>Añadir</strong> para añadir uno <em>por tipo de display</em> o
+<em>por topic</em> (la búsqueda muestra todos los topics de la red que se pueden dibujar). Mantén pulsado
+un chip para editarlo o quitarlo. Cada display tiene su propia QoS: <em>Best effort</em>, <em>Reliable</em> o
+<em>Transient local</em>.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22.0%" />
+<col style="width: 78.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Display</p></th>
+<th class="head"><p>Opciones principales</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Grid</p></td>
+<td><p>Frame de referencia, plano (XY, XZ, YZ), tamaño y número de celdas, color, transparencia,
+estilo y grosor de línea, desplazamiento.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TF</p></td>
+<td><p>Mostrar nombres, ejes y flechas; escala, tamaño del nombre, tiempo hasta dar un frame por
+perdido.</p></td>
+</tr>
+<tr class="row-even"><td><p>Axes</p></td>
+<td><p>Frame, longitud, radio, transparencia.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RobotModel</p></td>
+<td><p>Desde <code class="docutils literal notranslate"><span class="pre">/robot_description</span></code> (transient local). Geometría visual y de colisión,
+transparencia y un <strong>servidor de mallas</strong> opcional (ver abajo).</p></td>
+</tr>
+<tr class="row-even"><td><p>Map</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">nav_msgs/OccupancyGrid</span></code> con colores <em>map</em>, <em>costmap</em> o <em>raw</em>, transparencia y <em>dibujar
+detrás</em>. Los mapas grandes se reducen para caber en la GPU del móvil.</p></td>
+</tr>
+<tr class="row-odd"><td><p>LaserScan, PointCloud2, PointCloud</p></td>
+<td><p>Cuadrados o círculos, tamaño, color por intensidad, distancia, x/y/z, RGB o fijo, límites de
+valores, tiempo de persistencia (hasta 30 s). PointCloud2 muestra hasta 500.000 puntos.</p></td>
+</tr>
+<tr class="row-even"><td><p>Odometry</p></td>
+<td><p>Flechas o ejes, cuántas guardar, tolerancia de posición y de ángulo.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Path</p></td>
+<td><p>Color, estilo y grosor de línea, poses como ejes o flechas.</p></td>
+</tr>
+<tr class="row-even"><td><p>Pose, PoseWithCovariance, PoseArray</p></td>
+<td><p>Flechas o ejes; elipse de covarianza en <code class="docutils literal notranslate"><span class="pre">PoseWithCovariance</span></code> (p. ej. <code class="docutils literal notranslate"><span class="pre">/amcl_pose</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td><p>PointStamped, Polygon, Range</p></td>
+<td><p>Puntos pulsados, huellas (footprints) y conos de sensores de distancia.</p></td>
+</tr>
+<tr class="row-even"><td><p>Marker, MarkerArray</p></td>
+<td><p>Flechas, cubos, esferas, cilindros, líneas, listas de cubos y esferas, puntos, triángulos y
+texto; se respetan el borrado, el borrado total y el tiempo de vida. Los markers de malla no
+se dibujan.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vistas-y-gestos">
+<h2>Vistas y gestos<a class="headerlink" href="#vistas-y-gestos" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Vistas: <strong>Orbit</strong>, <strong>XYOrbit</strong>, <strong>TopDownOrtho</strong>, <strong>FPS</strong> y <strong>ThirdPersonFollower</strong> (sigue un
+frame, <code class="docutils literal notranslate"><span class="pre">base_link</span></code> por defecto). <em>Restablecer vista</em> vuelve a colocar la cámara.</p></li>
+<li><p>Un dedo gira, dos dedos desplazan, pellizcar hace zoom y girar con dos dedos rota.</p></li>
+<li><p>El fondo puede ser oscuro, gris de RViz, negro, gris claro, blanco o azul noche.</p></li>
+</ul>
+</section>
+<section id="goal-y-pose">
+<h2>Goal y Pose<a class="headerlink" href="#goal-y-pose" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Goal</strong> publica una meta 2D (<code class="docutils literal notranslate"><span class="pre">geometry_msgs/PoseStamped</span></code>) en <code class="docutils literal notranslate"><span class="pre">/goal_pose</span></code>.</p></li>
+<li><p><strong>Pose</strong> publica una estimación de pose 2D (<code class="docutils literal notranslate"><span class="pre">PoseWithCovarianceStamped</span></code>) en <code class="docutils literal notranslate"><span class="pre">/initialpose</span></code>.</p></li>
+</ul>
+<p>Toca el suelo y arrastra para elegir la orientación. La pose se envía en el fixed frame (o en
+<code class="docutils literal notranslate"><span class="pre">map</span></code>). Puedes cambiar los dos topics desde el menú, en <em>Topics de Goal / Pose…</em>. Mira
+<a class="reference internal" href="../tutorials/nav2.html"><span class="doc">Enviar metas a Nav2</span></a>.</p>
+</section>
+<section id="importar-un-fichero-rviz">
+<h2>Importar un fichero .rviz<a class="headerlink" href="#importar-un-fichero-rviz" title="Link to this heading"></a></h2>
+<p>Desde el menú, <strong>Importar .rviz</strong> trae los displays (los 18 tipos, grupos incluidos), el fixed
+frame, el fondo, la vista actual y los topics de meta y pose de una configuración del RViz de
+escritorio. Lo que no pueda usar aparece como <em>No compatible aquí</em>. Importar sustituye la
+configuración actual de la pestaña. Mira <a class="reference internal" href="../tutorials/visualize-robot.html"><span class="doc">Ver tu robot en 3D</span></a>.</p>
+</section>
+<section id="mallas-del-robot">
+<h2>Mallas del robot<a class="headerlink" href="#mallas-del-robot" title="Link to this heading"></a></h2>
+<p>Las cajas, cilindros y esferas del URDF se dibujan directamente. Las mallas (STL o Collada
+<code class="docutils literal notranslate"><span class="pre">.dae</span></code>) se descargan por HTTP desde el <strong>servidor de mallas</strong> indicado en el display RobotModel,
+por ejemplo <code class="docutils literal notranslate"><span class="pre">http://IP_DEL_ROBOT:8000</span></code>: <code class="docutils literal notranslate"><span class="pre">package://paquete/ruta</span></code> se convierte en
+<code class="docutils literal notranslate"><span class="pre">&lt;servidor&gt;/paquete/ruta</span></code>. Sirve cualquier servidor web que ofrezca las carpetas <code class="docutils literal notranslate"><span class="pre">share</span></code> de tus
+paquetes: mira <a class="reference internal" href="../tutorials/visualize-robot.html"><span class="doc">Ver tu robot en 3D</span></a>. Sin servidor de mallas, las piezas con mallas
+no se dibujan y el display indica cuántas.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="visualize.html" class="btn btn-neutral float-left" title="Visualizar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="camera.html" class="btn btn-neutral float-right" title="Cámara" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      </span></p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> Español
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Idioma</dt>
+      <dd><a href="../../tabs/rviz.html">English</a></dd>
+      <dd><strong>Español</strong></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v0.18.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

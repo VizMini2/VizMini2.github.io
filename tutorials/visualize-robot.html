@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualize your robot in 3D &mdash; VizMini2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Send Nav2 goals" href="nav2.html" />
+    <link rel="prev" title="Drive the demo robot" href="drive-demo.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="drive-demo.html">Drive the demo robot</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Visualize your robot in 3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#already-have-an-rviz-config">Already have an RViz config?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nav2.html">Send Nav2 goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dashboard.html">Build a dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buttons.html">Buttons for services and actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="record-bag.html">Record and replay a bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/visualize.html">Visualize</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/inspect.html">Inspect the network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/record.html">Record</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Account</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Known limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contact and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Visualize your robot in 3D</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="visualize-your-robot-in-3d">
+<h1>Visualize your robot in 3D<a class="headerlink" href="#visualize-your-robot-in-3d" title="Link to this heading"></a></h1>
+<p>Goal: see your robot model, TF, laser and map in the RViz tab.</p>
+<ol class="arabic">
+<li><p>Connect to the robot (<a class="reference internal" href="../getting-started/connect.html"><span class="doc">Connect to your robot</span></a>).</p></li>
+<li><p>Tap <strong>+ → RViz</strong>, keep <strong>Add map, laser, robot model and path displays</strong> checked and tap
+<strong>Create</strong>.</p></li>
+<li><p>If the robot publishes <code class="docutils literal notranslate"><span class="pre">/robot_description</span></code>, the <strong>RobotModel</strong> display draws it. If the model
+uses meshes (<code class="docutils literal notranslate"><span class="pre">package://my_robot/meshes/base.stl</span></code>…), the phone downloads them over HTTP: serve
+the folder that contains your packages’ <code class="docutils literal notranslate"><span class="pre">share</span></code> folders. For example, with a workspace built
+with <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span> <span class="pre">--merge-install</span></code>, on the robot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">install</span><span class="o">/</span><span class="n">share</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span> <span class="mi">8000</span>
+</pre></div>
+</div>
+<p>Then write <code class="docutils literal notranslate"><span class="pre">http://ROBOT_IP:8000</span></code> in the RobotModel display’s <strong>Mesh server</strong> field. The phone
+asks for <code class="docutils literal notranslate"><span class="pre">http://ROBOT_IP:8000/my_robot/meshes/base.stl</span></code>, so check that address opens in a
+browser. Only STL and Collada (<code class="docutils literal notranslate"><span class="pre">.dae</span></code>) meshes are drawn.</p>
+</li>
+<li><p>Missing a display? Tap <strong>Add → By topic</strong>: the list shows every topic that can be drawn.</p></li>
+<li><p>Pick the <strong>Fixed frame</strong> from the picker at the top (<code class="docutils literal notranslate"><span class="pre">map</span></code> when you navigate, <code class="docutils literal notranslate"><span class="pre">odom</span></code>
+otherwise).</p></li>
+</ol>
+<section id="already-have-an-rviz-config">
+<h2>Already have an RViz config?<a class="headerlink" href="#already-have-an-rviz-config" title="Link to this heading"></a></h2>
+<p>Copy your <code class="docutils literal notranslate"><span class="pre">.rviz</span></code> file to the phone and use the menu → <strong>Import .rviz</strong>. The displays, frame,
+background, view and goal/pose topics come along; anything that isn’t supported is listed.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="drive-demo.html" class="btn btn-neutral float-left" title="Drive the demo robot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nav2.html" class="btn btn-neutral float-right" title="Send Nav2 goals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Last updated on 2026-10-11.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> English
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Language</dt>
+      <dd><strong>English</strong></dd>
+      <dd><a href="../es/tutorials/visualize-robot.html">Español</a></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v0.18.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conectar con tu robot &mdash; Documentación de VizMini2</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="La interfaz" href="interface.html" />
+    <link rel="prev" title="Prueba la demo" href="demo.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Prueba la demo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Conectar con tu robot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#antes-de-empezar">Antes de empezar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pasos">Pasos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#si-en-la-red-solo-muestra-este-movil">Si <em>En la red</em> solo muestra este móvil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#guardalo">Guárdalo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">La interfaz</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutoriales</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/drive-demo.html">Conducir el robot de la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/visualize-robot.html">Ver tu robot en 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/visualize.html">Visualizar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/inspect.html">Inspeccionar la red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/record.html">Grabar</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuración</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Solución de problemas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requisitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Limitaciones conocidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contacto y apoyo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Registro de cambios</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Conectar con tu robot</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="conectar-con-tu-robot">
+<h1>Conectar con tu robot<a class="headerlink" href="#conectar-con-tu-robot" title="Link to this heading"></a></h1>
+<p>VizMini2 es un nodo de ROS 2 en tu móvil. Se une a la red DDS como cualquier otro nodo, así que ve
+directamente los topics, servicios y acciones de tu robot: no hay que instalar nada en el robot.</p>
+<section id="antes-de-empezar">
+<h2>Antes de empezar<a class="headerlink" href="#antes-de-empezar" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>El robot usa <strong>ROS 2 con Fast DDS</strong> (<code class="docutils literal notranslate"><span class="pre">rmw_fastrtps_cpp</span></code>, el de por defecto en Humble y Jazzy).
+Los topics funcionan también con otras implementaciones de DDS; los servicios y las acciones
+necesitan Fast DDS.</p></li>
+<li><p>El móvil y el robot están en la misma red.</p></li>
+<li><p>Sabes el <code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code> del robot (0 si nadie lo ha cambiado).</p></li>
+</ul>
+</section>
+<section id="pasos">
+<h2>Pasos<a class="headerlink" href="#pasos" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Abre <strong>Ajustes</strong> en la barra de abajo y, en <strong>Red</strong>, pon en <strong>Domain ID</strong> el <code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code>
+del robot.</p></li>
+<li><p>Pulsa <strong>Aplicar y reconectar</strong>.</p></li>
+<li><p>Ve a <strong>Inicio</strong>: <em>Conexión ROS 2</em> debe decir <strong>Conectado</strong>, y <em>En la red</em> debe mostrar los topics
+y nodos del robot.</p></li>
+</ol>
+</section>
+<section id="si-en-la-red-solo-muestra-este-movil">
+<h2>Si <em>En la red</em> solo muestra este móvil<a class="headerlink" href="#si-en-la-red-solo-muestra-este-movil" title="Link to this heading"></a></h2>
+<p>Muchas redes Wi-Fi (oficinas, universidades, redes de invitados y mesh) bloquean el tráfico
+multicast que usa DDS para descubrir otros equipos. Entonces:</p>
+<ol class="arabic simple">
+<li><p>En <strong>Ajustes → Red → Discovery peers</strong>, escribe la IP del robot (varias, separadas por comas).
+Funciona como <code class="docutils literal notranslate"><span class="pre">ROS_STATIC_PEERS</span></code>.</p></li>
+<li><p>Pulsa <strong>Aplicar y reconectar</strong>.</p></li>
+<li><p>Pulsa <strong>Comprobar red</strong> para ver qué ve el móvil y qué probar después.</p></li>
+</ol>
+<p>En redes grandes, por 4G o a través de una VPN, usa un <strong>Discovery Server</strong> (el robot debe usar el
+mismo). Mira <a class="reference internal" href="../config/network.html"><span class="doc">Red</span></a> y <a class="reference internal" href="../help/troubleshooting.html"><span class="doc">Solución de problemas</span></a>.</p>
+</section>
+<section id="guardalo">
+<h2>Guárdalo<a class="headerlink" href="#guardalo" title="Link to this heading"></a></h2>
+<p>Cuando funcione, guárdalo todo como <strong>perfil de robot</strong> (Ajustes → Perfiles de robot →
+<em>Guardar como…</em>) para volver con un toque, en cualquiera de tus móviles: <a class="reference internal" href="../config/profiles.html"><span class="doc">Perfiles de robot</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="demo.html" class="btn btn-neutral float-left" title="Prueba la demo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="interface.html" class="btn btn-neutral float-right" title="La interfaz" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      </span></p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> Español
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Idioma</dt>
+      <dd><a href="../../getting-started/connect.html">English</a></dd>
+      <dd><strong>Español</strong></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v0.18.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
