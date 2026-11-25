@@ -9,13 +9,14 @@
   <title>La interfaz &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/getting-started/interface.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -49,12 +50,14 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">La interfaz</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#anadir-una-pestana">Añadir una pestaña</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#recorrido-rapido">Recorrido rápido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#grabar-un-video">Grabar un vídeo</a></li>
 </ul>
 </li>
 </ul>
@@ -65,8 +68,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -79,14 +87,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -124,28 +136,43 @@
              
   <section id="la-interfaz">
 <h1>La interfaz<a class="headerlink" href="#la-interfaz" title="Link to this heading"></a></h1>
-<ul class="simple">
+<p>Esta página trata del móvil. En el PC las mismas piezas están en una barra lateral: mira
+<a class="reference internal" href="desktop.html"><span class="doc">La app de PC</span></a>.</p>
+<figure class="vm-clip vm-shot vm-right"><img src="../_static/shots/shot_phone_tab_menu.webp" alt="Pulsación larga en una pestaña: renombrar, duplicar, compartir, eliminar o exportar." loading="lazy"><figcaption>Pulsación larga en una pestaña: renombrar, duplicar, compartir, eliminar o exportar.</figcaption></figure><ul class="simple">
 <li><p><strong>Barra de abajo:</strong> <em>Inicio</em> y <em>Ajustes</em> siempre están. Cada pestaña que creas aparece a su lado,
-y <strong>+</strong> añade una nueva. Mantén pulsada una pestaña para renombrarla o borrarla.</p></li>
-<li><p><strong>Barra de arriba:</strong> el nombre de la pestaña actual y la etiqueta de la conexión (<em>Dominio N</em>).
-Púlsala para abrir Ajustes.</p></li>
+y <strong>+</strong> añade una nueva. Mantén pulsada una pestaña para renombrarla, duplicarla, compartirla,
+eliminarla o exportarla. <strong>Compartir</strong> envía la pestaña (un dashboard, con sus widgets) como un
+archivo <code class="docutils literal notranslate"><span class="pre">.json</span></code>; quien lo recibe la añade con <strong>+</strong> → <em>Importar una pestaña, un fichero de RViz
+o un layout</em>. <strong>Exportar como…</strong> (fichero de RViz 2, layout de paneles o layout de gráficas)
+aparece cuando la pestaña tiene algo que esos ficheros pueden guardar (<a class="reference internal" href="../config/import-export.html"><span class="doc">Importar y exportar</span></a>).</p></li>
+<li><p><strong>Barra de arriba:</strong> el nombre de la pestaña actual, el botón de grabar (<a class="reference internal" href="#recording-video"><span class="std std-ref">Grabar un vídeo</span></a>)
+y la etiqueta de la conexión (<em>Dominio N</em>). Púlsala para abrir Ajustes.</p></li>
 <li><p><strong>Inicio:</strong> el estado de la conexión; qué hay en la red (topics, servicios, acciones, nodos y
-nodos lifecycle); accesos al grafo de nodos y al árbol TF; tu espacio de trabajo; el <em>tablón de avisos</em> con las novedades del proyecto; y tarjetas para el
-recorrido rápido, esta documentación, el apoyo al proyecto, el historial de cambios, el contacto y
-la privacidad. Abajo del todo, debajo de las pestañas, hay un banner de anuncios.</p></li>
-<li><p><strong>Ajustes:</strong> red, conexión en segundo plano, perfiles de robot, avisos, idioma y, para los
-administradores, Administración.</p></li>
+nodos lifecycle); accesos al grafo de nodos y al árbol TF; tu espacio de trabajo; la tarjeta de
+la cuenta opcional (<a class="reference internal" href="account.html"><span class="doc">Tu cuenta (opcional)</span></a>); y tarjetas para el recorrido rápido, esta documentación, el
+apoyo al proyecto, el historial de cambios, el contacto y la privacidad.</p></li>
+<li><p><strong>Ajustes:</strong> red, conexión en segundo plano, perfiles de robot, alertas e idioma.</p></li>
 </ul>
-<section id="anadir-una-pestana">
+<div class="vm-clear"></div><section id="anadir-una-pestana">
 <h2>Añadir una pestaña<a class="headerlink" href="#anadir-una-pestana" title="Link to this heading"></a></h2>
-<p>Pulsa <strong>+</strong>. El catálogo agrupa los tipos de pestaña en <em>Visualizar</em>, <em>Control</em>, <em>Inspeccionar la
-red</em> y <em>Grabar</em>. Pulsa uno para ver un vídeo corto y lo que hace, ponle nombre (opcional) y pulsa
+<figure class="vm-clip vm-shot vm-right"><img src="../_static/shots/shot_phone_add_tab.webp" alt="La pantalla &quot;+&quot;: importar, dashboards ya montados y los tipos de pestaña." loading="lazy"><figcaption>La pantalla "+": importar, dashboards ya montados y los tipos de pestaña.</figcaption></figure><p>Pulsa <strong>+</strong>. Arriba, <em>Importar una pestaña, un fichero de RViz o un layout…</em> añade una
+pestaña compartida o convierte la configuración de otra herramienta en pestañas. Después vienen
+los dashboards ya montados (<em>Navegación</em>, <em>Robot con cámara</em>, <em>Monitorización</em>, <em>Showcase</em>,
+<em>Manipulación (MoveIt)</em>), que crean un dashboard con sus widgets de una vez. Debajo, los tipos de pestaña están agrupados en <em>Visualizar</em>, <em>Control</em>, <em>Inspeccionar la red</em> y
+<em>Grabar</em>. Pulsa uno para ver un vídeo corto y lo que hace, ponle nombre (opcional) y pulsa
 <strong>Crear</strong>. Algunos tipos piden antes un ajuste, como el topic de la cámara o el de velocidad.</p>
-<p>Tu cuenta decide qué tipos ves.</p>
 </section>
 <section id="recorrido-rapido">
 <h2>Recorrido rápido<a class="headerlink" href="#recorrido-rapido" title="Link to this heading"></a></h2>
 <p>Inicio → <strong>Recorrido rápido</strong> te enseña las pantallas principales en un minuto.</p>
+<div class="vm-clear"></div></section>
+<section id="grabar-un-video">
+<span id="recording-video"></span><h2>Grabar un vídeo<a class="headerlink" href="#grabar-un-video" title="Link to this heading"></a></h2>
+<p>Para enseñar cómo se comporta el robot, graba lo que hay en pantalla: el botón de grabar de arriba en
+el móvil (Android pide permiso cada vez; la notificación tiene <em>Parar</em>) guarda un MP4 en
+<em>Movies/VizMini2</em>. En el PC, <strong>Grabar vídeo</strong> en la barra lateral (o <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Mayús</kbd>+<kbd class="kbd docutils literal notranslate">R</kbd>) graba la
+ventana, vista 3D incluida, en <em>~/Vídeos/VizMini2</em> (<em>Vídeos\VizMini2</em> en Windows; necesita
+<code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>).</p>
 </section>
 </section>
 
@@ -161,7 +188,7 @@ red</em> y <em>Grabar</em>. Pulsa uno para ver un vídeo corto y lo que hace, po
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-12.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -188,7 +215,7 @@ red</em> y <em>Grabar</em>. Pulsa uno para ver un vídeo corto y lo que hace, po
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

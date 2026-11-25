@@ -9,19 +9,20 @@
   <title>Camera &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tabs/camera.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Dashboard" href="dashboard.html" />
+    <link rel="next" title="Indicators" href="indicators.html" />
     <link rel="prev" title="RViz" href="rviz.html" /> 
 </head>
 
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -62,12 +64,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="visualize.html">Visualize</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="rviz.html">RViz</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indicators.html">Indicators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html">Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gps.html">GPS map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="behavior_tree.html">Behavior tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plansys2.html">PlanSys2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashboard.html">Dashboard</a></li>
 </ul>
 </li>
@@ -79,14 +91,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -125,18 +141,32 @@
              
   <section id="camera">
 <h1>Camera<a class="headerlink" href="#camera" title="Link to this heading"></a></h1>
-<figure class="vm-clip vm-right"><video src="../_static/clips/clip_camera.mp4" poster="../_static/shots/shot_camera.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Live images from any camera topic.</p>
+<figure class="vm-clip vm-right"><video src="../_static/clips/clip_camera.mp4" poster="../_static/shots/shot_camera.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Live images from camera topics, up to four at once.</p>
 <ul class="simple">
-<li><p>Works with <code class="docutils literal notranslate"><span class="pre">sensor_msgs/Image</span></code> and <code class="docutils literal notranslate"><span class="pre">sensor_msgs/CompressedImage</span></code> (JPEG/PNG), and with
-<code class="docutils literal notranslate"><span class="pre">compressedDepth</span></code> for topics whose name contains <em>depth</em>.</p></li>
+<li><p>Works with <code class="docutils literal notranslate"><span class="pre">sensor_msgs/Image</span></code> and <code class="docutils literal notranslate"><span class="pre">sensor_msgs/CompressedImage</span></code> (JPEG/PNG), with
+<code class="docutils literal notranslate"><span class="pre">compressedDepth</span></code> for topics whose name contains <em>depth</em>, and with <strong>H.264 / H.265 video</strong>:
+<code class="docutils literal notranslate"><span class="pre">foxglove_msgs/CompressedVideo</span></code> (<code class="docutils literal notranslate"><span class="pre">.../foxglove</span></code>) and <code class="docutils literal notranslate"><span class="pre">ffmpeg_image_transport_msgs/FFMPEGPacket</span></code>
+(<code class="docutils literal notranslate"><span class="pre">.../ffmpeg</span></code>), which take a fraction of the WiFi a JPEG camera needs. The phone decodes them in
+hardware; the PC with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code> (Linux: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ffmpeg</span></code>; Windows: <code class="docutils literal notranslate"><span class="pre">winget</span> <span class="pre">install</span>
+<span class="pre">ffmpeg</span></code>), and without it the image says how to get it. The RViz <em>Image</em> and <em>Camera</em>
+displays take them too.</p></li>
 <li><p>Raw encodings: <code class="docutils literal notranslate"><span class="pre">rgb8</span></code>, <code class="docutils literal notranslate"><span class="pre">bgr8</span></code>, <code class="docutils literal notranslate"><span class="pre">rgba8</span></code>, <code class="docutils literal notranslate"><span class="pre">bgra8</span></code>, <code class="docutils literal notranslate"><span class="pre">mono8</span></code>, <code class="docutils literal notranslate"><span class="pre">mono16</span></code>, <code class="docutils literal notranslate"><span class="pre">8UC1/3/4</span></code>,
 <code class="docutils literal notranslate"><span class="pre">16UC1</span></code>, <code class="docutils literal notranslate"><span class="pre">32FC1</span></code>, <code class="docutils literal notranslate"><span class="pre">yuv422</span></code> (<code class="docutils literal notranslate"><span class="pre">uyvy</span></code>) and <code class="docutils literal notranslate"><span class="pre">yuyv</span></code>.</p></li>
-<li><p><strong>Search</strong> finds the image topics on the network; you can also type a topic name.</p></li>
-<li><p>The overlay shows the topic, resolution, encoding and frame rate.</p></li>
+<li><p><strong>Search</strong> finds the image topics on the network (it also runs by itself when ROS 2 connects).
+If yours is not listed, type its name at the end of the list and tap <strong>Add</strong>.</p></li>
+<li><p>Tap topics in the list to add or remove them. One camera fills the tab, two are stacked and three
+or four share a 2×2 grid.</p></li>
+<li><p>Each image shows its topic, resolution, encoding and frame rate.</p></li>
+<li><p><strong>Annotations</strong>: if there is a <code class="docutils literal notranslate"><span class="pre">visualization_msgs/ImageMarker</span></code> or
+<code class="docutils literal notranslate"><span class="pre">foxglove_msgs/ImageAnnotations</span></code> topic next to the image (in its namespace), its boxes, circles,
+lines and texts are drawn on the image by themselves. The eye button on the image shows or hides
+them.</p></li>
 </ul>
-<p>When you create the tab you can pick the topic straight away (the field suggests image topics it
-finds). The camera always subscribes with <em>Best effort</em> and keeps only the latest image, so it never
-falls behind.</p>
+<p>When you create the tab you can give the topic straight away (on the phone the field suggests the
+image topics it finds). Each camera subscribes with <em>Best effort</em> and keeps only the latest image, so
+it never falls behind.</p>
+<p>In a <a class="reference internal" href="dashboard.html"><span class="doc">Dashboard</span></a> widget the images fill the whole widget, and the button at the top right opens
+the topic list.</p>
 <div class="vm-clear docutils container">
 <p>Tip: put several cameras side by side in a <a class="reference internal" href="dashboard.html"><span class="doc">Dashboard</span></a>.</p>
 </div>
@@ -147,14 +177,14 @@ falls behind.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="rviz.html" class="btn btn-neutral float-left" title="RViz" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="dashboard.html" class="btn btn-neutral float-right" title="Dashboard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="indicators.html" class="btn btn-neutral float-right" title="Indicators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -181,7 +211,7 @@ falls behind.</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

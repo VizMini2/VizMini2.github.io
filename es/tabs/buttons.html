@@ -9,20 +9,21 @@
   <title>Botones &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/tabs/buttons.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="Lifecycle" href="lifecycle.html" />
+    <link rel="next" title="Sliders" href="sliders.html" />
     <link rel="prev" title="Teleop (2 joysticks)" href="teleop-dual.html" /> 
 </head>
 
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul class="current">
@@ -75,7 +82,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#tipos-de-mensaje">Tipos de mensaje</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="sliders.html">Sliders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters.html">Parámetros</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lifecycle.html">Lifecycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit.html">MoveIt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controladores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps.html">Mapas</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inspect.html">Inspeccionar la red</a></li>
@@ -85,14 +97,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -136,29 +152,43 @@
 <li><p><strong>Publicar</strong> un mensaje en un topic.</p></li>
 <li><p><strong>Llamar</strong> a un servicio y mostrar la respuesta, con lo que ha tardado.</p></li>
 <li><p><strong>Enviar</strong> un goal a una acción, mostrar su feedback y su resultado, y cancelarlo mientras se
-ejecuta.</p></li>
+ejecuta (pulsa otra vez el botón y confirma con <strong>Cancelar goal</strong>).</p></li>
 </ul>
 <p>Pulsa <strong>Añadir botón</strong>, elige el tipo y usa <strong>Explorar</strong> para escoger un topic, servicio o acción de
-la red (o escribe su nombre). Después rellena el mensaje: hay un campo por cada campo del mensaje,
-los arrays se escriben separados por comas y los arrays de mensajes en JSON. Los sellos de tiempo de
-las cabeceras se ponen con la hora actual al pulsar el botón.</p>
+la red (o escribe su nombre), y después elige su tipo. Rellena el mensaje: hay un campo por cada
+campo del mensaje, los arrays se escriben separados por comas y los arrays de mensajes en JSON. Los
+campos de tiempo (como <code class="docutils literal notranslate"><span class="pre">header.stamp</span></code>) tienen una casilla <em>hora actual al enviar</em>. Toca la línea
+de debajo de un botón para ver entera la respuesta, el feedback o el error; ahí, una lista larga
+muestra sus primeros valores y cuántos hay, por ejemplo <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">...]</span> <span class="pre">(11)</span></code>.</p>
+<p>Los botones de servicio y de acción funcionan con los mismos middlewares que la pestaña
+<a class="reference internal" href="services.html"><span class="doc">Services</span></a>.</p>
 <section id="opciones">
 <h2>Opciones<a class="headerlink" href="#opciones" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>QoS</strong> al publicar: <em>Reliable</em> (por defecto), <em>Best effort</em> o <em>Transient local</em>.</p></li>
 <li><p><strong>Repetir mientras se mantiene pulsado (Hz, 0 = una vez)</strong>, hasta 100 Hz: útil para «avanzar
-mientras lo pulso».</p></li>
+mientras lo pulso». Con repetición, al soltar el botón se publica una vez más el mensaje con todos
+los números a cero (activado por defecto), como un pedal de hombre muerto.</p></li>
 <li><p><strong>Tiempo de espera</strong> de la respuesta o de aceptación del goal, 5 s por defecto.</p></li>
 <li><p><strong>Pedir confirmación antes de enviar</strong>, para lo que sea peligroso.</p></li>
-<li><p>Un color: azul, verde, rojo, naranja, morado o gris.</p></li>
+<li><p>Un color: el de por defecto, azul, verde, rojo, naranja, morado o gris.</p></li>
 </ul>
-<p>El menú de cada botón tiene <em>Editar</em>, <em>Duplicar</em>, <em>Mover antes</em>, <em>Mover después</em> y <em>Borrar</em>.</p>
+<p>El menú ⋮ de cada botón tiene <em>Editar</em>, <em>Duplicar</em>, <em>Mover antes</em>, <em>Mover después</em> y <em>Eliminar</em>.
+Los botones van con la pestaña cuando la duplicas, la compartes o la exportas.</p>
 </section>
 <section id="tipos-de-mensaje">
 <h2>Tipos de mensaje<a class="headerlink" href="#tipos-de-mensaje" title="Link to this heading"></a></h2>
-<p>La app conoce casi 300 interfaces comunes (<code class="docutils literal notranslate"><span class="pre">std_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">geometry_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">nav_msgs</span></code>,
-<code class="docutils literal notranslate"><span class="pre">sensor_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">nav2_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">std_srvs</span></code>, <code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code>…). Para tus propios tipos,
-elige <strong>Definir un tipo propio…</strong> y pega la salida de <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">interface</span> <span class="pre">show</span> <span class="pre">tu_paquete/msg/TuTipo</span></code>.</p>
+<p>La app incluye más de 450 interfaces (<code class="docutils literal notranslate"><span class="pre">std_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">geometry_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">nav_msgs</span></code>,
+<code class="docutils literal notranslate"><span class="pre">sensor_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">nav2_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">control_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">moveit_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">std_srvs</span></code>,
+<code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code>…), y la lista para elegir el tipo tiene buscador. Los topics, servicios y
+acciones cuyo tipo no viene incluido aparecen marcados como <em>tipo no incluido</em> al explorar.</p>
+<p id="custom-types"><strong>Tus propios tipos:</strong> para un tipo que la app no trae (el paquete de tu robot), <em>Definir un tipo
+personalizado…</em> al final de la lista de tipos (o elegir el topic con <em>Explorar</em>, que lo ofrece
+directamente) pide su nombre completo (<code class="docutils literal notranslate"><span class="pre">mi_robot/srv/SetLight</span></code>) y el texto de su fichero
+<code class="docutils literal notranslate"><span class="pre">.msg</span></code>, <code class="docutils literal notranslate"><span class="pre">.srv</span></code> o <code class="docutils literal notranslate"><span class="pre">.action</span></code>: pega lo que muestra <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">interface</span> <span class="pre">show</span> <span class="pre">mi_robot/srv/SetLight</span></code>
+en el robot. Puede usar los tipos que la app ya conoce y los que hayas definido antes. El tipo se
+queda en este móvil o PC, y los botones, sliders e indicadores que lo usan llevan su definición,
+así que también funcionan al exportarlos o al cargarlos desde un perfil en otro sitio.</p>
 <div class="vm-clear docutils container">
 <p>Mira <a class="reference internal" href="../tutorials/buttons.html"><span class="doc">Botones para servicios y acciones</span></a>.</p>
 </div>
@@ -170,14 +200,14 @@ elige <strong>Definir un tipo propio…</strong> y pega la salida de <code class
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="teleop-dual.html" class="btn btn-neutral float-left" title="Teleop (2 joysticks)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="lifecycle.html" class="btn btn-neutral float-right" title="Lifecycle" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sliders.html" class="btn btn-neutral float-right" title="Sliders" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -204,7 +234,7 @@ elige <strong>Definir un tipo propio…</strong> y pega la salida de <code class
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

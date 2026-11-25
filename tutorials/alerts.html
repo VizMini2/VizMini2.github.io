@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get alerted when something goes wrong &mdash; VizMini2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tutorials/alerts.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bring your RViz setups and layouts" href="import-configs.html" />
+    <link rel="prev" title="Save maps and draw Nav2 zones" href="maps-zones.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="drive-demo.html">Drive the demo robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualize-robot.html">Visualize your robot in 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nav2.html">Send Nav2 goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dashboard.html">Build a dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buttons.html">Buttons for services and actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="record-bag.html">Record and replay a bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-configs.html">Bring your RViz setups and layouts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/visualize.html">Visualize</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/inspect.html">Inspect the network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/record.html">Record</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Account</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Known limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contact and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Get alerted when something goes wrong</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="get-alerted-when-something-goes-wrong">
+<h1>Get alerted when something goes wrong<a class="headerlink" href="#get-alerted-when-something-goes-wrong" title="Link to this heading"></a></h1>
+<p>Goal: a notification when the battery runs low, the laser stops publishing, a temperature goes
+too high or the robot drops off the network, even with the app in the background (phone) or behind
+other windows (PC).</p>
+<figure class="vm-clip vm-shot vm-center"><img src="../_static/shots/shot_pc_alerts.webp" alt="Three rules: one is firing (the temperature), the other two are fine." loading="lazy"><figcaption>Three rules: one is firing (the temperature), the other two are fine.</figcaption></figure><ol class="arabic simple">
+<li><p>Add an <strong>Alerts</strong> tab with <strong>+</strong>. At the top are the general switches: on the phone,
+<em>Alert notifications on this phone</em> (they also need the background connection,
+<a class="reference internal" href="../config/background.html"><span class="doc">Background connection</span></a>, to work with the app closed); on the PC, notifications, lost
+contact and diagnostics in ERROR, all on by default.</p></li>
+<li><p>Tap <strong>Add rule</strong>. For a low battery: <strong>Topic</strong> <code class="docutils literal notranslate"><span class="pre">/battery_state</span></code>, <strong>Value</strong>, <strong>Field</strong>
+<code class="docutils literal notranslate"><span class="pre">percentage</span></code>, the comparison <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <strong>Threshold</strong> <code class="docutils literal notranslate"><span class="pre">0.2</span></code>; <strong>Warning</strong> or <strong>Error</strong>.
+The field can be any number in the message, also inside arrays (<code class="docutils literal notranslate"><span class="pre">status[0].level</span></code>).</p></li>
+<li><p>Add another for a sensor that stops: <strong>Topic</strong> <code class="docutils literal notranslate"><span class="pre">/scan</span></code>, <strong>No messages</strong>, <strong>Seconds without
+messages</strong> <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+<li><p>Each rule shows its live value (<em>now 0.81</em>) and a dot: green when fine, orange or red when it
+fires, grey when nobody is watching. Switch a rule off with its switch; <strong>Edit</strong> changes or
+deletes it.</p></li>
+<li><p>When a rule fires you get a notification (and another when it recovers); <strong>Latest notices</strong>
+keeps the history, with lost contact and diagnostics too.</p></li>
+</ol>
+<p>Rules are watched by the phone’s connection service or, on the PC, while VizMini2 is open. More in
+<a class="reference internal" href="../tabs/alerts.html"><span class="doc">Alerts</span></a> and <a class="reference internal" href="../config/alerts.html"><span class="doc">Robot alerts</span></a>.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="maps-zones.html" class="btn btn-neutral float-left" title="Save maps and draw Nav2 zones" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="import-configs.html" class="btn btn-neutral float-right" title="Bring your RViz setups and layouts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Last updated on 2026-11-25.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> English
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Language</dt>
+      <dd><strong>English</strong></dd>
+      <dd><a href="../es/tutorials/alerts.html">Español</a></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v1.0.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

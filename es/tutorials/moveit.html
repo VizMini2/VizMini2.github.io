@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mover un brazo con MoveIt &mdash; Documentación de VizMini2</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/tutorials/moveit.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Cambiar y mandar controladores de ros2_control" href="controllers.html" />
+    <link rel="prev" title="Nodos lifecycle y parámetros" href="lifecycle-params.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutoriales</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="drive-demo.html">Conducir el robot de la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualize-robot.html">Ver tu robot en 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nav2.html">Enviar metas a Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dashboard.html">Crear un dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buttons.html">Botones para servicios y acciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="record-bag.html">Grabar y reproducir un bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/visualize.html">Visualizar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/inspect.html">Inspeccionar la red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/record.html">Grabar</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuración</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Solución de problemas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requisitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Limitaciones conocidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contacto y apoyo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Registro de cambios</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Mover un brazo con MoveIt</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mover-un-brazo-con-moveit">
+<h1>Mover un brazo con MoveIt<a class="headerlink" href="#mover-un-brazo-con-moveit" title="Link to this heading"></a></h1>
+<p>Objetivo: planificar y ejecutar movimientos de un brazo robótico desde el móvil o el PC, como con
+el panel <em>MotionPlanning</em> de RViz. Un cuarto de hora con la demo del Panda de MoveIt en un PC.</p>
+<figure class="vm-clip vm-shot vm-center"><img src="../_static/shots/shot_pc_moveit.webp" alt="La pestaña MoveIt con el Panda: articulaciones, poses con nombre y el objetivo de la pinza." loading="lazy"><figcaption>La pestaña MoveIt con el Panda: articulaciones, poses con nombre y el objetivo de la pinza.</figcaption></figure><ol class="arabic">
+<li><p>En un PC con ROS 2, arranca la demo del Panda (<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span>
+<span class="pre">ros-$ROS_DISTRO-moveit-resources-panda-moveit-config</span></code> si no la tienes):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>moveit_resources_panda_moveit_config<span class="w"> </span>demo.launch.py
+</pre></div>
+</div>
+<p>Cualquier robot con <code class="docutils literal notranslate"><span class="pre">move_group</span></code> funciona igual; puedes cerrar RViz, no hace falta.</p>
+</li>
+<li><p>En VizMini2, conéctate al mismo dominio (<a class="reference internal" href="../getting-started/connect.html"><span class="doc">Conectar con tu robot</span></a>) y añade una pestaña
+<strong>MoveIt</strong> con <strong>+</strong> (o el dashboard ya montado <em>Manipulación (MoveIt)</em>, que trae además una
+vista 3D con la trayectoria planificada). Lee el robot y sus grupos de planificación de
+<code class="docutils literal notranslate"><span class="pre">move_group</span></code>; elige <em>panda_arm</em> en <strong>Grupo</strong>.</p></li>
+<li><p>Pulsa la pose con nombre <strong>ready</strong> o <strong>extended</strong>: los sliders van al objetivo. Pulsa
+<strong>Planificar</strong>: la línea de estado dice cuánto dura el movimiento y, con un display
+<em>Trajectory</em> en una pestaña RViz, un brazo fantasma lo reproduce. Luego <strong>Ejecutar</strong> (o
+<strong>Planificar y ejecutar</strong> de una vez).</p></li>
+<li><p>Mueve una sola articulación con su slider, o la pinza con los botones <strong>X± Y± Z±</strong> y
+<strong>Rx± Ry± Rz±</strong> (MoveIt calcula las articulaciones; el paso se ve a la derecha), y vuelve a
+planificar. <strong>Velocidad</strong> escala el movimiento.</p></li>
+<li><p>Marca <strong>En línea recta</strong> para llevar la pinza por una trayectoria cartesiana recta; si solo se
+puede una parte, la app dice cuánta.</p></li>
+<li><p>Pulsa <strong>Añadir obstáculo</strong>: aparece una caja entre la pinza y el objetivo, y el siguiente plan la
+esquiva (un display <em>Planning scene</em> la enseña en 3D). <strong>Quitar obstáculos</strong> las quita.</p></li>
+<li><p><strong>Parar</strong> cancela el movimiento en cualquier momento.</p></li>
+</ol>
+<p>En <strong>Más opciones…</strong> eliges el planificador (OMPL, Pilz, CHOMP: lo que ofrezca <code class="docutils literal notranslate"><span class="pre">move_group</span></code>), el
+tiempo de planificación, el namespace de <code class="docutils literal notranslate"><span class="pre">move_group</span></code> y la versión de los mensajes de MoveIt (se
+detecta sola). La pestaña se explica en <a class="reference internal" href="../tabs/moveit.html"><span class="doc">MoveIt</span></a>.</p>
+<p>Siguiente: la misma demo usa ros2_control, así que también puedes probar <a class="reference internal" href="controllers.html"><span class="doc">Cambiar y mandar controladores de ros2_control</span></a>.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="lifecycle-params.html" class="btn btn-neutral float-left" title="Nodos lifecycle y parámetros" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="controllers.html" class="btn btn-neutral float-right" title="Cambiar y mandar controladores de ros2_control" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
+      </span></p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> Español
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Idioma</dt>
+      <dd><a href="../../tutorials/moveit.html">English</a></dd>
+      <dd><strong>Español</strong></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v1.0.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

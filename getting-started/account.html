@@ -6,23 +6,24 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your account &mdash; VizMini2 documentation</title>
+  <title>Your account (optional) &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/getting-started/account.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Try the demo" href="demo.html" />
-    <link rel="prev" title="Installation" href="install.html" /> 
+    <link rel="prev" title="The PC app" href="desktop.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,13 +49,12 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Your account</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#sign-up">Sign up</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sign-in-with-google-microsoft-or-github">Sign in with Google, Microsoft or GitHub</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#link-sign-in-methods">Link sign-in methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#forgot-your-password">Forgot your password?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#without-an-internet-connection">Without an internet connection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#without-an-account">Without an account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="desktop.html">The PC app</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Your account (optional)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#link-an-account">Link an account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sign-in-methods">Sign-in methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sign-out">Sign out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#on-the-pc">On the PC</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="demo.html">Try the demo</a></li>
@@ -70,6 +70,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -82,14 +87,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -116,7 +125,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Your account</li>
+      <li class="breadcrumb-item active">Your account (optional)</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -125,50 +134,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="your-account">
-<h1>Your account<a class="headerlink" href="#your-account" title="Link to this heading"></a></h1>
-<p>An account lets you connect to your real robots and keeps your robot profiles in the cloud.</p>
-<section id="sign-up">
-<h2>Sign up<a class="headerlink" href="#sign-up" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>On the sign-in screen tap <strong>Create an account</strong>.</p></li>
-<li><p>Fill in <strong>First name</strong>, <strong>Last name</strong>, <strong>Email</strong>, and the <strong>Password</strong> twice (6 characters or
-more).</p></li>
-<li><p>Open the email we send you and tap the verification link (look in spam too).</p></li>
-<li><p>Sign in with your email and password.</p></li>
-</ol>
-<p>That’s it: new accounts start with the <strong>Basic</strong> role (RViz, Camera and Teleop). An administrator
-can give you more.</p>
+  <section id="your-account-optional">
+<h1>Your account (optional)<a class="headerlink" href="#your-account-optional" title="Link to this heading"></a></h1>
+<p>You don’t need an account: the app opens straight on Home and everything works without one. An
+account only serves to <strong>sync your robot profiles</strong> across your devices (<a class="reference internal" href="../config/profiles.html"><span class="doc">Robot profiles</span></a>).</p>
+<section id="link-an-account">
+<h2>Link an account<a class="headerlink" href="#link-an-account" title="Link to this heading"></a></h2>
+<p>On <strong>Home</strong>, the <strong>Account (optional)</strong> card shows Google, Microsoft and GitHub. Tap <strong>Link</strong> next to
+one and pick your account. The first time, your VizMini2 account is created with that account’s name
+and email; no password or email check needed. Your profiles start syncing right away.</p>
+<p>If you already had an account with the same email, the app tells you: link the method you used the
+first time and add the new one from Home.</p>
+<p>Linking needs internet. After that you can use the app offline, for example connected only to the
+robot’s Wi-Fi: profiles sync when you are back online.</p>
 </section>
-<section id="sign-in-with-google-microsoft-or-github">
-<h2>Sign in with Google, Microsoft or GitHub<a class="headerlink" href="#sign-in-with-google-microsoft-or-github" title="Link to this heading"></a></h2>
-<p>On the sign-in screen (or the sign-up screen) tap <strong>Continue with Google</strong>, <strong>Continue with
-Microsoft</strong> or <strong>Continue with GitHub</strong> and pick your account. The first time, your VizMini2
-account is created with that account’s name and email; no password or email check needed.</p>
-<p>If you already had an account with the same email, the app tells you: sign in the way you did the
-first time and link the new method from Home.</p>
+<section id="sign-in-methods">
+<h2>Sign-in methods<a class="headerlink" href="#sign-in-methods" title="Link to this heading"></a></h2>
+<p>Once signed in, the card shows your email and your <strong>Sign-in methods</strong>. Tap <strong>Link</strong> next to Google,
+Microsoft or GitHub to also sign in with it to the same account, with the same profiles. <strong>Unlink</strong>
+removes it (you always keep at least one).</p>
+<p>Accounts created with earlier versions using email and password keep working: they stay signed in
+and appear as <em>Email and password</em> among the methods.</p>
 </section>
-<section id="link-sign-in-methods">
-<h2>Link sign-in methods<a class="headerlink" href="#link-sign-in-methods" title="Link to this heading"></a></h2>
-<p>On <strong>Home</strong>, in the card with your email, you’ll see your <strong>Sign-in methods</strong>. Tap <strong>Link</strong> next to
-Google, Microsoft or GitHub to also sign in with it to the same account, with the same profiles.
-<strong>Unlink</strong> removes it (you always keep at least one).</p>
+<section id="sign-out">
+<h2>Sign out<a class="headerlink" href="#sign-out" title="Link to this heading"></a></h2>
+<p><strong>Sign out</strong> on the same card. You stay in the app: your tabs and profiles stay on this phone, but
+they no longer sync with the cloud. To delete the account for good, see <a class="reference internal" href="../accounts/delete.html"><span class="doc">Delete your account</span></a>.</p>
 </section>
-<section id="forgot-your-password">
-<h2>Forgot your password?<a class="headerlink" href="#forgot-your-password" title="Link to this heading"></a></h2>
-<p>On the sign-in screen tap <strong>Forgot password?</strong> and enter your email: you’ll get a link to choose a
-new one.</p>
-</section>
-<section id="without-an-internet-connection">
-<h2>Without an internet connection<a class="headerlink" href="#without-an-internet-connection" title="Link to this heading"></a></h2>
-<p>Once signed in, you can open the app and use your robots without internet, for example connected only
-to the robot’s Wi-Fi. Every so often the app will ask you to connect to the internet for a moment to
-check your account (you don’t need to type your password again); after that you can carry on
-offline. Signing in for the first time does need internet.</p>
-</section>
-<section id="without-an-account">
-<h2>Without an account<a class="headerlink" href="#without-an-account" title="Link to this heading"></a></h2>
-<p>You can try everything with a simulated robot first: <a class="reference internal" href="demo.html"><span class="doc">Try the demo</span></a>.</p>
+<section id="on-the-pc">
+<h2>On the PC<a class="headerlink" href="#on-the-pc" title="Link to this heading"></a></h2>
+<p><strong>Configuration → Account (optional)</strong>. <strong>Continue with</strong> Google, Microsoft or GitHub opens your
+browser to sign in; then come back to the app. You can also sign in or create an account with an
+email and password. Once signed in, the card shows your email, <strong>Sync now</strong> and <strong>Sign out</strong>. It
+is the same account as on the phone, with the same profiles. Linking or unlinking sign-in methods
+and deleting the account are done from the phone (<a class="reference internal" href="../accounts/delete.html"><span class="doc">Delete your account</span></a>).</p>
 </section>
 </section>
 
@@ -176,7 +175,7 @@ offline. Signing in for the first time does need internet.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="install.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="desktop.html" class="btn btn-neutral float-left" title="The PC app" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="demo.html" class="btn btn-neutral float-right" title="Try the demo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -184,7 +183,7 @@ offline. Signing in for the first time does need internet.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -211,7 +210,7 @@ offline. Signing in for the first time does need internet.</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

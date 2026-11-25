@@ -9,13 +9,14 @@
   <title>Registro de cambios &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/changelog.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=8f16d266"></script>
+      <script src="_static/documentation_options.js?v=deffaa10"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="_static/translations.js?v=f85f4cfb"></script>
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/interface.html">La interfaz</a></li>
@@ -60,8 +62,13 @@
 <li class="toctree-l1"><a class="reference internal" href="tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -74,14 +81,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul class="current">
@@ -92,116 +103,122 @@
 <li class="toctree-l1"><a class="reference internal" href="help/contact.html">Contacto y apoyo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help/privacy.html">Privacidad</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Registro de cambios</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">[0.18.0] - 2026-10-11</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">[1.0.0] - 2026-11-25</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#anadido">Añadido</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cambiado">Cambiado</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#corregido">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">[0.17.1] - 2026-10-10</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Corregido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">[0.18.0] - 2026-10-11</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Añadido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Cambiado</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">[0.17.0] - 2026-10-10</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id5">Añadido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">Cambiado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">[0.17.1] - 2026-10-10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">[0.16.0] - 2026-10-09</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id8">Añadido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">Cambiado</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">Corregido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">[0.17.0] - 2026-10-10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Añadido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Cambiado</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id11">[0.15.0] - 2026-10-06</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id11">[0.16.0] - 2026-10-09</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id12">Añadido</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id13">Cambiado</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id14">[0.14.0] - 2026-10-02</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id15">Añadido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id16">Cambiado</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id17">Corregido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">[0.15.0] - 2026-10-06</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Añadido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Cambiado</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id18">[0.13.0] - 2026-09-29</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id18">[0.14.0] - 2026-10-02</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id19">Añadido</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id20">Cambiado</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id21">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id22">[0.12.0] - 2026-09-24</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id22">[0.13.0] - 2026-09-29</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id23">Añadido</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id24">Cambiado</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id25">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id26">[0.11.0] - 2026-09-19</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id26">[0.12.0] - 2026-09-24</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id27">Añadido</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id28">Cambiado</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id29">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id30">[0.10.0] - 2026-09-14</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id30">[0.11.0] - 2026-09-19</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id31">Añadido</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id32">Cambiado</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id33">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id34">[0.9.0] - 2026-09-09</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id34">[0.10.0] - 2026-09-14</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id35">Añadido</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id36">Cambiado</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id37">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id38">[0.8.2] - 2026-09-03</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id39">Corregido</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id40">[0.8.1] - 2026-09-01</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id38">[0.9.0] - 2026-09-09</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id39">Añadido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id40">Cambiado</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id41">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id42">[0.8.0] - 2026-08-28</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id43">Añadido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id44">Cambiado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id42">[0.8.2] - 2026-09-03</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id43">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id45">[0.7.0] - 2026-08-19</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id46">Añadido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id47">Corregido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id44">[0.8.1] - 2026-09-01</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id45">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id48">[0.6.1] - 2026-08-11</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id49">Corregido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id46">[0.8.0] - 2026-08-28</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id47">Añadido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id48">Cambiado</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id50">[0.6.0] - 2026-08-06</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id51">Añadido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id52">Cambiado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id49">[0.7.0] - 2026-08-19</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id50">Añadido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id51">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id53">[0.5.0] - 2026-07-27</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id54">Añadido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id55">Corregido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id52">[0.6.1] - 2026-08-11</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id53">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id56">[0.4.0] - 2026-07-14</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id57">Añadido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id54">[0.6.0] - 2026-08-06</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id55">Añadido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id56">Cambiado</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id58">[0.3.0] - 2026-07-03</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id59">Añadido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id60">Cambiado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id57">[0.5.0] - 2026-07-27</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id58">Añadido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id59">Corregido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id61">[0.2.0] - 2026-06-23</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id62">Añadido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id63">Corregido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id60">[0.4.0] - 2026-07-14</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id61">Añadido</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id64">[0.1.0] - 2026-06-12</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id65">Añadido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id62">[0.3.0] - 2026-07-03</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id63">Añadido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id64">Cambiado</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id65">[0.2.0] - 2026-06-23</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id66">Añadido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id67">Corregido</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id68">[0.1.0] - 2026-06-12</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id69">Añadido</a></li>
 </ul>
 </li>
 </ul>
@@ -234,23 +251,89 @@
   <section id="registro-de-cambios">
 <h1>Registro de cambios<a class="headerlink" href="#registro-de-cambios" title="Link to this heading"></a></h1>
 <p>Aquí se documentan todos los cambios relevantes de VizMini2.
-El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes de la 1.0, las versiones menores aún pueden cambiar el comportamiento).</p>
+El formato sigue Keep a Changelog y el proyecto usa versionado semántico.</p>
 <section id="id1">
-<h2>[0.18.0] - 2026-10-11<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<h2>[1.0.0] - 2026-11-25<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <section id="anadido">
 <h3>Añadido<a class="headerlink" href="#anadido" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Si guardas, borras o sincronizas perfiles sin conexión a internet, la app te avisa. Los cambios se quedan guardados en el móvil y se suben solos a la nube en cuanto vuelves a tener conexión; mientras tanto, la tarjeta de perfiles de Ajustes indica que hay cambios pendientes.</p></li>
+<li><p><strong>VizMini2 para el PC (Linux y Windows):</strong> las mismas pestañas que en el móvil, en una ventana. En Linux, instala el <code class="docutils literal notranslate"><span class="pre">.deb</span></code> en Ubuntu 20.04 o posterior, o compílalo como paquete de ROS 2 y arráncalo con <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">vizmini2</span> <span class="pre">vizmini2</span></code> (la primera vez toma el dominio y los peers de la terminal). También tiene el robot de demo (Configuración › Iniciar demo, o <code class="docutils literal notranslate"><span class="pre">vizmini2</span> <span class="pre">--demo</span></code>), solo en ese ordenador.</p></li>
+<li><p><strong>En Windows 10 y 11</strong> (64 bits): instala el <code class="docutils literal notranslate"><span class="pre">.msi</span></code> (para tu usuario, sin pedir administrador: te pregunta dónde y añade un acceso directo en el escritorio y en el menú Inicio) o descomprime el <code class="docutils literal notranslate"><span class="pre">.zip</span></code>. Al desinstalarla desde Configuración de Windows › Aplicaciones se conservan tus ajustes, bags y vídeos. El vídeo H.264/H.265 y la grabación de la ventana usan ffmpeg (<code class="docutils literal notranslate"><span class="pre">winget</span> <span class="pre">install</span> <span class="pre">ffmpeg</span></code>; si falta, la app explica cómo instalarlo), los diálogos de abrir y guardar son los de Windows, y un aviso indica cuándo se ha guardado un vídeo (al pulsarlo se abre el Explorador con él).</p></li>
+<li><p><strong>Pestaña MoveIt:</strong> planifica y mueve un brazo robótico con <code class="docutils literal notranslate"><span class="pre">move_group</span></code>: grupos de planificación y poses con nombre, un slider por articulación, mover la pinza en X, Y, Z y alrededor de sus ejes, líneas rectas, el planificador y el tiempo de planificación, y obstáculos. Funciona con el MoveIt de Humble, Jazzy y posteriores.</p></li>
+<li><p><strong>Pestaña Controladores (ros2_control):</strong> los controladores de un controller manager con su estado; actívalos, desactívalos, configúralos, cárgalos y descárgalos; mueve las articulaciones de los controladores de trayectorias y de comandos directos; y los componentes de hardware con sus interfaces. Foxy, Humble, Jazzy y posteriores.</p></li>
+<li><p><strong>Pestaña Mapas:</strong> guarda el mapa en el robot (map_saver de Nav2 o SLAM Toolbox) o descárgalo en PGM y YAML, pausa SLAM, limpia los costmaps y dibuja zonas prohibidas y de límite de velocidad que se publican como máscaras de los filtros de costmap de Nav2.</p></li>
+<li><p><strong>Pestaña Alertas:</strong> tus propias reglas sobre cualquier topic (un valor por encima o por debajo de un umbral, o unos segundos sin mensajes) con notificaciones, también en segundo plano, y los últimos avisos.</p></li>
+<li><p><strong>Pestaña PlanSys2:</strong> sigue un plan de PlanSys2 mientras se ejecuta, como su monitor de terminal: el plan con el estado y el avance de cada acción, las acciones en curso y quién las hace, el conocimiento (instancias, predicados, funciones y el objetivo, con lo que ya se cumple) y el registro del plan, qué hace el ejecutor y por qué. Los cuatro juntos o cada uno por separado. PlanSys2 4.0.0 y posteriores (Jazzy, rolling) y los mensajes anteriores de la 3.x; el robot de la demo también tiene uno.</p></li>
+<li><p><strong>Topics de vídeo H.264 y H.265</strong> (<code class="docutils literal notranslate"><span class="pre">foxglove_msgs/CompressedVideo</span></code> y ffmpeg_image_transport) en la pestaña Cámara y en los displays Image y Camera de la vista 3D. La cámara de la demo también se publica en H.264.</p></li>
+<li><p><strong>Graba la pantalla en vídeo:</strong> el botón de grabar de arriba (se guarda en Movies/VizMini2); en el PC, Grabar vídeo en la barra lateral.</p></li>
+<li><p><strong>Importa y exporta</strong> ficheros de RViz 2, layouts de paneles (<code class="docutils literal notranslate"><span class="pre">.json</span></code>) y layouts de gráficas (<code class="docutils literal notranslate"><span class="pre">.xml</span></code>), desde + y desde el menú de cada pestaña. Los paneles Publish pasan a ser botones, y cada pestaña de un layout llega como un dashboard propio.</p></li>
+<li><p><strong>Pestaña Gráficas:</strong> series en el tiempo, XY, transiciones de estado, espectro e histograma, con fórmulas y scripts en Lua, desde topics, bags, ficheros CSV, UDP, MQTT y ZeroMQ.</p></li>
+<li><p>Pestañas <strong>Indicadores, Mapa GPS, Árbol de comportamiento</strong> (Groot2 con el blackboard, la grabación y los puntos de parada, y el log de Nav2), <strong>Mensaje</strong> y <strong>Parámetros</strong>.</p></li>
+<li><p><strong>Vista 3D:</strong> displays Camera, DepthCloud, Effort, Image con anotaciones, Trajectory (la trayectoria planificada como robot fantasma) y Planning scene, marcadores de malla, marcadores interactivos, las herramientas Elegir, Medir y Publicar punto, y una herramienta de MoveIt para arrastrar el objetivo del brazo. Los paneles de imagen y de cámara se pueden mover y redimensionar.</p></li>
+<li><p><strong>Display NavMap:</strong> los mapas NavMap de EasyNavigation (<code class="docutils literal notranslate"><span class="pre">navmap_ros_interfaces/NavMap</span></code>) en la vista 3D: superficies navegables en una o varias plantas, coloreadas por cualquiera de sus capas (coste, elevación, ocupación…), con los enlaces entre plantas (escaleras, ascensores, puertas) y las actualizaciones de capas en directo. Los ficheros de RViz con su plugin se importan y se exportan.</p></li>
+<li><p><strong>Fixed frame escrito a mano:</strong> en la pestaña RViz, escribe cualquier frame, aunque aún no esté en TF, para dejar una vista preparada; mientras no aparezca se usa el automático.</p></li>
+<li><p><strong>Robots con rmw_zenoh_cpp</strong> (router de Zenoh en Ajustes › Red), y servicios, acciones, parámetros y lifecycle de nodos con rmw_cyclonedds_cpp.</p></li>
+<li><p><strong>A través de foxglove_bridge:</strong> topics, servicios, parámetros, acciones y el grafo de nodos.</p></li>
+<li><p><strong>Buscar robots</strong> (Ajustes › Red) muestra los dominios de ROS con nodos en la red; toca uno para conectarte.</p></li>
+<li><p><strong>Variables de los topics:</strong> escribe <code class="docutils literal notranslate"><span class="pre">${nombre}</span></code> en cualquier topic y pon su valor una vez en Ajustes, para cambiar todas las pestañas a otro robot de golpe.</p></li>
+<li><p><strong>Bags:</strong> reproducción directa con una línea de tiempo común para todas las pestañas.</p></li>
+<li><p><strong>Pestañas:</strong> duplícalas, compártelas como fichero e impórtalas (en el PC, con clic derecho en una pestaña la renombras, la duplicas, la borras o la exportas). Los widgets del dashboard se quedan donde los sueltas y pueden solaparse (un joystick sobre la vista 3D), y los de cámara y joystick son más compactos.</p></li>
+<li><p><strong>Tipos de mensaje que la app no trae:</strong> pega su definición (lo que muestra <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">interface</span> <span class="pre">show</span></code>) justo donde la necesitas, desde las pestañas Topics, Mensaje, Services y Actions o desde cualquier lista de tipos, y úsalos al momento.</p></li>
+<li><p>La pestaña Cámara enseña hasta cuatro cámaras, con sus anotaciones.</p></li>
+<li><p>La pestaña Nodos enseña el DDS de cada nodo.</p></li>
+<li><p>El robot de la demo tiene un controller manager de ros2_control (si desactivas su diff_drive_controller, se para) y su cámara también como vídeo H.264.</p></li>
 </ul>
 </section>
 <section id="cambiado">
 <h3>Cambiado<a class="headerlink" href="#cambiado" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Con la sesión iniciada puedes abrir la app y usar tus robots sin conexión a internet, por ejemplo conectado solo a la Wi-Fi del robot, y ahora entra al momento sin esperar al servidor. Ese uso sin conexión caduca: pasado un tiempo, la app te pide conectarte a internet un momento para comprobar tu cuenta (sin volver a escribir la contraseña) y después puedes seguir sin conexión.</p></li>
+<li><p><strong>Ya no hace falta cuenta:</strong> la app se abre directamente en Inicio y se conecta a tus robots sin ella; una cuenta (Google, Microsoft o GitHub) solo sincroniza tus perfiles de robot entre dispositivos.</p></li>
+<li><p>VizMini2 es software libre con la Apache License 2.0.</p></li>
+<li><p>Nuevo icono y logo de la app, en el móvil y en el PC.</p></li>
+<li><p>La app usa como objetivo Android 16 (API 36).</p></li>
+<li><p>Botones: una lista larga en un resultado muestra sus primeros valores y cuántos hay (<code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">…]</span> <span class="pre">(11)</span></code>) en vez de solo <code class="docutils literal notranslate"><span class="pre">[11]</span></code>.</p></li>
+<li><p>Bags: las estadísticas de la grabación y la posición de la reproducción se actualizan mientras están en marcha.</p></li>
+<li><p>PC: las pestañas de la barra lateral se encogen para caber en una ventana pequeña y, si hay más, aparece una barra de desplazamiento.</p></li>
+<li><p>PC: Grabar vídeo y Ctrl+Mayús+R avisan si falta ffmpeg y explican cómo instalarlo, y ffmpeg también se encuentra donde lo dejan winget y las instalaciones habituales.</p></li>
+<li><p>PC: los diálogos de abrir y guardar tienen título y solo muestran el tipo de fichero que toca, y se añade la extensión si escribes un nombre sin ella.</p></li>
+<li><p>PC: los instaladores pesan unos 40 MB menos (cada uno lleva solo las librerías nativas de su sistema).</p></li>
+<li><p>Línea de comandos del PC: <code class="docutils literal notranslate"><span class="pre">--tab</span></code> acepta también el nombre de una pestaña, e <code class="docutils literal notranslate"><span class="pre">--import</span></code> abre la pestaña importada.</p></li>
+<li><p>Los modos de control de la teleoperación y los botones del panel de displays de RViz en el PC (Añadir, Duplicar, Quitar, Renombrar, Color de fondo) están traducidos.</p></li>
 </ul>
 </section>
 <section id="corregido">
 <h3>Corregido<a class="headerlink" href="#corregido" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Servicios: varias llamadas a la vez al mismo servicio (también los resultados de las acciones) reciben cada una su propia respuesta, aunque el servidor conteste en otro orden; y los clientes de ROS 2 con Fast DDS, como <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">service</span> <span class="pre">call</span></code>, pueden usar los servicios que ofrece la app (los del robot de la demo).</p></li>
+<li><p>PC: cualquier clic en una pestaña Teleop (como Conducir, de la demo) le devuelve el teclado después de que se lo quitaran la barra lateral o un diálogo.</p></li>
+<li><p>PC: en Windows, las mallas del robot también se encuentran en la instalación local de ROS 2 (<code class="docutils literal notranslate"><span class="pre">AMENT_PREFIX_PATH</span></code>).</p></li>
+<li><p>PC: la app ya no crea una carpeta <code class="docutils literal notranslate"><span class="pre">.ihmc</span></code> en tu carpeta personal.</p></li>
+<li><p>Cierres al arrancar en Android 12 y 13, en Android 8 y 9, y al girar el móvil en horizontal en RViz o Cámara.</p></li>
+<li><p>Con un bag en bucle o una simulación reiniciada, la vista 3D se quedaba congelada: el historial de TF se vacía cuando el tiempo salta hacia atrás, como en RViz.</p></li>
+<li><p>Bags: cambiar la velocidad de reproducción hacía que los mensajes llegaran a golpes o se pararan, y algunos ficheros podían bloquear el lector.</p></li>
+<li><p>Al entrar con otra cuenta, los perfiles de la anterior se subían a la nueva.</p></li>
+<li><p>Una malla usada por dos displays a la vez no se veía en el segundo, y una gráfica podía bloquear la app con valores muy grandes.</p></li>
+<li><p>Dos partes de la app publicando a la vez en el mismo topic podían mandar un mensaje dos veces, y los botones de los marcadores interactivos podían perder un clic.</p></li>
+<li><p>El robot de la demo nunca llegaba a pararse del todo (su velocidad oscilaba).</p></li>
+</ul>
+</section>
+</section>
+<section id="id2">
+<h2>[0.18.0] - 2026-10-11<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<section id="id3">
+<h3>Añadido<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Si guardas, borras o sincronizas perfiles sin conexión a internet, la app te avisa. Los cambios se quedan guardados en el móvil y se suben solos a la nube en cuanto vuelves a tener conexión; mientras tanto, la tarjeta de perfiles de Ajustes indica que hay cambios pendientes.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Cambiado<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Con la sesión iniciada puedes abrir la app y usar tus robots sin conexión a internet, por ejemplo conectado solo a la Wi-Fi del robot, y ahora entra al momento sin esperar al servidor. Ese uso sin conexión caduca: pasado un tiempo, la app te pide conectarte a internet un momento para comprobar tu cuenta (sin volver a escribir la contraseña) y después puedes seguir sin conexión.</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Corregido<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Al abrir la app sin conexión a internet, a veces se cerraba la sesión y había que volver a entrar cuando hubiera conexión.</p></li>
 <li><p>Si la cuenta se eliminaba desde otro móvil, este seguía entrando con la sesión guardada; ahora pide volver a iniciar sesión.</p></li>
@@ -258,27 +341,27 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 </ul>
 </section>
 </section>
-<section id="id2">
-<h2>[0.17.1] - 2026-10-10<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
-<section id="id3">
-<h3>Corregido<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<section id="id6">
+<h2>[0.17.1] - 2026-10-10<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<section id="id7">
+<h3>Corregido<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Al entrar con Microsoft o GitHub, la app podía quedarse en la pantalla de inicio de sesión con el indicador de carga girando sin pasar nunca a la pantalla principal; había que cerrarla y volver a abrirla para que reconociera la sesión. Ya entra directamente al terminar en la página de Microsoft o GitHub. El mismo problema afectaba a vincular esas cuentas desde Inicio y a confirmar el borrado de la cuenta volviendo a entrar con ellas, y también queda corregido. (Con Google no pasaba.)</p></li>
 </ul>
 </section>
 </section>
-<section id="id4">
-<h2>[0.17.0] - 2026-10-10<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
-<section id="id5">
-<h3>Añadido<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<section id="id8">
+<h2>[0.17.0] - 2026-10-10<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<section id="id9">
+<h3>Añadido<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Entra o regístrate con Google, Microsoft o GitHub, sin tener que crear otra contraseña. La primera vez se crea tu cuenta con el nombre y el correo que da el proveedor, sin pasar por la verificación por correo.</p></li>
 <li><p>Vincula desde Inicio varias formas de entrar a la misma cuenta. En la tarjeta de tu cuenta aparecen tus formas de entrar (correo y contraseña, Google, Microsoft y GitHub), cada una con un botón para vincularla o desvincularla; así, aunque un día entres con Google y otro con Microsoft, llegas siempre a la misma cuenta con tus mismos perfiles. La última forma de entrar que quede no se puede quitar, para no dejarte fuera de tu cuenta.</p></li>
 <li><p>Si intentas entrar con un proveedor cuyo correo ya tiene una cuenta, la app te avisa y te explica que entres como la primera vez y vincules el nuevo método desde Inicio.</p></li>
 </ul>
 </section>
-<section id="id6">
-<h3>Cambiado<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<section id="id10">
+<h3>Cambiado<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Los botones de Google, Microsoft y GitHub están tanto en la pantalla de inicio de sesión como en la de registro.</p></li>
 <li><p>Los correos de verificación y de cambio de contraseña llegan en el idioma con el que estás usando la app.</p></li>
@@ -286,10 +369,10 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 </ul>
 </section>
 </section>
-<section id="id7">
-<h2>[0.16.0] - 2026-10-09<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
-<section id="id8">
-<h3>Añadido<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<section id="id11">
+<h2>[0.16.0] - 2026-10-09<a class="headerlink" href="#id11" title="Link to this heading"></a></h2>
+<section id="id12">
+<h3>Añadido<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Prueba la demo sin cuenta, directamente desde la pantalla de inicio de sesión. Inicio explica lo que estás viendo y cómo crear una cuenta para llegar a tus robots reales.</p></li>
 <li><p>El robot de la demo tiene parámetros, servicios (volver a la base, piloto automático, sumar dos enteros), una acción Fibonacci y un driver de cámara lifecycle, así que Nodos, Services, Actions, Lifecycle, Botones y Grafo de nodos se pueden probar sin un robot real. La demo incluye pestañas de Botones y Lifecycle listas para usar.</p></li>
@@ -301,8 +384,8 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 <li><p>Apoya el proyecto desde Inicio, a través de GitHub Sponsors.</p></li>
 </ul>
 </section>
-<section id="id9">
-<h3>Cambiado<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<section id="id13">
+<h3>Cambiado<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>El registro pide nombre, apellidos, correo y la contraseña dos veces, y puedes entrar en cuanto confirmas tu correo.</p></li>
 <li><p>Los tipos de pestaña están traducidos en el catálogo «+», en Inicio y en los nombres de las pestañas nuevas (Cámara, Diagnóstico, Árbol TF…). También las pestañas de la demo.</p></li>
@@ -310,23 +393,23 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 <li><p>El recorrido rápido y la política de privacidad tienen su propia tarjeta en Inicio, debajo de Novedades.</p></li>
 </ul>
 </section>
-<section id="id10">
-<h3>Corregido<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<section id="id14">
+<h3>Corregido<a class="headerlink" href="#id14" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Una llamada a un servicio podía esperar hasta agotar el tiempo cuando el servidor respondía muy rápido sin identidad de la petición.</p></li>
 </ul>
 </section>
 </section>
-<section id="id11">
-<h2>[0.15.0] - 2026-10-06<a class="headerlink" href="#id11" title="Link to this heading"></a></h2>
-<section id="id12">
-<h3>Añadido<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<section id="id15">
+<h2>[0.15.0] - 2026-10-06<a class="headerlink" href="#id15" title="Link to this heading"></a></h2>
+<section id="id16">
+<h3>Añadido<a class="headerlink" href="#id16" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Traducción al español, incluido este registro de cambios. Elige el idioma en Ajustes (English, Español o el del sistema).</p></li>
 </ul>
 </section>
-<section id="id13">
-<h3>Cambiado<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<section id="id17">
+<h3>Cambiado<a class="headerlink" href="#id17" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Ajustes está más ordenado: el estado de la conexión está en la tarjeta Red (Inicio mantiene el botón de reconectar) y el registro de cambios queda solo en Inicio.</p></li>
 <li><p>La visita guiada pasa de Inicio a Ajustes, y desaparece el consejo del día de Inicio.</p></li>
@@ -334,33 +417,33 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 </ul>
 </section>
 </section>
-<section id="id14">
-<h2>[0.14.0] - 2026-10-02<a class="headerlink" href="#id14" title="Link to this heading"></a></h2>
-<section id="id15">
-<h3>Añadido<a class="headerlink" href="#id15" title="Link to this heading"></a></h3>
+<section id="id18">
+<h2>[0.14.0] - 2026-10-02<a class="headerlink" href="#id18" title="Link to this heading"></a></h2>
+<section id="id19">
+<h3>Añadido<a class="headerlink" href="#id19" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>La visita guiada incluye los dashboards, el grafo de nodos, el árbol de TF y la comprobación de red, con capturas nuevas.</p></li>
 </ul>
 </section>
-<section id="id16">
-<h3>Cambiado<a class="headerlink" href="#id16" title="Link to this heading"></a></h3>
+<section id="id20">
+<h3>Cambiado<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Node graph también muestra los participantes que no anuncian nombres de nodo ROS, con su nombre de participante DDS (incluido el robot de demo).</p></li>
 <li><p>Capturas nuevas en el catálogo «+».</p></li>
 </ul>
 </section>
-<section id="id17">
-<h3>Corregido<a class="headerlink" href="#id17" title="Link to this heading"></a></h3>
+<section id="id21">
+<h3>Corregido<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Los robots recordados podían tomar el nombre de un nodo auxiliar oculto (como el daemon del CLI de ros2).</p></li>
 <li><p>Las etiquetas del joystick se solapaban en los widgets pequeños del dashboard.</p></li>
 </ul>
 </section>
 </section>
-<section id="id18">
-<h2>[0.13.0] - 2026-09-29<a class="headerlink" href="#id18" title="Link to this heading"></a></h2>
-<section id="id19">
-<h3>Añadido<a class="headerlink" href="#id19" title="Link to this heading"></a></h3>
+<section id="id22">
+<h2>[0.13.0] - 2026-09-29<a class="headerlink" href="#id22" title="Link to this heading"></a></h2>
+<section id="id23">
+<h3>Añadido<a class="headerlink" href="#id23" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Pestaña Dashboard: crea tu propia pantalla con cualquier pestaña como widget (vista 3D, varias cámaras, joystick, botones, diagnósticos…). Muévelos arrastrando, cámbialos de tamaño desde la esquina y quítalos en modo edición; se ajustan a una cuadrícula y nunca se solapan.</p></li>
 <li><p>La demo incluye un dashboard ya preparado.</p></li>
@@ -371,24 +454,24 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 <li><p>Los informes de fallos también cubren los cierres dentro del código nativo.</p></li>
 </ul>
 </section>
-<section id="id20">
-<h3>Cambiado<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
+<section id="id24">
+<h3>Cambiado<a class="headerlink" href="#id24" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Un cliente de service puede lanzar varias llamadas a la vez, y un cliente de action varios goals, cada uno con su propio feedback.</p></li>
 <li><p>Los botones de teleop se adaptan a espacios pequeños.</p></li>
 </ul>
 </section>
-<section id="id21">
-<h3>Corregido<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
+<section id="id25">
+<h3>Corregido<a class="headerlink" href="#id25" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>La hora de sincronización con la nube se mostraba en el idioma del móvil en lugar del de la app.</p></li>
 </ul>
 </section>
 </section>
-<section id="id22">
-<h2>[0.12.0] - 2026-09-24<a class="headerlink" href="#id22" title="Link to this heading"></a></h2>
-<section id="id23">
-<h3>Añadido<a class="headerlink" href="#id23" title="Link to this heading"></a></h3>
+<section id="id26">
+<h2>[0.12.0] - 2026-09-24<a class="headerlink" href="#id26" title="Link to this heading"></a></h2>
+<section id="id27">
+<h3>Añadido<a class="headerlink" href="#id27" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Pestañas Nodes, Topics, Services y Actions: explora todo lo que hay en la red, como con el CLI de ros2.</p></li>
 <li><p>Pantalla de topic con echo en directo, frecuencia (Hz) y los nodos que publican y se suscriben a él.</p></li>
@@ -399,27 +482,27 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 <li><p>Informes de fallos, para corregir los problemas más rápido.</p></li>
 </ul>
 </section>
-<section id="id24">
-<h3>Cambiado<a class="headerlink" href="#id24" title="Link to this heading"></a></h3>
+<section id="id28">
+<h3>Cambiado<a class="headerlink" href="#id28" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>El botón «+» abre el nuevo catálogo en lugar de una lista.</p></li>
 <li><p>Textos de la interfaz preparados para las próximas traducciones.</p></li>
 </ul>
 </section>
-<section id="id25">
-<h3>Corregido<a class="headerlink" href="#id25" title="Link to this heading"></a></h3>
+<section id="id29">
+<h3>Corregido<a class="headerlink" href="#id29" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>La configuración de la pestaña Camera ahora sugiere los topics de imagen encontrados en la red.</p></li>
 <li><p>Los mensajes de imagen grandes se publican con mucha menos sobrecarga.</p></li>
 </ul>
 </section>
 </section>
-<section id="id26">
-<h2>[0.11.0] - 2026-09-19<a class="headerlink" href="#id26" title="Link to this heading"></a></h2>
-<section id="id27">
-<h3>Añadido<a class="headerlink" href="#id27" title="Link to this heading"></a></h3>
+<section id="id30">
+<h2>[0.11.0] - 2026-09-19<a class="headerlink" href="#id30" title="Link to this heading"></a></h2>
+<section id="id31">
+<h3>Añadido<a class="headerlink" href="#id31" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Pestaña Bags: graba topics en archivos MCAP compatibles con <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> y Foxglove, reprodúcelos en la red (0,5×, 1×, 2×, bucle), e importa, comparte y borra grabaciones.</p></li>
+<li><p>Pestaña Bags: graba topics en archivos MCAP compatibles con <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code>, reprodúcelos en la red (0,5×, 1×, 2×, bucle), e importa, comparte y borra grabaciones.</p></li>
 <li><p>Inspector de nodos: parámetros de cualquier nodo, editables como con <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> (todos los tipos, rangos y marcas de solo lectura), además de lo que publica, a lo que se suscribe y los services que ofrece.</p></li>
 <li><p>Grafo de red: nodos y topics como en <code class="docutils literal notranslate"><span class="pre">rqt_graph</span></code>, con búsqueda y filtros, y un árbol de TF en directo como <code class="docutils literal notranslate"><span class="pre">rqt_tf_tree</span></code>.</p></li>
 <li><p>Número de nodos en Inicio; toca un nodo para abrirlo en el inspector.</p></li>
@@ -429,50 +512,50 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 <li><p>Soporte para Discovery Server, como <code class="docutils literal notranslate"><span class="pre">ROS_DISCOVERY_SERVER</span></code>, para redes grandes, 4G o VPN.</p></li>
 </ul>
 </section>
-<section id="id28">
-<h3>Cambiado<a class="headerlink" href="#id28" title="Link to this heading"></a></h3>
+<section id="id32">
+<h3>Cambiado<a class="headerlink" href="#id32" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Las tarjetas de Lifecycle pueden abrir los parámetros del nodo.</p></li>
 <li><p>Al grabar <code class="docutils literal notranslate"><span class="pre">/tf_static</span></code>, <code class="docutils literal notranslate"><span class="pre">/map</span></code> y <code class="docutils literal notranslate"><span class="pre">robot_description</span></code> se mantiene su comportamiento latched (transient local).</p></li>
 </ul>
 </section>
-<section id="id29">
-<h3>Corregido<a class="headerlink" href="#id29" title="Link to this heading"></a></h3>
+<section id="id33">
+<h3>Corregido<a class="headerlink" href="#id33" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>El texto con tildes o «ñ» en parámetros y estados lifecycle se mostraba con caracteres extraños.</p></li>
 <li><p>La primera llamada a un service justo después de conectar podía fallar con «does not publish responses».</p></li>
 </ul>
 </section>
 </section>
-<section id="id30">
-<h2>[0.10.0] - 2026-09-14<a class="headerlink" href="#id30" title="Link to this heading"></a></h2>
-<section id="id31">
-<h3>Añadido<a class="headerlink" href="#id31" title="Link to this heading"></a></h3>
+<section id="id34">
+<h2>[0.10.0] - 2026-09-14<a class="headerlink" href="#id34" title="Link to this heading"></a></h2>
+<section id="id35">
+<h3>Añadido<a class="headerlink" href="#id35" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Nuevo icono de la app, con una variante temática (monocromo) para Android 13 y posteriores.</p></li>
 <li><p>Indicador de conexión en la barra superior de cada pestaña; tócalo para abrir Ajustes.</p></li>
 <li><p>Sección Acerca de en Ajustes con la versión de la app y el registro de cambios.</p></li>
 </ul>
 </section>
-<section id="id32">
-<h3>Cambiado<a class="headerlink" href="#id32" title="Link to this heading"></a></h3>
+<section id="id36">
+<h3>Cambiado<a class="headerlink" href="#id36" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Ajustes rediseñado en tarjetas, a juego con la pestaña Inicio.</p></li>
 <li><p>Aspecto coherente en todas las pestañas: tarjetas y campos redondeados, iconos de pestaña y franjas de estado en Buttons, Lifecycle y Diagnostics.</p></li>
 <li><p>La imagen de la cámara se muestra en un marco redondeado y la búsqueda de topics está más a mano.</p></li>
 </ul>
 </section>
-<section id="id33">
-<h3>Corregido<a class="headerlink" href="#id33" title="Link to this heading"></a></h3>
+<section id="id37">
+<h3>Corregido<a class="headerlink" href="#id37" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Los peers de descubrimiento solo llegaban a los cuatro primeros procesos ROS de cada peer, así que los nodos lanzados después podían quedar invisibles.</p></li>
 </ul>
 </section>
 </section>
-<section id="id34">
-<h2>[0.9.0] - 2026-09-09<a class="headerlink" href="#id34" title="Link to this heading"></a></h2>
-<section id="id35">
-<h3>Añadido<a class="headerlink" href="#id35" title="Link to this heading"></a></h3>
+<section id="id38">
+<h2>[0.9.0] - 2026-09-09<a class="headerlink" href="#id38" title="Link to this heading"></a></h2>
+<section id="id39">
+<h3>Añadido<a class="headerlink" href="#id39" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Pestaña Inicio con pantalla de bienvenida, resumen de la conexión en directo, vista general del grafo ROS y novedades.</p></li>
 <li><p>Pestaña Lifecycle: descubre los nodos gestionados en la red, consulta su estado actual en directo y lanza transiciones (configure, activate, deactivate, cleanup, shutdown).</p></li>
@@ -484,8 +567,8 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 <li><p>Ajuste de peers de descubrimiento (como <code class="docutils literal notranslate"><span class="pre">ROS_STATIC_PEERS</span></code>) para redes Wi-Fi que descartan el tráfico multicast.</p></li>
 </ul>
 </section>
-<section id="id36">
-<h3>Cambiado<a class="headerlink" href="#id36" title="Link to this heading"></a></h3>
+<section id="id40">
+<h3>Cambiado<a class="headerlink" href="#id40" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>La interfaz se unifica en inglés, incluidos los nombres por defecto de las pestañas existentes.</p></li>
 <li><p>Pantallas de inicio de sesión y registro rediseñadas.</p></li>
@@ -493,18 +576,18 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 <li><p>La búsqueda de topics en las pestañas RViz y Camera lista todos los topics de la red en lugar de probar un conjunto fijo de nombres.</p></li>
 </ul>
 </section>
-<section id="id37">
-<h3>Corregido<a class="headerlink" href="#id37" title="Link to this heading"></a></h3>
+<section id="id41">
+<h3>Corregido<a class="headerlink" href="#id41" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>La búsqueda de topics podía pasar por alto topics con nombres o tipos poco habituales.</p></li>
 <li><p>Las respuestas de los services ahora se asocian a su petición, así que dos clientes que llaman al mismo service ya no ven las respuestas del otro.</p></li>
 </ul>
 </section>
 </section>
-<section id="id38">
-<h2>[0.8.2] - 2026-09-03<a class="headerlink" href="#id38" title="Link to this heading"></a></h2>
-<section id="id39">
-<h3>Corregido<a class="headerlink" href="#id39" title="Link to this heading"></a></h3>
+<section id="id42">
+<h2>[0.8.2] - 2026-09-03<a class="headerlink" href="#id42" title="Link to this heading"></a></h2>
+<section id="id43">
+<h3>Corregido<a class="headerlink" href="#id43" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Los caracteres no ASCII (tildes, ñ) en los logs de <code class="docutils literal notranslate"><span class="pre">/rosout</span></code> y en los diagnósticos se mostraban con caracteres extraños.</p></li>
 <li><p>Algunos suscriptores rechazaban los mensajes <code class="docutils literal notranslate"><span class="pre">std_msgs/Empty</span></code> publicados desde un botón.</p></li>
@@ -512,10 +595,10 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 </ul>
 </section>
 </section>
-<section id="id40">
-<h2>[0.8.1] - 2026-09-01<a class="headerlink" href="#id40" title="Link to this heading"></a></h2>
-<section id="id41">
-<h3>Corregido<a class="headerlink" href="#id41" title="Link to this heading"></a></h3>
+<section id="id44">
+<h2>[0.8.1] - 2026-09-01<a class="headerlink" href="#id44" title="Link to this heading"></a></h2>
+<section id="id45">
+<h3>Corregido<a class="headerlink" href="#id45" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Los botones de action se quedaban en «En ejecución…» si el servidor de action desaparecía a mitad de un goal.</p></li>
 <li><p>Las respuestas largas de los services se cortaban en el diálogo de resultado.</p></li>
@@ -523,10 +606,10 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 </ul>
 </section>
 </section>
-<section id="id42">
-<h2>[0.8.0] - 2026-08-28<a class="headerlink" href="#id42" title="Link to this heading"></a></h2>
-<section id="id43">
-<h3>Añadido<a class="headerlink" href="#id43" title="Link to this heading"></a></h3>
+<section id="id46">
+<h2>[0.8.0] - 2026-08-28<a class="headerlink" href="#id46" title="Link to this heading"></a></h2>
+<section id="id47">
+<h3>Añadido<a class="headerlink" href="#id47" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Pestaña Buttons: botones configurables que publican un mensaje, llaman a un service o envían un goal de action, con feedback y cancelación.</p></li>
 <li><p>Editor de formularios para cualquier tipo de mensaje, con soporte para campos anidados y arrays.</p></li>
@@ -534,34 +617,34 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 <li><p>Publicación repetida mientras mantienes pulsado, a una frecuencia configurable.</p></li>
 </ul>
 </section>
-<section id="id44">
-<h3>Cambiado<a class="headerlink" href="#id44" title="Link to this heading"></a></h3>
+<section id="id48">
+<h3>Cambiado<a class="headerlink" href="#id48" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Diagnostics: en el selector de gráficas solo se ofrecen los topics que se pueden representar.</p></li>
 </ul>
 </section>
 </section>
-<section id="id45">
-<h2>[0.7.0] - 2026-08-19<a class="headerlink" href="#id45" title="Link to this heading"></a></h2>
-<section id="id46">
-<h3>Añadido<a class="headerlink" href="#id46" title="Link to this heading"></a></h3>
+<section id="id49">
+<h2>[0.7.0] - 2026-08-19<a class="headerlink" href="#id49" title="Link to this heading"></a></h2>
+<section id="id50">
+<h3>Añadido<a class="headerlink" href="#id50" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Perfiles de robot: guarda los ajustes de conexión y todas las pestañas con un nombre y cambia de robot con un toque.</p></li>
 <li><p>Importa y exporta perfiles como archivos JSON para compartirlos con tu equipo.</p></li>
 <li><p>Modo en segundo plano opcional que mantiene vivo el nodo ROS 2 con una notificación.</p></li>
 </ul>
 </section>
-<section id="id47">
-<h3>Corregido<a class="headerlink" href="#id47" title="Link to this heading"></a></h3>
+<section id="id51">
+<h3>Corregido<a class="headerlink" href="#id51" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Cambiar el Domain ID no siempre eliminaba las suscripciones antiguas.</p></li>
 </ul>
 </section>
 </section>
-<section id="id48">
-<h2>[0.6.1] - 2026-08-11<a class="headerlink" href="#id48" title="Link to this heading"></a></h2>
-<section id="id49">
-<h3>Corregido<a class="headerlink" href="#id49" title="Link to this heading"></a></h3>
+<section id="id52">
+<h2>[0.6.1] - 2026-08-11<a class="headerlink" href="#id52" title="Link to this heading"></a></h2>
+<section id="id53">
+<h3>Corregido<a class="headerlink" href="#id53" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Soporte para dispositivos con páginas de memoria de 16 KB (Android 15 y posteriores).</p></li>
 <li><p>Cierre inesperado al volver a abrir una pestaña de cámara tras cambiar su topic.</p></li>
@@ -569,27 +652,27 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 </ul>
 </section>
 </section>
-<section id="id50">
-<h2>[0.6.0] - 2026-08-06<a class="headerlink" href="#id50" title="Link to this heading"></a></h2>
-<section id="id51">
-<h3>Añadido<a class="headerlink" href="#id51" title="Link to this heading"></a></h3>
+<section id="id54">
+<h2>[0.6.0] - 2026-08-06<a class="headerlink" href="#id54" title="Link to this heading"></a></h2>
+<section id="id55">
+<h3>Añadido<a class="headerlink" href="#id55" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Pestaña Diagnostics: resumen de <code class="docutils literal notranslate"><span class="pre">/diagnostics</span></code> agrupado por nivel, echo de topics con filtro de campos y gráficas en directo de los campos numéricos.</p></li>
 <li><p>Visor de logs de <code class="docutils literal notranslate"><span class="pre">/rosout</span></code> con filtro por nivel.</p></li>
 <li><p>Soporte para mandos físicos en las pestañas de teleop.</p></li>
 </ul>
 </section>
-<section id="id52">
-<h3>Cambiado<a class="headerlink" href="#id52" title="Link to this heading"></a></h3>
+<section id="id56">
+<h3>Cambiado<a class="headerlink" href="#id56" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Teleop: parada de seguridad cuando se pierde la red, se desconecta el mando o la interfaz deja de responder.</p></li>
 </ul>
 </section>
 </section>
-<section id="id53">
-<h2>[0.5.0] - 2026-07-27<a class="headerlink" href="#id53" title="Link to this heading"></a></h2>
-<section id="id54">
-<h3>Añadido<a class="headerlink" href="#id54" title="Link to this heading"></a></h3>
+<section id="id57">
+<h2>[0.5.0] - 2026-07-27<a class="headerlink" href="#id57" title="Link to this heading"></a></h2>
+<section id="id58">
+<h3>Añadido<a class="headerlink" href="#id58" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Importa archivos de configuración <code class="docutils literal notranslate"><span class="pre">.rviz</span></code>: se restauran los displays compatibles, el fixed frame y la vista.</p></li>
 <li><p>Display Robot Model con mallas (STL, DAE) servidas por HTTP desde el robot.</p></li>
@@ -597,17 +680,17 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 <li><p>Vistas orbital, cenital y en primera persona.</p></li>
 </ul>
 </section>
-<section id="id55">
-<h3>Corregido<a class="headerlink" href="#id55" title="Link to this heading"></a></h3>
+<section id="id59">
+<h3>Corregido<a class="headerlink" href="#id59" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Los frames de TF podían parpadear cuando transformadas estáticas y dinámicas compartían padre.</p></li>
 </ul>
 </section>
 </section>
-<section id="id56">
-<h2>[0.4.0] - 2026-07-14<a class="headerlink" href="#id56" title="Link to this heading"></a></h2>
-<section id="id57">
-<h3>Añadido<a class="headerlink" href="#id57" title="Link to this heading"></a></h3>
+<section id="id60">
+<h2>[0.4.0] - 2026-07-14<a class="headerlink" href="#id60" title="Link to this heading"></a></h2>
+<section id="id61">
+<h3>Añadido<a class="headerlink" href="#id61" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Pestaña Teleop con un joystick en pantalla que publica <code class="docutils literal notranslate"><span class="pre">geometry_msgs/Twist</span></code>.</p></li>
 <li><p>Teleop con doble joystick para robots holonómicos y drones.</p></li>
@@ -615,44 +698,44 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 </ul>
 </section>
 </section>
-<section id="id58">
-<h2>[0.3.0] - 2026-07-03<a class="headerlink" href="#id58" title="Link to this heading"></a></h2>
-<section id="id59">
-<h3>Añadido<a class="headerlink" href="#id59" title="Link to this heading"></a></h3>
+<section id="id62">
+<h2>[0.3.0] - 2026-07-03<a class="headerlink" href="#id62" title="Link to this heading"></a></h2>
+<section id="id63">
+<h3>Añadido<a class="headerlink" href="#id63" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Pestaña Camera para <code class="docutils literal notranslate"><span class="pre">sensor_msgs/Image</span></code> y <code class="docutils literal notranslate"><span class="pre">CompressedImage</span></code>, con búsqueda automática de topics.</p></li>
 <li><p>Displays Map, Path, Pose y PoseArray.</p></li>
 <li><p>Display PointCloud2 con coloreado por intensidad y RGB.</p></li>
 </ul>
 </section>
-<section id="id60">
-<h3>Cambiado<a class="headerlink" href="#id60" title="Link to this heading"></a></h3>
+<section id="id64">
+<h3>Cambiado<a class="headerlink" href="#id64" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Renderizado 3D más fluido con un nuevo renderizador de base física.</p></li>
 </ul>
 </section>
 </section>
-<section id="id61">
-<h2>[0.2.0] - 2026-06-23<a class="headerlink" href="#id61" title="Link to this heading"></a></h2>
-<section id="id62">
-<h3>Añadido<a class="headerlink" href="#id62" title="Link to this heading"></a></h3>
+<section id="id65">
+<h2>[0.2.0] - 2026-06-23<a class="headerlink" href="#id65" title="Link to this heading"></a></h2>
+<section id="id66">
+<h3>Añadido<a class="headerlink" href="#id66" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Pestañas: crea, renombra y borra tus propias pestañas RViz.</p></li>
 <li><p>Pestaña Ajustes con Domain ID, nombre del nodo y selección de interfaz de red.</p></li>
 <li><p>Display LaserScan y ejes de los frames de TF.</p></li>
 </ul>
 </section>
-<section id="id63">
-<h3>Corregido<a class="headerlink" href="#id63" title="Link to this heading"></a></h3>
+<section id="id67">
+<h3>Corregido<a class="headerlink" href="#id67" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>La app no se reconectaba tras cambiar de red Wi-Fi.</p></li>
 </ul>
 </section>
 </section>
-<section id="id64">
-<h2>[0.1.0] - 2026-06-12<a class="headerlink" href="#id64" title="Link to this heading"></a></h2>
-<section id="id65">
-<h3>Añadido<a class="headerlink" href="#id65" title="Link to this heading"></a></h3>
+<section id="id68">
+<h2>[0.1.0] - 2026-06-12<a class="headerlink" href="#id68" title="Link to this heading"></a></h2>
+<section id="id69">
+<h3>Añadido<a class="headerlink" href="#id69" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Primera build interna.</p></li>
 <li><p>Inicio de sesión y registro con verificación por email.</p></li>
@@ -674,7 +757,7 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-12.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -701,7 +784,7 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

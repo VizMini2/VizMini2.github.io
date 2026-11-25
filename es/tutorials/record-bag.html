@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grabar y reproducir una bag &mdash; Documentación de VizMini2</title>
+  <title>Grabar y reproducir un bag &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/tutorials/record-bag.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Grabar y reproducir un bag</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#en-el-pc">En el PC</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -75,14 +85,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -109,7 +123,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Grabar y reproducir una bag</li>
+      <li class="breadcrumb-item active">Grabar y reproducir un bag</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -118,23 +132,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="grabar-y-reproducir-una-bag">
-<h1>Grabar y reproducir una bag<a class="headerlink" href="#grabar-y-reproducir-una-bag" title="Link to this heading"></a></h1>
+  <section id="grabar-y-reproducir-un-bag">
+<h1>Grabar y reproducir un bag<a class="headerlink" href="#grabar-y-reproducir-un-bag" title="Link to this heading"></a></h1>
 <p>Objetivo: grabar lo que ve el robot y revisarlo después en un ordenador.</p>
 <ol class="arabic">
 <li><p>Pulsa <strong>+ → Bags</strong>.</p></li>
 <li><p>Pulsa <strong>Grabar</strong>, elige los topics (o <strong>Todos</strong>) y vuelve a pulsar <strong>Grabar</strong>. La tarjeta muestra
 el tiempo, el número de mensajes, el tamaño y los mensajes por topic.</p></li>
-<li><p>Pulsa <strong>Parar</strong>. La grabación aparece en la lista.</p></li>
-<li><p><strong>Compártela</strong> con tu ordenador y ábrela con Foxglove o con:</p>
+<li><p>Pulsa <strong>Detener</strong>. La grabación aparece en la lista.</p></li>
+<li><p><strong>Compártela</strong> con tu ordenador y ábrela con cualquier herramienta que lea MCAP, o con:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">bag</span> <span class="n">info</span> <span class="n">vizmini2_2026</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">09_12</span><span class="o">-</span><span class="mi">30</span><span class="o">-</span><span class="mf">05.</span><span class="n">mcap</span>
 <span class="n">ros2</span> <span class="n">bag</span> <span class="n">play</span> <span class="n">vizmini2_2026</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">09_12</span><span class="o">-</span><span class="mi">30</span><span class="o">-</span><span class="mf">05.</span><span class="n">mcap</span>
 </pre></div>
 </div>
 </li>
 <li><p>O pulsa <strong>Reproducir</strong> para volver a publicarla desde el móvil (0,5×, 1× o 2×, con bucle), por
-ejemplo para probar displays de RViz sin el robot.</p></li>
+ejemplo para probar displays de RViz sin el robot. Con <strong>Reproducir solo en este móvil</strong> no sale
+nada a la red: solo la ven las pestañas de la propia app.</p></li>
 </ol>
+<p>Solo se graban los topics cuyo tipo conoce la app. <strong>Importar</strong> añade bags MCAP grabados en otro
+sitio (por ejemplo con <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span> <span class="pre">record</span> <span class="pre">-s</span> <span class="pre">mcap</span></code>) para reproducirlos.</p>
+<section id="en-el-pc">
+<h2>En el PC<a class="headerlink" href="#en-el-pc" title="Link to this heading"></a></h2>
+<p>Los mismos pasos funcionan. Los bags se guardan en <code class="docutils literal notranslate"><span class="pre">~/.local/share/vizmini2/bags</span></code> en Linux y en
+<code class="docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\VizMini2</span> <span class="pre">Data\bags</span></code> en Windows; <strong>Compartir</strong> muestra dónde está el fichero, para
+que lo abras ahí mismo con <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code>.</p>
+</section>
 </section>
 
 
@@ -149,7 +172,7 @@ ejemplo para probar displays de RViz sin el robot.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -176,7 +199,7 @@ ejemplo para probar displays de RViz sin el robot.</p></li>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

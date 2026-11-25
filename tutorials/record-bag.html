@@ -9,13 +9,14 @@
   <title>Record and replay a bag &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tutorials/record-bag.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -60,8 +62,16 @@
 <li class="toctree-l1"><a class="reference internal" href="nav2.html">Send Nav2 goals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dashboard.html">Build a dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buttons.html">Buttons for services and actions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Record and replay a bag</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Record and replay a bag</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#on-the-pc">On the PC</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -74,14 +84,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -125,15 +139,24 @@
 <li><p>Tap <strong>Record</strong>, choose the topics (or <strong>All</strong>) and tap <strong>Record</strong> again. The card shows the
 time, the number of messages, the size and the messages per topic.</p></li>
 <li><p>Tap <strong>Stop</strong>. The recording appears in the list.</p></li>
-<li><p><strong>Share</strong> it to your computer and open it with Foxglove or with:</p>
+<li><p><strong>Share</strong> it to your computer and open it with any tool that reads MCAP, or with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">bag</span> <span class="n">info</span> <span class="n">vizmini2_2026</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">09_12</span><span class="o">-</span><span class="mi">30</span><span class="o">-</span><span class="mf">05.</span><span class="n">mcap</span>
 <span class="n">ros2</span> <span class="n">bag</span> <span class="n">play</span> <span class="n">vizmini2_2026</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">09_12</span><span class="o">-</span><span class="mi">30</span><span class="o">-</span><span class="mf">05.</span><span class="n">mcap</span>
 </pre></div>
 </div>
 </li>
 <li><p>Or tap <strong>Play</strong> to publish it again from the phone (0.5×, 1× or 2×, with loop), for example to
-test RViz displays without the robot.</p></li>
+test RViz displays without the robot. With <strong>Play only on this phone</strong> nothing goes to the
+network: only the app’s own tabs see it.</p></li>
 </ol>
+<p>Only topics whose type the app knows are recorded. <strong>Import</strong> adds MCAP bags recorded elsewhere
+(for example with <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span> <span class="pre">record</span> <span class="pre">-s</span> <span class="pre">mcap</span></code>) to play them.</p>
+<section id="on-the-pc">
+<h2>On the PC<a class="headerlink" href="#on-the-pc" title="Link to this heading"></a></h2>
+<p>The same steps work. Bags are saved in <code class="docutils literal notranslate"><span class="pre">~/.local/share/vizmini2/bags</span></code> on Linux and
+<code class="docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\VizMini2</span> <span class="pre">Data\bags</span></code> on Windows; <strong>Share</strong> shows where the
+file is, so you can open it right there with <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code>.</p>
+</section>
 </section>
 
 
@@ -148,7 +171,7 @@ test RViz displays without the robot.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -175,7 +198,7 @@ test RViz displays without the robot.</p></li>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

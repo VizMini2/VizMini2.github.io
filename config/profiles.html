@@ -9,19 +9,20 @@
   <title>Robot profiles &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/config/profiles.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Robot alerts" href="alerts.html" />
+    <link rel="next" title="Import and export" href="import-export.html" />
     <link rel="prev" title="Network" href="network.html" /> 
 </head>
 
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -62,6 +64,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -77,16 +84,21 @@
 <li class="toctree-l2"><a class="reference internal" href="#in-the-cloud">In the cloud</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#files">Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#qr-codes">QR codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#on-the-pc">On the PC</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -125,15 +137,18 @@
   <section id="robot-profiles">
 <h1>Robot profiles<a class="headerlink" href="#robot-profiles" title="Link to this heading"></a></h1>
 <p>A profile stores <strong>a connection and a set of tabs</strong>: domain, node name, peers, Discovery Server,
-interfaces and every tab with its settings. Switch between robots with one tap.</p>
+foxglove_bridge, Zenoh router, interfaces, service format and every tab with its settings. Switch
+between robots with one tap.</p>
 <ul class="simple">
 <li><p><strong>Save as…</strong> saves the current connection and tabs (names up to 32 characters).</p></li>
-<li><p><strong>Load…</strong> connects with the profile and replaces your tabs.</p></li>
+<li><p><strong>Load…</strong> connects with the profile and replaces your tabs. The same list lets you <strong>Delete</strong> a
+profile.</p></li>
 </ul>
 <section id="in-the-cloud">
 <h2>In the cloud<a class="headerlink" href="#in-the-cloud" title="Link to this heading"></a></h2>
-<p>Profiles are synced with your account, so they appear on all your phones. If the same profile was
-changed on two phones, the most recent change wins. <strong>Sync now</strong> forces a sync.</p>
+<p>Profiles always stay on the device. If you link an account on Home (<a class="reference internal" href="../getting-started/account.html"><span class="doc">Your account (optional)</span></a>),
+they are also synced with it, so they appear on all your phones and PCs. If the same profile was
+changed on two devices, the most recent change wins. <strong>Sync now</strong> forces a sync.</p>
 <p>Without an internet connection (for example, connected only to the robot’s Wi-Fi) you can still save
 and delete profiles: they stay on the phone, the app tells you, and the card shows that there are
 pending changes. They are uploaded to the cloud on their own as soon as you are back online.</p>
@@ -145,10 +160,17 @@ same name is replaced).</p>
 </section>
 <section id="qr-codes">
 <h2>QR codes<a class="headerlink" href="#qr-codes" title="Link to this heading"></a></h2>
-<p><strong>Share as QR</strong> shows a code with the <em>full profile</em> (if it fits) or <em>connection only</em>. <strong>Scan QR</strong>
-reads one with the Google Play services scanner: a connection-only code asks <em>Connect to…?</em> and
-keeps your tabs.</p>
-<p>Saving profiles, using files and using QR codes depend on what your account is allowed to do.</p>
+<p><strong>Share as QR</strong> shows a code for the current setup or a saved profile, with the <em>full profile</em> or
+the <em>connection only</em>. A full profile that doesn’t fit in one code is split into several that
+change by themselves: keep the other phone’s camera on them. <strong>Scan QR</strong> reads them with the Google
+Play services scanner: a connection-only code asks <em>Connect to…?</em> and keeps your tabs.</p>
+</section>
+<section id="on-the-pc">
+<h2>On the PC<a class="headerlink" href="#on-the-pc" title="Link to this heading"></a></h2>
+<p><strong>Configuration → Robot profiles</strong> has <strong>Save profile</strong>, <strong>Load profile</strong> (with a QR and a delete
+button next to each profile), <strong>QR</strong> (the current setup, to scan it with the phone; a full profile
+in several parts has arrows to go through them) and <strong>Import…</strong>, which reads a profile’s JSON file
+or a picture (PNG or JPEG) of its QR code. Profiles sync with your account as on the phone.</p>
 </section>
 </section>
 
@@ -157,14 +179,14 @@ keeps your tabs.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="network.html" class="btn btn-neutral float-left" title="Network" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="alerts.html" class="btn btn-neutral float-right" title="Robot alerts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="import-export.html" class="btn btn-neutral float-right" title="Import and export" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -191,7 +213,7 @@ keeps your tabs.</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

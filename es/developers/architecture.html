@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arquitectura &mdash; Documentación de VizMini2</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/developers/architecture.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Compilar y probar" href="building.html" />
+    <link rel="prev" title="Desarrollo" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutoriales</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/drive-demo.html">Conducir el robot de la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/visualize-robot.html">Ver tu robot en 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/visualize.html">Visualizar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/inspect.html">Inspeccionar la red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/record.html">Grabar</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuración</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Desarrollo</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Arquitectura</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#como-habla-con-ros">Cómo habla con ROS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#la-vista-3d">La vista 3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#librerias-nativas-de-escritorio">Librerías nativas de escritorio</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="building.html">Compilar y probar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="releases.html">Versiones y CI/CD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">Contribuir</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Solución de problemas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requisitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Limitaciones conocidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contacto y apoyo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Registro de cambios</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Desarrollo</a></li>
+      <li class="breadcrumb-item active">Arquitectura</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="arquitectura">
+<h1>Arquitectura<a class="headerlink" href="#arquitectura" title="Link to this heading"></a></h1>
+<p>Un solo código, dos apps: casi todo lo que ve el usuario se comparte entre Android y el escritorio.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22.0%" />
+<col style="width: 78.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Carpeta</p></th>
+<th class="head"><p>Qué es</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">core/</span></code></p></td>
+<td><p>Lógica compartida en Kotlin/JVM puro, con tests unitarios: la conexión ROS y sus
+middlewares, el códec de mensajes dinámicos, los modelos de cada pestaña (gráficas,
+alertas, controladores, mapas, MoveIt, Nav2…), los bags, los perfiles y los textos
+(<code class="docutils literal notranslate"><span class="pre">i18n</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ui/</span></code></p></td>
+<td><p>Pantallas Compose compartidas (la mayoría de las pestañas, el catálogo, los diálogos,
+importar y exportar), compiladas en las dos apps.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rviz3d/</span></code></p></td>
+<td><p>La vista 3D sobre Filament: displays, herramientas, interactive markers, mallas.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">app/</span></code></p></td>
+<td><p>La app Android: actividades y fragments alrededor de las pantallas compartidas, la conexión
+en segundo plano, el modo demo, las notificaciones, la grabación de pantalla y Firebase
+(cuenta, informes de fallos).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">desktopApp/</span></code></p></td>
+<td><p>La app de escritorio (Compose for Desktop): la ventana y la barra lateral, los diálogos de
+ficheros, la decodificación de vídeo y la grabación con ffmpeg, las notificaciones de
+escritorio (<code class="docutils literal notranslate"><span class="pre">notify-send</span></code> o el área de notificaciones), el <code class="docutils literal notranslate"><span class="pre">.deb</span></code> y el <code class="docutils literal notranslate"><span class="pre">.msi</span></code>, y los
+tests de extremo a extremo.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ros/vizmini2/</span></code></p></td>
+<td><p>El paquete de ROS 2: <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> ejecuta Gradle y <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">vizmini2</span> <span class="pre">vizmini2</span></code>
+arranca la app.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tools/</span></code></p></td>
+<td><p>Servidores de prueba (robot falso, Nav2, MoveIt con el Panda, ros2_control, vídeo,
+mapas…), scripts de la CI y de las versiones, la compilación en Ubuntu 20.04 de las
+librerías nativas de escritorio, las nativas de Windows (<code class="docutils literal notranslate"><span class="pre">tools/desktop-natives</span></code>) y la
+lista de binarios precompilados (<code class="docutils literal notranslate"><span class="pre">tools/prebuilt</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">docs/</span></code></p></td>
+<td><p>Este manual (Sphinx, inglés y español).</p></td>
+</tr>
+</tbody>
+</table>
+<section id="como-habla-con-ros">
+<h2>Cómo habla con ROS<a class="headerlink" href="#como-habla-con-ros" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>DDS</strong> con <strong>Fast DDS</strong> (a través de jros2), compilado para Android (arm64, x86-64…), Linux y
+Windows. La app es un participante DDS como cualquier nodo de ROS 2: sin puente ni agente en el
+robot. Los robots con Cyclone DDS interoperan por la red.</p></li>
+<li><p><strong>Los mensajes son dinámicos</strong>: las definiciones de interfaces
+(<code class="docutils literal notranslate"><span class="pre">app/src/main/assets/ros_interfaces.txt</span></code>, generadas por <code class="docutils literal notranslate"><span class="pre">tools/gen_ros_interfaces.py</span></code>) se
+leen en tiempo de ejecución y se codifican y decodifican con un códec CDR, así que cualquier
+tipo incluido se puede usar sin clases generadas. Cuando un mensaje cambia entre distribuciones
+(MoveIt, ros2_control), la app lleva las definiciones de cada versión y detecta cuál usa el
+robot.</p></li>
+<li><p><strong>Zenoh</strong> (las key expressions y attachments de <code class="docutils literal notranslate"><span class="pre">rmw_zenoh</span></code>) y <strong>foxglove_bridge</strong> (su
+protocolo WebSocket) son transportes alternativos detrás de la misma interfaz, para redes donde
+el descubrimiento DDS no funciona.</p></li>
+</ul>
+</section>
+<section id="la-vista-3d">
+<h2>La vista 3D<a class="headerlink" href="#la-vista-3d" title="Link to this heading"></a></h2>
+<p>Filament dibuja la escena en las dos plataformas (OpenGL ES en Android, OpenGL en escritorio). En el
+escritorio dibuja fuera de pantalla y el fotograma se muestra dentro de Compose. TF es un árbol
+indexado por tiempo; los displays se suscriben por la misma conexión que el resto de la app.</p>
+</section>
+<section id="librerias-nativas-de-escritorio">
+<h2>Librerías nativas de escritorio<a class="headerlink" href="#librerias-nativas-de-escritorio" title="Link to this heading"></a></h2>
+<p>Las librerías nativas de la app de escritorio (Fast DDS, el JNI de Filament y un pequeño ayudante de
+X11) se compilan para Linux dentro de un Ubuntu 20.04 en un espacio de nombres de usuario
+(<code class="docutils literal notranslate"><span class="pre">tools/compat</span></code>), así que necesitan como mucho glibc 2.31; Fast DDS enlaza libstdc++ de forma
+estática y oculta, para que no choque con la de la JVM. Las de Windows las compila con MSVC el
+workflow <em>Windows natives</em> (<code class="docutils literal notranslate"><span class="pre">tools/desktop-natives</span></code>). El entorno de Java va incluido (jlink), así
+que ni el <code class="docutils literal notranslate"><span class="pre">.deb</span></code> ni el <code class="docutils literal notranslate"><span class="pre">.msi</span></code> necesitan Java ni ROS.</p>
+<p>Las nativas de Fast DDS y Filament y jros2 para Android no están en git: viven en la release
+<em>prebuilt</em> del repositorio y la compilación las descarga (<code class="docutils literal notranslate"><span class="pre">tools/prebuilt</span></code>). Cada paquete lleva
+solo las nativas de su sistema: el <code class="docutils literal notranslate"><span class="pre">.deb</span></code>, el <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> y el paquete de ROS las de Linux; el
+<code class="docutils literal notranslate"><span class="pre">.msi</span></code> y el <code class="docutils literal notranslate"><span class="pre">.zip</span></code> las de Windows.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="index.html" class="btn btn-neutral float-left" title="Desarrollo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="building.html" class="btn btn-neutral float-right" title="Compilar y probar" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
+      </span></p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> Español
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Idioma</dt>
+      <dd><a href="../../developers/architecture.html">English</a></dd>
+      <dd><strong>Español</strong></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v1.0.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ConfigInterop</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    VizMini2
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":desktopApp/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":desktopApp/jvmMain" data-filter=":desktopApp/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    VizMini2
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="desktopApp::com.juancams.rviz2mini.ui.interop/ConfigInterop///PointingToDeclaration//38399494">
+  <div class="breadcrumbs"><a href="../../index.html">desktopApp</a><span class="delimiter">/</span><a href="../index.html">com.juancams.rviz2mini.ui.interop</a><span class="delimiter">/</span><span class="current">ConfigInterop</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Config</span><wbr><span><span>Interop</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">ConfigInterop</a></div><p class="paragraph">Reading and writing other tools' files: RViz 2 (.rviz), Foxglove layouts (.json) and PlotJuggler layouts (.xml), besides VizMini2's own exported tabs. Formats are recognized by their content, not their name.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-35961602%2FFunctions%2F38399494" anchor-label="dashboard" id="-35961602%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="dashboard.html"><span><span>dashboard</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-35961602%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="dashboard.html"><span class="token function">dashboard</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">parts<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../../../core/com.juancams.rviz2mini.tabs/-tab-spec/index.html">TabSpec</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int-array/index.html">IntArray</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../core/com.juancams.rviz2mini.tabs/-tab-spec/index.html">TabSpec</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A dashboard with these widgets at these grid places (x, y, w, h in cells), or the only tab if there is one.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="938455659%2FFunctions%2F38399494" anchor-label="detect" id="938455659%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="detect.html"><span><span>detect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="938455659%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="detect.html"><span class="token function">detect</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-config-format/index.html">ConfigFormat</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="529067924%2FFunctions%2F38399494" anchor-label="displayFor" id="529067924%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="display-for.html"><span>display</span><wbr><span><span>For</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="529067924%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="display-for.html"><span class="token function">displayFor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">topic<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../core/com.juancams.rviz2mini.rviz.display/-display-config/index.html">DisplayConfig</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">A display for a topic, from its type (or, if unknown, its name).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-870887125%2FFunctions%2F38399494" anchor-label="export" id="-870887125%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="export.html"><span><span>export</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-870887125%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="export.html"><span class="token function">export</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tab<span class="token operator">: </span><a href="../../../core/com.juancams.rviz2mini.tabs/-tab-spec/index.html">TabSpec</a><span class="token punctuation">, </span></span><span class="parameter ">all<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../core/com.juancams.rviz2mini.tabs/-tab-spec/index.html">TabSpec</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">format<span class="token operator">: </span><a href="../-config-format/index.html">ConfigFormat</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-export-result/index.html">ExportResult</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-633940515%2FFunctions%2F38399494" anchor-label="exportFormats" id="-633940515%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="export-formats.html"><span>export</span><wbr><span><span>Formats</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-633940515%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="export-formats.html"><span class="token function">exportFormats</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tab<span class="token operator">: </span><a href="../../../core/com.juancams.rviz2mini.tabs/-tab-spec/index.html">TabSpec</a><span class="token punctuation">, </span></span><span class="parameter ">all<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../core/com.juancams.rviz2mini.tabs/-tab-spec/index.html">TabSpec</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-config-format/index.html">ConfigFormat</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">The formats a tab (with its widgets, for a dashboard) can be exported to.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-429183982%2FFunctions%2F38399494" anchor-label="import" id="-429183982%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="import.html"><span><span>import</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-429183982%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="import.html"><span class="token function">import</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-import-result/index.html">ImportResult</a></div><div class="brief "><p class="paragraph">Throws IllegalArgumentException (with a message for the user) if it is not one of the formats.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-306430941%2FFunctions%2F38399494" anchor-label="paletteHex" id="-306430941%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="palette-hex.html"><span>palette</span><wbr><span><span>Hex</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-306430941%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="palette-hex.html"><span class="token function">paletteHex</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">n<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-124163164%2FFunctions%2F38399494" anchor-label="paletteIndex" id="-124163164%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="palette-index.html"><span>palette</span><wbr><span><span>Index</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-124163164%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="palette-index.html"><span class="token function">paletteIndex</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rgb<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">The palette color closest to <code class="lang-kotlin">rgb</code> ("#1f77b4"); -1 if it does not parse.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-75132921%2FFunctions%2F38399494" anchor-label="shortId" id="-75132921%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="short-id.html"><span>short</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-75132921%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="short-id.html"><span class="token function">shortId</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

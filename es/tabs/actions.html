@@ -9,13 +9,14 @@
   <title>Actions &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/tabs/actions.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul class="current">
@@ -70,8 +77,10 @@
 <li class="toctree-l1"><a class="reference internal" href="control.html">Control</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="inspect.html">Inspeccionar la red</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="diagnostics.html">Diagnóstico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alerts.html">Alertas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="topics.html">Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="message.html">Mensaje</a></li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">Services</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Actions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="node-graph.html">Grafo de nodos</a></li>
@@ -84,14 +93,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -130,13 +143,21 @@
              
   <section id="actions">
 <h1>Actions<a class="headerlink" href="#actions" title="Link to this heading"></a></h1>
-<figure class="vm-clip vm-right"><video src="../_static/clips/clip_actions.mp4" poster="../_static/shots/shot_actions.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Todas las acciones de la red, como <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">action</span> <span class="pre">list</span></code>. Pulsa una para enviar un goal:</p>
+<figure class="vm-clip vm-right"><video src="../_static/clips/clip_actions.mp4" poster="../_static/shots/shot_actions.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Todas las acciones de la red, como <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">action</span> <span class="pre">list</span></code>; las que no tienen servidor van marcadas.
+Pulsa una para enviar un goal:</p>
 <ol class="arabic simple">
 <li><p>Rellena el formulario del <strong>Goal</strong> y pulsa <strong>Enviar goal</strong>.</p></li>
 <li><p>El <strong>Feedback</strong> se actualiza en directo mientras se ejecuta; <strong>Cancelar</strong> lo detiene.</p></li>
-<li><p>El <strong>Resultado</strong> aparece con su estado final (<em>SUCCEEDED</em>, <em>CANCELED</em>, <em>ABORTED</em>).</p></li>
+<li><p>El <strong>Resultado</strong> aparece con su estado final (<em>SUCCEEDED</em>, <em>CANCELED</em>, <em>ABORTED</em>) y lo que ha
+tardado.</p></li>
 </ol>
-<p>Se pueden ejecutar varios goals a la vez, cada uno con su feedback.</p>
+<p>El tipo de la acción tiene que venir con la app o haberlo definido tú: si no, <em>Definir el tipo…</em> te
+lo pide (<a class="reference internal" href="buttons.html#custom-types"><span class="std std-ref">tus propios tipos</span></a>). En esta pantalla se ejecuta un goal cada vez, y
+al salir de ella se cancela el que esté en marcha (girar el móvil no lo cancela). Las acciones
+funcionan con los mismos middlewares que <a class="reference internal" href="services.html"><span class="doc">Services</span></a>; a través de foxglove_bridge, el bridge
+tiene que arrancarse con <code class="docutils literal notranslate"><span class="pre">include_hidden:=true</span></code> (mira <a class="reference internal" href="../config/network.html"><span class="doc">Red</span></a>). Para enviar a
+menudo el mismo goal, hazte un botón en la pestaña <a class="reference internal" href="buttons.html"><span class="doc">Botones</span></a>.</p>
+<p>En el PC la pantalla del goal se abre dentro de la pestaña; la flecha de arriba vuelve a la lista.</p>
 </section>
 
 
@@ -151,7 +172,7 @@
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -178,7 +199,7 @@
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

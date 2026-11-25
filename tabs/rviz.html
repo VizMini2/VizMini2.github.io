@@ -9,13 +9,14 @@
   <title>RViz &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tabs/rviz.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -62,6 +64,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul class="current">
@@ -70,12 +77,20 @@
 <li class="toctree-l3"><a class="reference internal" href="#creating-it">Creating it</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#displays">Displays</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#views-and-gestures">Views and gestures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#goal-and-pose">Goal and Pose</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#import-a-rviz-file">Import a .rviz file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tools">Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nav2-bar">Nav2 bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#going-back">Going back</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-and-export-rviz">Import and export .rviz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-annotations">Image annotations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#robot-meshes">Robot meshes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="camera.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indicators.html">Indicators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html">Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gps.html">GPS map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="behavior_tree.html">Behavior tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plansys2.html">PlanSys2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashboard.html">Dashboard</a></li>
 </ul>
 </li>
@@ -87,14 +102,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -133,22 +152,39 @@
              
   <section id="rviz">
 <h1>RViz<a class="headerlink" href="#rviz" title="Link to this heading"></a></h1>
-<figure class="vm-clip vm-right"><video src="../_static/clips/clip_rviz.mp4" poster="../_static/shots/shot_rviz.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>A 3D view of your robot, like RViz: TF, maps, lasers, point clouds, markers, paths, poses and the
-robot model, with Nav2 goal and initial pose tools.</p>
+<figure class="vm-clip vm-right"><video src="../_static/clips/clip_rviz.mp4" poster="../_static/shots/shot_rviz.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>A 3D view of your robot, like RViz: TF, maps, lasers, point clouds, cameras, markers, paths, poses,
+the robot model and MoveIt’s planned paths, with the Nav2 tools (goal, initial pose and waypoint
+routes) and a MoveIt goal you move by dragging. The phone and the PC draw the same scene with the same
+displays.</p>
 <section id="creating-it">
 <h2>Creating it<a class="headerlink" href="#creating-it" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>Fixed frame:</strong> leave it empty to pick one automatically (<code class="docutils literal notranslate"><span class="pre">map</span></code>, <code class="docutils literal notranslate"><span class="pre">odom</span></code>… or the root of the
 TF tree).</p></li>
 <li><p><strong>Add map, laser, robot model and path displays</strong> (on by default): adds <em>Map</em>, <em>RobotModel</em>,
-<em>LaserScan</em> and a <em>Path</em> called <em>Plan</em> on <code class="docutils literal notranslate"><span class="pre">/plan</span></code>, ready for a typical Nav2 robot.</p></li>
+<em>LaserScan</em> and a <em>Path</em> called <em>Plan</em> on <code class="docutils literal notranslate"><span class="pre">/plan</span></code> to the <em>Grid</em> and <em>TF</em> every view starts
+with, ready for a typical Nav2 robot.</p></li>
 </ul>
 </section>
 <section id="displays">
 <h2>Displays<a class="headerlink" href="#displays" title="Link to this heading"></a></h2>
-<p>Displays appear as chips at the bottom. Tap <strong>Add</strong> to add one <em>by display type</em> or <em>by topic</em>
-(the search lists every topic on the network that can be displayed). Long-press a chip to edit or
-remove it. Each display has its own QoS: <em>Best effort</em>, <em>Reliable</em> or <em>Transient local</em>.</p>
+<p>On the phone, displays appear as chips at the bottom, with a dot for their status. Tap a chip to
+turn the display on or off and long-press it to edit or remove it. Tap <strong>Add</strong> to add one <em>by
+display type</em> or <em>by topic</em> (the search lists every topic on the network that can be displayed).</p>
+<p>Each display has its own QoS: <em>Best effort</em>, <em>Reliable</em> or <em>Transient local</em>, and you can also change
+the depth, history, reliability and durability one by one, as in RViz 2. When a display receives
+nothing, its dialog says why and, if it can, offers a fix with a button (another topic of the same
+type, or the QoS the publisher uses).</p>
+<p>On the PC, the displays are in a panel on the right, like in RViz: <em>Global Options</em> (fixed frame and
+background), <em>Global Status</em> and each display with its checkbox and its properties, edited in place.
+Right click a display for <em>Enable</em>/<em>Disable</em>, <em>Duplicate</em>, <em>Rename</em> and <em>Remove</em> (also at the bottom
+of the panel, next to <em>Add</em>). Drag the panel’s left edge to make it wider; the button at the top right hides it. In a narrow
+window or a dashboard widget the chips are shown instead: click to turn a display on or off, right
+click to edit it.</p>
+<p>The <strong>fixed frame</strong> is picked from the frames in TF or written by hand (on the phone, <em>Write a frame…</em>
+in its dialog; on the PC, type it in <em>Fixed Frame</em>), even one that does not exist yet: to leave a view
+ready for a robot that is not running. Until it appears in TF the automatic one is used, and on the PC
+<em>Global Status</em> says so.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 22.0%" />
@@ -165,7 +201,9 @@ remove it. Each display has its own QoS: <em>Best effort</em>, <em>Reliable</em>
 offset.</p></td>
 </tr>
 <tr class="row-odd"><td><p>TF</p></td>
-<td><p>Show names, axes and arrows; marker scale, name size, frame timeout.</p></td>
+<td><p>Show names, axes and arrows; marker scale, name size, frame timeout. The TF topics
+(<code class="docutils literal notranslate"><span class="pre">/tf,</span> <span class="pre">/tf_static</span></code> or a robot’s own, such as <code class="docutils literal notranslate"><span class="pre">/robot1/tf</span></code>) and which frames to hide: a
+checkbox per frame, or patterns such as <code class="docutils literal notranslate"><span class="pre">*wheel*</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p>Axes</p></td>
 <td><p>Frame, length, radius, alpha.</p></td>
@@ -176,7 +214,7 @@ optional <strong>mesh server</strong> (see below).</p></td>
 </tr>
 <tr class="row-even"><td><p>Map</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">nav_msgs/OccupancyGrid</span></code> with <em>map</em>, <em>costmap</em> or <em>raw</em> colors, alpha and <em>draw behind</em>.
-Large maps are downsampled to fit the phone’s GPU.</p></td>
+Large maps are downsampled to fit the GPU.</p></td>
 </tr>
 <tr class="row-odd"><td><p>LaserScan, PointCloud2, PointCloud</p></td>
 <td><p>Squares or circles, size, color by intensity, range, x/y/z, RGB or flat color, value
@@ -196,35 +234,152 @@ bounds, decay time (up to 30 s). PointCloud2 shows up to 500,000 points.</p></td
 </tr>
 <tr class="row-even"><td><p>Marker, MarkerArray</p></td>
 <td><p>Arrows, cubes, spheres, cylinders, lines, cube/sphere lists, points, triangle lists and
-text; delete, delete all and lifetime are honored. Mesh markers are not drawn.</p></td>
+text; delete, delete all and lifetime are honored. Mesh markers (<code class="docutils literal notranslate"><span class="pre">MESH_RESOURCE</span></code>, STL or
+Collada) are downloaded from the display’s <strong>mesh server</strong>, as in RobotModel.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Image</p></td>
+<td><p>A camera image in a panel over the 3D view: <code class="docutils literal notranslate"><span class="pre">sensor_msgs/Image</span></code>, <code class="docutils literal notranslate"><span class="pre">CompressedImage</span></code> (topics
+ending in <code class="docutils literal notranslate"><span class="pre">/compressed</span></code>) or H.264/H.265 video (<code class="docutils literal notranslate"><span class="pre">…/foxglove</span></code>, <code class="docutils literal notranslate"><span class="pre">…/ffmpeg</span></code>, see
+<a class="reference internal" href="camera.html"><span class="doc">Camera</span></a>). Corner, width and alpha. Several panels in the same corner are stacked; drag
+a panel to put it anywhere and drag its bottom-right corner (or pinch it, on the phone) to
+resize it.</p></td>
+</tr>
+<tr class="row-even"><td><p>Camera</p></td>
+<td><p>The camera image with the 3D scene drawn over it, seen from the camera itself: grid,
+markers, clouds, the robot… line up with what the camera sees. It uses the
+<code class="docutils literal notranslate"><span class="pre">camera_info</span></code> next to the image (<code class="docutils literal notranslate"><span class="pre">/camera/image_raw</span></code> → <code class="docutils literal notranslate"><span class="pre">/camera/camera_info</span></code>, or another
+one) for the projection and the TF of its frame for the pose. Corner and width; the panel is
+moved and resized like an Image panel. <strong>Image Rendering</strong>: image and scene, the image over
+the scene (with <em>Overlay Alpha</em>), only the image or only the scene.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DepthCloud</p></td>
+<td><p>A depth image (<code class="docutils literal notranslate"><span class="pre">16UC1</span></code> in mm or <code class="docutils literal notranslate"><span class="pre">32FC1</span></code> in m) and its <code class="docutils literal notranslate"><span class="pre">camera_info</span></code> turned into a point
+cloud, colored by distance or with the colors of another image (<em>Color Image Topic</em>). Max
+range, max points, point size and style. <code class="docutils literal notranslate"><span class="pre">…/compressedDepth</span></code> topics (PNG, from
+compressed_depth_image_transport) work too.</p></td>
+</tr>
+<tr class="row-even"><td><p>Effort</p></td>
+<td><p>The effort of each joint in <code class="docutils literal notranslate"><span class="pre">sensor_msgs/JointState</span></code> as an arc around the joint’s axis (from
+the URDF in <code class="docutils literal notranslate"><span class="pre">/robot_description</span></code>): the closer to the joint’s effort limit, the longer and
+redder; the arrow shows the direction. Radius and width.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GridCells</p></td>
+<td><p>Flat cells of <code class="docutils literal notranslate"><span class="pre">nav_msgs/GridCells</span></code> (obstacles, inflated areas…): color and alpha.</p></td>
+</tr>
+<tr class="row-even"><td><p>Wrench, TwistStamped, AccelStamped</p></td>
+<td><p>Two arrows at the message’s frame: force and torque, or linear and angular. The angular
+part is drawn along its axis (right-hand rule). Colors, scale of each arrow and width.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Temperature, Illuminance, FluidPressure, RelativeHumidity</p></td>
+<td><p>A sphere at the sensor’s frame, from blue (minimum) to red (maximum), with the value next to
+it.</p></td>
+</tr>
+<tr class="row-even"><td><p>Trajectory</p></td>
+<td><p>MoveIt’s planned path (<code class="docutils literal notranslate"><span class="pre">moveit_msgs/DisplayTrajectory</span></code> on <code class="docutils literal notranslate"><span class="pre">/display_planned_path</span></code>) played
+by a translucent ghost robot, built from the URDF and placed where the real robot is. Color,
+alpha, loop and speed; it can also show the goal of the <a class="reference internal" href="moveit.html"><span class="doc">MoveIt</span></a> panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p>PlanningScene</p></td>
+<td><p>MoveIt’s collision objects (<code class="docutils literal notranslate"><span class="pre">/monitored_planning_scene</span></code>): boxes, spheres, cylinders, cones
+and meshes, also those attached to the robot. Color and alpha.</p></td>
+</tr>
+<tr class="row-even"><td><p>NavMap</p></td>
+<td><p><a class="reference external" href="https://github.com/EasyNavigation/NavMap">EasyNavigation’s NavMap</a> (<code class="docutils literal notranslate"><span class="pre">/navmap</span></code>): a navigable
+surface of triangles, on one floor or several (ramps, stairs, multi-storey car parks), colored
+by one of its layers (cost, elevation, occupancy…) with <em>viridis</em>, <em>heat</em>, <em>rainbow</em> or a <em>flat</em> color,
+blended across cells or cell by cell; unknown cells in translucent gray. The links between
+floors (stairs, elevators, doors) as arcs colored by type, and the layer updates of
+<code class="docutils literal notranslate"><span class="pre">/navmap_layers</span></code> (whole or only the cells that change). Its RViz plugin’s settings are
+imported from <code class="docutils literal notranslate"><span class="pre">.rviz</span></code> files.</p></td>
+</tr>
+<tr class="row-odd"><td><p>InteractiveMarkers</p></td>
+<td><p>The controls of an interactive marker server (<code class="docutils literal notranslate"><span class="pre">&lt;namespace&gt;/update</span></code>): their markers or, if
+a control has none, RViz’s arrows and rings. Move them with the <strong>Interact</strong> tool.</p></td>
 </tr>
 </tbody>
 </table>
+<p>Each message is placed with the TF at its stamp, from the last 10 s of history. If the TF clock goes
+back in time (a bag playing in a loop, or a simulation restarted with <code class="docutils literal notranslate"><span class="pre">/clock</span></code>), the history is
+cleared, as in RViz, together with the points accumulated by the decay time, the <em>Odometry</em> trail
+and the <em>PointStamped</em> points.</p>
 </section>
 <section id="views-and-gestures">
 <h2>Views and gestures<a class="headerlink" href="#views-and-gestures" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Views: <strong>Orbit</strong>, <strong>XYOrbit</strong>, <strong>TopDownOrtho</strong>, <strong>FPS</strong> and <strong>ThirdPersonFollower</strong> (follows a
 frame, <code class="docutils literal notranslate"><span class="pre">base_link</span></code> by default). <em>Reset view</em> puts the camera back.</p></li>
+<li><p><strong>Saved views</strong> (in the menu; on the PC, at the bottom of the displays panel): save the current
+camera with a name and go back to it with a tap.</p></li>
 <li><p>One finger rotates, two fingers pan, pinch zooms and a two-finger twist rotates.</p></li>
 <li><p>The background can be dark, RViz gray, black, light gray, white or midnight blue.</p></li>
 </ul>
+<p>On the PC, drag with the left button to rotate, with the right or middle button (or <kbd class="kbd docutils literal notranslate">Shift</kbd> +
+left) to pan, and use the wheel to zoom.</p>
 </section>
-<section id="goal-and-pose">
-<h2>Goal and Pose<a class="headerlink" href="#goal-and-pose" title="Link to this heading"></a></h2>
+<section id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>Goal</strong> publishes a 2D goal pose (<code class="docutils literal notranslate"><span class="pre">geometry_msgs/PoseStamped</span></code>) to <code class="docutils literal notranslate"><span class="pre">/goal_pose</span></code>.</p></li>
 <li><p><strong>Pose</strong> publishes a 2D pose estimate (<code class="docutils literal notranslate"><span class="pre">PoseWithCovarianceStamped</span></code>) to <code class="docutils literal notranslate"><span class="pre">/initialpose</span></code>.</p></li>
 </ul>
-<p>Tap the ground and drag to set the heading. The pose is sent in the fixed frame (or <code class="docutils literal notranslate"><span class="pre">map</span></code>). You
-can change both topics from the menu, under <em>Goal / Pose topics…</em>. See <a class="reference internal" href="../tutorials/nav2.html"><span class="doc">Send Nav2 goals</span></a>.</p>
+<p>Tap the ground and drag to set the heading. The pose is sent in the fixed frame (or <code class="docutils literal notranslate"><span class="pre">map</span></code>).</p>
+<figure class="vm-clip vm-right"><video src="../_static/clips/clip_rviz_select.mp4" poster="../_static/shots/shot_rviz.webp" autoplay loop muted playsinline preload="metadata"></video><figcaption>Select: tap a point of the laser to see where it is.</figcaption></figure><p>On the phone, the ruler button holds the other tools; on the PC, they are all in the toolbar (there
+<em>Publish Point</em> is <strong>Point</strong> and <em>MoveIt goal</em> is <strong>MoveIt</strong>):</p>
+<ul class="simple">
+<li><p><strong>Publish Point</strong> sends the point of the ground you tap (<code class="docutils literal notranslate"><span class="pre">geometry_msgs/PointStamped</span></code>) to
+<code class="docutils literal notranslate"><span class="pre">/clicked_point</span></code>, like RViz. You can drag before lifting your finger to adjust it.</p></li>
+<li><p><strong>Measure</strong>: drag on the ground from one point to another to see the distance and how much it
+changes in x and y. The measurement stays until the next one or until you tap the ruler again.</p></li>
+<li><p><strong>Select</strong> works with point clouds and laser scans: tap a point to see where it is, in the fixed
+frame and in the sensor’s frame, and how far it is from the sensor.</p></li>
+<li><p><strong>Interact</strong> works with <em>InteractiveMarkers</em> displays: drag the arrows to move along an axis, a
+ring to rotate or to move in a plane, and tap buttons and menus. The server receives the same
+feedback as from RViz (<code class="docutils literal notranslate"><span class="pre">&lt;namespace&gt;/feedback</span></code>). Touching anywhere else moves the view as usual,
+and the tool stays on until you tap the ruler again.</p></li>
+<li><p><strong>Waypoints</strong> builds a Nav2 route: tap the ground and drag to set each waypoint’s heading. The
+tool stays on to keep adding them.</p></li>
+<li><p><strong>MoveIt goal</strong> shows arrows and rings on the gripper goal of an open <a class="reference internal" href="moveit.html"><span class="doc">MoveIt</span></a> panel (a tab
+or a widget): drag the arrows to move it and the rings to turn it, then <em>Plan</em> in the panel. If
+MoveIt finds no joints for that position, it says so.</p></li>
+</ul>
+<p>You can change the topics of Goal, Pose and Publish Point from the menu, under <em>Tool topics…</em>. See
+<a class="reference internal" href="../tutorials/nav2.html"><span class="doc">Send Nav2 goals</span></a>.</p>
 </section>
-<section id="import-a-rviz-file">
-<h2>Import a .rviz file<a class="headerlink" href="#import-a-rviz-file" title="Link to this heading"></a></h2>
-<p>From the menu, <strong>Import .rviz</strong> brings in the displays (all 18 types, groups included), the fixed
-frame, the background, the current view and the goal and pose topics of a config from desktop
-RViz. Anything it can’t use is listed as <em>Not supported here</em>. Importing replaces the tab’s current
-configuration. See <a class="reference internal" href="../tutorials/visualize-robot.html"><span class="doc">Visualize your robot in 3D</span></a>.</p>
+<section id="nav2-bar">
+<h2>Nav2 bar<a class="headerlink" href="#nav2-bar" title="Link to this heading"></a></h2>
+<p>With waypoints on the map, a bar at the top shows how many there are and how to send them: <strong>Stop
+at each</strong> (Nav2’s <code class="docutils literal notranslate"><span class="pre">FollowWaypoints</span></code>, optionally in a <strong>Loop</strong>) or <strong>Pass through</strong> without stopping
+(<code class="docutils literal notranslate"><span class="pre">NavigateThroughPoses</span></code>). The buttons remove the last waypoint or all of them, and <strong>Go</strong> sends the
+route (<strong>Cancel</strong> stops it). While it runs, the bar shows the current waypoint, the distance and time
+left and the recoveries. The route is saved with the tab.</p>
+<p>The bar also shows the progress of any <code class="docutils literal notranslate"><span class="pre">navigate_to_pose</span></code> goal, such as one sent with the <strong>Goal</strong>
+tool.</p>
+</section>
+<section id="going-back">
+<h2>Going back<a class="headerlink" href="#going-back" title="Link to this heading"></a></h2>
+<p>The <strong>Go back</strong> button (the clock with an arrow) replays the last minute of this view (its displays’ topics and TF), without having
+recorded a bag: only on this device, in a loop, with the usual time bar to pause, change the speed or
+jump. Closing the bar goes back to the live robot. On the PC the view keeps that minute from the
+start; on the phone the first tap (or <em>Keep the last minute</em> in the menu) turns it on, because it
+uses memory.</p>
+</section>
+<section id="import-and-export-rviz">
+<h2>Import and export .rviz<a class="headerlink" href="#import-and-export-rviz" title="Link to this heading"></a></h2>
+<p>From the menu, <strong>Import .rviz file…</strong> brings in the displays (every type in the table, groups
+included; MoveIt’s <em>MotionPlanning</em> becomes a <em>Trajectory</em>), the fixed frame, the background, the
+current view and the goal, pose and point topics of a config from desktop RViz. Anything it can’t
+use is listed as <em>Not supported here</em>. Importing replaces the tab’s current configuration.
+<strong>Export .rviz…</strong> saves the view as a file you can open with <code class="docutils literal notranslate"><span class="pre">rviz2</span> <span class="pre">-d</span></code>. See
+<a class="reference internal" href="../config/import-export.html"><span class="doc">Import and export</span></a> and <a class="reference internal" href="../tutorials/visualize-robot.html"><span class="doc">Visualize your robot in 3D</span></a>.</p>
+</section>
+<section id="image-annotations">
+<h2>Image annotations<a class="headerlink" href="#image-annotations" title="Link to this heading"></a></h2>
+<p>Image and Camera have an <strong>Annotations Topic</strong>: boxes, circles, lines and texts drawn on the image,
+from <code class="docutils literal notranslate"><span class="pre">visualization_msgs/ImageMarker</span></code> (they add up by namespace and id, with their lifetime, like
+image_view) or from Foxglove’s <code class="docutils literal notranslate"><span class="pre">foxglove_msgs/ImageAnnotations</span></code> (each message replaces the
+previous one). The type is found on the network by itself. Coordinates are the image’s pixels. On an
+Image panel the eye button (or a double tap) shows or hides them; on Camera, the <em>Show Annotations</em>
+option does.</p>
 </section>
 <section id="robot-meshes">
 <h2>Robot meshes<a class="headerlink" href="#robot-meshes" title="Link to this heading"></a></h2>
@@ -248,7 +403,7 @@ Without a mesh server, parts that use meshes are not drawn and the display says 
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -275,7 +430,7 @@ Without a mesh server, parts that use meshes are not drawn and the display says 
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

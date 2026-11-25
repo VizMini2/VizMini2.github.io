@@ -9,20 +9,21 @@
   <title>Diagnóstico &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/tabs/diagnostics.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="Nodos" href="nodes.html" />
+    <link rel="next" title="Alertas" href="alerts.html" />
     <link rel="prev" title="Inspeccionar la red" href="inspect.html" /> 
 </head>
 
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul class="current">
@@ -70,8 +77,10 @@
 <li class="toctree-l1"><a class="reference internal" href="control.html">Control</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="inspect.html">Inspeccionar la red</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Diagnóstico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alerts.html">Alertas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="topics.html">Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="message.html">Mensaje</a></li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="actions.html">Actions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="node-graph.html">Grafo de nodos</a></li>
@@ -84,14 +93,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -130,21 +143,28 @@
              
   <section id="diagnostico">
 <h1>Diagnóstico<a class="headerlink" href="#diagnostico" title="Link to this heading"></a></h1>
-<figure class="vm-clip vm-right"><video src="../_static/clips/clip_diagnostics.mp4" poster="../_static/shots/shot_diagnostics.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Cuatro vistas en una pestaña; elige con cuál empezar al crearla.</p>
+<figure class="vm-clip vm-right"><video src="../_static/clips/clip_diagnostics.mp4" poster="../_static/shots/shot_diagnostics.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Cuatro vistas en una pestaña; elige con cuál empezar al crearla y cambia de una a otra arriba. Todas
+tienen <em>Pausar</em>, <em>Reanudar</em> y <em>Borrar</em>, y una línea de estado con lo que ha llegado.</p>
 <dl class="simple">
 <dt>Log</dt><dd><p><code class="docutils literal notranslate"><span class="pre">/rosout</span></code> con un nivel mínimo (<em>DEBUG</em>, <em>INFO</em>, <em>WARN</em>, <em>ERROR</em>, <em>FATAL</em>; <em>INFO</em> y superiores
-por defecto), un filtro por nodo o texto, y las últimas 2000 líneas. <em>Pausar</em>, <em>Reanudar</em> y
-<em>Borrar</em>.</p>
+por defecto), un filtro por nodo o texto, y las últimas 2000 líneas. El botón de <strong>nodos</strong> deja
+solo los que elijas. Toca una línea para verla entera, con su hora exacta, el fichero, la línea y
+la función; desde ahí se <strong>copia</strong> o, en el móvil, se <strong>comparte el log</strong> (lo que dejan los
+filtros) como texto.</p>
 </dd>
-<dt>Diagnostics</dt><dd><p><code class="docutils literal notranslate"><span class="pre">/diagnostics</span></code> agrupado por nivel, como <code class="docutils literal notranslate"><span class="pre">rqt_robot_monitor</span></code>. Pulsa una entrada para ver sus
-valores.</p>
+<dt>Diagnostics</dt><dd><p><code class="docutils literal notranslate"><span class="pre">/diagnostics</span></code> como <code class="docutils literal notranslate"><span class="pre">rqt_robot_monitor</span></code>: primero el peor nivel, con un recuento por nivel.
+Las entradas que pasan 10 segundos sin novedades pasan a <em>STALE</em>. Pulsa una entrada para
+desplegar sus valores y su ID de hardware.</p>
 </dd>
-<dt>Echo</dt><dd><p>Los mensajes en directo de cualquier topic. Elige el tipo con <strong>Tipo…</strong> y la QoS con <strong>QoS</strong>:
-<em>Best effort</em> recibe de cualquier publicador, <em>Reliable</em>, o <em>Transient local</em> para recibir el
-último mensaje que guarda el publicador (por ejemplo <code class="docutils literal notranslate"><span class="pre">/map</span></code>).</p>
+<dt>Echo</dt><dd><p>Los mensajes en directo de cualquier topic. Escribe el topic y pulsa ✓ (en los topics conocidos
+se rellena el tipo), elige el tipo con <strong>Tipo…</strong> de una lista de tipos comunes y la QoS con
+<strong>QoS</strong>: <em>Best effort</em> (por defecto) recibe de cualquier publicador, <em>Reliable</em>, o <em>Transient
+local</em> para recibir el último mensaje que guarda el publicador (por ejemplo <code class="docutils literal notranslate"><span class="pre">/map</span></code>). Para otros
+tipos, usa <a class="reference internal" href="message.html"><span class="doc">Mensaje</span></a> o <a class="reference internal" href="topics.html"><span class="doc">Topics</span></a>.</p>
 </dd>
-<dt>Plot</dt><dd><p>Hasta cuatro campos numéricos de un topic durante los últimos 30 segundos. Los mensajes sin
-números (mapas, imágenes, nubes de puntos) no se pueden dibujar.</p>
+<dt>Plot</dt><dd><p>Hasta cuatro campos numéricos de un topic, elegidos con <strong>Campos</strong>, durante los últimos 30
+segundos. Los mensajes sin números (mapas, imágenes, nubes de puntos) no se pueden dibujar. Para
+más, usa una pestaña <a class="reference internal" href="plot.html"><span class="doc">Gráficas</span></a>.</p>
 </dd>
 </dl>
 </section>
@@ -154,14 +174,14 @@ números (mapas, imágenes, nubes de puntos) no se pueden dibujar.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="inspect.html" class="btn btn-neutral float-left" title="Inspeccionar la red" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="nodes.html" class="btn btn-neutral float-right" title="Nodos" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="alerts.html" class="btn btn-neutral float-right" title="Alertas" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -188,7 +208,7 @@ números (mapas, imágenes, nubes de puntos) no se pueden dibujar.</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

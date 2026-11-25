@@ -1,7 +1,63 @@
 # Changelog
 
 All notable changes to VizMini2 are documented here.
-The format follows Keep a Changelog, and the project uses semantic versioning (pre-1.0: minor versions may still change behaviour).
+The format follows Keep a Changelog, and the project uses semantic versioning.
+
+## [1.0.0] - 2026-11-25
+
+### Added
+- **VizMini2 for the PC (Linux and Windows):** the same tabs as on the phone, in a window. On Linux, install the `.deb` on Ubuntu 20.04 or newer, or build it as a ROS 2 package and start it with `ros2 run vizmini2 vizmini2` (the first time it takes the domain and the peers from the terminal). It has the demo robot too (Configuration › Start demo, or `vizmini2 --demo`), on that computer only.
+- **On Windows 10 and 11** (64-bit): install the `.msi` (for your user, no administrator needed: it asks where, and adds a shortcut on the desktop and in the Start menu) or unzip the `.zip`. Uninstalling it from Settings › Apps keeps your settings, bags and videos. H.264/H.265 video and recording the window use ffmpeg (`winget install ffmpeg`; without it, the app says how to get it), the open and save dialogs are Windows' own, and a notification says when a video is saved (click it to see the video in Explorer).
+- **MoveIt tab:** plan and move a robot arm with `move_group`: planning groups and named poses, a slider per joint, moving the gripper in X, Y, Z and around its axes, straight lines, the planner and the planning time, and obstacles. Works with the MoveIt of Humble, Jazzy and newer.
+- **Controllers tab (ros2_control):** the controllers of a controller manager with their state; activate, deactivate, configure, load and unload them; move the joints of trajectory and forward command controllers; and the hardware components with their interfaces. Foxy, Humble, Jazzy and newer.
+- **Maps tab:** save the map on the robot (Nav2's map_saver or SLAM Toolbox) or download it as PGM and YAML, pause SLAM, clear the costmaps, and draw keepout and speed limit zones published as Nav2 costmap filter masks.
+- **Alerts tab:** your own rules on any topic (a value above or below a threshold, or no messages for some seconds) with notifications, also in the background, and the latest notices.
+- **PlanSys2 tab:** follow a PlanSys2 plan while it runs, like its terminal monitor: the plan with the state and progress of each action, the actions under way and their performers, the knowledge (instances, predicates, functions and the goal, with what already holds) and the plan log, what the executor does and why. The four together or each one on its own. PlanSys2 4.0.0 and newer (Jazzy, rolling) and the earlier 3.x messages; the demo robot has one too.
+- **H.264 and H.265 video topics** (`foxglove_msgs/CompressedVideo` and ffmpeg_image_transport) in the Camera tab and in the 3D view's Image and Camera displays. The demo camera is also published as H.264.
+- **Record the screen as a video:** the record button at the top (saved to Movies/VizMini2); on the PC, Record video in the sidebar.
+- **Import and export** RViz 2 files, panel layouts (`.json`) and plot layouts (`.xml`), from + and from each tab's menu. Publish panels become buttons, and every tab of a layout comes in as a dashboard of its own.
+- **Plot tab:** series over time, XY, state transitions, spectrum and histogram, with formulas and Lua scripts, from topics, bags, CSV files, UDP, MQTT and ZeroMQ.
+- **Indicators, GPS map, Behavior tree** (Groot2 with the blackboard, recording and breakpoints, and the Nav2 log), **Message** and **Parameters** tabs.
+- **3D view:** Camera, DepthCloud, Effort, Image with annotations, Trajectory (the planned path as a ghost robot) and Planning scene displays, mesh markers, interactive markers, the Select, Measure and Publish point tools, and a MoveIt tool to drag the arm's goal. Image and camera panels can be moved and resized.
+- **NavMap display:** EasyNavigation's NavMap maps (`navmap_ros_interfaces/NavMap`) in the 3D view: navigable surfaces on one or several floors, colored by any of their layers (cost, elevation, occupancy…), with the links between floors (stairs, elevators, doors) and live layer updates. RViz files with its plugin are imported and exported.
+- **Fixed frame written by hand:** in the RViz tab, type any frame, even one that is not in TF yet, to leave a view ready; the automatic one is used until it appears.
+- **Robots on rmw_zenoh_cpp** (Zenoh router in Config › Network), and services, actions, parameters and lifecycle of nodes on rmw_cyclonedds_cpp.
+- **Through foxglove_bridge:** topics, services, parameters, actions and the node graph.
+- **Find robots** (Config › Network) lists the ROS domains with nodes on the network; tap one to connect.
+- **Topic variables:** write `${name}` in any topic and set its value once in Config, to switch every tab to another robot at once.
+- **Bags:** direct playback with a shared timeline for every tab.
+- **Tabs:** duplicate them, share them as a file and import them (on the PC, right-click a tab to rename, duplicate, delete or export it). Dashboard widgets stay where you drop them and can overlap (a joystick over the 3D view), and the camera and joystick widgets are more compact.
+- **Message types the app doesn't bring:** paste their definition (what `ros2 interface show` prints) right where you need them, from the Topics, Message, Services and Actions tabs or from any type list, and use them straight away.
+- The Camera tab shows up to four cameras, with their annotations.
+- The Nodes tab shows the DDS each node runs on.
+- The demo robot has a ros2_control controller manager (deactivating its diff_drive_controller stops it) and its camera also as H.264 video.
+
+### Changed
+- **No account needed:** the app opens straight on Home and connects to your robots without one; an account (Google, Microsoft or GitHub) only syncs your robot profiles between devices.
+- VizMini2 is free software under the Apache License 2.0.
+- New app icon and logo, on the phone and on the PC.
+- The app targets Android 16 (API 36).
+- Buttons: a long list in a result shows its first values and how many there are (`[0, 1, 1, 2, 3, 5, …] (11)`) instead of just `[11]`.
+- Bags: the recording statistics and the playback position update while they run.
+- PC: the sidebar's tabs get shorter to fit a small window, and a scrollbar appears when there are more.
+- PC: Record video and Ctrl+Shift+R say when ffmpeg is missing and how to install it, and ffmpeg is also found where winget and the usual installs leave it.
+- PC: the open and save dialogs have a title and only list the right kind of file, and the extension is added when you type a name without one.
+- PC: the installers are about 40 MB smaller (each one only carries its own system's native libraries).
+- PC command line: `--tab` also takes a tab's name, and `--import` opens the imported tab.
+- The teleop control presets and the buttons of the PC's RViz displays panel (Add, Duplicate, Remove, Rename, Background Color) are translated.
+
+### Fixed
+- Services: several calls at once to the same service (also action results) each get their own response, even when the server answers out of order; and ROS 2 clients on Fast DDS, such as `ros2 service call`, can use the services the app serves (the demo robot's).
+- PC: any click in a Teleop tab (such as the demo's Drive) gives it the keyboard back after the sidebar or a dialog took it.
+- PC: on Windows, the robot's meshes are also found in the local ROS 2 install (`AMENT_PREFIX_PATH`).
+- PC: the app no longer creates an `.ihmc` folder in your home folder.
+- Crashes at startup on Android 12 and 13, on Android 8 and 9, and when turning the phone to landscape in RViz or Camera.
+- With a bag playing in a loop or a restarted simulation, the 3D view stayed frozen: the TF history is cleared when the time jumps back, as in RViz.
+- Bags: changing the playback speed made messages arrive in bursts or stall, and some files could make the reader hang.
+- After signing in with another account, the profiles of the previous one were uploaded to the new account.
+- A mesh used by two displays at once was not shown on the second one, and a plot could freeze the app with very large values.
+- Two parts of the app publishing on the same topic at once could send a message twice, and interactive marker buttons could miss a click.
+- The demo robot never came to a full stop (its speed kept flickering).
 
 ## [0.18.0] - 2026-10-11
 
@@ -117,7 +173,7 @@ The format follows Keep a Changelog, and the project uses semantic versioning (p
 ## [0.11.0] - 2026-09-19
 
 ### Added
-- Bags tab: record topics to MCAP files compatible with `ros2 bag` and Foxglove, play them back to the network (0.5×, 1×, 2×, loop), import, share and delete recordings.
+- Bags tab: record topics to MCAP files compatible with `ros2 bag`, play them back to the network (0.5×, 1×, 2×, loop), import, share and delete recordings.
 - Node inspector: parameters of any node, editable like `ros2 param` (all types, ranges and read-only flags), plus what it publishes, subscribes to and the services it offers.
 - Network graph: nodes and topics like `rqt_graph`, with search and filters, and a live TF tree like `rqt_tf_tree`.
 - Nodes count on Home; tap a node to open it in the inspector.

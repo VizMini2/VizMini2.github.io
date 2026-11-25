@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gráficas &mdash; Documentación de VizMini2</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/tabs/plot.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Mapa GPS" href="gps.html" />
+    <link rel="prev" title="Indicadores" href="indicators.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutoriales</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/drive-demo.html">Conducir el robot de la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/visualize-robot.html">Ver tu robot en 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="visualize.html">Visualizar</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camera.html">Cámara</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indicators.html">Indicadores</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Gráficas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#paneles-y-series">Paneles y series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#formulas">Fórmulas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scripts-lua">Scripts Lua</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paneles">Paneles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moverse-por-el-tiempo">Moverse por el tiempo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bags">Bags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#otras-fuentes-udp-mqtt-y-zeromq">Otras fuentes: UDP, MQTT y ZeroMQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exportar">Exportar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gps.html">Mapa GPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="behavior_tree.html">Árbol de comportamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plansys2.html">PlanSys2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard.html">Dashboard</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inspect.html">Inspeccionar la red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="record.html">Grabar</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuración</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Solución de problemas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requisitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Limitaciones conocidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contacto y apoyo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Registro de cambios</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="visualize.html">Visualizar</a></li>
+      <li class="breadcrumb-item active">Gráficas</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="graficas">
+<h1>Gráficas<a class="headerlink" href="#graficas" title="Link to this heading"></a></h1>
+<figure class="vm-clip vm-right"><video src="../_static/clips/clip_plot.mp4" poster="../_static/shots/shot_plot.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Gráficas de cualquier campo numérico: varios paneles con el mismo eje de tiempo,
+series de distintos topics, gráficas XY y los datos de un bag grabado.</p>
+<section id="paneles-y-series">
+<h2>Paneles y series<a class="headerlink" href="#paneles-y-series" title="Link to this heading"></a></h2>
+<p>Una pestaña tiene hasta tres paneles (menú ⋮ → <em>Añadir panel</em>) con hasta seis series cada uno. En
+cada panel, <strong>Añadir serie</strong> pide el topic (sugiere los de la red, o los del bag abierto), el tipo de mensaje y el <strong>campo</strong>, que
+se escribe como en los <a class="reference internal" href="indicators.html"><span class="doc">Indicadores</span></a>: <code class="docutils literal notranslate"><span class="pre">twist.twist.linear.x</span></code>, <code class="docutils literal notranslate"><span class="pre">ranges[-1]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">status{name==motor}.level</span></code>… Cada serie lleva
+un nombre, un color y una transformación:</p>
+<ul class="simple">
+<li><p><strong>Derivada</strong>: cuánto cambia por segundo (de una posición, la velocidad).</p></li>
+<li><p><strong>Media móvil</strong> de las últimas <em>N</em> muestras, para suavizar.</p></li>
+<li><p><strong>Integral</strong>: la suma acumulada en el tiempo (de una velocidad, la distancia).</p></li>
+<li><p><strong>Escala</strong> y <strong>desplazamiento</strong>: valor × escala + desplazamiento (57.2958 pasa radianes a grados).</p></li>
+</ul>
+</section>
+<section id="formulas">
+<h2>Fórmulas<a class="headerlink" href="#formulas" title="Link to this heading"></a></h2>
+<p>Elige <strong>Fórmula</strong> en vez de <em>Campo de un topic</em> para calcular una serie con otras.
+Cada serie va entre llaves con su nombre de la leyenda (en el diálogo, tócala
+para meterla):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{cmd}</span> <span class="pre">-</span> <span class="pre">{odom}</span></code>: el error entre una orden y la medida;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hypot({vx},</span> <span class="pre">{vy})</span></code>: la velocidad a partir de sus componentes;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deg(atan2({y},</span> <span class="pre">{x}))</span></code>, <code class="docutils literal notranslate"><span class="pre">{velocidad}</span> <span class="pre">*</span> <span class="pre">3.6</span></code>…</p></li>
+</ul>
+<p>Se pueden usar <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">-</span> <span class="pre">*</span> <span class="pre">/</span> <span class="pre">%</span> <span class="pre">^</span></code>, paréntesis, <code class="docutils literal notranslate"><span class="pre">pi</span></code>, <code class="docutils literal notranslate"><span class="pre">e</span></code> y <code class="docutils literal notranslate"><span class="pre">abs</span> <span class="pre">sqrt</span> <span class="pre">exp</span> <span class="pre">log</span> <span class="pre">log10</span> <span class="pre">sin</span> <span class="pre">cos</span> <span class="pre">tan</span>
+<span class="pre">asin</span> <span class="pre">acos</span> <span class="pre">atan</span> <span class="pre">atan2</span> <span class="pre">hypot</span> <span class="pre">min</span> <span class="pre">max</span> <span class="pre">floor</span> <span class="pre">ceil</span> <span class="pre">round</span> <span class="pre">sign</span> <span class="pre">deg</span> <span class="pre">rad</span></code>. El valor se calcula cada vez que
+la primera serie de la fórmula tiene una muestra nueva, con el último valor de las demás. Una
+fórmula puede usar otra, y sigue funcionando si cambias el nombre de una serie que usa. La
+transformación, la escala y el desplazamiento también valen para las fórmulas.</p>
+</section>
+<section id="scripts-lua">
+<h2>Scripts Lua<a class="headerlink" href="#scripts-lua" title="Link to this heading"></a></h2>
+<p>Para lo que no da una fórmula (guardar un estado, condiciones, bucles), elige <strong>Script (Lua)</strong>.
+Elige las <strong>series de entrada</strong> (la primera marca el tiempo),
+escribe las <strong>variables globales</strong> (se ejecutan una vez) y el cuerpo de
+<code class="docutils literal notranslate"><span class="pre">function(time,</span> <span class="pre">value,</span> <span class="pre">v1,</span> <span class="pre">v2…)</span></code>: <code class="docutils literal notranslate"><span class="pre">value</span></code> es la primera entrada, <code class="docutils literal notranslate"><span class="pre">v1</span></code>, <code class="docutils literal notranslate"><span class="pre">v2</span></code>… el último
+valor de las demás y <code class="docutils literal notranslate"><span class="pre">time</span></code> va en segundos. Devuelve un número, o <code class="docutils literal notranslate"><span class="pre">nil</span></code> para saltarte esa
+muestra. Por ejemplo, la distancia recorrida a partir de una velocidad, que vuelve a cero al
+pararse:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">globales</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">last</span> <span class="o">=</span> <span class="n">nil</span>
+
+<span class="o">--</span> <span class="n">función</span>
+<span class="k">if</span> <span class="n">last</span> <span class="o">~=</span> <span class="n">nil</span> <span class="n">then</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">dist</span> <span class="o">+</span> <span class="n">value</span> <span class="o">*</span> <span class="p">(</span><span class="n">time</span> <span class="o">-</span> <span class="n">last</span><span class="p">)</span> <span class="n">end</span>
+<span class="n">last</span> <span class="o">=</span> <span class="n">time</span>
+<span class="k">if</span> <span class="n">math</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.01</span> <span class="n">then</span> <span class="n">dist</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">end</span>
+<span class="k">return</span> <span class="n">dist</span>
+</pre></div>
+</div>
+<p>Los scripts tienen <code class="docutils literal notranslate"><span class="pre">math</span></code>, <code class="docutils literal notranslate"><span class="pre">string</span></code> y <code class="docutils literal notranslate"><span class="pre">table</span></code>, sin acceso a archivos ni al sistema.</p>
+</section>
+<section id="paneles">
+<h2>Paneles<a class="headerlink" href="#paneles" title="Link to this heading"></a></h2>
+<p>Toca una serie para editarla o quitarla. Desde el menú ⋮ del panel, <strong>Ver como XY (x frente a y)</strong>
+enseña la primera serie (x) frente a la segunda (y) (un panel XY lleva esas dos series), por ejemplo
+la trayectoria de <code class="docutils literal notranslate"><span class="pre">/odom</span></code>. Con <strong>Misma escala en x e y</strong> la trayectoria no se deforma. <strong>Ver en el
+tiempo</strong> lo devuelve a un panel normal y <strong>Quitar panel</strong> lo borra.</p>
+<p><strong>Ver como transiciones de estado</strong> dibuja cada
+serie como una franja que cambia de color cada vez que cambia su valor, con el valor escrito encima:
+un modo, el estado de la navegación, el de la batería… En estos paneles una serie también puede ser
+un campo de <strong>texto</strong> (<code class="docutils literal notranslate"><span class="pre">status.message</span></code>, <code class="docutils literal notranslate"><span class="pre">mode</span></code>): cada texto distinto tiene su color.</p>
+<p><strong>Ver como espectro (FFT)</strong> dibuja la amplitud de cada frecuencia de lo que hay en la ventana de
+tiempo (la leyenda dice el pico), útil para encontrar vibraciones; <strong>Ver como histograma</strong> dibuja
+cómo se reparten los valores, con la media y la desviación típica en la leyenda. En los paneles XY,
+<strong>Puntos en vez de una línea</strong> dibuja una nube de puntos.</p>
+</section>
+<section id="moverse-por-el-tiempo">
+<h2>Moverse por el tiempo<a class="headerlink" href="#moverse-por-el-tiempo" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Pellizca</strong> para cambiar la ventana de tiempo (también con el botón de la duración, de 5 s a 15 min).</p></li>
+<li><p><strong>Arrastra</strong> hacia la derecha para ir atrás: la gráfica deja de seguir los datos nuevos. El botón
+de pausa hace lo mismo y el de reproducir vuelve a seguirlos.</p></li>
+<li><p><strong>Toca</strong> un instante para poner el cursor: la leyenda de cada panel enseña el valor de todas las
+series en ese momento. El <strong>doble toque</strong> quita el cursor y vuelve a seguir los datos.</p></li>
+<li><p><strong>Mantén pulsado</strong> para poner un segundo cursor y <strong>medir</strong>: se sombrea lo que hay entre los dos y
+la leyenda enseña el tiempo entre ellos (Δt) y, de cada serie, su valor en el segundo cursor y
+cuánto ha cambiado (Δ).</p></li>
+</ul>
+<p>En el PC, la rueda del ratón cambia la ventana de tiempo, arrastrar mueve por el tiempo, un clic pone
+el cursor, mantener pulsado el botón pone el segundo y un doble clic los quita.</p>
+<p><strong>Estadísticas</strong> (menú ⋮) añade bajo cada panel de tiempo el mínimo, el máximo, la media, la
+desviación típica (σ), la frecuencia (Hz) y el número de muestras de cada serie, de lo que se ve o,
+con dos cursores, de lo que hay entre ellos. <strong>Borrar datos</strong> vacía las gráficas en vivo.</p>
+<p>El tiempo de cada muestra es cuando llegó. Con <strong>Tiempo de header.stamp</strong> (menú
+⋮) es en cambio el <code class="docutils literal notranslate"><span class="pre">header.stamp</span></code> de cada mensaje (en los mensajes sin header, sigue siendo cuando
+llegó). Es el momento en que se midió el dato, y alinea topics que llegan con retrasos distintos.
+Si el robot va con tiempo simulado, la ventana sigue al último dato y no al reloj del dispositivo. En los
+bags sustituye a la hora en que se grabó cada mensaje.</p>
+</section>
+<section id="bags">
+<h2>Bags<a class="headerlink" href="#bags" title="Link to this heading"></a></h2>
+<p>En el botón de la fuente (<em>En vivo</em>) elige un bag de los que hay en las pestañas <a class="reference internal" href="bags.html"><span class="doc">Bags</span></a>. Se lee
+entero sin publicar nada, con el tiempo de cada mensaje en el bag, y abajo aparece una línea de
+tiempo para mover el cursor. El botón de reproducir lo recorre a velocidad real.</p>
+<p>Los bags largos no tienen que caber en memoria: las series con más de 150 000 mensajes se enseñan
+primero reducidas (el mínimo y el máximo de cada tramo, que es lo que se ve con la ventana abierta, y
+el botón de la fuente pone <em>vista reducida</em>). Al acercarte se vuelve a leer solo el tramo visible a
+resolución completa.</p>
+<p><strong>Importar CSV…</strong> en el mismo botón abre un CSV como fuente (en el PC, con el diálogo de archivos del
+sistema): la columna que se llama <code class="docutils literal notranslate"><span class="pre">time</span></code> (o <code class="docutils literal notranslate"><span class="pre">timestamp</span></code>, <code class="docutils literal notranslate"><span class="pre">stamp</span></code>, <code class="docutils literal notranslate"><span class="pre">t</span></code>, <code class="docutils literal notranslate"><span class="pre">__time</span></code>; si no, la
+primera) es el tiempo en segundos y las demás son series. Añádelas con <code class="docutils literal notranslate"><span class="pre">csv</span></code> como topic y el nombre
+de la columna como campo.</p>
+</section>
+<section id="otras-fuentes-udp-mqtt-y-zeromq">
+<h2>Otras fuentes: UDP, MQTT y ZeroMQ<a class="headerlink" href="#otras-fuentes-udp-mqtt-y-zeromq" title="Link to this heading"></a></h2>
+<p>Una serie también puede leer mensajes JSON que no vienen de
+ROS. Escribe la fuente como topic, y el campo como una ruta dentro del JSON (<code class="docutils literal notranslate"><span class="pre">speed</span></code>,
+<code class="docutils literal notranslate"><span class="pre">battery.pct</span></code>, <code class="docutils literal notranslate"><span class="pre">motors[-1].current</span></code>, también con filtros):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">udp://0.0.0.0:9870</span></code>: datagramas con un JSON cada uno, enviados al móvil o al PC a ese puerto;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mqtt://BROKER:1883/robot/#</span></code>: un broker MQTT y el topic (se admiten comodines), con
+<code class="docutils literal notranslate"><span class="pre">mqtt://usuario:clave&#64;BROKER/…</span></code> si los pide y <code class="docutils literal notranslate"><span class="pre">mqtts://</span></code> (puerto 8883) para TLS, comprobado
+con los certificados del sistema; un mensaje que es solo un número se lee como <code class="docutils literal notranslate"><span class="pre">value</span></code>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zmq://HOST:9872</span></code>: un socket PUB de ZeroMQ (<code class="docutils literal notranslate"><span class="pre">zmq://HOST:9872/prefijo</span></code> para suscribirse solo a
+un prefijo; con varias partes, el JSON es la última).</p></li>
+</ul>
+<p>Se reconectan solas, y si hay algún problema sale en la leyenda de la serie.</p>
+</section>
+<section id="exportar">
+<h2>Exportar<a class="headerlink" href="#exportar" title="Link to this heading"></a></h2>
+<p><em>Exportar CSV</em> en el menú ⋮ guarda todas las series en un CSV (una columna de tiempo y otra por
+serie, con el último valor de cada una en cada instante). El móvil lo comparte; el PC lo guarda en
+<em>~/Documents</em> y dice dónde. Un bag reducido se vuelve a leer para exportarlo a resolución completa.</p>
+<p>Las pestañas de gráficas también se intercambian con otras herramientas de gráficas: sus layouts de
+gráficas (gráficas, gráficas XY y series Lua personalizadas) se importan como pestañas de gráficas, y
+una pestaña de gráficas se exporta como layout de gráficas. Mira <a class="reference internal" href="../config/import-export.html"><span class="doc">Importar y exportar</span></a>.</p>
+<p>La pestaña también se puede añadir a un <a class="reference internal" href="dashboard.html"><span class="doc">Dashboard</span></a>; soltar un topic o un campo sobre un widget
+de gráficas añade una serie. El modo demo trae una con las velocidades y la trayectoria
+del robot simulado.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="indicators.html" class="btn btn-neutral float-left" title="Indicadores" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="gps.html" class="btn btn-neutral float-right" title="Mapa GPS" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
+      </span></p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> Español
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Idioma</dt>
+      <dd><a href="../../tabs/plot.html">English</a></dd>
+      <dd><strong>Español</strong></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v1.0.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

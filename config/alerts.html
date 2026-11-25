@@ -9,20 +9,21 @@
   <title>Robot alerts &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/config/alerts.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Background connection" href="background.html" />
-    <link rel="prev" title="Robot profiles" href="profiles.html" /> 
+    <link rel="prev" title="Import and export" href="import-export.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -62,6 +64,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -74,14 +81,21 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="profiles.html">Robot profiles</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Robot alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-export.html">Import and export</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Robot alerts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#on-the-pc">On the PC</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -126,16 +140,28 @@
 repeated at most once a minute.</p></li>
 <li><p><strong>Lifecycle nodes lost, finalized or in error.</strong></p></li>
 </ul>
-<p>The network is checked every 3 seconds. Alerts work while the app is open, and in the background
-if <a class="reference internal" href="background.html"><span class="doc">Background connection</span></a> is on. <strong>Send a test notification</strong> checks that notifications reach you;
+<p>The network is checked every 3 seconds. Alerts are off until you turn them on, here or with the
+switch at the top of the Alerts tab. They work while the app is open, and in the background if
+<a class="reference internal" href="background.html"><span class="doc">Background connection</span></a> is on. <strong>Send a test notification</strong> checks that notifications reach you;
 Android 13 and newer ask for permission the first time.</p>
+<p>Your own rules on any topic (a value crossing a threshold, a topic that stops) are in the
+<a class="reference internal" href="../tabs/alerts.html"><span class="doc">Alerts tab</span></a>, which also keeps the history of every alert.</p>
+<section id="on-the-pc">
+<h2>On the PC<a class="headerlink" href="#on-the-pc" title="Link to this heading"></a></h2>
+<p>Alerts are desktop notifications while VizMini2 is open: with <code class="docutils literal notranslate"><span class="pre">notify-send</span></code> on Linux (package
+<code class="docutils literal notranslate"><span class="pre">libnotify-bin</span></code>), and from VizMini2’s icon in the system tray on Windows (or on a Linux desktop
+without <code class="docutils literal notranslate"><span class="pre">notify-send</span></code>). Their switches are
+at the top of the Alerts tab: <strong>Notifications on this PC</strong>, <strong>When contact with the robot is lost</strong>
+and <strong>When a diagnostic turns ERROR</strong>, all on by default. Your topic rules work the same as on the
+phone.</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="profiles.html" class="btn btn-neutral float-left" title="Robot profiles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="import-export.html" class="btn btn-neutral float-left" title="Import and export" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="background.html" class="btn btn-neutral float-right" title="Background connection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -143,7 +169,7 @@ Android 13 and newer ask for permission the first time.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -170,7 +196,7 @@ Android 13 and newer ask for permission the first time.</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

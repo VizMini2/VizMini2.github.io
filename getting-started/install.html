@@ -9,19 +9,20 @@
   <title>Installation &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/getting-started/install.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Your account" href="account.html" />
+    <link rel="next" title="The PC app" href="desktop.html" />
     <link rel="prev" title="VizMini2" href="../index.html" /> 
 </head>
 
@@ -48,10 +49,13 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#on-the-phone">On the phone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#on-the-pc">On the PC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#updating">Updating</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface.html">The interface</a></li>
@@ -65,6 +69,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -77,14 +86,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -122,27 +135,55 @@
              
   <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
-<p>VizMini2 runs on <strong>Android 8.0 or newer</strong> (phones and tablets). It is not on Google Play yet: you
-install it from an APK file.</p>
+<p>VizMini2 runs on <strong>Android phones and tablets</strong> (Android 8.0 or newer) and on <strong>PCs</strong> with Linux
+(Ubuntu 20.04 or newer) or Windows (10 or 11). This page is about the phone; for the PC see
+<a class="reference internal" href="desktop.html"><span class="doc">The PC app</span></a>.</p>
+<section id="on-the-phone">
+<h2>On the phone<a class="headerlink" href="#on-the-phone" title="Link to this heading"></a></h2>
+<p>The same app, two ways to get it:</p>
+<ul class="simple">
+<li><p><strong>From Google Play</strong> (the easiest): install VizMini2 from <a class="reference external" href="https://play.google.com/store/apps/details?id=com.juancams.vizmini2">Google Play</a>. It updates by itself.</p></li>
+<li><p><strong>As an APK</strong>, from the project’s <a class="reference external" href="https://github.com/VizMini2/VizMini2/releases/latest">releases page</a>: for phones without Google Play, or to get a
+version before it reaches the store.</p>
 <ol class="arabic simple">
-<li><p>Download the latest <a class="reference external" href="https://drive.google.com/uc?export=download&amp;id=1SRu2hZaSW09ijFyoXaq9aNKBH1zeVI3F">VizMini2.apk</a> shared by the project.</p></li>
-<li><p>Open it on the phone. If Android asks, allow installing apps from that source (your browser or
-file manager).</p></li>
-<li><p>Open <strong>VizMini2</strong>. You will see the sign-in screen.</p></li>
+<li><p>On the phone, download <code class="docutils literal notranslate"><span class="pre">VizMini2-&lt;version&gt;-universal.apk</span></code> (it works on every phone; the
+<code class="docutils literal notranslate"><span class="pre">arm64-v8a</span></code> one is smaller and fits almost all recent phones).</p></li>
+<li><p>Open it. If Android asks, allow installing apps from that source (your browser or file
+manager).</p></li>
 </ol>
-<div class="admonition note">
+</li>
+</ul>
+<p>Pick one of the two and keep it: each one updates from where it came from (see <em>Updating</em> below).</p>
+<p>Open <strong>VizMini2</strong>. It opens on Home, with no account needed; the first time, a quick tour shows you
+the basics.</p>
+<figure class="vm-clip vm-shot vm-right"><img src="../_static/shots/shot_phone_home.webp" alt="Home, here with the demo robot." loading="lazy"><figcaption>Home, here with the demo robot.</figcaption></figure><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Your phone and your robot must be on the <strong>same network</strong> (or reachable through a VPN or a
 Discovery Server) for the app to see the robot. The demo works anywhere: it never leaves the
 phone.</p>
 </div>
+<p>The app asks for little: permission to show notifications (alerts and the background connection)
+and, each time you record the screen, Android’s screen capture prompt.</p>
+<div class="vm-clear"></div></section>
+<section id="on-the-pc">
+<h2>On the PC<a class="headerlink" href="#on-the-pc" title="Link to this heading"></a></h2>
+<p>The desktop app has the same tabs. From the same <a class="reference external" href="https://github.com/VizMini2/VizMini2/releases/latest">releases page</a>: on Ubuntu the <code class="docutils literal notranslate"><span class="pre">vizmini2_1.0.0_amd64.deb</span></code>
+(<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">./vizmini2_*_amd64.deb</span></code>) or the <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code>; on Windows the <code class="docutils literal notranslate"><span class="pre">.msi</span></code> (for your
+user, no administrator needed) or the <code class="docutils literal notranslate"><span class="pre">.zip</span></code>. On Linux it can also be built from source and run
+with <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">vizmini2</span> <span class="pre">vizmini2</span></code>. All the details are in <a class="reference internal" href="desktop.html"><span class="doc">The PC app</span></a>.</p>
+</section>
 <section id="updating">
 <h2>Updating<a class="headerlink" href="#updating" title="Link to this heading"></a></h2>
-<p>When there is a new version, the app tells you when you open it and brings you to this page.
-Download the APK from the same link and install it over the one you have: your session, tabs and
-settings are kept. If a version is ever required (for example, for security), the app won’t let
-you continue until you update.</p>
-<p>Next: <a class="reference internal" href="account.html"><span class="doc">Your account</span></a>, or go straight to <a class="reference internal" href="demo.html"><span class="doc">Try the demo</span></a>.</p>
+<p>Download the newer APK (or <code class="docutils literal notranslate"><span class="pre">.deb</span></code> or <code class="docutils literal notranslate"><span class="pre">.msi</span></code>) and install it over the one you have: your tabs,
+profiles and settings are kept. With the <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> or the <code class="docutils literal notranslate"><span class="pre">.zip</span></code>, replace the folder. The <a class="reference internal" href="../changelog.html"><span class="doc">Changelog</span></a> lists what changed in each version.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you installed it from <strong>Google Play</strong>, update it there: Google Play signs the app with its
+own key, so an APK from the releases page can’t be installed over it (nor the other way
+round). To switch from one to the other, uninstall first; export your tabs or save a
+<a class="reference internal" href="../config/profiles.html"><span class="doc">profile</span></a> to take them along.</p>
+</div>
+<p>Next: <a class="reference internal" href="demo.html"><span class="doc">Try the demo</span></a> or <a class="reference internal" href="connect.html"><span class="doc">Connect to your robot</span></a>. An <a class="reference internal" href="account.html"><span class="doc">account</span></a> is optional.</p>
 </section>
 </section>
 
@@ -151,14 +192,14 @@ you continue until you update.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../index.html" class="btn btn-neutral float-left" title="VizMini2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="account.html" class="btn btn-neutral float-right" title="Your account" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="desktop.html" class="btn btn-neutral float-right" title="The PC app" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-12.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -185,7 +226,7 @@ you continue until you update.</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

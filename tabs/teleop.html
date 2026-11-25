@@ -9,13 +9,14 @@
   <title>Teleop &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tabs/teleop.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -62,6 +64,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul class="current">
@@ -73,7 +80,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="teleop-dual.html">Teleop (2 joysticks)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buttons.html">Buttons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sliders.html">Sliders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters.html">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lifecycle.html">Lifecycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit.html">MoveIt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps.html">Maps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inspect.html">Inspect the network</a></li>
@@ -83,14 +95,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -129,26 +145,36 @@
              
   <section id="teleop">
 <h1>Teleop<a class="headerlink" href="#teleop" title="Link to this heading"></a></h1>
-<figure class="vm-clip vm-right"><video src="../_static/clips/clip_teleop.mp4" poster="../_static/shots/shot_teleop.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Drive the robot with an on-screen joystick, or with a Bluetooth or USB gamepad.</p>
+<figure class="vm-clip vm-right"><video src="../_static/clips/clip_teleop.mp4" poster="../_static/shots/shot_teleop.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Drive the robot with an on-screen joystick, a Bluetooth or USB gamepad on the phone, or the
+keyboard on the PC.</p>
 <ul class="simple">
 <li><p>Publishes <code class="docutils literal notranslate"><span class="pre">geometry_msgs/Twist</span></code> on the velocity topic chosen when you create the tab
-(<code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> by default) at a steady rate (10 Hz). Turn on <strong>Use TwistStamped</strong> for controllers
-that expect it (for example <code class="docutils literal notranslate"><span class="pre">diff_drive_controller</span></code> on Jazzy).</p></li>
-<li><p><strong>Settings</strong> (gear button): maximum linear speed (0.05–3 m/s, 0.5 by default), maximum angular
-speed (0.1–6 rad/s, 1.0 by default), the control preset and axis inversion.</p></li>
+(<code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> by default) at a steady 10 Hz while you drive. Turn on <strong>Use TwistStamped</strong> for
+controllers that expect it (for example <code class="docutils literal notranslate"><span class="pre">diff_drive_controller</span></code> on Jazzy).</p></li>
+<li><p>The top line shows the topic, the message type and how many subscribers it has, so you can see
+whether the robot is listening, and below it the velocity being sent.</p></li>
+<li><p><strong>Settings</strong> (gear button, not while driving): the topic, maximum linear speed (up to 3 m/s, 0.5
+by default), maximum angular speed (up to 6 rad/s, 1.0 by default), the control preset and the
+connection-loss stop.</p></li>
 <li><p><strong>Presets:</strong> <em>Differential</em> (forward + turn), <em>Holonomic</em> (forward + strafe) or <em>Custom</em>, where
 each stick axis can drive any linear or angular axis, inverted if you like.</p></li>
-<li><p><strong>Gamepad:</strong> the sticks drive and the <strong>B</strong> button is STOP.</p></li>
+<li><p><strong>Gamepad</strong> (phone): the sticks drive and the <strong>B</strong> button is STOP.</p></li>
 </ul>
+<p>On the PC, drag the joystick with the mouse or use the keyboard: <kbd class="kbd docutils literal notranslate">W</kbd>/<kbd class="kbd docutils literal notranslate">S</kbd> or <kbd class="kbd docutils literal notranslate">↑</kbd>/<kbd class="kbd docutils literal notranslate">↓</kbd>
+and <kbd class="kbd docutils literal notranslate">A</kbd>/<kbd class="kbd docutils literal notranslate">D</kbd> or <kbd class="kbd docutils literal notranslate">←</kbd>/<kbd class="kbd docutils literal notranslate">→</kbd> move the (left) joystick, and <kbd class="kbd docutils literal notranslate">Space</kbd> is STOP. If
+the keys stop working after you clicked the sidebar or a dialog, click anywhere in the tab: it takes
+the keyboard back.</p>
 <section id="safety">
 <h2>Safety<a class="headerlink" href="#safety" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>STOP</strong> sends zero velocity and locks the joystick until you release it and touch it again.</p></li>
-<li><p>When you let go of the stick, the robot gets zero velocity three times and then publishing stops.</p></li>
-<li><p>If the screen freezes for more than half a second, the robot is stopped.</p></li>
-<li><p><strong>Stop if the connection is lost while driving</strong> (on by default) stops the robot if the network
-or the gamepad goes away; tap the banner to continue.</p></li>
-<li><p>Teleop never publishes while the app is in the background.</p></li>
+<li><p>When you let go of the stick (or the keys), the robot gets zero velocity three times and then
+publishing stops, so it doesn’t fight other <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code> sources such as Nav2.</p></li>
+<li><p>If the app stops responding for more than 0.6 s while you drive, the robot is stopped.</p></li>
+<li><p><strong>Stop if the connection is lost while driving</strong> (on by default) stops the robot if the ROS 2
+connection drops, if the robot stops listening on the topic or, on the phone, if the network goes
+away. Unplugging the gamepad while driving also stops it. Tap the red banner to continue.</p></li>
+<li><p>Leaving the tab, or putting the phone app in the background, stops the robot.</p></li>
 </ul>
 </section>
 </section>
@@ -165,7 +191,7 @@ or the gamepad goes away; tap the banner to continue.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -192,7 +218,7 @@ or the gamepad goes away; tap the banner to continue.</p></li>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

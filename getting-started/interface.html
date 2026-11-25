@@ -9,13 +9,14 @@
   <title>The interface &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/getting-started/interface.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -48,12 +49,14 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="connect.html">Connect to your robot</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">The interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#adding-a-tab">Adding a tab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#quick-tour">Quick tour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recording-a-video">Recording a video</a></li>
 </ul>
 </li>
 </ul>
@@ -66,6 +69,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -78,14 +86,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -123,28 +135,42 @@
              
   <section id="the-interface">
 <h1>The interface<a class="headerlink" href="#the-interface" title="Link to this heading"></a></h1>
-<ul class="simple">
+<p>This page is about the phone. On the PC the same pieces are in a sidebar: see
+<a class="reference internal" href="desktop.html"><span class="doc">The PC app</span></a>.</p>
+<figure class="vm-clip vm-shot vm-right"><img src="../_static/shots/shot_phone_tab_menu.webp" alt="Long press on a tab: rename, duplicate, share, delete or export it." loading="lazy"><figcaption>Long press on a tab: rename, duplicate, share, delete or export it.</figcaption></figure><ul class="simple">
 <li><p><strong>Bottom bar:</strong> <em>Home</em> and <em>Config</em> are always there. Every tab you create appears next to them,
-and <strong>+</strong> adds a new one. Long-press a tab to rename or delete it.</p></li>
-<li><p><strong>Top bar:</strong> the name of the current tab and the connection badge (<em>Domain N</em>). Tap the badge to
-open Config.</p></li>
+and <strong>+</strong> adds a new one. Long-press a tab to rename, duplicate, share, delete or export it.
+<strong>Share</strong> sends the tab (a dashboard with its widgets) as a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file; whoever gets it adds
+it with <strong>+</strong> → <em>Import a tab, an RViz file or a layout</em>. <strong>Export as…</strong> (an RViz 2 file, a panel
+layout or a plot layout) appears when the tab has something those files can hold (<a class="reference internal" href="../config/import-export.html"><span class="doc">Import and export</span></a>).</p></li>
+<li><p><strong>Top bar:</strong> the name of the current tab, the record button (<a class="reference internal" href="#recording-video"><span class="std std-ref">Recording a video</span></a>) and the
+connection badge (<em>Domain N</em>). Tap the badge to open Config.</p></li>
 <li><p><strong>Home:</strong> the connection status; what is on the network (topics, services, actions, nodes and
-lifecycle nodes); shortcuts to the node graph and the TF tree; your workspace; the <em>notice board</em> with project news; and
-cards for the quick tour, this documentation, support, the changelog, contact and privacy. At the
-very bottom, below the tabs, there is an ad banner.</p></li>
-<li><p><strong>Config:</strong> network, background connection, robot profiles, alerts, language and, for
-administrators, Administration.</p></li>
+lifecycle nodes); shortcuts to the node graph and the TF tree; your workspace; the optional
+account card (<a class="reference internal" href="account.html"><span class="doc">Your account (optional)</span></a>); and cards for the quick tour, this documentation, support, the
+changelog, contact and privacy.</p></li>
+<li><p><strong>Config:</strong> network, background connection, robot profiles, alerts and language.</p></li>
 </ul>
-<section id="adding-a-tab">
+<div class="vm-clear"></div><section id="adding-a-tab">
 <h2>Adding a tab<a class="headerlink" href="#adding-a-tab" title="Link to this heading"></a></h2>
-<p>Tap <strong>+</strong>. The catalog groups the tab types under <em>Visualize</em>, <em>Control</em>, <em>Inspect the network</em> and
-<em>Record</em>. Tap one to watch a short video and read what it does, give it a name (optional) and tap
+<figure class="vm-clip vm-shot vm-right"><img src="../_static/shots/shot_phone_add_tab.webp" alt="The &quot;+&quot; screen: import, ready-made dashboards and the tab types." loading="lazy"><figcaption>The "+" screen: import, ready-made dashboards and the tab types.</figcaption></figure><p>Tap <strong>+</strong>. At the top, <em>Import a tab, an RViz file or a layout…</em> adds a shared tab or
+turns another tool’s configuration into tabs. Then come the ready-made dashboards (<em>Navigation</em>,
+<em>Camera robot</em>, <em>Monitoring</em>, <em>Showcase</em>, <em>Manipulation (MoveIt)</em>), which create a dashboard
+with its widgets in one go. Below, the tab types are grouped under <em>Visualize</em>, <em>Control</em>,
+<em>Inspect the network</em> and <em>Record</em>. Tap one to watch a short video and read what it does, give it a name (optional) and tap
 <strong>Create</strong>. Some types ask for one setting first, such as the camera topic or the velocity topic.</p>
-<p>Your account decides which types you see.</p>
 </section>
 <section id="quick-tour">
 <h2>Quick tour<a class="headerlink" href="#quick-tour" title="Link to this heading"></a></h2>
 <p>Home → <strong>Quick tour</strong> walks you through the main screens in a minute.</p>
+<div class="vm-clear"></div></section>
+<section id="recording-a-video">
+<span id="recording-video"></span><h2>Recording a video<a class="headerlink" href="#recording-a-video" title="Link to this heading"></a></h2>
+<p>To show how the robot behaves, record what is on the screen: the record button at the top of the
+phone (Android asks for permission each time; the notification has <em>Stop</em>) saves an MP4 to
+<em>Movies/VizMini2</em>. On the PC, <strong>Record video</strong> in the sidebar (or <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">R</kbd>) records the
+window, 3D view included, to <em>~/Videos/VizMini2</em> (<em>Videos\VizMini2</em> on Windows; it needs
+<code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>).</p>
 </section>
 </section>
 
@@ -160,7 +186,7 @@ administrators, Administration.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-12.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -187,7 +213,7 @@ administrators, Administration.</p></li>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

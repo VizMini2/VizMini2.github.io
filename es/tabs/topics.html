@@ -9,20 +9,21 @@
   <title>Topics &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/tabs/topics.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="Services" href="services.html" />
+    <link rel="next" title="Mensaje" href="message.html" />
     <link rel="prev" title="Nodos" href="nodes.html" /> 
 </head>
 
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul class="current">
@@ -70,8 +77,10 @@
 <li class="toctree-l1"><a class="reference internal" href="control.html">Control</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="inspect.html">Inspeccionar la red</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="diagnostics.html">Diagnóstico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alerts.html">Alertas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodos</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="message.html">Mensaje</a></li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="actions.html">Actions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="node-graph.html">Grafo de nodos</a></li>
@@ -84,14 +93,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -136,10 +149,16 @@ suscriptores tiene cada uno.</p>
 <ul class="simple">
 <li><p>su <strong>último mensaje</strong>, en directo (<em>Pausar</em> para congelarlo);</p></li>
 <li><p>su <strong>frecuencia</strong> (<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">Hz</span> <span class="pre">·</span> <span class="pre">N</span> <span class="pre">mensajes</span></code>), como <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">hz</span></code>;</p></li>
-<li><p>los <strong>publicadores y suscriptores</strong>, nodo a nodo.</p></li>
+<li><p>los <strong>publicadores y suscriptores</strong>, nodo a nodo (en el móvil, pulsa uno para abrir su
+inspector).</p></li>
 </ul>
-<p>El mensaje se puede mostrar para las ~300 interfaces incluidas, y para tus propios tipos una vez
-definidos en la pestaña <a class="reference internal" href="buttons.html"><span class="doc">Botones</span></a>.</p>
+<p>El mensaje se puede mostrar para cualquier tipo de mensaje incluido en la app (más de 300); para
+los demás, <em>Definir el tipo…</em> te deja pegar su definición (<a class="reference internal" href="buttons.html#custom-types"><span class="std std-ref">tus propios tipos</span></a>). Dentro
+de un <a class="reference internal" href="dashboard.html"><span class="doc">Dashboard</span></a>, arrastra un topic de la lista a un widget o a un hueco libre para verlo ahí
+(en el móvil, mantenlo pulsado antes).</p>
+<p>En el PC el topic se abre dentro de la pestaña (la flecha de arriba vuelve a la lista), y en un
+dashboard también puedes arrastrar un campo numérico del mensaje, por el asa que tiene al lado, a
+una gráfica.</p>
 </section>
 
 
@@ -147,14 +166,14 @@ definidos en la pestaña <a class="reference internal" href="buttons.html"><span
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="nodes.html" class="btn btn-neutral float-left" title="Nodos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="services.html" class="btn btn-neutral float-right" title="Services" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="message.html" class="btn btn-neutral float-right" title="Mensaje" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -181,7 +200,7 @@ definidos en la pestaña <a class="reference internal" href="buttons.html"><span
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

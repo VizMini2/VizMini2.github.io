@@ -1,0 +1,513 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>GpsController</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    VizMini2
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":desktopApp/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":desktopApp/jvmMain" data-filter=":desktopApp/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    VizMini2
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="desktopApp::com.juancams.rviz2mini.ui.screens/GpsController///PointingToDeclaration//38399494">
+  <div class="breadcrumbs"><a href="../../index.html">desktopApp</a><span class="delimiter">/</span><a href="../index.html">com.juancams.rviz2mini.ui.screens</a><span class="delimiter">/</span><span class="current">GpsController</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Gps</span><wbr><span><span>Controller</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">GpsController</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>tabId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><p class="paragraph">GPS tab (like Foxglove's Map panel): the positions from a sensor_msgs/NavSatFix topic on an OpenStreetMap street map, with the accuracy circle and the track. The map is panned with a finger or the mouse (which stops following), and zoomed with pinch, wheel or double tap.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="992466049%2FConstructors%2F38399494" anchor-label="GpsController" id="992466049%2FConstructors%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gps-controller.html"><span>Gps</span><wbr><span><span>Controller</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="992466049%2FConstructors%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tabId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-871471696%2FClasslikes%2F38399494" anchor-label="Companion" id="-871471696%2FClasslikes%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-871471696%2FClasslikes%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-2010472484%2FProperties%2F38399494" anchor-label="center" id="-2010472484%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="center.html"><span><span>center</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2010472484%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="center.html">center</a><span class="token operator">: </span><a href="../../../core/com.juancams.rviz2mini.gps/-lat-lon/index.html">LatLon</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1092645535%2FProperties%2F38399494" anchor-label="centerLat" id="1092645535%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="center-lat.html"><span>center</span><wbr><span><span>Lat</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1092645535%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="center-lat.html">centerLat</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief "><p class="paragraph">Map center and zoom (tile zoom, with decimals).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1484221043%2FProperties%2F38399494" anchor-label="centerLon" id="1484221043%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="center-lon.html"><span>center</span><wbr><span><span>Lon</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1484221043%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="center-lon.html">centerLon</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1430670926%2FProperties%2F38399494" anchor-label="choosingTopic" id="1430670926%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="choosing-topic.html"><span>choosing</span><wbr><span><span>Topic</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1430670926%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="choosing-topic.html">choosingTopic</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="582372084%2FProperties%2F38399494" anchor-label="fix" id="582372084%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fix.html"><span><span>fix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="582372084%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="fix.html">fix</a><span class="token operator">: </span><a href="../../../core/com.juancams.rviz2mini.gps/-gps-math/-fix/index.html">GpsMath.Fix</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="988082176%2FProperties%2F38399494" anchor-label="follow" id="988082176%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="follow.html"><span><span>follow</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="988082176%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="follow.html">follow</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1302687069%2FProperties%2F38399494" anchor-label="info" id="-1302687069%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="info.html"><span><span>info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1302687069%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="info.html">info</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2086193959%2FProperties%2F38399494" anchor-label="tabId" id="-2086193959%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tab-id.html"><span>tab</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2086193959%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="tab-id.html">tabId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1763027324%2FProperties%2F38399494" anchor-label="tiles" id="-1763027324%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tiles.html"><span><span>tiles</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1763027324%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="tiles.html">tiles</a><span class="token operator">: </span><a href="../-tile-store/index.html">TileStore</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="431808538%2FProperties%2F38399494" anchor-label="topic" id="431808538%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="topic.html"><span><span>topic</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="431808538%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="topic.html">topic</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="810636158%2FProperties%2F38399494" anchor-label="track" id="810636158%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="track.html"><span><span>track</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="810636158%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="track.html">track</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-array-list/index.html">ArrayList</a><span class="token operator">&lt;</span><a href="../../../core/com.juancams.rviz2mini.gps/-lat-lon/index.html">LatLon</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">The track: at least one point every <a href="../../../desktopApp/com.juancams.rviz2mini.ui.screens/-gps-controller/-companion/-t-r-a-c-k_-s-t-e-p_-m.html">TRACK_STEP_M</a>, so memory doesn't fill up while standing still.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1899597020%2FProperties%2F38399494" anchor-label="trackVersion" id="-1899597020%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="track-version.html"><span>track</span><wbr><span><span>Version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1899597020%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="track-version.html">trackVersion</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1637922590%2FProperties%2F38399494" anchor-label="zoom" id="1637922590%2FProperties%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="zoom.html"><span><span>zoom</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1637922590%2FProperties%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="zoom.html">zoom</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1980857739%2FFunctions%2F38399494" anchor-label="changeFollow" id="-1980857739%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="change-follow.html"><span>change</span><wbr><span><span>Follow</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1980857739%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="change-follow.html"><span class="token function">changeFollow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">on<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1539158189%2FFunctions%2F38399494" anchor-label="clearTrack" id="-1539158189%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clear-track.html"><span>clear</span><wbr><span><span>Track</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1539158189%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="clear-track.html"><span class="token function">clearTrack</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-496888975%2FFunctions%2F38399494" anchor-label="close" id="-496888975%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="close.html"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-496888975%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1231863192%2FFunctions%2F38399494" anchor-label="pan" id="1231863192%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="pan.html"><span><span>pan</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1231863192%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="pan.html"><span class="token function">pan</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dx<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">dy<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">scalePx<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Pans the map by <code class="lang-kotlin">dx</code>, <code class="lang-kotlin">dy</code> screen pixels (<code class="lang-kotlin">tilePx</code>: the on-screen size of a tile at the integer zoom).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-912382669%2FFunctions%2F38399494" anchor-label="pause" id="-912382669%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="pause.html"><span><span>pause</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-912382669%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="pause.html"><span class="token function">pause</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1108179301%2FFunctions%2F38399494" anchor-label="pickTopic" id="-1108179301%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="pick-topic.html"><span>pick</span><wbr><span><span>Topic</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1108179301%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="pick-topic.html"><span class="token function">pickTopic</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1571972882%2FFunctions%2F38399494" anchor-label="refresh" id="-1571972882%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="refresh.html"><span><span>refresh</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1571972882%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="refresh.html"><span class="token function">refresh</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="867051268%2FFunctions%2F38399494" anchor-label="resume" id="867051268%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resume.html"><span><span>resume</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="867051268%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="resume.html"><span class="token function">resume</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1567828800%2FFunctions%2F38399494" anchor-label="setTopic" id="1567828800%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-topic.html"><span>set</span><wbr><span><span>Topic</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1567828800%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-topic.html"><span class="token function">setTopic</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">t<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1721835650%2FFunctions%2F38399494" anchor-label="zoomBy" id="1721835650%2FFunctions%2F38399494" data-filterable-set=":desktopApp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":desktopApp/jvmMain" data-filterable-set=":desktopApp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="zoom-by.html"><span>zoom</span><wbr><span><span>By</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1721835650%2FFunctions%2F38399494"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":desktopApp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="zoom-by.html"><span class="token function">zoomBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">factor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">px<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">py<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">scalePx<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Zooms in <code class="lang-kotlin">factor</code> times keeping the point <code class="lang-kotlin">(px, py)</code>, relative to the view center, fixed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

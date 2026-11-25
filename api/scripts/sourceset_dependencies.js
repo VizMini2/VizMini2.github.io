@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":app/main":[],":core/commonMain":[],":core/jvmMain":[":core/commonMain"],":desktopApp/commonMain":[],":desktopApp/jvmMain":[":desktopApp/commonMain"]}'

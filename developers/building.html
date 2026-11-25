@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building and testing &mdash; VizMini2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/developers/building.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Releases and CI/CD" href="releases.html" />
+    <link rel="prev" title="Architecture" href="architecture.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/drive-demo.html">Drive the demo robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/visualize-robot.html">Visualize your robot in 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Send Nav2 goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Build a dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/visualize.html">Visualize</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/inspect.html">Inspect the network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/record.html">Record</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Account</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Building and testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#building">Building</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tests">Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="releases.html">Releases and CI/CD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Known limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contact and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Developers</a></li>
+      <li class="breadcrumb-item active">Building and testing</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="building-and-testing">
+<h1>Building and testing<a class="headerlink" href="#building-and-testing" title="Link to this heading"></a></h1>
+<p>You need a JDK 21, the Android SDK (for the Android app) and, for the tests against ROS, a ROS 2
+installation on the PC. The first build needs internet: Gradle downloads its dependencies and the
+prebuilt native libraries. No sudo or Docker is needed for any script.</p>
+<section id="building">
+<h2>Building<a class="headerlink" href="#building" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./gradlew<span class="w"> </span>installDirectDebug<span class="w">             </span><span class="c1"># the Android app on a connected phone (debug)</span>
+./gradlew<span class="w"> </span>:desktopApp:run<span class="w">                </span><span class="c1"># the desktop app from the sources</span>
+./gradlew<span class="w"> </span>:desktopApp:packageDeb<span class="w">         </span><span class="c1"># the .deb (desktopApp/build/compose/binaries/main/deb)</span>
+./gradlew<span class="w"> </span>dokkaGenerate<span class="w">                  </span><span class="c1"># API reference in build/dokka/html</span>
+docs/build.sh<span class="w">                            </span><span class="c1"># this manual in docs/_build/site</span>
+</pre></div>
+</div>
+<p>On Windows (JDK 21), <code class="docutils literal notranslate"><span class="pre">./gradlew</span> <span class="pre">:desktopApp:run</span></code> and <code class="docutils literal notranslate"><span class="pre">./gradlew</span> <span class="pre">:desktopApp:packageMsi</span></code> (the
+<code class="docutils literal notranslate"><span class="pre">.msi</span></code> in <code class="docutils literal notranslate"><span class="pre">desktopApp/build/compose/binaries/main/msi</span></code>, finished by
+<code class="docutils literal notranslate"><span class="pre">tools/desktop-installer/msi-postprocess.ps1</span></code>). Each package can only be built on its own system,
+and it carries only that system’s native libraries.</p>
+<p>The Android app has two flavors: <em>direct</em> (APK files) and <em>play</em> (Google Play). Release builds
+need a signing key in <code class="docutils literal notranslate"><span class="pre">keystore.properties</span></code> (see <code class="docutils literal notranslate"><span class="pre">keystore.properties.example</span></code>).</p>
+<p>The native libraries (Fast DDS for Android and the desktop, Filament for the desktop) come prebuilt:
+they are not in git, and the first build downloads them from the repository’s <em>prebuilt</em> release
+(<code class="docutils literal notranslate"><span class="pre">tools/prebuilt/prebuilt.txt</span></code> lists them with their SHA-256). To rebuild them:</p>
+<ul class="simple">
+<li><p>the Linux ones (after changing Fast DDS or Filament): <code class="docutils literal notranslate"><span class="pre">tools/compat/build-desktop-natives.sh</span></code>
+builds them inside an Ubuntu 20.04 root, and <code class="docutils literal notranslate"><span class="pre">tools/compat/check-glibc.sh</span></code> checks they still
+run on 20.04;</p></li>
+<li><p>the Windows ones: the <em>Windows natives</em> workflow (<code class="docutils literal notranslate"><span class="pre">.github/workflows/windows-natives.yml</span></code>)
+builds them, and <code class="docutils literal notranslate"><span class="pre">tools/desktop-natives/add-windows.sh</span></code> puts them into the same jars;</p></li>
+<li><p>jros2 for Android: <code class="docutils literal notranslate"><span class="pre">tools/jros2-16k/build.sh</span></code>.</p></li>
+</ul>
+<p>A file rebuilt locally is kept (the build warns that it differs). Then <code class="docutils literal notranslate"><span class="pre">tools/prebuilt/publish.sh</span></code>
+uploads the changed files to the <em>prebuilt</em> release and updates <code class="docutils literal notranslate"><span class="pre">prebuilt.txt</span></code>, which is what you
+commit. Never delete old files from that release: older commits need them. See
+<code class="docutils literal notranslate"><span class="pre">tools/prebuilt/README.md</span></code>.</p>
+</section>
+<section id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45.0%" />
+<col style="width: 55.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>What it tests</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">./gradlew</span> <span class="pre">:core:jvmTest</span> <span class="pre">testDirectDebugUnitTest</span> <span class="pre">lintDirectDebug</span></code></p></td>
+<td><p>Unit tests of the shared logic and the Android app, and Android lint.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tools/e2e/run.sh</span></code></p></td>
+<td><p>The desktop app end to end against real ROS 2 servers on this PC (fake robot, Nav2,
+MoveIt, ros2_control, video, maps, interactive markers…): it starts them, runs the tests
+and stops them.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tools/e2e/android_device_tests.sh</span></code></p></td>
+<td><p>Device tests on a phone or an emulator with the demo robot.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tools/pc_tests.sh</span> <span class="pre">-b</span></code></p></td>
+<td><p>The phone against the servers on the PC (same network). It saves and restores the
+phone’s tabs.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tools/compat/try-desktop.sh</span> <span class="pre">22.04</span> <span class="pre">[file.deb]</span></code></p></td>
+<td><p>The app (or installing the <code class="docutils literal notranslate"><span class="pre">.deb</span></code>) on another Ubuntu release.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">tools/license_headers.py</span> <span class="pre">--check</span></code> and <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">tools/check_english_comments.py</span></code></p></td>
+<td><p>Every source file has the license header and English comments.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The test servers in <code class="docutils literal notranslate"><span class="pre">tools/</span></code> are also handy by hand: <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">tools/fake_robot.py</span></code> publishes
+almost every message type the app shows, and <code class="docutils literal notranslate"><span class="pre">vizmini2</span> <span class="pre">--showcase</span></code> adds a dashboard made for it.
+For the NavMap display, <code class="docutils literal notranslate"><span class="pre">tools/navmap_demo.py</span></code> publishes a small two-floor building with live layer
+updates and <code class="docutils literal notranslate"><span class="pre">tools/navmap_file_pub.py</span></code> any <code class="docutils literal notranslate"><span class="pre">.navmap</span></code> file (EasyNavigation’s playgrounds have real
+ones, such as a multi-storey car park); open them with <code class="docutils literal notranslate"><span class="pre">vizmini2</span> <span class="pre">--import</span> <span class="pre">tools/navmap_demo.rviz</span></code>.
+Both need <code class="docutils literal notranslate"><span class="pre">navmap_ros_interfaces</span></code>: <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">&quot;$(tools/e2e/build_msgs.sh)&quot;</span></code> builds a copy of it.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="architecture.html" class="btn btn-neutral float-left" title="Architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="releases.html" class="btn btn-neutral float-right" title="Releases and CI/CD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Last updated on 2026-11-25.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> English
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Language</dt>
+      <dd><strong>English</strong></dd>
+      <dd><a href="../es/developers/building.html">Español</a></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v1.0.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

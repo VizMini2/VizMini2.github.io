@@ -9,13 +9,14 @@
   <title>Conectar con tu robot &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/getting-started/connect.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -49,12 +50,15 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="demo.html">Prueba la demo</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Conectar con tu robot</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#antes-de-empezar">Antes de empezar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pasos">Pasos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#si-en-la-red-solo-muestra-este-movil">Si <em>En la red</em> solo muestra este móvil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sin-dds">Sin DDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#en-el-pc">En el PC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#guardalo">Guárdalo</a></li>
 </ul>
 </li>
@@ -67,8 +71,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -81,14 +90,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -126,14 +139,16 @@
              
   <section id="conectar-con-tu-robot">
 <h1>Conectar con tu robot<a class="headerlink" href="#conectar-con-tu-robot" title="Link to this heading"></a></h1>
-<p>VizMini2 es un nodo de ROS 2 en tu móvil. Se une a la red DDS como cualquier otro nodo, así que ve
-directamente los topics, servicios y acciones de tu robot: no hay que instalar nada en el robot.</p>
+<p>VizMini2 es un nodo de ROS 2 en tu móvil o en tu PC. Se une a la red DDS como cualquier otro nodo,
+así que ve directamente los topics, servicios y acciones de tu robot: no hay que instalar nada en
+el robot.</p>
 <section id="antes-de-empezar">
 <h2>Antes de empezar<a class="headerlink" href="#antes-de-empezar" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>El robot usa <strong>ROS 2 con Fast DDS</strong> (<code class="docutils literal notranslate"><span class="pre">rmw_fastrtps_cpp</span></code>, el de por defecto en Humble y Jazzy).
-Los topics funcionan también con otras implementaciones de DDS; los servicios y las acciones
-necesitan Fast DDS.</p></li>
+<li><p>El robot usa ROS 2 (Foxy o posterior) con <strong>Fast DDS</strong> (<code class="docutils literal notranslate"><span class="pre">rmw_fastrtps_cpp</span></code>, el de por defecto)
+o <strong>Cyclone DDS</strong> (<code class="docutils literal notranslate"><span class="pre">rmw_cyclonedds_cpp</span></code>). Los topics funcionan también con otras
+implementaciones de DDS. Para <strong>Zenoh</strong> (<code class="docutils literal notranslate"><span class="pre">rmw_zenoh_cpp</span></code>) o cualquier otro middleware, mira
+<em>Sin DDS</em> más abajo.</p></li>
 <li><p>El móvil y el robot están en la misma red.</p></li>
 <li><p>Sabes el <code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code> del robot (0 si nadie lo ha cambiado).</p></li>
 </ul>
@@ -142,7 +157,8 @@ necesitan Fast DDS.</p></li>
 <h2>Pasos<a class="headerlink" href="#pasos" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Abre <strong>Ajustes</strong> en la barra de abajo y, en <strong>Red</strong>, pon en <strong>Domain ID</strong> el <code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code>
-del robot.</p></li>
+del robot. ¿No sabes cuál es? <strong>Buscar robots</strong> muestra los dominios con nodos en la red: toca
+uno para conectarte a él.</p></li>
 <li><p>Pulsa <strong>Aplicar y reconectar</strong>.</p></li>
 <li><p>Ve a <strong>Inicio</strong>: <em>Conexión ROS 2</em> debe decir <strong>Conectado</strong>, y <em>En la red</em> debe mostrar los topics
 y nodos del robot.</p></li>
@@ -161,10 +177,30 @@ Funciona como <code class="docutils literal notranslate"><span class="pre">ROS_S
 <p>En redes grandes, por 4G o a través de una VPN, usa un <strong>Discovery Server</strong> (el robot debe usar el
 mismo). Mira <a class="reference internal" href="../config/network.html"><span class="doc">Red</span></a> y <a class="reference internal" href="../help/troubleshooting.html"><span class="doc">Solución de problemas</span></a>.</p>
 </section>
+<section id="sin-dds">
+<h2>Sin DDS<a class="headerlink" href="#sin-dds" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Robot con <strong>Zenoh</strong>: escribe su router de Zenoh (<code class="docutils literal notranslate"><span class="pre">tcp/IP_DEL_ROBOT:7447</span></code>) en <strong>Ajustes → Red →
+Router de Zenoh</strong>.</p></li>
+<li><p>Cualquier middleware, o un robot detrás de un router o en internet: arranca <code class="docutils literal notranslate"><span class="pre">foxglove_bridge</span></code>
+en el robot y escribe <code class="docutils literal notranslate"><span class="pre">ws://IP_DEL_ROBOT:8765</span></code> en <strong>Ajustes → Red → foxglove_bridge</strong>.</p></li>
+</ul>
+<p>Después pulsa <strong>Aplicar y reconectar</strong>. Los detalles están en <a class="reference internal" href="../config/network.html"><span class="doc">Red</span></a>.</p>
+</section>
+<section id="en-el-pc">
+<h2>En el PC<a class="headerlink" href="#en-el-pc" title="Link to this heading"></a></h2>
+<p>Los mismos ajustes están en <strong>Configuración</strong> (el último elemento de la barra lateral) → <strong>Red</strong>. La
+primera vez, la app toma <code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code> (y <code class="docutils literal notranslate"><span class="pre">ROS_STATIC_PEERS</span></code> o <code class="docutils literal notranslate"><span class="pre">ROS_DISCOVERY_SERVER</span></code>) de su
+entorno: la terminal desde la que la arrancas o, en Windows, las variables de entorno de tu usuario.
+No hay Inicio: arriba en la barra lateral pone <em>Dominio N</em> cuando el nodo está en marcha, y una
+pestaña <strong>Topics</strong> o <strong>Nodos</strong> (<strong>Añadir</strong> en la barra lateral) muestra lo que hay en la red. Si no
+aparece nada, revisa también el cortafuegos: <a class="reference internal" href="../help/troubleshooting.html"><span class="doc">Solución de problemas</span></a>.</p>
+</section>
 <section id="guardalo">
 <h2>Guárdalo<a class="headerlink" href="#guardalo" title="Link to this heading"></a></h2>
 <p>Cuando funcione, guárdalo todo como <strong>perfil de robot</strong> (Ajustes → Perfiles de robot →
-<em>Guardar como…</em>) para volver con un toque, en cualquiera de tus móviles: <a class="reference internal" href="../config/profiles.html"><span class="doc">Perfiles de robot</span></a>.</p>
+<em>Guardar como…</em>) para volver con un toque, en cualquiera de tus dispositivos:
+<a class="reference internal" href="../config/profiles.html"><span class="doc">Perfiles de robot</span></a>.</p>
 </section>
 </section>
 
@@ -180,7 +216,7 @@ mismo). Mira <a class="reference internal" href="../config/network.html"><span c
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -207,7 +243,7 @@ mismo). Mira <a class="reference internal" href="../config/network.html"><span c
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

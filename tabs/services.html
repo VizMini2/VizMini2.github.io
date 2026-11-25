@@ -9,20 +9,21 @@
   <title>Services &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tabs/services.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Actions" href="actions.html" />
-    <link rel="prev" title="Topics" href="topics.html" /> 
+    <link rel="prev" title="Message" href="message.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -62,6 +64,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul class="current">
@@ -69,8 +76,10 @@
 <li class="toctree-l1"><a class="reference internal" href="control.html">Control</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="inspect.html">Inspect the network</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alerts.html">Alerts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="topics.html">Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="message.html">Message</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="actions.html">Actions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="node-graph.html">Node graph</a></li>
@@ -83,14 +92,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -129,21 +142,27 @@
              
   <section id="services">
 <h1>Services<a class="headerlink" href="#services" title="Link to this heading"></a></h1>
-<figure class="vm-clip vm-right"><video src="../_static/clips/clip_services.mp4" poster="../_static/shots/shot_services.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>All the services on the network, like <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">service</span> <span class="pre">list</span></code>. Tap one to call it:</p>
+<figure class="vm-clip vm-right"><video src="../_static/clips/clip_services.mp4" poster="../_static/shots/shot_services.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>All the services on the network, like <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">service</span> <span class="pre">list</span></code>; those with no server are marked. Tap
+one to call it:</p>
 <ol class="arabic simple">
 <li><p>Fill in the <strong>Request</strong> form (one field per request field).</p></li>
 <li><p>Tap <strong>Call</strong>.</p></li>
-<li><p>The <strong>Response</strong> appears with <em>Answered in N ms</em>.</p></li>
+<li><p>The <strong>Response</strong> appears with <em>Answered in N ms</em>. With no answer in 10 seconds the call fails.</p></li>
 </ol>
-<p>Calls need the robot to use Fast DDS (<code class="docutils literal notranslate"><span class="pre">rmw_fastrtps_cpp</span></code>, the default). To call the same
-service often, make a button for it in the <a class="reference internal" href="buttons.html"><span class="doc">Buttons</span></a> tab.</p>
+<p>Calls work with servers on Fast DDS (<code class="docutils literal notranslate"><span class="pre">rmw_fastrtps_cpp</span></code>) and Cyclone DDS
+(<code class="docutils literal notranslate"><span class="pre">rmw_cyclonedds_cpp</span></code>), even mixed on the same network, over Zenoh and through foxglove_bridge.
+If a service doesn’t answer, see <em>Service format</em> in <a class="reference internal" href="../config/network.html"><span class="doc">Network</span></a>. The service type has
+to be bundled with the app, or defined by you: when it isn’t, <em>Define the type…</em> asks for it
+(<a class="reference internal" href="buttons.html#custom-types"><span class="std std-ref">your own types</span></a>).</p>
+<p>To call the same service often, make a button for it in the <a class="reference internal" href="buttons.html"><span class="doc">Buttons</span></a> tab. On the PC the call
+screen opens inside the tab; the arrow at the top goes back to the list.</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="topics.html" class="btn btn-neutral float-left" title="Topics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="message.html" class="btn btn-neutral float-left" title="Message" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="actions.html" class="btn btn-neutral float-right" title="Actions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -151,7 +170,7 @@ service often, make a button for it in the <a class="reference internal" href="b
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -178,7 +197,7 @@ service often, make a button for it in the <a class="reference internal" href="b
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

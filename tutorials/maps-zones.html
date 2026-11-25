@@ -1,0 +1,225 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Save maps and draw Nav2 zones &mdash; VizMini2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tutorials/maps-zones.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Get alerted when something goes wrong" href="alerts.html" />
+    <link rel="prev" title="Switch and command ros2_control controllers" href="controllers.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="drive-demo.html">Drive the demo robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualize-robot.html">Visualize your robot in 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nav2.html">Send Nav2 goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dashboard.html">Build a dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buttons.html">Buttons for services and actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="record-bag.html">Record and replay a bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Save maps and draw Nav2 zones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#saving-the-map">Saving the map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clearing-costmaps">Clearing costmaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keepout-and-speed-zones">Keepout and speed zones</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-configs.html">Bring your RViz setups and layouts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/visualize.html">Visualize</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/inspect.html">Inspect the network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/record.html">Record</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Account</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Known limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contact and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Save maps and draw Nav2 zones</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="save-maps-and-draw-nav2-zones">
+<h1>Save maps and draw Nav2 zones<a class="headerlink" href="#save-maps-and-draw-nav2-zones" title="Link to this heading"></a></h1>
+<p>Goal: save the map a robot has built, clear stuck costmaps, and draw <em>keepout</em> and <em>speed limit</em>
+zones for Nav2 on the map, without editing images by hand.</p>
+<figure class="vm-clip vm-shot vm-center"><img src="../_static/shots/shot_pc_maps.webp" alt="The Maps tab: a keepout zone (red) and a 40 % speed zone (yellow) on the map." loading="lazy"><figcaption>The Maps tab: a keepout zone (red) and a 40 % speed zone (yellow) on the map.</figcaption></figure><p>You need a robot (or a simulation) with Nav2 or SLAM Toolbox publishing a <code class="docutils literal notranslate"><span class="pre">map</span></code>, for example
+Nav2’s own simulation from <code class="docutils literal notranslate"><span class="pre">nav2_bringup</span></code>.</p>
+<section id="saving-the-map">
+<h2>Saving the map<a class="headerlink" href="#saving-the-map" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Add a <strong>Maps</strong> tab with <strong>+</strong>. It shows <code class="docutils literal notranslate"><span class="pre">/map</span></code>; <strong>Map</strong> chooses another <code class="docutils literal notranslate"><span class="pre">OccupancyGrid</span></code>.
+Zoom with pinch (the wheel on the PC) or the <strong>+</strong> / <strong>−</strong> buttons; <strong>Fit</strong> shows it all.</p></li>
+<li><p>Under <strong>Save the map</strong>, type a name. <strong>Download PGM + YAML</strong> saves it on the phone (with the
+share sheet) or the PC (a file dialog), in the format <code class="docutils literal notranslate"><span class="pre">map_server</span></code> loads.</p></li>
+<li><p>To save it on the robot instead, <strong>Save on the robot (map_saver)</strong> calls Nav2’s map saver; the
+name is then a path on the robot without extension. With SLAM Toolbox there are also <strong>SLAM
+Toolbox: save map</strong>, <strong>save pose graph</strong> (to continue mapping later) and <strong>Pause SLAM</strong>.</p></li>
+</ol>
+</section>
+<section id="clearing-costmaps">
+<h2>Clearing costmaps<a class="headerlink" href="#clearing-costmaps" title="Link to this heading"></a></h2>
+<p>When the robot keeps avoiding obstacles that are gone, <strong>Costmaps</strong> → <strong>Clear</strong> the global or local
+costmap, or <strong>Clear all</strong>.</p>
+</section>
+<section id="keepout-and-speed-zones">
+<h2>Keepout and speed zones<a class="headerlink" href="#keepout-and-speed-zones" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Tap <strong>Draw keepout zone</strong> and tap the corners of the area on the map (<strong>Undo corner</strong> if you
+miss one), then <strong>Finish zone</strong>. For a slow area, <strong>Draw speed zone</strong> and choose the limit in
+percent of the maximum speed.</p></li>
+<li><p>Under <strong>Zones for Nav2</strong>, <strong>Publish</strong>: the zones go out as costmap filter masks
+(<code class="docutils literal notranslate"><span class="pre">/keepout_filter_mask</span></code>, <code class="docutils literal notranslate"><span class="pre">/speed_filter_mask</span></code>), latched, with the filter info if you tick
+it. <strong>Download mask</strong> saves them as PGM + YAML to serve with <code class="docutils literal notranslate"><span class="pre">map_server</span></code> instead.</p></li>
+<li><p>Nav2 uses them once its costmap has the <em>KeepoutFilter</em> or <em>SpeedFilter</em> plugin reading that
+filter info topic (see Nav2’s guide <em>Navigating with Keepout Zones</em>). Send a goal across the
+zone (<a class="reference internal" href="nav2.html"><span class="doc">Send Nav2 goals</span></a>) and the robot goes around it, or slows down.</p></li>
+</ol>
+<p>The zones are saved with the tab. More in <a class="reference internal" href="../tabs/maps.html"><span class="doc">Maps</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="controllers.html" class="btn btn-neutral float-left" title="Switch and command ros2_control controllers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="alerts.html" class="btn btn-neutral float-right" title="Get alerted when something goes wrong" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Last updated on 2026-11-25.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> English
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Language</dt>
+      <dd><strong>English</strong></dd>
+      <dd><a href="../es/tutorials/maps-zones.html">Español</a></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v1.0.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

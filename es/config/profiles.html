@@ -9,20 +9,21 @@
   <title>Perfiles de robot &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/config/profiles.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="Avisos del robot" href="alerts.html" />
+    <link rel="next" title="Importar y exportar" href="import-export.html" />
     <link rel="prev" title="Red" href="network.html" /> 
 </head>
 
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -78,16 +85,21 @@
 <li class="toctree-l2"><a class="reference internal" href="#en-la-nube">En la nube</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ficheros">Ficheros</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#codigos-qr">Códigos QR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#en-el-pc">En el PC</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -126,16 +138,19 @@
   <section id="perfiles-de-robot">
 <h1>Perfiles de robot<a class="headerlink" href="#perfiles-de-robot" title="Link to this heading"></a></h1>
 <p>Un perfil guarda <strong>una conexión y un conjunto de pestañas</strong>: dominio, nombre del nodo, peers,
-Discovery Server, interfaces y cada pestaña con sus ajustes. Cambia de robot con un toque.</p>
+Discovery Server, foxglove_bridge, router de Zenoh, interfaces, formato de servicios y cada pestaña
+con sus ajustes. Cambia de robot con un toque.</p>
 <ul class="simple">
 <li><p><strong>Guardar como…</strong> guarda la conexión y las pestañas actuales (nombres de hasta 32 caracteres).</p></li>
-<li><p><strong>Cargar…</strong> se conecta con el perfil y sustituye tus pestañas.</p></li>
+<li><p><strong>Cargar…</strong> se conecta con el perfil y sustituye tus pestañas. Desde la misma lista puedes
+<strong>Eliminar</strong> un perfil.</p></li>
 </ul>
 <section id="en-la-nube">
 <h2>En la nube<a class="headerlink" href="#en-la-nube" title="Link to this heading"></a></h2>
-<p>Los perfiles se sincronizan con tu cuenta, así que aparecen en todos tus móviles. Si el mismo
-perfil se cambió en dos móviles, gana el cambio más reciente. <strong>Sincronizar ahora</strong> fuerza la
-sincronización.</p>
+<p>Los perfiles siempre se quedan en el dispositivo. Si vinculas una cuenta en Inicio
+(<a class="reference internal" href="../getting-started/account.html"><span class="doc">Tu cuenta (opcional)</span></a>), además se sincronizan con ella, así que aparecen en todos tus
+móviles y PC. Si el mismo perfil se cambió en dos dispositivos, gana el cambio más reciente.
+<strong>Sincronizar ahora</strong> fuerza la sincronización.</p>
 <p>Sin conexión a internet (por ejemplo, conectado solo a la Wi-Fi del robot) puedes seguir guardando y
 borrando perfiles: se quedan en el móvil, la app te avisa y la tarjeta indica que hay cambios
 pendientes. Se suben solos a la nube en cuanto vuelves a tener conexión.</p>
@@ -147,10 +162,19 @@ con el mismo nombre se sustituye).</p>
 </section>
 <section id="codigos-qr">
 <h2>Códigos QR<a class="headerlink" href="#codigos-qr" title="Link to this heading"></a></h2>
-<p><strong>Compartir como QR</strong> muestra un código con el <em>perfil completo</em> (si cabe) o <em>solo la conexión</em>.
-<strong>Escanear QR</strong> lee uno con el escáner de Google Play services: un código de solo conexión pregunta
-<em>¿Conectar a…?</em> y mantiene tus pestañas.</p>
-<p>Guardar perfiles, usar ficheros y usar códigos QR dependen de lo que tu cuenta tenga permitido.</p>
+<p><strong>Compartir como QR</strong> muestra un código de la configuración actual o de un perfil guardado, con el
+<em>perfil completo</em> o <em>solo la conexión</em>. Un perfil completo que no cabe en un código se reparte en
+varios que cambian solos: mantén la cámara del otro móvil sobre ellos. <strong>Escanear QR</strong> los lee con
+el escáner de Google Play services: un código de solo conexión pregunta <em>¿Conectar a…?</em> y mantiene
+tus pestañas.</p>
+</section>
+<section id="en-el-pc">
+<h2>En el PC<a class="headerlink" href="#en-el-pc" title="Link to this heading"></a></h2>
+<p><strong>Configuración → Perfiles de robot</strong> tiene <strong>Guardar perfil</strong>, <strong>Cargar perfil</strong> (con un QR y un
+botón para eliminar junto a cada perfil), <strong>QR</strong> (la configuración actual, para escanearla con el
+móvil; un perfil completo en varias partes tiene flechas para recorrerlas) e <strong>Importar…</strong>, que lee
+el fichero JSON de un perfil o una imagen (PNG o JPEG) de su código QR. Los perfiles se sincronizan
+con tu cuenta igual que en el móvil.</p>
 </section>
 </section>
 
@@ -159,14 +183,14 @@ con el mismo nombre se sustituye).</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="network.html" class="btn btn-neutral float-left" title="Red" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="alerts.html" class="btn btn-neutral float-right" title="Avisos del robot" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="import-export.html" class="btn btn-neutral float-right" title="Importar y exportar" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -193,7 +217,7 @@ con el mismo nombre se sustituye).</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

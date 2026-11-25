@@ -9,13 +9,14 @@
   <title>Conducir el robot de la demo &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/tutorials/drive-demo.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,13 @@
 <li class="toctree-l1"><a class="reference internal" href="nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -75,14 +82,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -120,14 +131,16 @@
              
   <section id="conducir-el-robot-de-la-demo">
 <h1>Conducir el robot de la demo<a class="headerlink" href="#conducir-el-robot-de-la-demo" title="Link to this heading"></a></h1>
-<p>Cinco minutos, sin robot.</p>
+<p>Cinco minutos, sin robot. La demo funciona en el móvil o en el PC.</p>
 <ol class="arabic simple">
 <li><p>Arranca la demo (<a class="reference internal" href="../getting-started/demo.html"><span class="doc">Prueba la demo</span></a>).</p></li>
-<li><p>Abre <strong>RViz demo</strong>: el robot recorre la habitación solo, con su láser, su mapa y su ruta.</p></li>
+<li><p>Abre <strong>RViz demo</strong>: el robot recorre la habitación solo, con su láser, su mapa y su ruta
+planificada.</p></li>
 <li><p>Abre <strong>Conducir</strong> y mueve el joystick: el robot te sigue y se para al soltarlo. Pulsa <strong>STOP</strong>
 cuando quieras.</p></li>
-<li><p>De vuelta en <strong>RViz demo</strong>, prueba las vistas del menú (<em>TopDownOrtho</em> es ideal para mapas) y
-los gestos: un dedo gira, dos dedos desplazan, pellizcar hace zoom.</p></li>
+<li><p>De vuelta en <strong>RViz demo</strong>, prueba las vistas del menú (en el PC, el botón de vista de la barra
+de herramientas; <em>TopDownOrtho</em> es ideal para mapas) y los gestos: un dedo gira, dos dedos
+desplazan, pellizcar hace zoom.</p></li>
 <li><p>Abre <strong>Cámara</strong> para ver lo que ve el robot.</p></li>
 <li><p>Abre <strong>Botones</strong> y pulsa <strong>Volver a la base</strong>: el robot vuelve a su base. <strong>Fibonacci 10</strong>
 ejecuta una acción y muestra su feedback.</p></li>
@@ -135,7 +148,8 @@ ejecuta una acción y muestra su feedback.</p></li>
 pulsar <strong>Activate</strong>.</p></li>
 </ol>
 <p>Después, cambia cómo se comporta el robot: en una pestaña <strong>Nodos</strong> abre <code class="docutils literal notranslate"><span class="pre">/demo_robot</span></code> y baja
-<code class="docutils literal notranslate"><span class="pre">max_linear_speed</span></code>, o pon <code class="docutils literal notranslate"><span class="pre">autopilot</span></code> a <code class="docutils literal notranslate"><span class="pre">false</span></code> para que te espere.</p>
+<code class="docutils literal notranslate"><span class="pre">max_linear_speed</span></code>, o pon <code class="docutils literal notranslate"><span class="pre">autopilot</span></code> a <code class="docutils literal notranslate"><span class="pre">false</span></code> para que te espere. Las pestañas <strong>Sliders</strong>,
+<strong>Indicadores</strong>, <strong>Gráficas</strong> y <strong>Mapa GPS</strong> de la demo también están listas para probar.</p>
 </section>
 
 
@@ -150,7 +164,7 @@ pulsar <strong>Activate</strong>.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -177,7 +191,7 @@ pulsar <strong>Activate</strong>.</p></li>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

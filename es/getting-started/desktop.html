@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La app de PC &mdash; Documentación de VizMini2</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/getting-started/desktop.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Tu cuenta (opcional)" href="account.html" />
+    <link rel="prev" title="Instalación" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Instalación</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">La app de PC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instalacion">Instalación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#en-windows">En Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#la-ventana">La ventana</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sin-robot-la-demo">Sin robot: la demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#raton-y-teclado">Ratón y teclado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#grabar-la-ventana">Grabar la ventana</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notificaciones">Notificaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#movil-y-pc-que-cambia">Móvil y PC: qué cambia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#donde-guarda-las-cosas">Dónde guarda las cosas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linea-de-comandos">Línea de comandos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">Tu cuenta (opcional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Prueba la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect.html">Conectar con tu robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">La interfaz</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutoriales</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/drive-demo.html">Conducir el robot de la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/visualize-robot.html">Ver tu robot en 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/visualize.html">Visualizar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/inspect.html">Inspeccionar la red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/record.html">Grabar</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuración</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Solución de problemas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requisitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Limitaciones conocidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contacto y apoyo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Registro de cambios</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">La app de PC</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="la-app-de-pc">
+<h1>La app de PC<a class="headerlink" href="#la-app-de-pc" title="Link to this heading"></a></h1>
+<p>VizMini2 también funciona en un PC con Linux o Windows, con las mismas pestañas que el móvil en una ventana
+redimensionable: cómoda junto a la terminal del robot, en una pantalla grande del laboratorio o con
+ratón y teclado para sesiones largas. Tus pestañas, dashboards y perfiles pasan del móvil al PC y al
+revés (expórtalos, o vincula una <a class="reference internal" href="account.html"><span class="doc">cuenta</span></a>).</p>
+<figure class="vm-clip vm-center vm-wide"><video src="../_static/clips/clip_pc_dashboard.mp4" poster="../_static/shots/shot_pc_dashboard.webp" autoplay loop muted playsinline preload="metadata"></video><figcaption>El dashboard Showcase en el PC, contra tools/fake_robot.py.</figcaption></figure><section id="instalacion">
+<h2>Instalación<a class="headerlink" href="#instalacion" title="Link to this heading"></a></h2>
+<p>Funciona en <strong>Ubuntu 20.04 o posterior</strong> (x86-64, o cualquier Linux con glibc 2.31 o posterior) con
+OpenGL. <strong>No</strong> hace falta ROS 2 en el PC: la app trae su propio DDS. Sirve cualquier distro de ROS 2
+en la red (Foxy, Humble, Jazzy, Kilted, Lyrical…).</p>
+<ul>
+<li><p><strong>El .deb</strong> (de la <a class="reference external" href="https://github.com/VizMini2/VizMini2/releases/latest">página de versiones</a>):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./vizmini2_*_amd64.deb
+</pre></div>
+</div>
+<p>Luego abre <em>VizMini2</em> desde el menú de aplicaciones, o ejecuta <code class="docutils literal notranslate"><span class="pre">/opt/vizmini2/bin/vizmini2</span></code>.
+Para actualizar, instala el <code class="docutils literal notranslate"><span class="pre">.deb</span></code> nuevo igual; <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">remove</span> <span class="pre">vizmini2</span></code> la desinstala (tus
+ajustes se quedan en tu carpeta personal).</p>
+</li>
+<li><p><strong>El .tar.gz</strong>: la misma app sin instalarla. Descomprímelo donde quieras y ejecuta
+<code class="docutils literal notranslate"><span class="pre">vizmini2/bin/vizmini2</span></code>.</p></li>
+<li><p><strong>Como paquete de ROS 2</strong> (Linux), compilado desde el código fuente. Hace falta un JDK 17 o
+posterior (se recomienda el 21), y la primera compilación necesita internet: Gradle descarga sus
+dependencias y las librerías nativas precompiladas.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/VizMini2/VizMini2.git<span class="w"> </span>vizmini2_src
+<span class="nb">cd</span><span class="w"> </span>~/ros2_ws<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>colcon<span class="w"> </span>build<span class="w"> </span>--packages-select<span class="w"> </span>vizmini2<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>install/setup.bash
+ros2<span class="w"> </span>run<span class="w"> </span>vizmini2<span class="w"> </span>vizmini2
+</pre></div>
+</div>
+<p>La primera vez toma el <code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code> de la terminal.</p>
+</li>
+</ul>
+<p>Extras recomendados: <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code> (topics de vídeo H.264/H.265 y grabar la ventana) y
+<code class="docutils literal notranslate"><span class="pre">libnotify-bin</span></code> (notificaciones de escritorio de las <a class="reference internal" href="../tabs/alerts.html"><span class="doc">alertas</span></a>):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ffmpeg<span class="w"> </span>libnotify-bin
+</pre></div>
+</div>
+<section id="en-windows">
+<h3>En Windows<a class="headerlink" href="#en-windows" title="Link to this heading"></a></h3>
+<p>Funciona en <strong>Windows 10 u 11</strong> (64 bits). Como en Linux, no hace falta ROS 2 en el PC.</p>
+<ul class="simple">
+<li><p><strong>El .msi</strong> (de la <a class="reference external" href="https://github.com/VizMini2/VizMini2/releases/latest">página de versiones</a>): ábrelo y sigue los pasos. Se instala para
+tu usuario, sin pedir administrador, en <em>%LOCALAPPDATA%\VizMini2</em> (en el segundo paso puedes
+elegir otra carpeta), con un acceso directo en el escritorio y una carpeta <em>VizMini2</em> en el menú
+Inicio. El instalador no está firmado, así que Windows puede avisar antes de abrirlo («Windows
+protegió su PC» o una advertencia de seguridad): elige <em>Más información</em> → <em>Ejecutar de todas
+formas</em>, o <em>Ejecutar</em>. Para actualizar, instala el <code class="docutils literal notranslate"><span class="pre">.msi</span></code> nuevo igual; se desinstala desde
+<em>Configuración</em> → <em>Aplicaciones</em>. Ninguna de las dos cosas toca tus ajustes, bags ni vídeos.</p></li>
+<li><p><strong>El .zip</strong>: la misma app sin instalarla. Descomprímelo donde quieras y abre
+<em>VizMini2\VizMini2.exe</em>.</p></li>
+</ul>
+<p>La primera vez que se conecta, el Firewall de Windows pregunta si VizMini2 puede usar la red:
+permítelo. Si tu red está marcada como <strong>Pública</strong> en Windows, puede que no aparezcan los robots;
+márcala como <strong>Privada</strong> (<em>Configuración</em> → <em>Red e Internet</em> → tu red) o usa las IPs del robot o un
+Discovery Server en <a class="reference internal" href="../config/network.html"><span class="doc">Red</span></a>.</p>
+<p>Extra recomendado: <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>, para los topics de vídeo H.264/H.265 y grabar la ventana:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">winget</span> <span class="n">install</span> <span class="n">ffmpeg</span>
+</pre></div>
+</div>
+<p>Si no tienes <code class="docutils literal notranslate"><span class="pre">winget</span></code>, descárgalo de <a class="reference external" href="https://ffmpeg.org/download.html">ffmpeg.org</a> y añade su
+carpeta <code class="docutils literal notranslate"><span class="pre">bin</span></code> al <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Sin él, la app te lo dice cuando lo necesita.</p>
+</section>
+</section>
+<section id="la-ventana">
+<h2>La ventana<a class="headerlink" href="#la-ventana" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Barra lateral</strong> (izquierda): la etiqueta de conexión (<em>Dominio N</em>), tus pestañas, <strong>Añadir</strong>,
+<strong>Grabar vídeo</strong> y <strong>Configuración</strong>. El botón ☰ la pliega a solo iconos (pasa el ratón por
+encima de uno para ver su nombre).</p>
+<ul>
+<li><p>Haz clic en una pestaña para abrirla; la <strong>×</strong> la elimina, después de preguntar (un dashboard se
+lleva sus widgets).</p></li>
+<li><p><strong>Clic derecho</strong> en una pestaña, como la pulsación larga del móvil: <em>Renombrar</em>, <em>Duplicar</em>
+(una copia justo debajo, con sus widgets), <em>Eliminar</em>, y exportarla como fichero de VizMini2
+(para añadirla en otro PC o móvil con <em>Añadir</em> → <em>Importar</em>) o, cuando tiene algo que
+entiendan, como fichero de RViz 2, layout de paneles o layout de gráficas
+(<a class="reference internal" href="../config/import-export.html"><span class="doc">Importar y exportar</span></a>).</p></li>
+</ul>
+</li>
+<li><p><strong>Añadir</strong> abre el catálogo: los mismos tipos de pestaña y dashboards ya montados que en el
+móvil, e <em>Importar una pestaña, un fichero de RViz o un layout…</em> con un diálogo de ficheros.</p></li>
+<li><p><strong>Configuración</strong>: red (dominio, middleware, Zenoh, foxglove_bridge, interfaces), apariencia
+(idioma, tema, tamaño de la interfaz), la cuenta, las variables de topics y los perfiles de
+robot. Mira <a class="reference internal" href="../config/network.html"><span class="doc">Red</span></a>.</p></li>
+</ul>
+<figure class="vm-clip vm-shot vm-center"><img src="../_static/shots/shot_pc_camera.webp" alt="La pestaña Cámara: una imagen sin comprimir y dos topics de vídeo (H.264 y H.265) a la vez." loading="lazy"><figcaption>La pestaña Cámara: una imagen sin comprimir y dos topics de vídeo (H.264 y H.265) a la vez.</figcaption></figure></section>
+<section id="sin-robot-la-demo">
+<h2>Sin robot: la demo<a class="headerlink" href="#sin-robot-la-demo" title="Link to this heading"></a></h2>
+<p><em>Configuración</em> → <strong>Iniciar demo</strong> ejecuta el mismo robot simulado que el móvil, solo en este
+ordenador (su propio dominio, el 231, y solo la interfaz local, así que no llega nada a tu red): una
+sala con mapa, láser, cámara (también como vídeo H.264, con <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>), odometría, diagnósticos,
+servicios, una acción, un nodo lifecycle y un controller manager de ros2_control, con pestañas y un
+dashboard para probarlo todo. Condúcelo desde <em>Conducir</em>. Mientras está en marcha, <strong>Salir de la
+demo</strong> se queda arriba en la barra lateral; al salir vuelven tus pestañas y tu conexión.
+<code class="docutils literal notranslate"><span class="pre">vizmini2</span> <span class="pre">--demo</span></code> (<code class="docutils literal notranslate"><span class="pre">VizMini2.exe</span> <span class="pre">--demo</span></code> en Windows) arranca directamente en ella; si cierras la
+app en modo demo, vuelve a abrirse en modo demo.</p>
+</section>
+<section id="raton-y-teclado">
+<h2>Ratón y teclado<a class="headerlink" href="#raton-y-teclado" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Vista 3D:</strong> arrastra para orbitar, arrastra con el botón derecho o el central (o
+<kbd class="kbd docutils literal notranslate">Mayús</kbd> + arrastrar) para desplazar, y la rueda para el zoom; la barra tiene todas las
+herramientas (en el móvil algunas están en el menú de la regla). En el grafo de nodos y el árbol
+TF, la rueda hace zoom y un doble clic encaja la vista.</p></li>
+<li><p><strong>Dashboards:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">E</kbd> edita, <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Z</kbd> deshace, <kbd class="kbd docutils literal notranslate">Esc</kbd> sale de la edición,
+<kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">0</kbd> restablece el zoom y <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + rueda hace zoom. Arrastra topics desde la
+pestaña Topics (o campos de un mensaje) a los widgets o a las gráficas.</p></li>
+<li><p><strong>Teleop:</strong> arrastra el joystick con el ratón, o conduce con <kbd class="kbd docutils literal notranslate">W</kbd> <kbd class="kbd docutils literal notranslate">A</kbd> <kbd class="kbd docutils literal notranslate">S</kbd> <kbd class="kbd docutils literal notranslate">D</kbd>
+o las flechas; <kbd class="kbd docutils literal notranslate">Espacio</kbd> es STOP.</p></li>
+<li><p><strong>Grabar la ventana:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Mayús</kbd>+<kbd class="kbd docutils literal notranslate">R</kbd> empieza y para.</p></li>
+</ul>
+</section>
+<section id="grabar-la-ventana">
+<h2>Grabar la ventana<a class="headerlink" href="#grabar-la-ventana" title="Link to this heading"></a></h2>
+<p><strong>Grabar vídeo</strong> en la barra lateral (o <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Mayús</kbd>+<kbd class="kbd docutils literal notranslate">R</kbd>) graba toda la ventana, vista 3D
+incluida, en un MP4 en <em>~/Vídeos/VizMini2</em> (<em>Vídeos\VizMini2</em> en Windows); mientras graba, el
+botón muestra el tiempo y sirve para parar. Cuando se guarda el vídeo, una notificación dice dónde
+(en Windows, al hacer clic en ella se muestra el vídeo en el Explorador de archivos). Necesita
+<code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>. Para enseñar a alguien qué hizo el robot, suele ser más rápido que un bag.</p>
+</section>
+<section id="notificaciones">
+<h2>Notificaciones<a class="headerlink" href="#notificaciones" title="Link to this heading"></a></h2>
+<p>El PC muestra las <a class="reference internal" href="../tabs/alerts.html"><span class="doc">alertas</span></a> (tus reglas de topics, la pérdida de contacto con
+el robot y los diagnósticos en ERROR) como notificaciones de escritorio mientras VizMini2 está
+abierta: con <code class="docutils literal notranslate"><span class="pre">notify-send</span></code> en Linux, y desde el icono de VizMini2 en el área de notificaciones en
+Windows (o en un escritorio Linux sin <code class="docutils literal notranslate"><span class="pre">notify-send</span></code>). Los tres interruptores están arriba en la
+pestaña Alertas; vienen activados.</p>
+<figure class="vm-clip vm-center vm-wide"><video src="../_static/clips/clip_pc_alerts.mp4" poster="../_static/shots/shot_pc_alerts.webp" autoplay loop muted playsinline preload="metadata"></video><figcaption>La pestaña Alertas con tres reglas y los últimos avisos.</figcaption></figure></section>
+<section id="movil-y-pc-que-cambia">
+<h2>Móvil y PC: qué cambia<a class="headerlink" href="#movil-y-pc-que-cambia" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Móvil</p></th>
+<th class="head"><p>PC</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Pestañas</p></td>
+<td><p>Todas</p></td>
+<td><p>Todas</p></td>
+</tr>
+<tr class="row-odd"><td><p>Robot de demo</p></td>
+<td><p>Sí</p></td>
+<td><p>Sí (<em>Configuración</em>, o <code class="docutils literal notranslate"><span class="pre">vizmini2</span> <span class="pre">--demo</span></code>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Conducir</p></td>
+<td><p>Joysticks táctiles, mando</p></td>
+<td><p>Ratón, teclado</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ficheros (bags, mapas, exportaciones)</p></td>
+<td><p>Menú de compartir</p></td>
+<td><p>Diálogo de ficheros; bags en <em>~/.local/share/vizmini2/bags</em> (Windows:
+<em>%LOCALAPPDATA%\VizMini2 Data\bags</em>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Renombrar o duplicar una pestaña</p></td>
+<td><p>Pulsación larga</p></td>
+<td><p>Clic derecho</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grabar la pantalla</p></td>
+<td><p><em>Movies/VizMini2</em></p></td>
+<td><p><em>~/Vídeos/VizMini2</em> (Windows: <em>Vídeos\VizMini2</em>), necesita ffmpeg</p></td>
+</tr>
+<tr class="row-even"><td><p>Alertas en segundo plano</p></td>
+<td><p>Sí, con la conexión en segundo plano</p></td>
+<td><p>Mientras la ventana está abierta</p></td>
+</tr>
+<tr class="row-odd"><td><p>Informes de fallos</p></td>
+<td><p>Firebase Crashlytics</p></td>
+<td><p>Ninguno</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="donde-guarda-las-cosas">
+<h2>Dónde guarda las cosas<a class="headerlink" href="#donde-guarda-las-cosas" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Ajustes, pestañas y perfiles: <em>~/.config/vizmini2</em></p></li>
+<li><p>Bags: <em>~/.local/share/vizmini2/bags</em></p></li>
+<li><p>Cachés (vista 3D, librerías nativas, teselas del mapa GPS): <em>~/.cache/vizmini2</em></p></li>
+<li><p>Vídeos de la pantalla: <em>~/Vídeos/VizMini2</em></p></li>
+</ul>
+<p>Borrar <em>~/.config/vizmini2</em> empieza de cero.</p>
+<p>En Windows:</p>
+<ul class="simple">
+<li><p>Ajustes, pestañas y perfiles: <em>%APPDATA%\VizMini2</em></p></li>
+<li><p>Bags: <em>%LOCALAPPDATA%\VizMini2 Data\bags</em></p></li>
+<li><p>Cachés (vista 3D, librerías nativas, teselas del mapa GPS): <em>%LOCALAPPDATA%\VizMini2 Data\Cache</em></p></li>
+<li><p>Vídeos de la pantalla: <em>Vídeos\VizMini2</em></p></li>
+</ul>
+<p>Borrar <em>%APPDATA%\VizMini2</em> empieza de cero. Desinstalar VizMini2 no borra ninguna de estas
+carpetas.</p>
+</section>
+<section id="linea-de-comandos">
+<h2>Línea de comandos<a class="headerlink" href="#linea-de-comandos" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">vizmini2</span></code> (o <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">vizmini2</span> <span class="pre">vizmini2</span></code>) acepta algunas opciones, sobre todo para scripts y
+para diagnosticar problemas:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Opción</p></th>
+<th class="head"><p>Qué hace</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--domain</span> <span class="pre">N</span></code></p></td>
+<td><p>Arranca en el dominio de ROS <em>N</em> (y lo guarda).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--tab</span> <span class="pre">PESTAÑA</span></code></p></td>
+<td><p>Abre esa pestaña: su nombre, o la primera pestaña de un tipo (<code class="docutils literal notranslate"><span class="pre">RVIZ</span></code>, <code class="docutils literal notranslate"><span class="pre">CAMERA</span></code>, <code class="docutils literal notranslate"><span class="pre">PLOT</span></code>,
+<code class="docutils literal notranslate"><span class="pre">MAPS</span></code>…, que se crea si no hay ninguna); <code class="docutils literal notranslate"><span class="pre">CONFIG</span></code> abre Configuración.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--check</span> <span class="pre">[--domain</span> <span class="pre">N]</span></code></p></td>
+<td><p>Sin ventana: se conecta, espera unos segundos, lista lo que ve en la red y sale (código 0 si
+ha visto otro nodo, 1 si no). Útil para probar la red desde una terminal.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--scan-domains</span></code></p></td>
+<td><p>Sin ventana: qué dominios de ROS tienen nodos en la red.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--record</span> <span class="pre">salida.mp4</span> <span class="pre">[--seconds</span> <span class="pre">N]</span></code></p></td>
+<td><p>Abre la ventana, espera unos segundos, la graba durante <em>N</em> segundos (5 por defecto) y sale.
+Necesita ffmpeg.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--shot</span> <span class="pre">salida.png</span> <span class="pre">[--size</span> <span class="pre">AxH]</span> <span class="pre">[--millis</span> <span class="pre">N]</span></code></p></td>
+<td><p>Guarda una captura de una pestaña sin abrir ventana (1200×800 tras 4 s por defecto; también
+con <code class="docutils literal notranslate"><span class="pre">--tab</span></code>, <code class="docutils literal notranslate"><span class="pre">--domain</span></code>, <code class="docutils literal notranslate"><span class="pre">--demo</span></code>, <code class="docutils literal notranslate"><span class="pre">--import</span></code>, <code class="docutils literal notranslate"><span class="pre">--set</span></code> y <code class="docutils literal notranslate"><span class="pre">--play</span></code>), para informes
+o para una CI.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--demo</span></code></p></td>
+<td><p>Arranca en modo demo, con el robot simulado.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--set</span> <span class="pre">clave=valor</span></code></p></td>
+<td><p>Cambia un ajuste de la pestaña de <code class="docutils literal notranslate"><span class="pre">--tab</span></code> (<code class="docutils literal notranslate"><span class="pre">clave=&#64;fichero</span></code> lee el valor de un fichero);
+se puede repetir. Para scripts y capturas.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--play</span> <span class="pre">FICHERO.mcap</span></code></p></td>
+<td><p>Reproduce ese bag en la red en bucle en cuanto se conecta, como <em>Reproducir</em> en la pestaña
+Bags.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--import</span> <span class="pre">FICHERO</span></code></p></td>
+<td><p>Añade un fichero de pestaña de VizMini2, un fichero de RViz 2 o un layout de paneles o de
+gráficas, lo abre, e imprime lo que no se ha podido pasar.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--showcase</span></code></p></td>
+<td><p>Añade el dashboard <em>Showcase</em> (casi todos los widgets; pruébalo con la demo) y sale: abre la
+app después.</p></td>
+</tr>
+</tbody>
+</table>
+<p>En Windows el programa es <em>VizMini2.exe</em>. Es un programa de ventanas, así que una terminal no
+muestra lo que imprime: redirígelo a un fichero, por ejemplo en PowerShell:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Start-Process</span> <span class="s2">&quot;$env:LOCALAPPDATA\VizMini2\VizMini2.exe&quot;</span> <span class="n">-ArgumentList</span> <span class="s1">&#39;--check&#39;</span> <span class="p">`</span>
+    <span class="n">-RedirectStandardOutput</span> <span class="n">check</span><span class="p">.</span><span class="n">txt</span> <span class="n">-Wait</span> <span class="n">-NoNewWindow</span><span class="p">;</span> <span class="nb">Get-Content</span> <span class="n">check</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Siguiente: <a class="reference internal" href="connect.html"><span class="doc">Conectar con tu robot</span></a> para ver tu robot, y luego las <a class="reference internal" href="../tabs/visualize.html"><span class="doc">pestañas</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="install.html" class="btn btn-neutral float-left" title="Instalación" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="account.html" class="btn btn-neutral float-right" title="Tu cuenta (opcional)" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
+      </span></p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> Español
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Idioma</dt>
+      <dd><a href="../../getting-started/desktop.html">English</a></dd>
+      <dd><strong>Español</strong></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v1.0.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

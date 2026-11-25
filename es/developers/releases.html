@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Versiones y CI/CD &mdash; Documentación de VizMini2</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/developers/releases.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Contribuir" href="contributing.html" />
+    <link rel="prev" title="Compilar y probar" href="building.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutoriales</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/drive-demo.html">Conducir el robot de la demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/visualize-robot.html">Ver tu robot en 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/visualize.html">Visualizar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/inspect.html">Inspeccionar la red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/record.html">Grabar</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuración</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Desarrollo</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">Arquitectura</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building.html">Compilar y probar</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Versiones y CI/CD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integracion-continua">Integración continua</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publicar-una-version">Publicar una versión</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#la-web">La web</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">Contribuir</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Solución de problemas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requisitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Limitaciones conocidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contacto y apoyo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Registro de cambios</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Desarrollo</a></li>
+      <li class="breadcrumb-item active">Versiones y CI/CD</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="versiones-y-ci-cd">
+<h1>Versiones y CI/CD<a class="headerlink" href="#versiones-y-ci-cd" title="Link to this heading"></a></h1>
+<section id="integracion-continua">
+<h2>Integración continua<a class="headerlink" href="#integracion-continua" title="Link to this heading"></a></h2>
+<p>Los push a <code class="docutils literal notranslate"><span class="pre">main</span></code> y <code class="docutils literal notranslate"><span class="pre">develop</span></code> y cada pull request pasan <code class="docutils literal notranslate"><span class="pre">.github/workflows/ci.yml</span></code> (no cuando
+solo tocan ficheros <code class="docutils literal notranslate"><span class="pre">*.md</span></code>, <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code>, <code class="docutils literal notranslate"><span class="pre">NOTICE</span></code> o las plantillas de GitHub): las
+comprobaciones de licencia y comentarios, los tests unitarios y el lint, las compilaciones de
+Android y de escritorio, la comprobación de glibc de las librerías nativas, la app de escritorio
+arrancada en Ubuntu 20.04, 22.04 y 24.04 limpios, este manual, los tests de extremo a extremo del
+escritorio contra servidores ROS 2 de Humble, Jazzy y Lyrical (cada uno en su Ubuntu) y los tests de
+dispositivo en un emulador Android.</p>
+<p>Los pull requests también pasan <code class="docutils literal notranslate"><span class="pre">desktop-windows.yml</span></code> (que también se puede lanzar a mano): los
+tests de escritorio en Windows, el <code class="docutils literal notranslate"><span class="pre">.msi</span></code> y la app arrancada (<code class="docutils literal notranslate"><span class="pre">--check</span></code>, y la vista 3D con el
+OpenGL por software de Mesa, porque los runners no tienen GPU). <code class="docutils literal notranslate"><span class="pre">windows-natives.yml</span></code> compila las
+librerías nativas de Windows (el JNI de Filament y Fast DDS, con MSVC) cuando cambian sus scripts,
+o a mano.</p>
+</section>
+<section id="publicar-una-version">
+<h2>Publicar una versión<a class="headerlink" href="#publicar-una-version" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Pon la misma versión en <code class="docutils literal notranslate"><span class="pre">app/build.gradle.kts</span></code> (<code class="docutils literal notranslate"><span class="pre">versionName</span></code>, y un <code class="docutils literal notranslate"><span class="pre">versionCode</span></code> mayor),
+<code class="docutils literal notranslate"><span class="pre">gradle.properties</span></code> (<code class="docutils literal notranslate"><span class="pre">vizmini2.version</span></code>) y <code class="docutils literal notranslate"><span class="pre">ros/vizmini2/package.xml</span></code>.</p></li>
+<li><p>Añade su entrada a los dos historiales de cambios (<code class="docutils literal notranslate"><span class="pre">app/src/main/assets/CHANGELOG.md</span></code> y
+<code class="docutils literal notranslate"><span class="pre">CHANGELOG.es.md</span></code>): la app los enseña en <em>Historial de cambios</em> y este manual en <a class="reference internal" href="../changelog.html"><span class="doc">Registro de cambios</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">tools/release/version.py</span> <span class="pre">check</span> <span class="pre">v1.2.3</span></code> comprueba que todo cuadra. Pon también como
+fecha de las entradas del historial el día de la versión (eso no se comprueba).</p></li>
+<li><p>Si has recompilado librerías nativas, publícalas antes (<code class="docutils literal notranslate"><span class="pre">tools/prebuilt/publish.sh</span></code>) y sube a
+git <code class="docutils literal notranslate"><span class="pre">tools/prebuilt/prebuilt.txt</span></code>: la versión se compila con los ficheros que lista.</p></li>
+<li><p>Etiqueta y sube: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">v1.2.3</span> <span class="pre">&amp;&amp;</span> <span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">v1.2.3</span></code>.</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">.github/workflows/release.yml</span></code> compila entonces todos los ficheros, los comprueba y deja un
+<strong>borrador</strong> de versión en GitHub para revisarlo y publicarlo a mano:</p>
+<ul class="simple">
+<li><p>los APK (uno por arquitectura y el universal), firmados con la clave
+de los secretos del repositorio <code class="docutils literal notranslate"><span class="pre">ANDROID_KEYSTORE_BASE64</span></code>, <code class="docutils literal notranslate"><span class="pre">ANDROID_KEYSTORE_PASSWORD</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ANDROID_KEY_ALIAS</span></code> y <code class="docutils literal notranslate"><span class="pre">ANDROID_KEY_PASSWORD</span></code>;</p></li>
+<li><p>el <code class="docutils literal notranslate"><span class="pre">.deb</span></code> y un <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> de la app de escritorio, después de instalar el <code class="docutils literal notranslate"><span class="pre">.deb</span></code> con apt en
+Ubuntu 20.04, 22.04 y 24.04 limpios y arrancarla (<code class="docutils literal notranslate"><span class="pre">--check</span></code> y una captura del 3D);</p></li>
+<li><p>el <code class="docutils literal notranslate"><span class="pre">.msi</span></code> y el <code class="docutils literal notranslate"><span class="pre">.zip</span></code> de Windows, compilados en Windows; el <code class="docutils literal notranslate"><span class="pre">.msi</span></code> se instala para el usuario
+actual, se arranca (<code class="docutils literal notranslate"><span class="pre">--check</span></code>, y la vista 3D con el OpenGL por software de Mesa) y se
+desinstala;</p></li>
+<li><p>este manual y la referencia de la API en zips, <code class="docutils literal notranslate"><span class="pre">SHA256SUMS</span></code> y la entrada del historial como
+notas de la versión.</p></li>
+</ul>
+<p>No se sube nada a Google Play ni a Firebase. El bundle de Google Play (<code class="docutils literal notranslate"><span class="pre">.aab</span></code>, firmado con la
+misma clave) no va en la versión, porque nadie puede instalarlo: descárgalo del artefacto
+<code class="docutils literal notranslate"><span class="pre">android-bundle</span></code> de la ejecución (30 días) y súbelo a mano. Los mappings de R8 se guardan en el
+artefacto <code class="docutils literal notranslate"><span class="pre">android-mapping</span></code> (90 días). El workflow también se puede lanzar a mano desde la pestaña
+<em>Actions</em> para probarlo (sin claves genera ficheros <code class="docutils literal notranslate"><span class="pre">-debugsigned</span></code>).</p>
+</section>
+<section id="la-web">
+<h2>La web<a class="headerlink" href="#la-web" title="Link to this heading"></a></h2>
+<p>Cuando publicas esa versión (una etiqueta <code class="docutils literal notranslate"><span class="pre">v*</span></code>: publicar la release <em>prebuilt</em> de los binarios
+nativos no despliega nada), <code class="docutils literal notranslate"><span class="pre">.github/workflows/site.yml</span></code> compila este manual y la referencia de
+la API desde su etiqueta y los sube al repositorio
+<a class="reference external" href="https://github.com/VizMini2/VizMini2.github.io">VizMini2/VizMini2.github.io</a>, que GitHub Pages
+sirve en <a class="reference external" href="https://vizmini2.github.io">https://vizmini2.github.io</a> (el manual en la raíz, el español en <code class="docutils literal notranslate"><span class="pre">es/</span></code> y la referencia de
+la API en <code class="docutils literal notranslate"><span class="pre">api/</span></code>). También se puede lanzar a mano, desde cualquier rama o etiqueta, para corregir
+la web entre versiones; <em>dry run</em> solo la compila y enseña qué cambiaría.</p>
+<p>Necesita el secreto <code class="docutils literal notranslate"><span class="pre">SITE_DEPLOY_KEY</span></code>: crea una clave con <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">ed25519</span> <span class="pre">-N</span> <span class="pre">&quot;&quot;</span> <span class="pre">-f</span>
+<span class="pre">site_key</span></code>, añade <code class="docutils literal notranslate"><span class="pre">site_key.pub</span></code> en <em>Settings › Deploy keys</em> del repositorio de la web con <em>Allow
+write access</em>, y <code class="docutils literal notranslate"><span class="pre">site_key</span></code> en <em>Settings › Secrets and variables › Actions</em> de este repositorio.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="building.html" class="btn btn-neutral float-left" title="Compilar y probar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="contributing.html" class="btn btn-neutral float-right" title="Contribuir" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
+      </span></p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> Español
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Idioma</dt>
+      <dd><a href="../../developers/releases.html">English</a></dd>
+      <dd><strong>Español</strong></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v1.0.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

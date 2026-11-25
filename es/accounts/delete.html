@@ -9,21 +9,22 @@
   <title>Eliminar tu cuenta &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/accounts/delete.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="Solución de problemas" href="../help/troubleshooting.html" />
-    <link rel="prev" title="Usar la app sin cuenta" href="guest.html" /> 
+    <link rel="next" title="Desarrollo" href="../developers/index.html" />
+    <link rel="prev" title="Idioma" href="../config/language.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -75,14 +82,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -120,15 +131,19 @@
              
   <section id="eliminar-tu-cuenta">
 <h1>Eliminar tu cuenta<a class="headerlink" href="#eliminar-tu-cuenta" title="Link to this heading"></a></h1>
-<p>En <strong>Inicio</strong>, en la tarjeta con tu correo, pulsa <strong>Eliminar mi cuenta</strong> y escribe tu contraseña (si entras con Google, Microsoft o GitHub,
-vuelve a entrar con ella para confirmar).</p>
+<p>En <strong>Inicio</strong>, en la tarjeta con tu correo, pulsa <strong>Eliminar mi cuenta</strong> y vuelve a entrar con
+Google, Microsoft o GitHub para confirmar (las cuentas de versiones anteriores con correo y
+contraseña escriben su contraseña).</p>
 <p>Se borran, al momento y para siempre:</p>
 <ul class="simple">
 <li><p>tu cuenta (ya no podrás entrar con ella);</p></li>
-<li><p>tu nombre, correo y rol;</p></li>
+<li><p>tu nombre, tu correo y tus formas de entrar vinculadas;</p></li>
 <li><p>tus perfiles de robot en la nube.</p></li>
 </ul>
-<p>Las grabaciones, pestañas y ajustes guardados en el móvil se quedan hasta que desinstales la app.</p>
+<p>Sigues en la app y puedes seguir usándola sin cuenta: las pestañas, perfiles, grabaciones y ajustes
+guardados en el móvil se quedan hasta que la desinstales.</p>
+<p>La app del PC no tiene el botón <strong>Eliminar mi cuenta</strong>: elimínala desde el móvil o por correo, como
+se explica abajo. Después, pulsa <strong>Cerrar sesión</strong> en el PC (Configuración → Cuenta (opcional)).</p>
 <p>¿No puedes abrir la app? Escribe a <a class="reference external" href="mailto:jc&#46;manzanares&#46;serrano&#37;&#52;&#48;gmail&#46;com?subject=Borrar%20mi%20cuenta%20de%20VizMini2">jc<span>&#46;</span>manzanares<span>&#46;</span>serrano<span>&#64;</span>gmail<span>&#46;</span>com</a> desde el
 correo de tu cuenta con el asunto <em>Borrar mi cuenta de VizMini2</em>. Mira también la
 <a class="reference external" href="https://ros-2-viz-mini.web.app/privacy#es">política de privacidad</a>.</p>
@@ -138,15 +153,15 @@ correo de tu cuenta con el asunto <em>Borrar mi cuenta de VizMini2</em>. Mira ta
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="guest.html" class="btn btn-neutral float-left" title="Usar la app sin cuenta" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="../help/troubleshooting.html" class="btn btn-neutral float-right" title="Solución de problemas" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../config/language.html" class="btn btn-neutral float-left" title="Idioma" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../developers/index.html" class="btn btn-neutral float-right" title="Desarrollo" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -173,7 +188,7 @@ correo de tu cuenta con el asunto <em>Borrar mi cuenta de VizMini2</em>. Mira ta
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

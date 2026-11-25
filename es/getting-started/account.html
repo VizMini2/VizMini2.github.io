@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tu cuenta &mdash; Documentación de VizMini2</title>
+  <title>Tu cuenta (opcional) &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/getting-started/account.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -23,7 +24,7 @@
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Prueba la demo" href="demo.html" />
-    <link rel="prev" title="Instalación" href="install.html" /> 
+    <link rel="prev" title="La app de PC" href="desktop.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,13 +50,12 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Instalación</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Tu cuenta</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#registrarse">Registrarse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#entrar-con-google-microsoft-o-github">Entrar con Google, Microsoft o GitHub</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vincular-formas-de-entrar">Vincular formas de entrar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#has-olvidado-la-contrasena">¿Has olvidado la contraseña?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sin-conexion-a-internet">Sin conexión a internet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sin-cuenta">Sin cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="desktop.html">La app de PC</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tu cuenta (opcional)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vincular-una-cuenta">Vincular una cuenta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#formas-de-entrar">Formas de entrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cerrar-sesion">Cerrar sesión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#en-el-pc">En el PC</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="demo.html">Prueba la demo</a></li>
@@ -69,8 +69,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -83,14 +88,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -117,7 +126,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Tu cuenta</li>
+      <li class="breadcrumb-item active">Tu cuenta (opcional)</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -126,50 +135,42 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tu-cuenta">
-<h1>Tu cuenta<a class="headerlink" href="#tu-cuenta" title="Link to this heading"></a></h1>
-<p>Con una cuenta puedes conectarte a tus robots reales y guardar tus perfiles de robot en la nube.</p>
-<section id="registrarse">
-<h2>Registrarse<a class="headerlink" href="#registrarse" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>En la pantalla de inicio de sesión pulsa <strong>Crear una cuenta</strong>.</p></li>
-<li><p>Rellena <strong>Nombre</strong>, <strong>Apellidos</strong>, <strong>Correo</strong> y la <strong>Contraseña</strong> dos veces (6 caracteres o más).</p></li>
-<li><p>Abre el correo que te enviamos y pulsa el enlace de verificación (mira también en spam).</p></li>
-<li><p>Entra con tu correo y tu contraseña.</p></li>
-</ol>
-<p>Listo: las cuentas nuevas empiezan con el rol <strong>Basic</strong> (RViz, Cámara y Teleop). Un administrador
-puede darte más.</p>
+  <section id="tu-cuenta-opcional">
+<h1>Tu cuenta (opcional)<a class="headerlink" href="#tu-cuenta-opcional" title="Link to this heading"></a></h1>
+<p>No necesitas cuenta: la app se abre directamente en Inicio y todo funciona sin ella. Una cuenta solo
+sirve para <strong>sincronizar tus perfiles de robot</strong> entre tus dispositivos (<a class="reference internal" href="../config/profiles.html"><span class="doc">Perfiles de robot</span></a>).</p>
+<section id="vincular-una-cuenta">
+<h2>Vincular una cuenta<a class="headerlink" href="#vincular-una-cuenta" title="Link to this heading"></a></h2>
+<p>En <strong>Inicio</strong>, la tarjeta <strong>Cuenta (opcional)</strong> muestra Google, Microsoft y GitHub. Pulsa
+<strong>Vincular</strong> junto a una y elige tu cuenta. La primera vez se crea tu cuenta de VizMini2 con el
+nombre y el correo de esa cuenta; no hace falta contraseña ni verificar el correo. Tus perfiles
+empiezan a sincronizarse al momento.</p>
+<p>Si ya tenías una cuenta con ese mismo correo, la app te avisa: vincula la forma de entrar que
+usaste la primera vez y añade la nueva desde Inicio.</p>
+<p>Para vincular necesitas internet. Después puedes usar la app sin conexión, por ejemplo conectado
+solo a la Wi-Fi del robot: los perfiles se sincronizan cuando vuelves a tener conexión.</p>
 </section>
-<section id="entrar-con-google-microsoft-o-github">
-<h2>Entrar con Google, Microsoft o GitHub<a class="headerlink" href="#entrar-con-google-microsoft-o-github" title="Link to this heading"></a></h2>
-<p>En la pantalla de inicio de sesión (o en la de registro) pulsa <strong>Continuar con Google</strong>,
-<strong>Continuar con Microsoft</strong> o <strong>Continuar con GitHub</strong> y elige tu cuenta. La primera vez se crea
-tu cuenta de VizMini2 con el nombre y el correo de esa cuenta; no hace falta contraseña ni
-verificar el correo.</p>
-<p>Si ya tenías una cuenta con ese mismo correo, la app te avisa: entra como lo hiciste la primera vez
-y vincula la nueva forma de entrar desde Inicio.</p>
-</section>
-<section id="vincular-formas-de-entrar">
-<h2>Vincular formas de entrar<a class="headerlink" href="#vincular-formas-de-entrar" title="Link to this heading"></a></h2>
-<p>En <strong>Inicio</strong>, en la tarjeta con tu correo, aparecen tus <strong>Formas de entrar</strong>. Pulsa <strong>Vincular</strong>
+<section id="formas-de-entrar">
+<h2>Formas de entrar<a class="headerlink" href="#formas-de-entrar" title="Link to this heading"></a></h2>
+<p>Con la sesión iniciada, la tarjeta muestra tu correo y tus <strong>Formas de entrar</strong>. Pulsa <strong>Vincular</strong>
 junto a Google, Microsoft o GitHub para poder entrar también con ella en la misma cuenta, con tus
 mismos perfiles. <strong>Desvincular</strong> la quita (siempre te queda al menos una).</p>
+<p>Las cuentas creadas con versiones anteriores con correo y contraseña siguen funcionando: mantienen
+la sesión iniciada y aparecen como <em>Correo y contraseña</em> entre las formas de entrar.</p>
 </section>
-<section id="has-olvidado-la-contrasena">
-<h2>¿Has olvidado la contraseña?<a class="headerlink" href="#has-olvidado-la-contrasena" title="Link to this heading"></a></h2>
-<p>En la pantalla de inicio de sesión pulsa <strong>¿Has olvidado la contraseña?</strong> y escribe tu correo:
-recibirás un enlace para elegir una nueva.</p>
+<section id="cerrar-sesion">
+<h2>Cerrar sesión<a class="headerlink" href="#cerrar-sesion" title="Link to this heading"></a></h2>
+<p><strong>Cerrar sesión</strong>, en la misma tarjeta. Sigues en la app: tus pestañas y perfiles se quedan en este
+móvil, pero dejan de sincronizarse con la nube. Para borrar la cuenta para siempre, mira
+<a class="reference internal" href="../accounts/delete.html"><span class="doc">Eliminar tu cuenta</span></a>.</p>
 </section>
-<section id="sin-conexion-a-internet">
-<h2>Sin conexión a internet<a class="headerlink" href="#sin-conexion-a-internet" title="Link to this heading"></a></h2>
-<p>Con la sesión iniciada puedes abrir la app y usar tus robots sin internet, por ejemplo conectado solo
-a la Wi-Fi del robot. De vez en cuando la app te pedirá conectarte a internet un momento para
-comprobar tu cuenta (no hace falta volver a escribir la contraseña); después puedes seguir sin
-conexión. Para iniciar sesión por primera vez sí necesitas internet.</p>
-</section>
-<section id="sin-cuenta">
-<h2>Sin cuenta<a class="headerlink" href="#sin-cuenta" title="Link to this heading"></a></h2>
-<p>Puedes probarlo todo antes con un robot simulado: <a class="reference internal" href="demo.html"><span class="doc">Prueba la demo</span></a>.</p>
+<section id="en-el-pc">
+<h2>En el PC<a class="headerlink" href="#en-el-pc" title="Link to this heading"></a></h2>
+<p><strong>Configuración → Cuenta (opcional)</strong>. <strong>Continuar con</strong> Google, Microsoft o GitHub abre el
+navegador para iniciar sesión; después vuelve a la app. También puedes entrar o crear una cuenta con
+correo y contraseña. Con la sesión iniciada, la tarjeta muestra tu correo, <strong>Sincronizar ahora</strong> y
+<strong>Cerrar sesión</strong>. Es la misma cuenta que en el móvil, con los mismos perfiles. Vincular o
+desvincular formas de entrar y eliminar la cuenta se hace desde el móvil (<a class="reference internal" href="../accounts/delete.html"><span class="doc">Eliminar tu cuenta</span></a>).</p>
 </section>
 </section>
 
@@ -177,7 +178,7 @@ conexión. Para iniciar sesión por primera vez sí necesitas internet.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="install.html" class="btn btn-neutral float-left" title="Instalación" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="desktop.html" class="btn btn-neutral float-left" title="La app de PC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="demo.html" class="btn btn-neutral float-right" title="Prueba la demo" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -185,7 +186,7 @@ conexión. Para iniciar sesión por primera vez sí necesitas internet.</p>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -212,7 +213,7 @@ conexión. Para iniciar sesión por primera vez sí necesitas internet.</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

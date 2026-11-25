@@ -9,13 +9,14 @@
   <title>Dashboard &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/tabs/dashboard.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -23,7 +24,7 @@
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Control" href="control.html" />
-    <link rel="prev" title="Cámara" href="camera.html" /> 
+    <link rel="prev" title="PlanSys2" href="plansys2.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,15 +63,29 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="visualize.html">Visualizar</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="rviz.html">RViz</a></li>
 <li class="toctree-l2"><a class="reference internal" href="camera.html">Cámara</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indicators.html">Indicadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html">Gráficas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gps.html">Mapa GPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="behavior_tree.html">Árbol de comportamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plansys2.html">PlanSys2</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Dashboard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#arrastrar-topics">Arrastrar topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dashboards-ya-montados">Dashboards ya montados</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="control.html">Control</a></li>
@@ -80,14 +96,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -127,27 +147,66 @@
   <section id="dashboard">
 <h1>Dashboard<a class="headerlink" href="#dashboard" title="Link to this heading"></a></h1>
 <figure class="vm-clip vm-right"><video src="../_static/clips/clip_dashboard.mp4" poster="../_static/shots/shot_dashboard.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Tu propia pantalla, hecha con otras pestañas como widgets: una vista 3D, varias cámaras, un
-joystick, botones, diagnósticos… todo a la vez.</p>
+joystick, botones, diagnósticos… todo a la vez. El móvil y el PC usan el mismo dashboard.</p>
 <ul class="simple">
-<li><p>Pulsa <strong>Editar</strong>, luego <strong>Widget</strong>, y elige cualquier tipo de pestaña (menos otro dashboard).</p></li>
-<li><p>Los widgets van en una cuadrícula de 12 columnas: se ajustan solos y se apartan para no solaparse
-nunca. El tamaño mínimo es de 3 × 2 celdas.</p></li>
-<li><p>En modo edición, arrastra un widget para moverlo, arrastra su esquina para cambiar su tamaño o
-pulsa <strong>Quitar widget</strong>.</p></li>
-<li><p>Sal del modo edición para usar los widgets.</p></li>
+<li><p>Pulsa <strong>Editar</strong>, luego <strong>Widget</strong>, y elige cualquier tipo de pestaña (menos otro dashboard).
+Pulsa <strong>Hecho</strong> para volver a usar los widgets.</p></li>
+<li><p>Los widgets se quedan justo donde los sueltas, y pueden solaparse: el último que has movido queda
+encima, y un widget que tapa a otro se dibuja translúcido y con un borde de color (un joystick sobre
+la vista 3D, una cámara pequeña en una esquina…). El tablero mide 12 celdas de ancho con el zoom
+al 100 % y crece hacia la derecha y hacia abajo según colocas widgets. El widget más pequeño es de
+3 × 2 celdas.</p></li>
+<li><p>En modo edición, arrastra un widget para moverlo, arrastra el botón redondo de su esquina inferior
+derecha para cambiar su tamaño, o pulsa la papelera roja para quitarlo. <strong>Deshacer</strong> (la flecha de
+la barra) revierte el último movimiento, cambio de tamaño o borrado; un widget quitado vuelve con
+sus ajustes.</p></li>
+<li><p>En el móvil, en modo edición, los widgets de Botones, Sliders e Indicadores muestran además un
+<strong>+</strong> para añadirles un botón, un slider o un indicador (dentro de un dashboard no llevan su barra
+de «Añadir»). Uno vacío también añade al tocarlo.</p></li>
+<li><p><strong>Zoom</strong>: pellizca con dos dedos para acercar o alejar el tablero y arrastra con dos dedos para
+moverte por él (los gestos de dos dedos sobre un joystick son del joystick). El porcentaje de la
+barra lo devuelve al 100 %. El zoom se recuerda para cada dashboard en cada dispositivo.</p></li>
+<li><p>El botón de pausa de la barra congela todos los widgets a la vez (los mensajes siguen llegando y
+al reanudar se ve el último). Mientras se reproduce un bag desde la pestaña <a class="reference internal" href="bags.html"><span class="doc">Bags</span></a>, su barra
+de tiempo aparece aquí, y pausar, cambiar la velocidad o saltar mueve todos los widgets a la vez.</p></li>
 </ul>
-<p>Cada widget guarda sus propios ajustes, como una pestaña normal. La demo incluye un <em>Dashboard
-demo</em> ya preparado.</p>
+<p>Cada widget guarda sus propios ajustes, como una pestaña normal.</p>
+<p>En el PC, haz zoom con <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + rueda y usa <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">0</kbd> para volver al 100 %, <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">E</kbd>
+para entrar o salir del modo edición, <kbd class="kbd docutils literal notranslate">Esc</kbd> para salir de él y <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Z</kbd> para deshacer. Con
+el botón derecho sobre un widget tienes <em>Traer al frente</em>, <em>Editar</em> y <em>Quitar widget</em> sin entrar en
+modo edición.</p>
+<section id="arrastrar-topics">
+<h2>Arrastrar topics<a class="headerlink" href="#arrastrar-topics" title="Link to this heading"></a></h2>
+<p>Arrastra un topic desde un widget de Topics (en el móvil, mantenlo pulsado antes), o un campo de su
+mensaje, y suéltalo en el dashboard:</p>
+<ul class="simple">
+<li><p>en un hueco libre se convierte ahí en un widget nuevo: una imagen en una Cámara, algo que dibuja
+RViz en una vista 3D, el diagnóstico en un widget de Diagnóstico y un número en una Gráfica;</p></li>
+<li><p>sobre un widget de RViz añade un display, y sobre uno de Gráficas una serie (si has soltado un topic
+entero, se abre el editor de la serie para elegir el campo).</p></li>
+</ul>
+</section>
+<section id="dashboards-ya-montados">
+<h2>Dashboards ya montados<a class="headerlink" href="#dashboards-ya-montados" title="Link to this heading"></a></h2>
+<p>La pantalla <strong>+</strong> tiene <em>Dashboards ya montados</em>, que añaden un dashboard con sus widgets ya
+colocados y configurados, con los topics que haya en la red si los hay: <strong>Navegación</strong> (3D con mapa,
+láser, plan y footprint, joystick, velocidad y diagnóstico), <strong>Robot con cámara</strong>,
+<strong>Monitorización</strong> (diagnóstico, gráficas, indicadores, grafo de nodos y árbol TF), <strong>Manipulación
+(MoveIt)</strong> y <strong>Showcase</strong> (casi todo lo que sabe hacer la app, pensado para <code class="docutils literal notranslate"><span class="pre">tools/fake_robot.py</span></code>).
+El modo demo trae además un <em>Dashboard demo</em>.</p>
+<p>Los layouts de paneles (<code class="docutils literal notranslate"><span class="pre">.json</span></code>) se pueden importar como dashboard, y un dashboard se puede
+exportar como layout de paneles: mira <a class="reference internal" href="../config/import-export.html"><span class="doc">Importar y exportar</span></a>.</p>
 <div class="vm-clear docutils container">
 <p>Mira <a class="reference internal" href="../tutorials/dashboard.html"><span class="doc">Crear un dashboard</span></a>.</p>
 </div>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="camera.html" class="btn btn-neutral float-left" title="Cámara" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="plansys2.html" class="btn btn-neutral float-left" title="PlanSys2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="control.html" class="btn btn-neutral float-right" title="Control" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -155,7 +214,7 @@ demo</em> ya preparado.</p>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -182,7 +241,7 @@ demo</em> ya preparado.</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

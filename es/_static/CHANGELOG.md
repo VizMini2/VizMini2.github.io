@@ -1,7 +1,63 @@
 # Registro de cambios
 
 Aquí se documentan todos los cambios relevantes de VizMini2.
-El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes de la 1.0, las versiones menores aún pueden cambiar el comportamiento).
+El formato sigue Keep a Changelog y el proyecto usa versionado semántico.
+
+## [1.0.0] - 2026-11-25
+
+### Añadido
+- **VizMini2 para el PC (Linux y Windows):** las mismas pestañas que en el móvil, en una ventana. En Linux, instala el `.deb` en Ubuntu 20.04 o posterior, o compílalo como paquete de ROS 2 y arráncalo con `ros2 run vizmini2 vizmini2` (la primera vez toma el dominio y los peers de la terminal). También tiene el robot de demo (Configuración › Iniciar demo, o `vizmini2 --demo`), solo en ese ordenador.
+- **En Windows 10 y 11** (64 bits): instala el `.msi` (para tu usuario, sin pedir administrador: te pregunta dónde y añade un acceso directo en el escritorio y en el menú Inicio) o descomprime el `.zip`. Al desinstalarla desde Configuración de Windows › Aplicaciones se conservan tus ajustes, bags y vídeos. El vídeo H.264/H.265 y la grabación de la ventana usan ffmpeg (`winget install ffmpeg`; si falta, la app explica cómo instalarlo), los diálogos de abrir y guardar son los de Windows, y un aviso indica cuándo se ha guardado un vídeo (al pulsarlo se abre el Explorador con él).
+- **Pestaña MoveIt:** planifica y mueve un brazo robótico con `move_group`: grupos de planificación y poses con nombre, un slider por articulación, mover la pinza en X, Y, Z y alrededor de sus ejes, líneas rectas, el planificador y el tiempo de planificación, y obstáculos. Funciona con el MoveIt de Humble, Jazzy y posteriores.
+- **Pestaña Controladores (ros2_control):** los controladores de un controller manager con su estado; actívalos, desactívalos, configúralos, cárgalos y descárgalos; mueve las articulaciones de los controladores de trayectorias y de comandos directos; y los componentes de hardware con sus interfaces. Foxy, Humble, Jazzy y posteriores.
+- **Pestaña Mapas:** guarda el mapa en el robot (map_saver de Nav2 o SLAM Toolbox) o descárgalo en PGM y YAML, pausa SLAM, limpia los costmaps y dibuja zonas prohibidas y de límite de velocidad que se publican como máscaras de los filtros de costmap de Nav2.
+- **Pestaña Alertas:** tus propias reglas sobre cualquier topic (un valor por encima o por debajo de un umbral, o unos segundos sin mensajes) con notificaciones, también en segundo plano, y los últimos avisos.
+- **Pestaña PlanSys2:** sigue un plan de PlanSys2 mientras se ejecuta, como su monitor de terminal: el plan con el estado y el avance de cada acción, las acciones en curso y quién las hace, el conocimiento (instancias, predicados, funciones y el objetivo, con lo que ya se cumple) y el registro del plan, qué hace el ejecutor y por qué. Los cuatro juntos o cada uno por separado. PlanSys2 4.0.0 y posteriores (Jazzy, rolling) y los mensajes anteriores de la 3.x; el robot de la demo también tiene uno.
+- **Topics de vídeo H.264 y H.265** (`foxglove_msgs/CompressedVideo` y ffmpeg_image_transport) en la pestaña Cámara y en los displays Image y Camera de la vista 3D. La cámara de la demo también se publica en H.264.
+- **Graba la pantalla en vídeo:** el botón de grabar de arriba (se guarda en Movies/VizMini2); en el PC, Grabar vídeo en la barra lateral.
+- **Importa y exporta** ficheros de RViz 2, layouts de paneles (`.json`) y layouts de gráficas (`.xml`), desde + y desde el menú de cada pestaña. Los paneles Publish pasan a ser botones, y cada pestaña de un layout llega como un dashboard propio.
+- **Pestaña Gráficas:** series en el tiempo, XY, transiciones de estado, espectro e histograma, con fórmulas y scripts en Lua, desde topics, bags, ficheros CSV, UDP, MQTT y ZeroMQ.
+- Pestañas **Indicadores, Mapa GPS, Árbol de comportamiento** (Groot2 con el blackboard, la grabación y los puntos de parada, y el log de Nav2), **Mensaje** y **Parámetros**.
+- **Vista 3D:** displays Camera, DepthCloud, Effort, Image con anotaciones, Trajectory (la trayectoria planificada como robot fantasma) y Planning scene, marcadores de malla, marcadores interactivos, las herramientas Elegir, Medir y Publicar punto, y una herramienta de MoveIt para arrastrar el objetivo del brazo. Los paneles de imagen y de cámara se pueden mover y redimensionar.
+- **Display NavMap:** los mapas NavMap de EasyNavigation (`navmap_ros_interfaces/NavMap`) en la vista 3D: superficies navegables en una o varias plantas, coloreadas por cualquiera de sus capas (coste, elevación, ocupación…), con los enlaces entre plantas (escaleras, ascensores, puertas) y las actualizaciones de capas en directo. Los ficheros de RViz con su plugin se importan y se exportan.
+- **Fixed frame escrito a mano:** en la pestaña RViz, escribe cualquier frame, aunque aún no esté en TF, para dejar una vista preparada; mientras no aparezca se usa el automático.
+- **Robots con rmw_zenoh_cpp** (router de Zenoh en Ajustes › Red), y servicios, acciones, parámetros y lifecycle de nodos con rmw_cyclonedds_cpp.
+- **A través de foxglove_bridge:** topics, servicios, parámetros, acciones y el grafo de nodos.
+- **Buscar robots** (Ajustes › Red) muestra los dominios de ROS con nodos en la red; toca uno para conectarte.
+- **Variables de los topics:** escribe `${nombre}` en cualquier topic y pon su valor una vez en Ajustes, para cambiar todas las pestañas a otro robot de golpe.
+- **Bags:** reproducción directa con una línea de tiempo común para todas las pestañas.
+- **Pestañas:** duplícalas, compártelas como fichero e impórtalas (en el PC, con clic derecho en una pestaña la renombras, la duplicas, la borras o la exportas). Los widgets del dashboard se quedan donde los sueltas y pueden solaparse (un joystick sobre la vista 3D), y los de cámara y joystick son más compactos.
+- **Tipos de mensaje que la app no trae:** pega su definición (lo que muestra `ros2 interface show`) justo donde la necesitas, desde las pestañas Topics, Mensaje, Services y Actions o desde cualquier lista de tipos, y úsalos al momento.
+- La pestaña Cámara enseña hasta cuatro cámaras, con sus anotaciones.
+- La pestaña Nodos enseña el DDS de cada nodo.
+- El robot de la demo tiene un controller manager de ros2_control (si desactivas su diff_drive_controller, se para) y su cámara también como vídeo H.264.
+
+### Cambiado
+- **Ya no hace falta cuenta:** la app se abre directamente en Inicio y se conecta a tus robots sin ella; una cuenta (Google, Microsoft o GitHub) solo sincroniza tus perfiles de robot entre dispositivos.
+- VizMini2 es software libre con la Apache License 2.0.
+- Nuevo icono y logo de la app, en el móvil y en el PC.
+- La app usa como objetivo Android 16 (API 36).
+- Botones: una lista larga en un resultado muestra sus primeros valores y cuántos hay (`[0, 1, 1, 2, 3, 5, …] (11)`) en vez de solo `[11]`.
+- Bags: las estadísticas de la grabación y la posición de la reproducción se actualizan mientras están en marcha.
+- PC: las pestañas de la barra lateral se encogen para caber en una ventana pequeña y, si hay más, aparece una barra de desplazamiento.
+- PC: Grabar vídeo y Ctrl+Mayús+R avisan si falta ffmpeg y explican cómo instalarlo, y ffmpeg también se encuentra donde lo dejan winget y las instalaciones habituales.
+- PC: los diálogos de abrir y guardar tienen título y solo muestran el tipo de fichero que toca, y se añade la extensión si escribes un nombre sin ella.
+- PC: los instaladores pesan unos 40 MB menos (cada uno lleva solo las librerías nativas de su sistema).
+- Línea de comandos del PC: `--tab` acepta también el nombre de una pestaña, e `--import` abre la pestaña importada.
+- Los modos de control de la teleoperación y los botones del panel de displays de RViz en el PC (Añadir, Duplicar, Quitar, Renombrar, Color de fondo) están traducidos.
+
+### Corregido
+- Servicios: varias llamadas a la vez al mismo servicio (también los resultados de las acciones) reciben cada una su propia respuesta, aunque el servidor conteste en otro orden; y los clientes de ROS 2 con Fast DDS, como `ros2 service call`, pueden usar los servicios que ofrece la app (los del robot de la demo).
+- PC: cualquier clic en una pestaña Teleop (como Conducir, de la demo) le devuelve el teclado después de que se lo quitaran la barra lateral o un diálogo.
+- PC: en Windows, las mallas del robot también se encuentran en la instalación local de ROS 2 (`AMENT_PREFIX_PATH`).
+- PC: la app ya no crea una carpeta `.ihmc` en tu carpeta personal.
+- Cierres al arrancar en Android 12 y 13, en Android 8 y 9, y al girar el móvil en horizontal en RViz o Cámara.
+- Con un bag en bucle o una simulación reiniciada, la vista 3D se quedaba congelada: el historial de TF se vacía cuando el tiempo salta hacia atrás, como en RViz.
+- Bags: cambiar la velocidad de reproducción hacía que los mensajes llegaran a golpes o se pararan, y algunos ficheros podían bloquear el lector.
+- Al entrar con otra cuenta, los perfiles de la anterior se subían a la nueva.
+- Una malla usada por dos displays a la vez no se veía en el segundo, y una gráfica podía bloquear la app con valores muy grandes.
+- Dos partes de la app publicando a la vez en el mismo topic podían mandar un mensaje dos veces, y los botones de los marcadores interactivos podían perder un clic.
+- El robot de la demo nunca llegaba a pararse del todo (su velocidad oscilaba).
 
 ## [0.18.0] - 2026-10-11
 
@@ -117,7 +173,7 @@ El formato sigue Keep a Changelog y el proyecto usa versionado semántico (antes
 ## [0.11.0] - 2026-09-19
 
 ### Añadido
-- Pestaña Bags: graba topics en archivos MCAP compatibles con `ros2 bag` y Foxglove, reprodúcelos en la red (0,5×, 1×, 2×, bucle), e importa, comparte y borra grabaciones.
+- Pestaña Bags: graba topics en archivos MCAP compatibles con `ros2 bag`, reprodúcelos en la red (0,5×, 1×, 2×, bucle), e importa, comparte y borra grabaciones.
 - Inspector de nodos: parámetros de cualquier nodo, editables como con `ros2 param` (todos los tipos, rangos y marcas de solo lectura), además de lo que publica, a lo que se suscribe y los services que ofrece.
 - Grafo de red: nodos y topics como en `rqt_graph`, con búsqueda y filtros, y un árbol de TF en directo como `rqt_tf_tree`.
 - Número de nodos en Inicio; toca un nodo para abrirlo en el inspector.

@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avisos del robot &mdash; Documentación de VizMini2</title>
+  <title>Alertas del robot &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/config/alerts.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -23,7 +24,7 @@
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Conexión en segundo plano" href="background.html" />
-    <link rel="prev" title="Perfiles de robot" href="profiles.html" /> 
+    <link rel="prev" title="Importar y exportar" href="import-export.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -75,14 +82,21 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Alertas del robot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#en-el-pc">En el PC</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -109,7 +123,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Avisos del robot</li>
+      <li class="breadcrumb-item active">Alertas del robot</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -118,25 +132,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="avisos-del-robot">
-<h1>Avisos del robot<a class="headerlink" href="#avisos-del-robot" title="Link to this heading"></a></h1>
-<p><strong>Ajustes → Avisos del robot</strong> envía una notificación cuando algo va mal:</p>
+  <section id="alertas-del-robot">
+<h1>Alertas del robot<a class="headerlink" href="#alertas-del-robot" title="Link to this heading"></a></h1>
+<p><strong>Ajustes → Alertas del robot</strong> envía una notificación cuando algo va mal:</p>
 <ul class="simple">
-<li><p><strong>Contacto perdido con el robot.</strong></p></li>
-<li><p><strong>Diagnósticos en ERROR o STALE</strong> y, si quieres, <strong>también avisos (WARN)</strong>. El mismo aviso se
+<li><p><strong>Se ha perdido el contacto con el robot.</strong></p></li>
+<li><p><strong>Diagnósticos en ERROR o STALE</strong> y, si quieres, <strong>también avisos (WARN)</strong>. La misma alerta se
 repite como mucho una vez por minuto.</p></li>
-<li><p><strong>Nodos lifecycle perdidos, finalizados o en error.</strong></p></li>
+<li><p><strong>Nodos lifecycle perdidos, finalizados o con error.</strong></p></li>
 </ul>
-<p>La red se revisa cada 3 segundos. Los avisos funcionan con la app abierta, y en segundo plano si
+<p>La red se revisa cada 3 segundos. Las alertas están desactivadas hasta que las activas, aquí o con
+el interruptor de arriba de la pestaña Alertas. Funcionan con la app abierta, y en segundo plano si
 está activada la <a class="reference internal" href="background.html"><span class="doc">Conexión en segundo plano</span></a>. <strong>Enviar una notificación de prueba</strong> comprueba que te llegan;
 Android 13 y posteriores piden permiso la primera vez.</p>
+<p>Tus propias reglas sobre cualquier topic (un valor que pasa un umbral, un topic que se calla) están
+en la <a class="reference internal" href="../tabs/alerts.html"><span class="doc">pestaña Alertas</span></a>, que además guarda el historial de todas las alertas.</p>
+<section id="en-el-pc">
+<h2>En el PC<a class="headerlink" href="#en-el-pc" title="Link to this heading"></a></h2>
+<p>Las alertas son notificaciones del escritorio mientras VizMini2 está abierta: con <code class="docutils literal notranslate"><span class="pre">notify-send</span></code> en
+Linux (paquete <code class="docutils literal notranslate"><span class="pre">libnotify-bin</span></code>), y desde el icono de VizMini2 en el área de notificaciones en
+Windows (o en un escritorio Linux sin <code class="docutils literal notranslate"><span class="pre">notify-send</span></code>). Sus interruptores están arriba en la pestaña
+Alertas: <strong>Notificaciones en este PC</strong>, <strong>Al perder el contacto con el robot</strong> y <strong>Cuando un
+diagnóstico pasa a ERROR</strong>, todos activados por defecto. Tus reglas sobre topics funcionan igual que
+en el móvil.</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="profiles.html" class="btn btn-neutral float-left" title="Perfiles de robot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="import-export.html" class="btn btn-neutral float-left" title="Importar y exportar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="background.html" class="btn btn-neutral float-right" title="Conexión en segundo plano" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -144,7 +170,7 @@ Android 13 y posteriores piden permiso la primera vez.</p>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -171,7 +197,7 @@ Android 13 y posteriores piden permiso la primera vez.</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

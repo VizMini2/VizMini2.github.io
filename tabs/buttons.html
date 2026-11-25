@@ -9,19 +9,20 @@
   <title>Buttons &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tabs/buttons.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lifecycle" href="lifecycle.html" />
+    <link rel="next" title="Sliders" href="sliders.html" />
     <link rel="prev" title="Teleop (2 joysticks)" href="teleop-dual.html" /> 
 </head>
 
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -62,6 +64,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul class="current">
@@ -74,7 +81,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#message-types">Message types</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="sliders.html">Sliders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters.html">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lifecycle.html">Lifecycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit.html">MoveIt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps.html">Maps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inspect.html">Inspect the network</a></li>
@@ -84,14 +96,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -134,28 +150,43 @@
 <ul class="simple">
 <li><p><strong>Publish</strong> a message on a topic.</p></li>
 <li><p><strong>Call</strong> a service and show the response, with the time it took.</p></li>
-<li><p><strong>Send</strong> an action goal, show its feedback and result, and cancel it while it runs.</p></li>
+<li><p><strong>Send</strong> an action goal, show its feedback and result, and cancel it while it runs (tap the
+button again and confirm with <strong>Cancel goal</strong>).</p></li>
 </ul>
 <p>Tap <strong>Add button</strong>, choose the kind and use <strong>Browse</strong> to pick a topic, service or action from the
-network (or type its name). Then fill in the message: there is one field per message field, arrays
-are written as comma-separated values and arrays of messages as JSON. Header stamps are set to the
-current time when the button is pressed.</p>
+network (or type its name), then choose its type. Fill in the message: there is one field per
+message field, arrays are written as comma-separated values and arrays of messages as JSON. Time
+fields (such as <code class="docutils literal notranslate"><span class="pre">header.stamp</span></code>) have a <em>current time when sent</em> box. Tap the line under a button
+to see the whole response, feedback or error; there, a long list shows its first values and how
+many there are, for example <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">...]</span> <span class="pre">(11)</span></code>.</p>
+<p>Service and action buttons work with the same middlewares as the <a class="reference internal" href="services.html"><span class="doc">Services</span></a> tab.</p>
 <section id="options">
 <h2>Options<a class="headerlink" href="#options" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>QoS</strong> for publishing: <em>Reliable</em> (default), <em>Best effort</em> or <em>Transient local</em>.</p></li>
-<li><p><strong>Repeat while held (Hz, 0 = once)</strong>, up to 100 Hz: handy for “move forward while pressed”.</p></li>
+<li><p><strong>Repeat while held (Hz, 0 = once)</strong>, up to 100 Hz: handy for “move forward while pressed”. With
+repeat, releasing the button publishes the message once more with every number at zero (on by
+default), like a dead man’s switch.</p></li>
 <li><p><strong>Response / goal acceptance timeout</strong>, 5 s by default.</p></li>
 <li><p><strong>Ask for confirmation before sending</strong>, for anything dangerous.</p></li>
-<li><p>A color: blue, green, red, orange, purple or gray.</p></li>
+<li><p>A color: the default one, blue, green, red, orange, purple or gray.</p></li>
 </ul>
-<p>Each button’s menu has <em>Edit</em>, <em>Duplicate</em>, <em>Move earlier</em>, <em>Move later</em> and <em>Delete</em>.</p>
+<p>Each button’s ⋮ menu has <em>Edit</em>, <em>Duplicate</em>, <em>Move earlier</em>, <em>Move later</em> and
+<em>Delete</em>. The buttons go with the tab when you duplicate, share or export it.</p>
 </section>
 <section id="message-types">
 <h2>Message types<a class="headerlink" href="#message-types" title="Link to this heading"></a></h2>
-<p>The app knows almost 300 common interfaces (<code class="docutils literal notranslate"><span class="pre">std_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">geometry_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">nav_msgs</span></code>,
-<code class="docutils literal notranslate"><span class="pre">sensor_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">nav2_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">std_srvs</span></code>, <code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code>…). For your own types, pick
-<strong>Define a custom type…</strong> and paste the output of <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">interface</span> <span class="pre">show</span> <span class="pre">your_pkg/msg/YourType</span></code>.</p>
+<p>The app bundles more than 450 interfaces (<code class="docutils literal notranslate"><span class="pre">std_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">geometry_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">nav_msgs</span></code>,
+<code class="docutils literal notranslate"><span class="pre">sensor_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">nav2_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">control_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">moveit_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">std_srvs</span></code>,
+<code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code>…), and the list to pick a type has a search box. Topics, services and
+actions whose type is not bundled are marked <em>type not bundled</em> when you browse.</p>
+<p id="custom-types"><strong>Your own types:</strong> for a type the app doesn’t bring (your robot’s package), <em>Define a custom type…</em>
+at the bottom of the type list (or pick the topic with <em>Browse</em>, which offers it straight away) asks
+for its full name (<code class="docutils literal notranslate"><span class="pre">my_robot/srv/SetLight</span></code>) and the text of its <code class="docutils literal notranslate"><span class="pre">.msg</span></code>, <code class="docutils literal notranslate"><span class="pre">.srv</span></code> or <code class="docutils literal notranslate"><span class="pre">.action</span></code>
+file: paste what <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">interface</span> <span class="pre">show</span> <span class="pre">my_robot/srv/SetLight</span></code> prints on the robot. It can use the
+types the app already knows, and those you defined before. The type is kept on this phone or PC,
+and the buttons, sliders and indicators that use it carry its definition, so they also work when
+you export them or load them from a profile somewhere else.</p>
 <div class="vm-clear docutils container">
 <p>See <a class="reference internal" href="../tutorials/buttons.html"><span class="doc">Buttons for services and actions</span></a>.</p>
 </div>
@@ -167,14 +198,14 @@ current time when the button is pressed.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="teleop-dual.html" class="btn btn-neutral float-left" title="Teleop (2 joysticks)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="lifecycle.html" class="btn btn-neutral float-right" title="Lifecycle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sliders.html" class="btn btn-neutral float-right" title="Sliders" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -201,7 +232,7 @@ current time when the button is pressed.</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

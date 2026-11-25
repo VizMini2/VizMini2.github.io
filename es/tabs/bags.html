@@ -9,13 +9,14 @@
   <title>Bags &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/tabs/bags.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul class="current">
@@ -83,14 +90,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -132,23 +143,44 @@
 <figure class="vm-clip vm-right"><video src="../_static/clips/clip_bags.mp4" poster="../_static/shots/shot_bags.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Graba topics en ficheros MCAP y reprodúcelos.</p>
 <section id="grabar">
 <h2>Grabar<a class="headerlink" href="#grabar" title="Link to this heading"></a></h2>
-<p>Pulsa <strong>Grabar</strong>, elige los topics (o <strong>Todos</strong>) y pulsa <strong>Grabar</strong>. Pulsa <strong>Parar</strong> al terminar.
-Los ficheros se guardan como <code class="docutils literal notranslate"><span class="pre">vizmini2_&lt;fecha&gt;_&lt;hora&gt;.mcap</span></code> (sin comprimir, perfil de ROS 2) y se
-abren con <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> y Foxglove. Los topics cuyo tipo no conoce la app se omiten.</p>
-<p>Grabar necesita el permiso <em>Grabar bags</em> en tu rol.</p>
+<p>Pulsa <strong>Grabar</strong>, elige los topics (o <strong>Todos</strong>) y pulsa <strong>Grabar</strong>. Mientras graba ves el tiempo,
+los mensajes y el tamaño, topic a topic (y cuántos se han descartado, si hay alguno), actualizados en
+directo. Pulsa <strong>Detener</strong> al terminar. La grabación y la
+reproducción siguen aunque cambies a otra pestaña.</p>
+<p>Los ficheros se guardan como <code class="docutils literal notranslate"><span class="pre">vizmini2_&lt;fecha&gt;_&lt;hora&gt;.mcap</span></code> (sin comprimir, perfil de ROS 2) y se
+abren con <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> y con cualquier herramienta que lea MCAP. Solo se pueden grabar los topics cuyo tipo conoce la app; los
+demás no aparecen en la lista.</p>
 </section>
 <section id="reproducir">
 <h2>Reproducir<a class="headerlink" href="#reproducir" title="Link to this heading"></a></h2>
 <p>Pulsa <strong>Reproducir</strong> en una grabación para volver a publicar sus mensajes a 0,5×, 1× o 2×, con
-bucle y pausa.</p>
+bucle y pausa. La tarjeta muestra la posición y la duración mientras se reproduce. Arrastra la barra
+de progreso para saltar a cualquier instante, también en pausa. Al
+saltar hacia delante se vuelve a publicar el último mensaje de los topics «latched»
+(<code class="docutils literal notranslate"><span class="pre">/tf_static</span></code>, <code class="docutils literal notranslate"><span class="pre">/map</span></code>, <code class="docutils literal notranslate"><span class="pre">/robot_description</span></code>…) para que la vista 3D conserve el mapa y el
+robot. Los topics cuyo tipo no conoce la app se omiten.</p>
+<p>Con <strong>Reproducir solo en este móvil</strong>, el bag va directo a las pestañas de la app, sin DDS (y la
+conexión pasa a una aislada, para que no se mezcle nada de la red): la vista 3D, las cámaras, las
+gráficas, los indicadores… ven el mismo bag en el mismo instante, y no sale nada a la red ni llega
+al robot. Los mensajes se entregan tal cual están en el bag, así que llegan enteras incluso las nubes
+y las imágenes grandes, no se omiten los topics de tipos que la app no incluye, y las gráficas usan
+el tiempo del bag. Mientras se reproduce en el móvil aparece una <strong>línea de tiempo</strong> sobre las
+pestañas, en todas ellas: desde ahí se pausa, se salta a cualquier momento o se para. Al parar vuelve tu conexión.</p>
+<p>Los dashboards también muestran una barra de reproducción mientras se reproduce cualquier bag, con pausa,
+un control para saltar, la velocidad (tócala para pasar de 0,25× a 4×) y parar. Para ver un bag en
+gráficas sin publicar nada, ábrelo en una pestaña <a class="reference internal" href="plot.html"><span class="doc">Gráficas</span></a>.</p>
 </section>
 <section id="importar-y-compartir">
 <h2>Importar y compartir<a class="headerlink" href="#importar-y-compartir" title="Link to this heading"></a></h2>
-<p><strong>Importar</strong> abre ficheros <code class="docutils literal notranslate"><span class="pre">.mcap</span></code> del móvil, sin comprimir o comprimidos con lz4 o zstd (el de
-por defecto en muchas instalaciones de ROS 2). Las bags <code class="docutils literal notranslate"><span class="pre">.db3</span></code> (SQLite) no son compatibles.
-<strong>Compartir</strong> envía una grabación a otra app (correo, Drive…) y <strong>Borrar</strong> la elimina.</p>
+<p><strong>Importar</strong> abre ficheros <code class="docutils literal notranslate"><span class="pre">.mcap</span></code>, sin comprimir o comprimidos con lz4 o zstd (el de por defecto
+en muchas instalaciones de ROS 2). Los bags <code class="docutils literal notranslate"><span class="pre">.db3</span></code> (SQLite) no son compatibles. <strong>Compartir</strong>
+envía una grabación a otra app (correo, Drive…) y <strong>Eliminar</strong> la borra.</p>
+<p>En el PC las grabaciones están en <code class="docutils literal notranslate"><span class="pre">~/.local/share/vizmini2/bags</span></code> (Linux) o
+<code class="docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\VizMini2</span> <span class="pre">Data\bags</span></code> (Windows): <strong>Importar</strong> abre un diálogo
+para elegir el fichero y <strong>Compartir</strong> enseña dónde está. La opción <em>Reproducir solo en este móvil</em>
+funciona igual allí, y la barra de reproducción se queda debajo de la pestaña que tengas abierta.</p>
 <div class="vm-clear docutils container">
-<p>Mira <a class="reference internal" href="../tutorials/record-bag.html"><span class="doc">Grabar y reproducir una bag</span></a>.</p>
+<p>Mira <a class="reference internal" href="../tutorials/record-bag.html"><span class="doc">Grabar y reproducir un bag</span></a>.</p>
 </div>
 </section>
 </section>
@@ -165,7 +197,7 @@ por defecto en muchas instalaciones de ROS 2). Las bags <code class="docutils li
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -192,7 +224,7 @@ por defecto en muchas instalaciones de ROS 2). Las bags <code class="docutils li
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

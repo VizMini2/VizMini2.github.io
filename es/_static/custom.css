@@ -19,12 +19,21 @@ figure.vm-right { float: right; }
 figure.vm-center { margin: 1em auto 1.5em; }
 @media (max-width: 768px) { figure.vm-right { float: none; margin: 1em auto; } }
 .vm-clear { clear: both; }
+figure.vm-wide video { width: 760px; aspect-ratio: auto; border-radius: 10px; }
+/* Screenshots: PC ones wide (centered), phone ones narrow like the videos. */
+figure.vm-shot img { max-width: 100%; border-radius: 10px; box-shadow: 0 6px 22px rgba(10, 22, 38, .3); background: #15181c; }
+figure.vm-shot.vm-center img { width: 760px; }
+figure.vm-shot.vm-right img, figure.vm-shot.vm-phone img { width: 260px; border-radius: 16px; }
+figure.vm-shot.vm-right { width: 260px; }
+figure.vm-phone { display: inline-block; margin: .5em .6em 1.2em; vertical-align: top; }
+.vm-row { text-align: center; }
 
 /* Portada: tarjetas de funciones */
 .vm-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 1em 0 1.5em; }
 .vm-card { border: 1px solid #e1e4e5; border-radius: 12px; padding: 12px 14px; background: #fcfcfc; }
 .vm-card b { display: block; margin-bottom: 4px; color: #0F2C44; }
 .vm-card a { font-weight: 600; }
+.vm-card.vm-entry { border-color: #0F2C44; border-width: 2px; }
 
 /* Tablas: el texto de las celdas salta de línea (el tema lo impide por defecto). */
 .wy-table-responsive table td, .wy-table-responsive table th { white-space: normal; }

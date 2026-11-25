@@ -9,13 +9,14 @@
   <title>VizMini2 &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/index.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=8f16d266"></script>
+      <script src="_static/documentation_options.js?v=deffaa10"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="_static/translations.js?v=f85f4cfb"></script>
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/interface.html">La interfaz</a></li>
@@ -60,8 +62,13 @@
 <li class="toctree-l1"><a class="reference internal" href="tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -74,14 +81,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul>
@@ -119,32 +130,49 @@
              
   <section id="vizmini2">
 <h1>VizMini2<a class="headerlink" href="#vizmini2" title="Link to this heading"></a></h1>
-<p><strong>ROS 2 en tu bolsillo.</strong> VizMini2 es una app Android para ver, conducir e inspeccionar robots con
-ROS 2 desde el móvil: una vista 3D como RViz, cámaras en directo, joysticks, tus propios botones
-para servicios y acciones, parámetros de nodos, nodos lifecycle, eco y gráficas de topics,
-grabación de bags y mucho más. Habla directamente con tus robots por tu red (DDS), sin puentes ni
-servidores en el robot.</p>
-<p>¿Aún no lo tienes claro? <strong>Prueba la demo sin cuenta</strong>: un robot simulado que funciona solo dentro
-de tu móvil, con todo funcionando.</p>
-<figure class="vm-clip vm-center"><video src="_static/clips/clip_dashboard.mp4" poster="_static/shots/shot_dashboard.webp" autoplay loop muted playsinline preload="metadata"></video><figcaption>Un dashboard con la vista 3D, la cámara, el joystick y los diagnósticos.</figcaption></figure><section id="que-puede-hacer">
+<p><strong>ROS 2 en tu bolsillo y en tu mesa.</strong> VizMini2 te deja ver, conducir e inspeccionar robots con
+ROS 2 desde un <strong>móvil Android</strong> o un <strong>PC con Linux o Windows</strong>: una vista 3D como RViz, cámaras y vídeo en
+directo, joysticks, tus propios botones para servicios y acciones, MoveIt y ros2_control, mapas
+para Nav2, gráficas, alertas, parámetros de nodos, nodos lifecycle, bags y mucho más. Habla
+directamente con tus robots por tu red (DDS), sin puentes ni servidores en el robot (también
+funciona con Zenoh y con foxglove_bridge).</p>
+<p>No necesitas cuenta. ¿Aún no lo tienes claro? <strong>Prueba la demo</strong>: un robot simulado que funciona
+solo dentro del móvil o del PC, con todo funcionando.</p>
+<figure class="vm-clip vm-center"><video src="_static/clips/clip_dashboard.mp4" poster="_static/shots/shot_dashboard.webp" autoplay loop muted playsinline preload="metadata"></video><figcaption>Un dashboard con la vista 3D, la cámara, el joystick y los diagnósticos.</figcaption></figure><section id="movil-o-pc">
+<h2>Móvil o PC<a class="headerlink" href="#movil-o-pc" title="Link to this heading"></a></h2>
+<p>Las dos apps tienen las mismas pestañas y ajustes, y tus pestañas, perfiles y diseños pasan de una
+a otra sin más. El manual cubre las dos: donde cambian (táctil o ratón, mando o teclado, menú de
+compartir o diálogo de ficheros), cada página lo dice.</p>
+<div class="vm-grid">
+  <div class="vm-card vm-entry"><b>En el móvil (Android 8.0+)</b>Instálala desde Google Play o como APK, prueba el robot de demo y conéctate al tuyo. <a href="getting-started/install.html">Instalar en Android</a></div>
+  <div class="vm-card vm-entry"><b>En el PC (Ubuntu 20.04+ o Windows 10/11)</b>Un <code>.deb</code>, un <code>.msi</code> o <code>ros2 run vizmini2 vizmini2</code>: una ventana con barra lateral, atajos de teclado y arrastrar y soltar. <a href="getting-started/desktop.html">La app de PC</a></div>
+</div></section>
+<section id="que-puede-hacer">
 <h2>Qué puede hacer<a class="headerlink" href="#que-puede-hacer" title="Link to this heading"></a></h2>
 <div class="vm-grid">
-  <div class="vm-card"><b>Ver</b>Vista 3D con 18 displays de RViz, cámaras, el árbol TF, el grafo de nodos y tus propios dashboards. <a href="tabs/rviz.html">Pestaña RViz</a></div>
-  <div class="vm-card"><b>Conducir</b>Joysticks en pantalla o un mando, con paradas de seguridad. <a href="tabs/teleop.html">Teleop</a></div>
-  <div class="vm-card"><b>Actuar</b>Botones que publican, llaman a servicios o envían goals; metas de Nav2 desde el mapa. <a href="tabs/buttons.html">Botones</a></div>
-  <div class="vm-card"><b>Inspeccionar</b>Nodos y parámetros, topics con eco y frecuencia, servicios, acciones y nodos lifecycle. <a href="tabs/nodes.html">Nodos</a></div>
-  <div class="vm-card"><b>Grabar</b>Bags MCAP compatibles con ros2 bag y Foxglove, y reproducirlas. <a href="tabs/bags.html">Bags</a></div>
-  <div class="vm-card"><b>Compartir</b>Perfiles de robot sincronizados con tu cuenta, como ficheros o códigos QR. <a href="config/profiles.html">Perfiles</a></div>
+  <div class="vm-card"><b>Ver</b>Vista 3D con 34 tipos de display (los de RViz y los mapas de varias plantas de NavMap), cámaras y vídeo H.264/H.265, el árbol TF, el grafo de nodos, mapas GPS y tus propios dashboards. <a href="tabs/rviz.html">Pestaña RViz</a></div>
+  <div class="vm-card"><b>Conducir</b>Joysticks en pantalla, un mando o el teclado, con paradas de seguridad; metas y waypoints de Nav2 desde el mapa. <a href="tabs/teleop.html">Teleop</a></div>
+  <div class="vm-card"><b>Mover brazos</b>Planifica y ejecuta con MoveIt, y cambia o manda los controladores de ros2_control. <a href="tabs/moveit.html">MoveIt</a> · <a href="tabs/controllers.html">Controladores</a></div>
+  <div class="vm-card"><b>Actuar</b>Botones y sliders que publican, llaman a servicios o envían goals. <a href="tabs/buttons.html">Botones</a></div>
+  <div class="vm-card"><b>Mapas</b>Guarda mapas, maneja SLAM Toolbox, limpia costmaps y dibuja zonas prohibidas y de velocidad para Nav2. <a href="tabs/maps.html">Mapas</a></div>
+  <div class="vm-card"><b>Graficar y vigilar</b>Gráficas con fórmulas y Lua, indicadores y alertas cuando un valor cruza un límite o un topic se calla. <a href="tabs/plot.html">Gráficas</a> · <a href="tabs/alerts.html">Alertas</a></div>
+  <div class="vm-card"><b>Inspeccionar</b>Nodos y parámetros, topics con eco y frecuencia, servicios, acciones y nodos lifecycle, y los planes de PlanSys2 mientras se ejecutan. <a href="tabs/nodes.html">Nodos</a> · <a href="tabs/plansys2.html">PlanSys2</a></div>
+  <div class="vm-card"><b>Grabar</b>Bags MCAP compatibles con ros2 bag, y vídeos de la pantalla para enseñar qué pasó. <a href="tabs/bags.html">Bags</a></div>
+  <div class="vm-card"><b>Compartir y migrar</b>Perfiles como ficheros o códigos QR; pestañas desde y hacia ficheros de RViz 2 y layouts de otras herramientas. <a href="config/import-export.html">Importar y exportar</a></div>
 </div></section>
 <section id="por-donde-empezar">
 <h2>Por dónde empezar<a class="headerlink" href="#por-donde-empezar" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>¿Eres nuevo? Sigue <a class="reference internal" href="getting-started/install.html"><span class="doc">Instalación</span></a> y <a class="reference internal" href="getting-started/demo.html"><span class="doc">Prueba la demo</span></a>.</p></li>
-<li><p>¿Listo para tu robot? <a class="reference internal" href="getting-started/connect.html"><span class="doc">Conectar con tu robot</span></a>.</p></li>
+<li><p>¿Eres nuevo? <a class="reference internal" href="getting-started/install.html"><span class="doc">Instalación</span></a> (móvil) o <a class="reference internal" href="getting-started/desktop.html"><span class="doc">La app de PC</span></a> (PC), y
+después <a class="reference internal" href="getting-started/demo.html"><span class="doc">Prueba la demo</span></a> y <a class="reference internal" href="getting-started/connect.html"><span class="doc">Conectar con tu robot</span></a>.</p></li>
+<li><p>¿Vienes de RViz o de otra herramienta de visualización? <a class="reference internal" href="tutorials/import-configs.html"><span class="doc">Traer tus configuraciones de RViz y tus layouts</span></a>.</p></li>
 <li><p>¿Buscas una pantalla concreta? Cada pestaña está explicada en <strong>Pestañas</strong>, en el menú, con un
 vídeo.</p></li>
 <li><p>¿Algo no funciona? Mira <a class="reference internal" href="help/troubleshooting.html"><span class="doc">Solución de problemas</span></a> o <a class="reference internal" href="help/contact.html"><span class="doc">Contacto y apoyo</span></a>.</p></li>
+<li><p>¿Quieres compilarla o ayudar? <a class="reference internal" href="developers/index.html"><span class="doc">Desarrollo</span></a>.</p></li>
 </ul>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -171,7 +199,7 @@ vídeo.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-12.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -198,7 +226,7 @@ vídeo.</p></li>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

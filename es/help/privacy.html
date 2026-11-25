@@ -9,13 +9,14 @@
   <title>Privacidad &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/help/privacy.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -75,14 +82,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul class="current">
@@ -91,7 +102,10 @@
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">Requisitos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitaciones conocidas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contacto y apoyo</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Privacidad</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Privacidad</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#en-el-pc">En el PC</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Registro de cambios</a></li>
 </ul>
 
@@ -122,15 +136,29 @@
 <h1>Privacidad<a class="headerlink" href="#privacidad" title="Link to this heading"></a></h1>
 <p>En resumen:</p>
 <ul class="simple">
-<li><p>Tu cuenta guarda tu nombre, correo y rol; los perfiles que guardas se quedan en la nube.</p></li>
-<li><p><strong>Los datos del robot nunca salen de tu red</strong>: van directamente entre el móvil y tus robots.</p></li>
-<li><p>Se envían informes de errores para poder arreglarlos. No hay analítica de uso.</p></li>
-<li><p>La app muestra un banner de anuncios (Google AdMob). En Europa te pregunta antes si aceptas
-anuncios personalizados, y en Estados Unidos puedes pedir que no se compartan tus datos para
-ellos; las dos cosas se cambian en <em>Política de privacidad → Preferencias de anuncios</em>.</p></li>
+<li><p>No hace falta cuenta. Solo si vinculas una (Google, Microsoft o GitHub) para sincronizar tus
+perfiles, se guardan en la nube tu nombre, tu correo y los perfiles que guardes (Firebase
+Authentication y Cloud Firestore, de Google), tanto desde el móvil como desde el PC.</p></li>
+<li><p><strong>Los datos del robot nunca salen de tu red</strong>: van directamente entre el móvil (o el PC) y tus
+robots.</p></li>
+<li><p>Desde el móvil se envían informes de errores para poder arreglarlos (Firebase Crashlytics). No hay
+analítica de uso.</p></li>
+<li><p>No hay anuncios y tus datos no se venden.</p></li>
+<li><p>Una pestaña <strong>Mapa GPS</strong> descarga las imágenes del mapa de los servidores de OpenStreetMap, que
+ven tu dirección IP y la zona que se muestra.</p></li>
 <li><p>Puedes eliminar tu cuenta desde la app cuando quieras: <a class="reference internal" href="../accounts/delete.html"><span class="doc">Eliminar tu cuenta</span></a>.</p></li>
 </ul>
 <p>Lee la <a class="reference external" href="https://ros-2-viz-mini.web.app/privacy#es">política de privacidad completa</a>.</p>
+<section id="en-el-pc">
+<h2>En el PC<a class="headerlink" href="#en-el-pc" title="Link to this heading"></a></h2>
+<p>La app del PC no envía informes de errores. Todo lo que guarda se queda en tu ordenador: los
+ajustes, las pestañas, los perfiles y la sesión de la cuenta en <code class="docutils literal notranslate"><span class="pre">~/.config/vizmini2</span></code>; los bags en
+<code class="docutils literal notranslate"><span class="pre">~/.local/share/vizmini2</span></code>; las cachés (vista 3D, librerías nativas, teselas del mapa GPS) en
+<code class="docutils literal notranslate"><span class="pre">~/.cache/vizmini2</span></code>; las grabaciones de
+la ventana en <code class="docutils literal notranslate"><span class="pre">~/Vídeos/VizMini2</span></code> (la carpeta de vídeos de tu escritorio). En Windows:
+<code class="docutils literal notranslate"><span class="pre">%APPDATA%\VizMini2</span></code>, <code class="docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\VizMini2</span> <span class="pre">Data</span></code> (los bags, y las cachés en su carpeta
+<em>Cache</em>) y <em>Vídeos\VizMini2</em>.</p>
+</section>
 </section>
 
 
@@ -145,7 +173,7 @@ ellos; las dos cosas se cambian en <em>Política de privacidad → Preferencias 
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-12.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -172,7 +200,7 @@ ellos; las dos cosas se cambian en <em>Política de privacidad → Preferencias 
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

@@ -9,13 +9,14 @@
   <title>VizMini2 &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/index.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="_static/documentation_options.js?v=a12e3537"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/js/theme.js"></script>
@@ -47,7 +48,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/interface.html">The interface</a></li>
@@ -61,6 +63,11 @@
 <li class="toctree-l1"><a class="reference internal" href="tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -73,14 +80,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -118,30 +129,47 @@
              
   <section id="vizmini2">
 <h1>VizMini2<a class="headerlink" href="#vizmini2" title="Link to this heading"></a></h1>
-<p><strong>ROS 2 in your pocket.</strong> VizMini2 is an Android app to see, drive and inspect ROS 2 robots
-from your phone: a 3D view like RViz, live cameras, joysticks, your own buttons for services and
-actions, node parameters, lifecycle nodes, topic echo and plots, bag recording and much more.
-It talks to your robots directly over your network (DDS), with no bridge or server on the robot.</p>
-<p>Not sure yet? <strong>Try the demo without an account</strong>: a simulated robot that runs only inside your
-phone, with everything working.</p>
-<figure class="vm-clip vm-center"><video src="_static/clips/clip_dashboard.mp4" poster="_static/shots/shot_dashboard.webp" autoplay loop muted playsinline preload="metadata"></video><figcaption>A dashboard with the 3D view, camera, joystick and diagnostics.</figcaption></figure><section id="what-it-can-do">
+<p><strong>ROS 2 in your pocket, and on your desk.</strong> VizMini2 lets you see, drive and inspect ROS 2 robots
+from an <strong>Android phone</strong> or a <strong>Linux or Windows PC</strong>: a 3D view like RViz, live cameras and video, joysticks,
+your own buttons for services and actions, MoveIt and ros2_control, maps for Nav2, plots, alerts,
+node parameters, lifecycle nodes, bags and much more. It talks to your robots directly over your
+network (DDS), with no bridge or server on the robot (Zenoh and foxglove_bridge work too).</p>
+<p>No account needed. Not sure yet? <strong>Try the demo</strong>: a simulated robot that runs only inside the
+phone or the PC, with everything working.</p>
+<figure class="vm-clip vm-center"><video src="_static/clips/clip_dashboard.mp4" poster="_static/shots/shot_dashboard.webp" autoplay loop muted playsinline preload="metadata"></video><figcaption>A dashboard with the 3D view, camera, joystick and diagnostics.</figcaption></figure><section id="phone-or-pc">
+<h2>Phone or PC<a class="headerlink" href="#phone-or-pc" title="Link to this heading"></a></h2>
+<p>Both apps have the same tabs and settings, and your tabs, profiles and layouts move freely between
+them. The manual covers both: where they differ (touch or mouse, gamepad or keyboard, share sheet
+or file dialog), each page says so.</p>
+<div class="vm-grid">
+  <div class="vm-card vm-entry"><b>On the phone (Android 8.0+)</b>Install it from Google Play or as an APK, try the demo robot and connect to yours. <a href="getting-started/install.html">Install on Android</a></div>
+  <div class="vm-card vm-entry"><b>On the PC (Ubuntu 20.04+ or Windows 10/11)</b>A <code>.deb</code>, an <code>.msi</code> or <code>ros2 run vizmini2 vizmini2</code>: a window with a sidebar, keyboard shortcuts and drag and drop. <a href="getting-started/desktop.html">The PC app</a></div>
+</div></section>
+<section id="what-it-can-do">
 <h2>What it can do<a class="headerlink" href="#what-it-can-do" title="Link to this heading"></a></h2>
 <div class="vm-grid">
-  <div class="vm-card"><b>See</b>3D view with 18 RViz displays, cameras, the TF tree, the node graph and your own dashboards. <a href="tabs/rviz.html">RViz tab</a></div>
-  <div class="vm-card"><b>Drive</b>On-screen joysticks or a gamepad, with safety stops. <a href="tabs/teleop.html">Teleop</a></div>
-  <div class="vm-card"><b>Act</b>Buttons that publish, call services or send action goals; Nav2 goals from the map. <a href="tabs/buttons.html">Buttons</a></div>
-  <div class="vm-card"><b>Inspect</b>Nodes and parameters, topics with echo and rate, services, actions and lifecycle nodes. <a href="tabs/nodes.html">Nodes</a></div>
-  <div class="vm-card"><b>Record</b>MCAP bags compatible with ros2 bag and Foxglove, and play them back. <a href="tabs/bags.html">Bags</a></div>
-  <div class="vm-card"><b>Share</b>Robot profiles synced to your account, as files or as QR codes. <a href="config/profiles.html">Profiles</a></div>
+  <div class="vm-card"><b>See</b>3D view with 34 display types (RViz's and NavMap's multi-floor maps), cameras and H.264/H.265 video, the TF tree, the node graph, GPS maps and your own dashboards. <a href="tabs/rviz.html">RViz tab</a></div>
+  <div class="vm-card"><b>Drive</b>On-screen joysticks, a gamepad or the keyboard, with safety stops; Nav2 goals and waypoints from the map. <a href="tabs/teleop.html">Teleop</a></div>
+  <div class="vm-card"><b>Move arms</b>Plan and execute with MoveIt, and switch or command ros2_control controllers. <a href="tabs/moveit.html">MoveIt</a> · <a href="tabs/controllers.html">Controllers</a></div>
+  <div class="vm-card"><b>Act</b>Buttons and sliders that publish, call services or send action goals. <a href="tabs/buttons.html">Buttons</a></div>
+  <div class="vm-card"><b>Maps</b>Save maps, drive SLAM Toolbox, clear costmaps and draw keepout and speed zones for Nav2. <a href="tabs/maps.html">Maps</a></div>
+  <div class="vm-card"><b>Plot and watch</b>Plots with formulas and Lua, gauges, and alerts when a value crosses a limit or a topic goes silent. <a href="tabs/plot.html">Plot</a> · <a href="tabs/alerts.html">Alerts</a></div>
+  <div class="vm-card"><b>Inspect</b>Nodes and parameters, topics with echo and rate, services, actions and lifecycle nodes, and PlanSys2 plans as they run. <a href="tabs/nodes.html">Nodes</a> · <a href="tabs/plansys2.html">PlanSys2</a></div>
+  <div class="vm-card"><b>Record</b>MCAP bags compatible with ros2 bag, and screen videos to show what happened. <a href="tabs/bags.html">Bags</a></div>
+  <div class="vm-card"><b>Share and migrate</b>Profiles as files or QR codes; tabs to and from RViz 2 files and layouts of other tools. <a href="config/import-export.html">Import and export</a></div>
 </div></section>
 <section id="where-to-start">
 <h2>Where to start<a class="headerlink" href="#where-to-start" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>New here? Follow <a class="reference internal" href="getting-started/install.html"><span class="doc">Installation</span></a> and <a class="reference internal" href="getting-started/demo.html"><span class="doc">Try the demo</span></a>.</p></li>
-<li><p>Ready for your robot? <a class="reference internal" href="getting-started/connect.html"><span class="doc">Connect to your robot</span></a>.</p></li>
+<li><p>New here? <a class="reference internal" href="getting-started/install.html"><span class="doc">Installation</span></a> (phone) or <a class="reference internal" href="getting-started/desktop.html"><span class="doc">The PC app</span></a> (PC), then
+<a class="reference internal" href="getting-started/demo.html"><span class="doc">Try the demo</span></a> and <a class="reference internal" href="getting-started/connect.html"><span class="doc">Connect to your robot</span></a>.</p></li>
+<li><p>Coming from RViz or another visualization tool? <a class="reference internal" href="tutorials/import-configs.html"><span class="doc">Bring your RViz setups and layouts</span></a>.</p></li>
 <li><p>Looking for a specific screen? Every tab is described under <strong>Tabs</strong> in the menu, with a video.</p></li>
 <li><p>Something not working? See <a class="reference internal" href="help/troubleshooting.html"><span class="doc">Troubleshooting</span></a> or <a class="reference internal" href="help/contact.html"><span class="doc">Contact and support</span></a>.</p></li>
+<li><p>Want to build it or help? <a class="reference internal" href="developers/index.html"><span class="doc">Developers</span></a>.</p></li>
 </ul>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -168,7 +196,7 @@ phone, with everything working.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-12.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -195,7 +223,7 @@ phone, with everything working.</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

@@ -9,19 +9,20 @@
   <title>Lifecycle nodes and parameters &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tutorials/lifecycle-params.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Visualize" href="../tabs/visualize.html" />
+    <link rel="next" title="Move an arm with MoveIt" href="moveit.html" />
     <link rel="prev" title="Record and replay a bag" href="record-bag.html" /> 
 </head>
 
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -66,6 +68,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -78,14 +85,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -127,12 +138,12 @@
 <section id="lifecycle">
 <h2>Lifecycle<a class="headerlink" href="#lifecycle" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Tap <strong>+ → Lifecycle</strong> and accept adding the lifecycle nodes found (in the demo:
-<code class="docutils literal notranslate"><span class="pre">/camera_driver</span></code>).</p></li>
-<li><p>Each node shows its state. Tap <strong>Configure</strong>, then <strong>Activate</strong> (confirm each one). The state
+<li><p>Tap <strong>+ → Lifecycle</strong>, keep <strong>Add the N lifecycle node(s) found now</strong> checked and tap <strong>Create</strong>
+(in the demo: <code class="docutils literal notranslate"><span class="pre">/camera_driver</span></code>). Later, <strong>Add node</strong> adds more.</p></li>
+<li><p>Each node shows its state. Tap <strong>Configure</strong>, then <strong>Activate</strong>. The state
 changes live, even when another program (like Nav2’s lifecycle manager) changes it.</p></li>
 <li><p><strong>Deactivate</strong> pauses the node; <strong>Cleanup</strong> takes it back to <em>unconfigured</em>; <strong>Shutdown</strong>
-finalizes it.</p></li>
+finalizes it (after you confirm).</p></li>
 </ol>
 </section>
 <section id="parameters">
@@ -143,7 +154,9 @@ finalizes it.</p></li>
 <li><p>Tap one to change it. The node may reject a value (out of range, read-only…): the app shows the
 reason it gives.</p></li>
 </ol>
+<p>A <strong>Parameters</strong> tab shows the same for the node you choose.</p>
 <p>In the demo, set <code class="docutils literal notranslate"><span class="pre">max_linear_speed</span></code> to <code class="docutils literal notranslate"><span class="pre">0.2</span></code> and drive: the robot is slower right away.</p>
+<p>On the PC it works the same, clicking instead of tapping (<strong>Add</strong> in the side bar is the <strong>+</strong>).</p>
 </section>
 </section>
 
@@ -152,14 +165,14 @@ reason it gives.</p></li>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="record-bag.html" class="btn btn-neutral float-left" title="Record and replay a bag" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../tabs/visualize.html" class="btn btn-neutral float-right" title="Visualize" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="moveit.html" class="btn btn-neutral float-right" title="Move an arm with MoveIt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -186,7 +199,7 @@ reason it gives.</p></li>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

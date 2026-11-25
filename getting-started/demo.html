@@ -9,20 +9,21 @@
   <title>Try the demo &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/getting-started/demo.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Connect to your robot" href="connect.html" />
-    <link rel="prev" title="Your account" href="account.html" /> 
+    <link rel="prev" title="Your account (optional)" href="account.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">Your account (optional)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Try the demo</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#start-it">Start it</a></li>
 </ul>
@@ -65,6 +67,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -77,14 +84,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -124,10 +135,10 @@
 <h1>Try the demo<a class="headerlink" href="#try-the-demo" title="Link to this heading"></a></h1>
 <figure class="vm-clip vm-right"><video src="../_static/clips/clip_rviz.mp4" poster="../_static/shots/shot_rviz.webp" autoplay loop muted playsinline preload="metadata"></video><figcaption>The demo robot in the RViz tab.</figcaption></figure><p>The demo starts a <strong>simulated robot inside your phone</strong>: a small differential robot in a
 10 × 8 m room with boxes. It publishes what a real mobile robot would (TF, odometry, laser, map,
-camera, diagnostics, logs, its URDF and a planned path), obeys <code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code>, and drives around on
-its own when nobody is using the joystick.</p>
-<p>It also offers parameters, services, an action and a lifecycle node, so every tab has something
-to show:</p>
+camera, also as H.264 video, diagnostics, battery, GPS, logs, its URDF and a planned path), obeys
+<code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code>, and drives around on its own when nobody is using the joystick.</p>
+<p>It also offers parameters, services, an action, a lifecycle node and a ros2_control controller
+manager, so every tab has something to show:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">/demo_robot</span></code> parameters: <code class="docutils literal notranslate"><span class="pre">autopilot</span></code>, <code class="docutils literal notranslate"><span class="pre">max_linear_speed</span></code>, <code class="docutils literal notranslate"><span class="pre">max_angular_speed</span></code>,
 <code class="docutils literal notranslate"><span class="pre">robot_name</span></code> (read-only) and <code class="docutils literal notranslate"><span class="pre">use_sim_time</span></code>.</p></li>
@@ -135,19 +146,19 @@ to show:</p>
 (<code class="docutils literal notranslate"><span class="pre">std_srvs/SetBool</span></code>) and <code class="docutils literal notranslate"><span class="pre">/add_two_ints</span></code>.</p></li>
 <li><p>Action: <code class="docutils literal notranslate"><span class="pre">/fibonacci</span></code> (<code class="docutils literal notranslate"><span class="pre">example_interfaces/action/Fibonacci</span></code>), with feedback and cancel.</p></li>
 <li><p>Lifecycle node <code class="docutils literal notranslate"><span class="pre">/camera_driver</span></code>: the camera only publishes while it is <em>active</em>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/controller_manager</span></code> with <code class="docutils literal notranslate"><span class="pre">joint_state_broadcaster</span></code> and <code class="docutils literal notranslate"><span class="pre">diff_drive_controller</span></code> active:
+deactivate <code class="docutils literal notranslate"><span class="pre">diff_drive_controller</span></code> in a Controllers tab and the robot stops.</p></li>
 </ul>
-<p>The demo uses its own ROS domain (231) and only the phone’s internal (loopback) network, so
+<p>The demo uses its own ROS domain (231) and only the device’s internal (loopback) network, so
 <strong>nothing reaches your Wi-Fi</strong> and it never interferes with real robots.</p>
 <section id="start-it">
 <h2>Start it<a class="headerlink" href="#start-it" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><strong>Without an account:</strong> on the sign-in screen tap <strong>Try the demo without an account</strong>. See
-<a class="reference internal" href="../accounts/guest.html"><span class="doc">Using the app without an account</span></a>.</p></li>
-<li><p><strong>With an account:</strong> on Home tap <strong>Try the demo</strong>. Your tabs and connection are saved and come
-back when you tap <strong>Exit demo</strong>.</p></li>
-</ul>
+<p>On Home tap <strong>Try demo</strong> (or <strong>Start demo mode</strong> in the quick tour). Your tabs and connection are
+saved and come back when you tap <strong>Exit demo</strong>. No account needed.</p>
 <p>The demo adds ready-made tabs: <em>Demo RViz</em>, <em>Drive</em>, <em>Camera</em>, <em>Diagnostics</em>, <em>Topics</em>, <em>Buttons</em>,
-<em>Lifecycle</em> and <em>Demo dashboard</em>.</p>
+<em>Sliders</em>, <em>Indicators</em>, <em>GPS map</em>, <em>Plot</em>, <em>Lifecycle</em> and <em>Demo dashboard</em>.</p>
+<p>On the PC the demo is the same: <em>Configuration</em> → <strong>Start demo</strong>, or start the app with
+<code class="docutils literal notranslate"><span class="pre">vizmini2</span> <span class="pre">--demo</span></code> (<a class="reference internal" href="desktop.html"><span class="doc">The PC app</span></a>). It runs on that computer only.</p>
 <div class="vm-clear docutils container">
 <p>Next: <a class="reference internal" href="../tutorials/drive-demo.html"><span class="doc">Drive the demo robot</span></a>.</p>
 </div>
@@ -158,7 +169,7 @@ back when you tap <strong>Exit demo</strong>.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="account.html" class="btn btn-neutral float-left" title="Your account" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="account.html" class="btn btn-neutral float-left" title="Your account (optional)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="connect.html" class="btn btn-neutral float-right" title="Connect to your robot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -166,7 +177,7 @@ back when you tap <strong>Exit demo</strong>.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -193,7 +204,7 @@ back when you tap <strong>Exit demo</strong>.</p></li>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

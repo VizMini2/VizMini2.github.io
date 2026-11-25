@@ -9,13 +9,14 @@
   <title>Solución de problemas &mdash; Documentación de VizMini2</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/es/help/troubleshooting.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8f16d266"></script>
+      <script src="../_static/documentation_options.js?v=deffaa10"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -23,7 +24,7 @@
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Preguntas frecuentes" href="faq.html" />
-    <link rel="prev" title="Eliminar tu cuenta" href="../accounts/delete.html" /> 
+    <link rel="prev" title="Contribuir" href="../developers/contributing.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,7 +50,8 @@
               <p class="caption" role="heading"><span class="caption-text">Primeros pasos</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Instalación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">La app de PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Tu cuenta (opcional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Prueba la demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Conectar con tu robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">La interfaz</a></li>
@@ -61,8 +63,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Enviar metas a Nav2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Crear un dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Botones para servicios y acciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir una bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Grabar y reproducir un bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Nodos lifecycle y parámetros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Mover un brazo con MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Cambiar y mandar controladores de ros2_control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Guardar mapas y dibujar zonas de Nav2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Recibir avisos cuando algo va mal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Traer tus configuraciones de RViz y tus layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pestañas</span></p>
 <ul>
@@ -75,23 +82,31 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Red</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Perfiles de robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Avisos del robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Importar y exportar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Alertas del robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Conexión en segundo plano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Idioma</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cuenta</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Usar la app sin cuenta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Eliminar tu cuenta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Desarrollo</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Ayuda</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Solución de problemas</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#el-robot-no-aparece">El robot no aparece</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#el-robot-no-aparece">El robot no aparece</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#en-el-pc">En el PC</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#aparecen-los-topics-pero-no-llegan-datos">Aparecen los topics pero no llegan datos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#los-servicios-o-las-acciones-no-responden">Los servicios o las acciones no responden</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rviz-muestra-el-robot-sin-mallas">RViz muestra el robot sin mallas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#el-robot-sigue-moviendose">El robot sigue moviéndose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#solo-en-el-pc">Solo en el PC</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Preguntas frecuentes</a></li>
@@ -132,7 +147,7 @@
 <p>Inicio dice <em>Solo se ve este dispositivo</em>:</p>
 <ol class="arabic simple">
 <li><p><strong>¿Mismo dominio?</strong> Ajustes → Red → Domain ID tiene que coincidir con el <code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code> del
-robot.</p></li>
+robot. <strong>Buscar robots</strong>, a su lado, escucha en todos los dominios y muestra dónde hay nodos.</p></li>
 <li><p><strong>¿Misma red?</strong> El móvil tiene que estar en la Wi-Fi del robot (no en datos móviles ni en una
 red de invitados aislada).</p></li>
 <li><p><strong>¿Multicast bloqueado?</strong> Muy habitual en Wi-Fi de oficinas, universidades, invitados y mesh.
@@ -141,6 +156,33 @@ Escribe la IP del robot en <strong>Discovery peers</strong> y pulsa <strong>Apli
 <li><p>¿Nada? Pide que desactiven el <em>IGMP snooping</em> y el <em>aislamiento de clientes/AP</em> en el router, o
 usa un <strong>Discovery Server</strong> en los dos lados.</p></li>
 </ol>
+<section id="en-el-pc">
+<h3>En el PC<a class="headerlink" href="#en-el-pc" title="Link to this heading"></a></h3>
+<p>En el PC no hay Inicio: el estado de la barra lateral pone <em>Dominio N</em> cuando el nodo está en
+marcha, y una pestaña <strong>Nodos</strong> o <strong>Topics</strong> muestra lo que ve.</p>
+<ol class="arabic simple">
+<li><p><strong>¿Mismo dominio?</strong> Configuración → Red → Domain ID tiene que coincidir con el
+<code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code> del robot, o usa <strong>Buscar robots</strong>. La primera vez, la app toma
+<code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_STATIC_PEERS</span></code> y <code class="docutils literal notranslate"><span class="pre">ROS_DISCOVERY_SERVER</span></code> de su entorno (la terminal
+desde la que se arranca o, en Windows, las variables de entorno de tu usuario); después solo
+cuenta lo que pongas en Configuración.</p></li>
+<li><p><strong>¿Cortafuegos?</strong> DDS usa multicast UDP y puertos a partir del 7400. En Linux, si tienes <code class="docutils literal notranslate"><span class="pre">ufw</span></code>
+u otro cortafuegos activo, permite la red del robot. En Windows, permite VizMini2 cuando el
+Firewall de Windows lo pregunte; si lo cerraste, abre <em>Seguridad de Windows</em> → <em>Firewall y
+protección de red</em> → <em>Permitir una aplicación a través del firewall</em> y marca <em>VizMini2</em> para las
+redes <em>Privadas</em>. Si tu Wi-Fi está marcada como <strong>Pública</strong>, márcala como <strong>Privada</strong>
+(<em>Configuración</em> → <em>Red e Internet</em>). También puedes añadir la IP del robot en <strong>Discovery
+peers</strong>.</p></li>
+<li><p><strong>¿Varias tarjetas de red</strong> (Docker, VPN…)? Escribe la IP o la interfaz correcta en
+<strong>Interfaces de red permitidas</strong>.</p></li>
+<li><p>Compruébalo desde una terminal, sin ventana: <code class="docutils literal notranslate"><span class="pre">vizmini2</span> <span class="pre">--check</span> <span class="pre">--domain</span> <span class="pre">N</span></code>. Con el paquete de
+ROS 2 es <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">vizmini2</span> <span class="pre">vizmini2</span> <span class="pre">--check</span> <span class="pre">--domain</span> <span class="pre">N</span></code>; con el <code class="docutils literal notranslate"><span class="pre">.deb</span></code>,
+<code class="docutils literal notranslate"><span class="pre">/opt/vizmini2/bin/vizmini2</span> <span class="pre">--check</span> <span class="pre">--domain</span> <span class="pre">N</span></code>. Se conecta unos segundos y escribe su estado,
+los nodos y los topics que ve. En Windows, <code class="docutils literal notranslate"><span class="pre">VizMini2.exe</span> <span class="pre">--check</span></code> no escribe nada en la
+terminal: redirígelo a un fichero como se explica en <a class="reference internal" href="../getting-started/desktop.html"><span class="doc">La app de PC</span></a> (<em>Línea
+de comandos</em>).</p></li>
+</ol>
+</section>
 </section>
 <section id="aparecen-los-topics-pero-no-llegan-datos">
 <h2>Aparecen los topics pero no llegan datos<a class="headerlink" href="#aparecen-los-topics-pero-no-llegan-datos" title="Link to this heading"></a></h2>
@@ -148,24 +190,41 @@ usa un <strong>Discovery Server</strong> en los dos lados.</p></li>
 <li><p><strong>QoS:</strong> una suscripción <em>Reliable</em> no recibe de un publicador <em>Best effort</em>. En los displays de
 RViz y en Echo, elige <em>Best effort</em>. Para topics «latched» como <code class="docutils literal notranslate"><span class="pre">/map</span></code> o
 <code class="docutils literal notranslate"><span class="pre">/robot_description</span></code>, usa <em>Transient local</em>.</p></li>
-<li><p><strong>Tipo desconocido:</strong> la app conoce ~300 interfaces comunes; define las tuyas en la pestaña
-Botones (<a class="reference internal" href="../tabs/buttons.html"><span class="doc">Botones</span></a>).</p></li>
+<li><p><strong>Tipo desconocido:</strong> la app trae unas 470 interfaces comunes (<a class="reference internal" href="requirements.html"><span class="doc">Requisitos</span></a>); define las
+tuyas en la pestaña Botones (<a class="reference internal" href="../tabs/buttons.html"><span class="doc">Botones</span></a>).</p></li>
 <li><p><strong>Mensajes grandes por Wi-Fi:</strong> las nubes de puntos y las imágenes sin comprimir pesan mucho.
 Mejor imágenes comprimidas y nubes reducidas.</p></li>
+<li><p><strong>ROS 2 en un contenedor Docker en el mismo PC</strong> (Kilted o posterior, ejecutado como <em>root</em>,
+como es habitual): los topics aparecen pero no llegan datos, porque Fast DDS los manda por memoria
+compartida y la app, que se ejecuta con tu usuario, no puede abrirla. Arranca el contenedor con
+<code class="docutils literal notranslate"><span class="pre">-e</span> <span class="pre">FASTDDS_BUILTIN_TRANSPORTS=UDPv4</span></code> (o con tu usuario: <code class="docutils literal notranslate"><span class="pre">--user</span> <span class="pre">$(id</span> <span class="pre">-u):$(id</span> <span class="pre">-g)</span></code>).</p></li>
+<li><p><strong>Topics de vídeo en el PC</strong> (H.264/H.265, como <code class="docutils literal notranslate"><span class="pre">foxglove_msgs/CompressedVideo</span></code>): necesitan
+<code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ffmpeg</span></code> en Linux, <code class="docutils literal notranslate"><span class="pre">winget</span> <span class="pre">install</span> <span class="pre">ffmpeg</span></code> en Windows. Sin él,
+la cámara lo dice.</p></li>
+<li><p><strong>Las nubes o las imágenes se paran después de usar</strong> <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">echo</span></code> <strong>o</strong> <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">hz</span></code>
+<strong>en el robot (ROS 2 Lyrical):</strong> un fallo del <code class="docutils literal notranslate"><span class="pre">rmw_fastrtps_cpp</span></code> de Lyrical hace que un
+publicador deje de enviar los topics con arrays de bytes (<code class="docutils literal notranslate"><span class="pre">sensor_msgs/PointCloud2</span></code>, <code class="docutils literal notranslate"><span class="pre">Image</span></code>,
+<code class="docutils literal notranslate"><span class="pre">CompressedImage</span></code>…) a los lectores que no son de ROS, como la app (en el móvil y en el PC), en
+cuanto se cierra otro suscriptor de ROS de ese topic. Reinicia el nodo que publica el topic y
+vuelven los datos. Hasta entonces, evita <code class="docutils literal notranslate"><span class="pre">echo</span></code>/<code class="docutils literal notranslate"><span class="pre">hz</span></code> sobre esos topics mientras usas la app.</p></li>
 </ul>
 </section>
 <section id="los-servicios-o-las-acciones-no-responden">
 <h2>Los servicios o las acciones no responden<a class="headerlink" href="#los-servicios-o-las-acciones-no-responden" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>El robot tiene que usar <strong>Fast DDS</strong> (<code class="docutils literal notranslate"><span class="pre">rmw_fastrtps_cpp</span></code>). Con CycloneDDS los topics
-funcionan, pero los servicios y las acciones no.</p></li>
+<li><p>El robot tiene que usar <strong>Fast DDS</strong> (<code class="docutils literal notranslate"><span class="pre">rmw_fastrtps_cpp</span></code>) o <strong>Cyclone DDS</strong>
+(<code class="docutils literal notranslate"><span class="pre">rmw_cyclonedds_cpp</span></code>): la app los distingue sola. Con <strong>Zenoh</strong> (<code class="docutils literal notranslate"><span class="pre">rmw_zenoh_cpp</span></code>), rellena el
+<strong>Router de Zenoh</strong> en <a class="reference internal" href="../config/network.html"><span class="doc">Ajustes → Red</span></a>. Con cualquier otro middleware, usa
+foxglove_bridge. Si aun así no responden, prueba el ajuste <strong>Formato de servicios</strong> en Ajustes →
+Red.</p></li>
 <li><p>La app espera hasta el tiempo límite del botón (5 s por defecto). Los servicios largos necesitan
 más tiempo.</p></li>
 </ul>
 </section>
 <section id="rviz-muestra-el-robot-sin-mallas">
 <h2>RViz muestra el robot sin mallas<a class="headerlink" href="#rviz-muestra-el-robot-sin-mallas" title="Link to this heading"></a></h2>
-<p>Configura el servidor de mallas: <a class="reference internal" href="../tutorials/visualize-robot.html"><span class="doc">Ver tu robot en 3D</span></a>.</p>
+<p>Configura el servidor de mallas: <a class="reference internal" href="../tutorials/visualize-robot.html"><span class="doc">Ver tu robot en 3D</span></a>. En el PC, las mallas de los
+paquetes instalados en el mismo ordenador se encuentran sin él.</p>
 </section>
 <section id="el-robot-sigue-moviendose">
 <h2>El robot sigue moviéndose<a class="headerlink" href="#el-robot-sigue-moviendose" title="Link to this heading"></a></h2>
@@ -173,13 +232,36 @@ más tiempo.</p></li>
 pantalla congelada también lo paran. Si tu robot sigue con la última orden, configura en el robot
 un tiempo límite de velocidad (casi todos los controladores lo tienen).</p>
 </section>
+<section id="solo-en-el-pc">
+<h2>Solo en el PC<a class="headerlink" href="#solo-en-el-pc" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>El dock muestra un icono genérico o un nombre de Java (Linux)</dt><dd><p>El <code class="docutils literal notranslate"><span class="pre">.deb</span></code> añade <em>VizMini2</em> al menú de aplicaciones con su icono. Con <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code>, la app añade
+esa entrada del menú (en <code class="docutils literal notranslate"><span class="pre">~/.local/share/applications</span></code>) la primera vez que arranca; si el dock
+sigue mostrando el icono genérico, cierra la app y vuelve a abrirla.</p>
+</dd>
+<dt>Wayland (Linux)</dt><dd><p>La app funciona a través de XWayland, que Ubuntu trae por defecto. Si la ventana no se abre en
+una sesión Wayland, comprueba que XWayland está instalado o entra con una sesión X11 (Xorg).</p>
+</dd>
+<dt>Windows dice «Windows protegió su PC» al instalar</dt><dd><p>El <code class="docutils literal notranslate"><span class="pre">.msi</span></code> no está firmado: elige <em>Más información</em> → <em>Ejecutar de todas formas</em>.</p>
+</dd>
+<dt>No llegan notificaciones</dt><dd><p>En Linux, las alertas usan <code class="docutils literal notranslate"><span class="pre">notify-send</span></code>: instálalo con <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">libnotify-bin</span></code>. En
+Windows salen del icono de VizMini2 en el área de notificaciones: comprueba que las
+notificaciones de Windows están activadas para él. Comprueba también que <strong>Notificaciones en
+este PC</strong> está activado en la pestaña Alertas (<a class="reference internal" href="../tabs/alerts.html"><span class="doc">Alertas</span></a>).</p>
+</dd>
+<dt>Grabar vídeo no funciona</dt><dd><p>Grabar la ventana necesita <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ffmpeg</span></code> en Linux, <code class="docutils literal notranslate"><span class="pre">winget</span> <span class="pre">install</span>
+<span class="pre">ffmpeg</span></code> en Windows (la app también encuentra el que instala winget aunque ya estuviera abierta).
+O pon en la variable de entorno <code class="docutils literal notranslate"><span class="pre">VIZMINI2_FFMPEG</span></code> la ruta del programa <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>.</p>
+</dd>
+</dl>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="../accounts/delete.html" class="btn btn-neutral float-left" title="Eliminar tu cuenta" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../developers/contributing.html" class="btn btn-neutral float-left" title="Contribuir" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="faq.html" class="btn btn-neutral float-right" title="Preguntas frecuentes" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -187,7 +269,7 @@ un tiempo límite de velocidad (casi todos los controladores lo tienen).</p>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-10-11.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
       </span></p>
   </div>
 
@@ -214,7 +296,7 @@ un tiempo límite de velocidad (casi todos los controladores lo tienen).</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

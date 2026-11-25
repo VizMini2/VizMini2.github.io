@@ -9,13 +9,14 @@
   <title>Build a dashboard &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tutorials/dashboard.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -62,6 +64,11 @@
 <li class="toctree-l1"><a class="reference internal" href="buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -74,14 +81,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -121,15 +132,20 @@
 <h1>Build a dashboard<a class="headerlink" href="#build-a-dashboard" title="Link to this heading"></a></h1>
 <p>Goal: one screen with the 3D view, a camera and a joystick.</p>
 <ol class="arabic simple">
-<li><p>Tap <strong>+ → Dashboard</strong> and give it a name.</p></li>
+<li><p>Tap <strong>+ → Dashboard</strong>, give it a name if you like and tap <strong>Create</strong>.</p></li>
 <li><p>Tap <strong>Edit → Widget → RViz</strong>. Drag its corner to make it take the top half.</p></li>
 <li><p>Add a <strong>Camera</strong> widget and choose the image topic; place it under the 3D view.</p></li>
 <li><p>Add a <strong>Teleop</strong> widget next to the camera.</p></li>
 <li><p>Optional: add <strong>Buttons</strong> with your most used commands, or <strong>Diagnostics</strong> in <em>Log</em> mode.</p></li>
-<li><p>Leave edit mode and drive while you watch.</p></li>
+<li><p>Tap <strong>Done</strong> and drive while you watch.</p></li>
 </ol>
-<p>Widgets snap to a grid and push each other aside instead of overlapping, so you can rearrange them
-freely. Save the result in a robot profile (<a class="reference internal" href="../config/profiles.html"><span class="doc">Robot profiles</span></a>) to get it on another phone.</p>
+<p>Widgets stay exactly where you drop them and can overlap: the one you moved last is on top, so you
+can put a joystick over the 3D view or a small camera in a corner. <strong>Undo</strong> reverts the last move.
+Save the result in a robot profile (<a class="reference internal" href="../config/profiles.html"><span class="doc">Robot profiles</span></a>) to get it on another device.</p>
+<p>In a hurry? The <strong>+</strong> catalog also has <strong>Ready-made dashboards</strong> (<em>Navigation</em>, <em>Camera robot</em>,
+<em>Monitoring</em>, <em>Manipulation (MoveIt)</em>…) that use the topics found on the network.</p>
+<p>On the PC it works the same: <strong>Add</strong> in the side bar is the <strong>+</strong>, and <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">E</kbd> toggles edit
+mode, <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Z</kbd> undoes and <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">0</kbd> resets the zoom.</p>
 </section>
 
 
@@ -144,7 +160,7 @@ freely. Save the result in a robot profile (<a class="reference internal" href="
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -171,7 +187,7 @@ freely. Save the result in a robot profile (<a class="reference internal" href="
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

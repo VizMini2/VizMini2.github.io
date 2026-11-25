@@ -9,13 +9,14 @@
   <title>Privacy &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/help/privacy.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -62,6 +64,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -74,14 +81,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul class="current">
@@ -90,7 +101,10 @@
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="limitations.html">Known limitations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact and support</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Privacy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Privacy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#on-the-pc">On the PC</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
 </ul>
 
@@ -121,15 +135,26 @@
 <h1>Privacy<a class="headerlink" href="#privacy" title="Link to this heading"></a></h1>
 <p>In short:</p>
 <ul class="simple">
-<li><p>Your account stores your name, email and role; profiles you save are kept in the cloud.</p></li>
-<li><p><strong>Robot data never leaves your network</strong>: it goes straight between the phone and your robots.</p></li>
-<li><p>Crash reports are sent to fix bugs. No usage analytics.</p></li>
-<li><p>The app shows an ad banner (Google AdMob). In Europe it first asks whether you accept
-personalised ads, and in the United States you can ask for your data not to be shared for them;
-both are changed in <em>Privacy policy → Ad preferences</em>.</p></li>
+<li><p>No account is needed. Only if you link one (Google, Microsoft or GitHub) to sync your profiles,
+your name, email and the profiles you save are kept in the cloud (Firebase Authentication and
+Cloud Firestore, from Google), from the phone and the PC alike.</p></li>
+<li><p><strong>Robot data never leaves your network</strong>: it goes straight between the phone (or the PC) and
+your robots.</p></li>
+<li><p>Crash reports are sent from the phone to fix bugs (Firebase Crashlytics). No usage analytics.</p></li>
+<li><p>No ads, and your data is never sold.</p></li>
+<li><p>A <strong>GPS map</strong> tab downloads the map images from OpenStreetMap’s servers, which see your IP
+address and the area shown.</p></li>
 <li><p>You can delete your account from the app at any time: <a class="reference internal" href="../accounts/delete.html"><span class="doc">Delete your account</span></a>.</p></li>
 </ul>
 <p>Read the full <a class="reference external" href="https://ros-2-viz-mini.web.app/privacy">privacy policy</a>.</p>
+<section id="on-the-pc">
+<h2>On the PC<a class="headerlink" href="#on-the-pc" title="Link to this heading"></a></h2>
+<p>The PC app sends no crash reports. Everything it stores stays on your computer: settings, tabs,
+profiles and the account session in <code class="docutils literal notranslate"><span class="pre">~/.config/vizmini2</span></code>; bags in <code class="docutils literal notranslate"><span class="pre">~/.local/share/vizmini2</span></code>;
+caches (3D view, native libraries, GPS map tiles) in <code class="docutils literal notranslate"><span class="pre">~/.cache/vizmini2</span></code>; window recordings in <code class="docutils literal notranslate"><span class="pre">~/Videos/VizMini2</span></code> (your desktop’s
+videos folder). On Windows: <code class="docutils literal notranslate"><span class="pre">%APPDATA%\VizMini2</span></code>, <code class="docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\VizMini2</span> <span class="pre">Data</span></code> (bags, and the
+caches in its <em>Cache</em> folder) and <em>Videos\VizMini2</em>.</p>
+</section>
 </section>
 
 
@@ -144,7 +169,7 @@ both are changed in <em>Privacy policy → Ad preferences</em>.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-12.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -171,7 +196,7 @@ both are changed in <em>Privacy policy → Ad preferences</em>.</p></li>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Behavior tree &mdash; VizMini2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tabs/behavior_tree.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PlanSys2" href="plansys2.html" />
+    <link rel="prev" title="GPS map" href="gps.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0F2C44" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VizMini2
+              <img src="../_static/vizmini2.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/drive-demo.html">Drive the demo robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/visualize-robot.html">Visualize your robot in 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/nav2.html">Send Nav2 goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/dashboard.html">Build a dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="visualize.html">Visualize</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camera.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indicators.html">Indicators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html">Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gps.html">GPS map</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Behavior tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#groot2-behaviortree-cpp-4">Groot2 (BehaviorTree.CPP 4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nav2-log-topic">Nav2 log topic</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plansys2.html">PlanSys2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard.html">Dashboard</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="control.html">Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inspect.html">Inspect the network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="record.html">Record</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Account</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/limitations.html">Known limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/contact.html">Contact and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/privacy.html">Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0F2C44" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VizMini2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="visualize.html">Visualize</a></li>
+      <li class="breadcrumb-item active">Behavior tree</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="behavior-tree">
+<h1>Behavior tree<a class="headerlink" href="#behavior-tree" title="Link to this heading"></a></h1>
+<figure class="vm-clip vm-right"><video src="../_static/clips/clip_behavior_tree.mp4" poster="../_static/shots/shot_behavior_tree.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Watch a behavior tree run live, like Groot2’s monitor mode: which node is running, what succeeded
+and what failed. The tree is drawn top-down. Each node is a box with a stripe for its category
+(control, decorator, action, condition, subtree), its name and its type. The border shows its state:</p>
+<ul class="simple">
+<li><p><strong>orange</strong>: running;</p></li>
+<li><p><strong>green</strong>: success;</p></li>
+<li><p><strong>red</strong>: failure;</p></li>
+<li><p>faded green or red: the node is idle again, and that is how it ended last time. You can see
+which branch just ran even after the tree has restarted.</p></li>
+</ul>
+<p>Drag to move, pinch to zoom, double tap (or the frame button) to fit the whole tree. Tap a node to
+see its type, its state and its ports (the attributes in the XML). Tap a <strong>SubTree</strong> to fold or
+unfold it. The book button shows the latest state changes instead, newest first, and the
+<strong>blackboard</strong> button shows the values in the tree’s blackboards (Groot2 only), refreshed twice a
+second.</p>
+<p>On the PC, drag with the mouse to move, zoom with the wheel and double click to fit the tree.</p>
+<p><strong>Breakpoints</strong> (Groot2 only): select a node and tap <strong>Breakpoint here</strong>. When the tree is about to
+run that node it stops (the node gets a red dashed border and the top line says where it is
+stopped) until you tap <strong>Continue</strong>; it stops there again on the next pass until you remove the
+breakpoint. While there are breakpoints, state changes are worked out from the polled states
+instead of recorded. Leaving the tab or changing the source lets the tree go on and removes them,
+so the robot is never left stopped.</p>
+<p>Tap the source at the top to choose where the tree comes from.</p>
+<section id="groot2-behaviortree-cpp-4">
+<h2>Groot2 (BehaviorTree.CPP 4)<a class="headerlink" href="#groot2-behaviortree-cpp-4" title="Link to this heading"></a></h2>
+<p>The robot’s program must create a <code class="docutils literal notranslate"><span class="pre">BT::Groot2Publisher</span></code> for its tree, the same one Groot2 uses:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factory</span><span class="p">.</span><span class="n">createTree</span><span class="p">(</span><span class="s">&quot;MainTree&quot;</span><span class="p">);</span>
+<span class="n">BT</span><span class="o">::</span><span class="n">Groot2Publisher</span><span class="w"> </span><span class="nf">publisher</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span><span class="w"> </span><span class="mi">1667</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1667 is the default port</span>
+</pre></div>
+</div>
+<p>Write the robot’s IP (or <code class="docutils literal notranslate"><span class="pre">IP:port</span></code> if it isn’t 1667). The first time, the address of the
+connection settings is suggested: the bridge’s host, or the first discovery peer. The tab asks for
+the whole tree once, with its subtrees, and then for the state of every node ten times a second. If
+the program loads another tree, it is fetched again. If the connection drops, the tab keeps
+retrying.</p>
+<p>This is a plain TCP connection (ZeroMQ) to the robot, not ROS: it doesn’t use the domain or the
+bridge, so the phone or PC must reach that port. Groot2Publisher serves one viewer at a time, so close
+Groot2 if it is connected.</p>
+</section>
+<section id="nav2-log-topic">
+<h2>Nav2 log topic<a class="headerlink" href="#nav2-log-topic" title="Link to this heading"></a></h2>
+<p>Nav2’s <code class="docutils literal notranslate"><span class="pre">bt_navigator</span></code> doesn’t run a Groot2Publisher, but it publishes every state change on
+<code class="docutils literal notranslate"><span class="pre">/behavior_tree_log</span></code> (<code class="docutils literal notranslate"><span class="pre">nav2_msgs/BehaviorTreeLog</span></code>). With this source the tab subscribes to
+that topic (over DDS or the bridge, like any other). The log doesn’t include the shape of the tree,
+so the nodes are listed in a column as they appear, in tree order, each with its state.</p>
+<p>To see the real tree, <strong>load its XML</strong> in the same dialog (the <code class="docutils literal notranslate"><span class="pre">.xml</span></code> that bt_navigator runs, such
+as <code class="docutils literal notranslate"><span class="pre">navigate_to_pose_w_replanning_and_recovery.xml</span></code>; on the PC, with the system’s file dialog): it
+is drawn like with Groot2, and each change in the log lights up its node. On <strong>Humble</strong>, tick the option: its log has no node ids, so each
+change goes to the first node with that name.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gps.html" class="btn btn-neutral float-left" title="GPS map" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plansys2.html" class="btn btn-neutral float-right" title="PlanSys2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
+      <span class="lastupdated">Last updated on 2026-11-25.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Language">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-language"></span> English
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Language</dt>
+      <dd><strong>English</strong></dd>
+      <dd><a href="../es/tabs/behavior_tree.html">Español</a></dd>
+    </dl>
+    <dl>
+      <dt>VizMini2</dt>
+      <dd>v1.0.0</dd>
+    </dl>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

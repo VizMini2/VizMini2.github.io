@@ -9,20 +9,21 @@
   <title>Delete your account &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/accounts/delete.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Troubleshooting" href="../help/troubleshooting.html" />
-    <link rel="prev" title="Using the app without an account" href="guest.html" /> 
+    <link rel="next" title="Developers" href="../developers/index.html" />
+    <link rel="prev" title="Language" href="../config/language.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -62,6 +64,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul>
@@ -74,14 +81,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="guest.html">Using the app without an account</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -119,15 +130,19 @@
              
   <section id="delete-your-account">
 <h1>Delete your account<a class="headerlink" href="#delete-your-account" title="Link to this heading"></a></h1>
-<p>On <strong>Home</strong>, in the card with your email, tap <strong>Delete my account</strong> and enter your password (if you sign in with Google, Microsoft or GitHub,
-sign in with it again to confirm).</p>
+<p>On <strong>Home</strong>, in the card with your email, tap <strong>Delete my account</strong> and sign in again with Google,
+Microsoft or GitHub to confirm (accounts from earlier versions with email and password enter their
+password instead).</p>
 <p>This deletes, right away and for good:</p>
 <ul class="simple">
 <li><p>your account (you can’t sign in with it any more);</p></li>
-<li><p>your name, email and role;</p></li>
+<li><p>your name, email and linked sign-in methods;</p></li>
 <li><p>your robot profiles in the cloud.</p></li>
 </ul>
-<p>Recordings, tabs and settings stored on the phone stay until you uninstall the app.</p>
+<p>You stay in the app and can keep using it without an account: tabs, profiles, recordings and
+settings stored on the phone stay until you uninstall it.</p>
+<p>The PC app has no <strong>Delete my account</strong> button: delete it from the phone, or by email as below.
+Afterwards, <strong>Sign out</strong> on the PC (Configuration → Account (optional)).</p>
 <p>Can’t open the app? Email <a class="reference external" href="mailto:jc&#46;manzanares&#46;serrano&#37;&#52;&#48;gmail&#46;com?subject=Delete%20my%20VizMini2%20account">jc<span>&#46;</span>manzanares<span>&#46;</span>serrano<span>&#64;</span>gmail<span>&#46;</span>com</a> from your
 account’s address with the subject <em>Delete my VizMini2 account</em>. See also the
 <a class="reference external" href="https://ros-2-viz-mini.web.app/privacy">privacy policy</a>.</p>
@@ -137,15 +152,15 @@ account’s address with the subject <em>Delete my VizMini2 account</em>. See al
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="guest.html" class="btn btn-neutral float-left" title="Using the app without an account" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../help/troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../config/language.html" class="btn btn-neutral float-left" title="Language" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../developers/index.html" class="btn btn-neutral float-right" title="Developers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -172,7 +187,7 @@ account’s address with the subject <em>Delete my VizMini2 account</em>. See al
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>

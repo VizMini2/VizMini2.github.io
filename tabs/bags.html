@@ -9,13 +9,14 @@
   <title>Bags &mdash; VizMini2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b6fd289b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e3cc06e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://vizmini2.github.io/tabs/bags.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f0c74d41"></script>
+      <script src="../_static/documentation_options.js?v=a12e3537"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -48,7 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/desktop.html">The PC app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/account.html">Your account (optional)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/demo.html">Try the demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/connect.html">Connect to your robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/interface.html">The interface</a></li>
@@ -62,6 +64,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/buttons.html">Buttons for services and actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/record-bag.html">Record and replay a bag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/lifecycle-params.html">Lifecycle nodes and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/moveit.html">Move an arm with MoveIt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/controllers.html">Switch and command ros2_control controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/maps-zones.html">Save maps and draw Nav2 zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/alerts.html">Get alerted when something goes wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/import-configs.html">Bring your RViz setups and layouts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tabs</span></p>
 <ul class="current">
@@ -82,14 +89,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../config/network.html">Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/profiles.html">Robot profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/import-export.html">Import and export</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/alerts.html">Robot alerts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/background.html">Background connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../config/language.html">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Account</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../accounts/guest.html">Using the app without an account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../accounts/delete.html">Delete your account</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Help</span></p>
 <ul>
@@ -131,20 +142,41 @@
 <figure class="vm-clip vm-right"><video src="../_static/clips/clip_bags.mp4" poster="../_static/shots/shot_bags.webp" autoplay loop muted playsinline preload="metadata"></video></figure><p>Record topics to MCAP files and play them back.</p>
 <section id="record">
 <h2>Record<a class="headerlink" href="#record" title="Link to this heading"></a></h2>
-<p>Tap <strong>Record</strong>, choose the topics (or <strong>All</strong>) and tap <strong>Record</strong>. Tap <strong>Stop</strong> when you’re done.
-Files are saved as <code class="docutils literal notranslate"><span class="pre">vizmini2_&lt;date&gt;_&lt;time&gt;.mcap</span></code> (uncompressed, ROS 2 profile) and open in
-<code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> and Foxglove. Topics whose type the app doesn’t know are skipped.</p>
-<p>Recording needs the <em>Record bags</em> permission in your role.</p>
+<p>Tap <strong>Record</strong>, choose the topics (or <strong>All</strong>) and tap <strong>Record</strong>. While it records you see the
+time, the messages and the size, topic by topic (and how many were dropped, if any), updated live.
+Tap <strong>Stop</strong> when you’re done. Recording and
+playback go on if you switch to another tab.</p>
+<p>Files are saved as <code class="docutils literal notranslate"><span class="pre">vizmini2_&lt;date&gt;_&lt;time&gt;.mcap</span></code> (uncompressed, ROS 2 profile) and open in
+<code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> and in any tool that reads MCAP. Only topics whose type the app knows can be recorded; the others are not
+listed.</p>
 </section>
 <section id="play">
 <h2>Play<a class="headerlink" href="#play" title="Link to this heading"></a></h2>
-<p>Tap <strong>Play</strong> on a recording to publish its messages again at 0.5×, 1× or 2×, with loop and pause.</p>
+<p>Tap <strong>Play</strong> on a recording to publish its messages again at 0.5×, 1× or 2×, with loop and pause.
+The card shows the position and the length as it plays. Drag the progress bar to jump to any
+instant, also while paused. Jumping forward republishes the
+last message of latched topics (<code class="docutils literal notranslate"><span class="pre">/tf_static</span></code>, <code class="docutils literal notranslate"><span class="pre">/map</span></code>, <code class="docutils literal notranslate"><span class="pre">/robot_description</span></code>…) so the 3D view
+keeps the map and the robot. Topics whose type the app doesn’t know are skipped.</p>
+<p>With <strong>Play only on this phone</strong>, the bag goes straight to the app’s tabs, without DDS (and the
+connection switches to an isolated one, so nothing from the network gets mixed in): the 3D view,
+cameras, plots, indicators… all see the same bag at the same moment, and nothing goes to the network
+or reaches the robot. Messages are delivered as they are in the bag, so even large clouds and images
+arrive whole, topics of types the app doesn’t bundle are not skipped, and plots use the bag’s time.
+While it plays on the phone, a <strong>timeline</strong> appears above the tabs, on every tab: pause, move to any
+moment or stop from there. Your connection comes back when playback stops.</p>
+<p>Dashboards also show a playback bar while any bag plays, with pause, a slider to jump, the speed
+(tap it to go through 0.25× to 4×) and stop. To plot a bag without publishing anything at all, open
+it in a <a class="reference internal" href="plot.html"><span class="doc">Plot</span></a> tab.</p>
 </section>
 <section id="import-and-share">
 <h2>Import and share<a class="headerlink" href="#import-and-share" title="Link to this heading"></a></h2>
-<p><strong>Import</strong> opens <code class="docutils literal notranslate"><span class="pre">.mcap</span></code> files from the phone, uncompressed or compressed with lz4 or zstd (the
-default of many ROS 2 setups). <code class="docutils literal notranslate"><span class="pre">.db3</span></code> (SQLite) bags are not supported. <strong>Share</strong> sends a
-recording to another app (email, Drive…), and <strong>Delete</strong> removes it.</p>
+<p><strong>Import</strong> opens <code class="docutils literal notranslate"><span class="pre">.mcap</span></code> files, uncompressed or compressed with lz4 or zstd (the default of many
+ROS 2 setups). <code class="docutils literal notranslate"><span class="pre">.db3</span></code> (SQLite) bags are not supported. <strong>Share</strong> sends a recording to another app
+(email, Drive…), and <strong>Delete</strong> removes it.</p>
+<p>On the PC the recordings are in <code class="docutils literal notranslate"><span class="pre">~/.local/share/vizmini2/bags</span></code> (Linux) or
+<code class="docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\VizMini2</span> <span class="pre">Data\bags</span></code> (Windows): <strong>Import</strong> opens a file dialog and
+<strong>Share</strong> shows where the file is. The <em>Play only on this phone</em> option works the same there, and the
+playback bar stays under whichever tab is open.</p>
 <div class="vm-clear docutils container">
 <p>See <a class="reference internal" href="../tutorials/record-bag.html"><span class="doc">Record and replay a bag</span></a>.</p>
 </div>
@@ -163,7 +195,7 @@ recording to another app (email, Drive…), and <strong>Delete</strong> removes 
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-10-11.
+      <span class="lastupdated">Last updated on 2026-11-25.
       </span></p>
   </div>
 
@@ -190,7 +222,7 @@ recording to another app (email, Drive…), and <strong>Delete</strong> removes 
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v0.18.0</dd>
+      <dd>v1.0.0</dd>
     </dl>
   </div>
 </div><script>
