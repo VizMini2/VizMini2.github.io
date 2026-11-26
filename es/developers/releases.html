@@ -99,6 +99,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Versiones y CI/CD</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#integracion-continua">Integración continua</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#publicar-una-version">Publicar una versión</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#el-repositorio-apt">El repositorio apt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#la-web">La web</a></li>
 </ul>
 </li>
@@ -169,10 +170,15 @@ o a mano.</p>
 fecha de las entradas del historial el día de la versión (eso no se comprueba).</p></li>
 <li><p>Si has recompilado librerías nativas, publícalas antes (<code class="docutils literal notranslate"><span class="pre">tools/prebuilt/publish.sh</span></code>) y sube a
 git <code class="docutils literal notranslate"><span class="pre">tools/prebuilt/prebuilt.txt</span></code>: la versión se compila con los ficheros que lista.</p></li>
-<li><p>Etiqueta y sube: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">v1.2.3</span> <span class="pre">&amp;&amp;</span> <span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">v1.2.3</span></code>.</p></li>
+<li><p>Arráncala con <code class="docutils literal notranslate"><span class="pre">tools/release/start.sh</span> <span class="pre">1.2.3</span></code> (desde <code class="docutils literal notranslate"><span class="pre">main</span></code>, al día y sin nada sin
+commit): vuelve a comprobar las versiones, crea el <strong>borrador</strong> de versión en GitHub a tu nombre
+(título y notas de los changelogs) y crea y sube la etiqueta <code class="docutils literal notranslate"><span class="pre">v1.2.3</span></code>. Un simple
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">v1.2.3</span> <span class="pre">&amp;&amp;</span> <span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">v1.2.3</span></code> también vale, pero entonces el workflow crea el
+borrador por su cuenta y la versión aparece como de <em>github-actions</em>, no tuya (ni en el feed de
+quien te sigue).</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">.github/workflows/release.yml</span></code> compila entonces todos los ficheros, los comprueba y deja un
-<strong>borrador</strong> de versión en GitHub para revisarlo y publicarlo a mano:</p>
+<p><code class="docutils literal notranslate"><span class="pre">.github/workflows/release.yml</span></code> compila entonces todos los ficheros, los comprueba y los sube a
+ese <strong>borrador</strong> de versión en GitHub, para revisarlo y publicarlo a mano:</p>
 <ul class="simple">
 <li><p>los APK (uno por arquitectura y el universal), firmados con la clave
 de los secretos del repositorio <code class="docutils literal notranslate"><span class="pre">ANDROID_KEYSTORE_BASE64</span></code>, <code class="docutils literal notranslate"><span class="pre">ANDROID_KEYSTORE_PASSWORD</span></code>,
@@ -190,6 +196,17 @@ misma clave) no va en la versión, porque nadie puede instalarlo: descárgalo de
 <code class="docutils literal notranslate"><span class="pre">android-bundle</span></code> de la ejecución (30 días) y súbelo a mano. Los mappings de R8 se guardan en el
 artefacto <code class="docutils literal notranslate"><span class="pre">android-mapping</span></code> (90 días). El workflow también se puede lanzar a mano desde la pestaña
 <em>Actions</em> para probarlo (sin claves genera ficheros <code class="docutils literal notranslate"><span class="pre">-debugsigned</span></code>).</p>
+</section>
+<section id="el-repositorio-apt">
+<h2>El repositorio apt<a class="headerlink" href="#el-repositorio-apt" title="Link to this heading"></a></h2>
+<p>Cuando publicas una versión <code class="docutils literal notranslate"><span class="pre">v*</span></code>, <code class="docutils literal notranslate"><span class="pre">.github/workflows/apt.yml</span></code> añade su <code class="docutils literal notranslate"><span class="pre">.deb</span></code> al repositorio
+apt de VizMini2 y lo vuelve a firmar (<code class="docutils literal notranslate"><span class="pre">tools/apt/update-repo.sh</span></code>). El repositorio es la release
+<em>apt</em> de GitHub (una prerelease, nunca la última): sus ficheros son los <code class="docutils literal notranslate"><span class="pre">.deb</span></code>, el índice
+<code class="docutils literal notranslate"><span class="pre">Packages</span></code>, el <code class="docutils literal notranslate"><span class="pre">InRelease</span></code> firmado y la clave pública. Necesita el secreto <code class="docutils literal notranslate"><span class="pre">APT_SIGNING_KEY</span></code>,
+la clave privada de firma (<code class="docutils literal notranslate"><span class="pre">gpg</span> <span class="pre">--armor</span> <span class="pre">--export-secret-keys</span> <span class="pre">&lt;id&gt;</span></code>, sin contraseña); su mitad
+pública es <code class="docutils literal notranslate"><span class="pre">desktopApp/packaging/linux/vizmini2-archive-keyring.gpg</span></code>, que lleva el <code class="docutils literal notranslate"><span class="pre">.deb</span></code> para
+añadir el repositorio la primera vez que se instala. A mano desde la pestaña <em>Actions</em>, añade el
+<code class="docutils literal notranslate"><span class="pre">.deb</span></code> de la etiqueta que le digas.</p>
 </section>
 <section id="la-web">
 <h2>La web<a class="headerlink" href="#la-web" title="Link to this heading"></a></h2>
@@ -218,7 +235,7 @@ write access</em>, y <code class="docutils literal notranslate"><span class="pre
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-26.
       </span></p>
   </div>
 

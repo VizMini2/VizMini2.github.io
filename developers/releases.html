@@ -98,6 +98,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Releases and CI/CD</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#continuous-integration">Continuous integration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#making-a-release">Making a release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-apt-repository">The apt repository</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#the-website">The website</a></li>
 </ul>
 </li>
@@ -168,10 +169,14 @@ JNI and Fast DDS, with MSVC) when their scripts change, or by hand.</p>
 of the changelog entries to the release day too (it is not checked).</p></li>
 <li><p>If you rebuilt native libraries, publish them first (<code class="docutils literal notranslate"><span class="pre">tools/prebuilt/publish.sh</span></code>) and commit
 <code class="docutils literal notranslate"><span class="pre">tools/prebuilt/prebuilt.txt</span></code>: the release is built with the files it lists.</p></li>
-<li><p>Tag and push: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">v1.2.3</span> <span class="pre">&amp;&amp;</span> <span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">v1.2.3</span></code>.</p></li>
+<li><p>Start it with <code class="docutils literal notranslate"><span class="pre">tools/release/start.sh</span> <span class="pre">1.2.3</span></code> (from <code class="docutils literal notranslate"><span class="pre">main</span></code>, up to date and with nothing
+uncommitted): it checks the versions again, creates the <strong>draft</strong> GitHub release in your name
+(title and notes from the changelogs), and tags and pushes <code class="docutils literal notranslate"><span class="pre">v1.2.3</span></code>. A plain
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">v1.2.3</span> <span class="pre">&amp;&amp;</span> <span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">v1.2.3</span></code> works too, but then the workflow creates the draft
+itself and the release shows as <em>github-actions</em>’, not yours (nor in your followers’ feed).</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">.github/workflows/release.yml</span></code> then builds every file, checks it and leaves a <strong>draft</strong>
-GitHub release to review and publish by hand:</p>
+<p><code class="docutils literal notranslate"><span class="pre">.github/workflows/release.yml</span></code> then builds every file, checks it and uploads it to that <strong>draft</strong>
+GitHub release, to review and publish by hand:</p>
 <ul class="simple">
 <li><p>the APKs (one per architecture and the universal one), signed with
 the release key from the repository secrets <code class="docutils literal notranslate"><span class="pre">ANDROID_KEYSTORE_BASE64</span></code>,
@@ -188,6 +193,17 @@ same key) is not in the release, as nobody can install it: download it from the 
 <code class="docutils literal notranslate"><span class="pre">android-bundle</span></code> artifact (30 days) and upload it by hand. The R8 mappings are kept as the
 <code class="docutils literal notranslate"><span class="pre">android-mapping</span></code> artifact (90 days). The workflow can also be started by hand from the <em>Actions</em> tab to
 try it (unsigned keys produce <code class="docutils literal notranslate"><span class="pre">-debugsigned</span></code> files).</p>
+</section>
+<section id="the-apt-repository">
+<h2>The apt repository<a class="headerlink" href="#the-apt-repository" title="Link to this heading"></a></h2>
+<p>When you publish a <code class="docutils literal notranslate"><span class="pre">v*</span></code> release, <code class="docutils literal notranslate"><span class="pre">.github/workflows/apt.yml</span></code> adds its <code class="docutils literal notranslate"><span class="pre">.deb</span></code> to VizMini2’s apt
+repository and signs it again (<code class="docutils literal notranslate"><span class="pre">tools/apt/update-repo.sh</span></code>). The repository is the <em>apt</em> GitHub
+release (a pre-release, never the latest): its files are the <code class="docutils literal notranslate"><span class="pre">.deb</span></code> files, the <code class="docutils literal notranslate"><span class="pre">Packages</span></code> index,
+the signed <code class="docutils literal notranslate"><span class="pre">InRelease</span></code> and the public key. It needs the secret <code class="docutils literal notranslate"><span class="pre">APT_SIGNING_KEY</span></code>, the private
+signing key (<code class="docutils literal notranslate"><span class="pre">gpg</span> <span class="pre">--armor</span> <span class="pre">--export-secret-keys</span> <span class="pre">&lt;id&gt;</span></code>, without a passphrase); its public half is
+<code class="docutils literal notranslate"><span class="pre">desktopApp/packaging/linux/vizmini2-archive-keyring.gpg</span></code>, which the <code class="docutils literal notranslate"><span class="pre">.deb</span></code> brings along to add
+the repository on its first install. By hand from the <em>Actions</em> tab, it adds the <code class="docutils literal notranslate"><span class="pre">.deb</span></code> of the tag
+you give.</p>
 </section>
 <section id="the-website">
 <h2>The website<a class="headerlink" href="#the-website" title="Link to this heading"></a></h2>
@@ -216,7 +232,7 @@ write access</em>, and <code class="docutils literal notranslate"><span class="p
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-11-25.
+      <span class="lastupdated">Last updated on 2026-11-26.
       </span></p>
   </div>
 

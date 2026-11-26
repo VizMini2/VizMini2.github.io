@@ -154,13 +154,24 @@ sessions. Your tabs, dashboards and profiles move between phone and PC (export t
 ROS 2 is <strong>not</strong> needed on the PC: the app brings its own DDS. Any ROS 2 distro on the network
 works (Foxy, Humble, Jazzy, Kilted, Lyrical…).</p>
 <ul>
+<li><p><strong>With apt</strong> (recommended): add VizMini2’s repository once, and <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code> brings
+each new version like any other package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>-qO-<span class="w"> </span>https://github.com/VizMini2/VizMini2/releases/download/apt/vizmini2-archive-keyring.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/usr/share/keyrings/vizmini2-archive-keyring.gpg<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=amd64 signed-by=/usr/share/keyrings/vizmini2-archive-keyring.gpg] https://github.com/VizMini2/VizMini2/releases/download/apt ./&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/vizmini2.list
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vizmini2
+</pre></div>
+</div>
+</li>
 <li><p><strong>The .deb</strong> (from the <a class="reference external" href="https://github.com/VizMini2/VizMini2/releases/latest">releases page</a>):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./vizmini2_*_amd64.deb
 </pre></div>
 </div>
-<p>Then open <em>VizMini2</em> from the applications menu, or run <code class="docutils literal notranslate"><span class="pre">/opt/vizmini2/bin/vizmini2</span></code>. Upgrade
-by installing the new <code class="docutils literal notranslate"><span class="pre">.deb</span></code> the same way; <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">remove</span> <span class="pre">vizmini2</span></code> removes it (your
-settings stay in your home folder).</p>
+<p>Installing it also adds VizMini2’s repository (the first time, unless apt already has it), so
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code> brings the new versions from then on. If you don’t want that, remove
+<code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/vizmini2.list</span></code>: it is not added again.</p>
+<p>Then open <em>VizMini2</em> from the applications menu, or run <code class="docutils literal notranslate"><span class="pre">/opt/vizmini2/bin/vizmini2</span></code>.
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">remove</span> <span class="pre">vizmini2</span></code> removes it (your settings stay in your home folder), and
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">purge</span> <span class="pre">vizmini2</span></code> removes the repository too.</p>
 </li>
 <li><p><strong>The .tar.gz</strong>: the same app without installing it. Unpack it anywhere and run
 <code class="docutils literal notranslate"><span class="pre">vizmini2/bin/vizmini2</span></code>.</p></li>
@@ -417,7 +428,7 @@ what it prints: redirect it to a file, for example in PowerShell:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Last updated on 2026-11-25.
+      <span class="lastupdated">Last updated on 2026-11-26.
       </span></p>
   </div>
 

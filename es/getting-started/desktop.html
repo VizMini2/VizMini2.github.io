@@ -155,13 +155,24 @@ revés (expórtalos, o vincula una <a class="reference internal" href="account.h
 OpenGL. <strong>No</strong> hace falta ROS 2 en el PC: la app trae su propio DDS. Sirve cualquier distro de ROS 2
 en la red (Foxy, Humble, Jazzy, Kilted, Lyrical…).</p>
 <ul>
+<li><p><strong>Con apt</strong> (recomendado): añade una vez el repositorio de VizMini2 y <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code> trae
+cada versión nueva como cualquier otro paquete:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>-qO-<span class="w"> </span>https://github.com/VizMini2/VizMini2/releases/download/apt/vizmini2-archive-keyring.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/usr/share/keyrings/vizmini2-archive-keyring.gpg<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=amd64 signed-by=/usr/share/keyrings/vizmini2-archive-keyring.gpg] https://github.com/VizMini2/VizMini2/releases/download/apt ./&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/vizmini2.list
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vizmini2
+</pre></div>
+</div>
+</li>
 <li><p><strong>El .deb</strong> (de la <a class="reference external" href="https://github.com/VizMini2/VizMini2/releases/latest">página de versiones</a>):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./vizmini2_*_amd64.deb
 </pre></div>
 </div>
+<p>Al instalarlo también se añade el repositorio de VizMini2 (la primera vez, salvo que apt ya lo
+tenga), así que a partir de entonces <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code> trae las versiones nuevas. Si no lo
+quieres, borra <code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/vizmini2.list</span></code>: no se vuelve a añadir.</p>
 <p>Luego abre <em>VizMini2</em> desde el menú de aplicaciones, o ejecuta <code class="docutils literal notranslate"><span class="pre">/opt/vizmini2/bin/vizmini2</span></code>.
-Para actualizar, instala el <code class="docutils literal notranslate"><span class="pre">.deb</span></code> nuevo igual; <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">remove</span> <span class="pre">vizmini2</span></code> la desinstala (tus
-ajustes se quedan en tu carpeta personal).</p>
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">remove</span> <span class="pre">vizmini2</span></code> la desinstala (tus ajustes se quedan en tu carpeta personal) y
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">purge</span> <span class="pre">vizmini2</span></code> quita también el repositorio.</p>
 </li>
 <li><p><strong>El .tar.gz</strong>: la misma app sin instalarla. Descomprímelo donde quieras y ejecuta
 <code class="docutils literal notranslate"><span class="pre">vizmini2/bin/vizmini2</span></code>.</p></li>
@@ -423,7 +434,7 @@ muestra lo que imprime: redirígelo a un fichero, por ejemplo en PowerShell:</p>
 
   <div role="contentinfo">
     <p>&#169; Derechos de autor 2026, Juan Carlos Manzanares Serrano.
-      <span class="lastupdated">Actualizado por última vez en 2026-11-25.
+      <span class="lastupdated">Actualizado por última vez en 2026-11-26.
       </span></p>
   </div>
 
