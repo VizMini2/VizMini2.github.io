@@ -16,7 +16,7 @@
     <link rel="canonical" href="https://vizmini2.github.io/es/developers/architecture.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=deffaa10"></script>
+      <script src="../_static/documentation_options.js?v=cc39960a"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -179,9 +179,10 @@ ficheros, la decodificación de vídeo y la grabación con ffmpeg, las notificac
 escritorio (<code class="docutils literal notranslate"><span class="pre">notify-send</span></code> o el área de notificaciones), el <code class="docutils literal notranslate"><span class="pre">.deb</span></code> y el <code class="docutils literal notranslate"><span class="pre">.msi</span></code>, y los
 tests de extremo a extremo.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ros/vizmini2/</span></code></p></td>
-<td><p>El paquete de ROS 2: <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> ejecuta Gradle y <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">vizmini2</span> <span class="pre">vizmini2</span></code>
-arranca la app.</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">package.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">scripts/</span></code></p></td>
+<td><p>El repositorio también es un paquete de ROS 2: <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> ejecuta Gradle (con el JDK
+del sistema) e instala los jar de la app, y <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">vizmini2</span> <span class="pre">vizmini2</span></code> los arranca con la
+Java del sistema.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tools/</span></code></p></td>
 <td><p>Servidores de prueba (robot falso, Nav2, MoveIt con el Panda, ros2_control, vídeo,
@@ -271,7 +272,7 @@ solo las nativas de su sistema: el <code class="docutils literal notranslate"><s
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v1.0.0</dd>
+      <dd>v1.1.0</dd>
     </dl>
   </div>
 </div><script>

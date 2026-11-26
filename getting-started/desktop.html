@@ -16,7 +16,7 @@
     <link rel="canonical" href="https://vizmini2.github.io/getting-started/desktop.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=a12e3537"></script>
+      <script src="../_static/documentation_options.js?v=b3e8092d"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -175,11 +175,14 @@ sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </
 </li>
 <li><p><strong>The .tar.gz</strong>: the same app without installing it. Unpack it anywhere and run
 <code class="docutils literal notranslate"><span class="pre">vizmini2/bin/vizmini2</span></code>.</p></li>
-<li><p><strong>As a ROS 2 package</strong> (Linux), built from the source code. It needs a JDK 17 or newer (21
-recommended), and the first build needs internet: Gradle downloads its dependencies and the
-prebuilt native libraries.</p>
+<li><p><strong>As a ROS 2 package</strong> (Linux, Jazzy or newer), built from the source code. It is built and
+runs with the system’s Java (17 or newer; <code class="docutils literal notranslate"><span class="pre">rosdep</span> <span class="pre">install</span></code> brings <code class="docutils literal notranslate"><span class="pre">default-jdk</span></code>), and the
+first build needs internet: Gradle downloads its dependencies and the prebuilt native libraries.
+On Humble, Ubuntu 22.04’s Java (11) is too old: use the <code class="docutils literal notranslate"><span class="pre">.deb</span></code> there, which connects to Humble
+robots just the same.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/VizMini2/VizMini2.git<span class="w"> </span>vizmini2_src
-<span class="nb">cd</span><span class="w"> </span>~/ros2_ws<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>colcon<span class="w"> </span>build<span class="w"> </span>--packages-select<span class="w"> </span>vizmini2<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>install/setup.bash
+<span class="nb">cd</span><span class="w"> </span>~/ros2_ws<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>-y
+colcon<span class="w"> </span>build<span class="w"> </span>--packages-select<span class="w"> </span>vizmini2<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>install/setup.bash
 ros2<span class="w"> </span>run<span class="w"> </span>vizmini2<span class="w"> </span>vizmini2
 </pre></div>
 </div>
@@ -455,7 +458,7 @@ what it prints: redirect it to a file, for example in PowerShell:</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v1.0.0</dd>
+      <dd>v1.1.0</dd>
     </dl>
   </div>
 </div><script>

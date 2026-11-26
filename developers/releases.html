@@ -16,7 +16,7 @@
     <link rel="canonical" href="https://vizmini2.github.io/developers/releases.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=a12e3537"></script>
+      <script src="../_static/documentation_options.js?v=b3e8092d"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -161,10 +161,11 @@ JNI and Fast DDS, with MSVC) when their scripts change, or by hand.</p>
 <h2>Making a release<a class="headerlink" href="#making-a-release" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Set the same version in <code class="docutils literal notranslate"><span class="pre">app/build.gradle.kts</span></code> (<code class="docutils literal notranslate"><span class="pre">versionName</span></code>, and a higher
-<code class="docutils literal notranslate"><span class="pre">versionCode</span></code>), <code class="docutils literal notranslate"><span class="pre">gradle.properties</span></code> (<code class="docutils literal notranslate"><span class="pre">vizmini2.version</span></code>) and <code class="docutils literal notranslate"><span class="pre">ros/vizmini2/package.xml</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">versionCode</span></code>), <code class="docutils literal notranslate"><span class="pre">gradle.properties</span></code> (<code class="docutils literal notranslate"><span class="pre">vizmini2.version</span></code>) and <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>.</p></li>
 <li><p>Add its entry to both changelogs (<code class="docutils literal notranslate"><span class="pre">app/src/main/assets/CHANGELOG.md</span></code> and
 <code class="docutils literal notranslate"><span class="pre">CHANGELOG.es.md</span></code>): the app shows them under <em>Changelog</em> and this manual in
-<a class="reference internal" href="../changelog.html"><span class="doc">Changelog</span></a>.</p></li>
+<a class="reference internal" href="../changelog.html"><span class="doc">Changelog</span></a>. Then <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">tools/release/version.py</span> <span class="pre">rst</span> <span class="pre">&gt;</span> <span class="pre">CHANGELOG.rst</span></code>: the ROS 2
+package’s changelog, made from the English one.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">tools/release/version.py</span> <span class="pre">check</span> <span class="pre">v1.2.3</span></code> checks that everything agrees. Set the date
 of the changelog entries to the release day too (it is not checked).</p></li>
 <li><p>If you rebuilt native libraries, publish them first (<code class="docutils literal notranslate"><span class="pre">tools/prebuilt/publish.sh</span></code>) and commit
@@ -259,7 +260,7 @@ write access</em>, and <code class="docutils literal notranslate"><span class="p
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v1.0.0</dd>
+      <dd>v1.1.0</dd>
     </dl>
   </div>
 </div><script>

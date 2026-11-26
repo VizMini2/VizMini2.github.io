@@ -16,7 +16,7 @@
     <link rel="canonical" href="https://vizmini2.github.io/es/getting-started/desktop.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=deffaa10"></script>
+      <script src="../_static/documentation_options.js?v=cc39960a"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/translations.js?v=f85f4cfb"></script>
@@ -176,11 +176,14 @@ quieres, borra <code class="docutils literal notranslate"><span class="pre">/etc
 </li>
 <li><p><strong>El .tar.gz</strong>: la misma app sin instalarla. Descomprímelo donde quieras y ejecuta
 <code class="docutils literal notranslate"><span class="pre">vizmini2/bin/vizmini2</span></code>.</p></li>
-<li><p><strong>Como paquete de ROS 2</strong> (Linux), compilado desde el código fuente. Hace falta un JDK 17 o
-posterior (se recomienda el 21), y la primera compilación necesita internet: Gradle descarga sus
-dependencias y las librerías nativas precompiladas.</p>
+<li><p><strong>Como paquete de ROS 2</strong> (Linux, Jazzy o posterior), compilado desde el código fuente. Se
+compila y funciona con el Java del sistema (17 o posterior; <code class="docutils literal notranslate"><span class="pre">rosdep</span> <span class="pre">install</span></code> instala
+<code class="docutils literal notranslate"><span class="pre">default-jdk</span></code>), y la primera compilación necesita internet: Gradle descarga sus dependencias y
+las librerías nativas precompiladas. En Humble, el Java de Ubuntu 22.04 (11) es demasiado
+antiguo: usa allí el <code class="docutils literal notranslate"><span class="pre">.deb</span></code>, que se conecta igual a robots con Humble.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/VizMini2/VizMini2.git<span class="w"> </span>vizmini2_src
-<span class="nb">cd</span><span class="w"> </span>~/ros2_ws<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>colcon<span class="w"> </span>build<span class="w"> </span>--packages-select<span class="w"> </span>vizmini2<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>install/setup.bash
+<span class="nb">cd</span><span class="w"> </span>~/ros2_ws<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>-y
+colcon<span class="w"> </span>build<span class="w"> </span>--packages-select<span class="w"> </span>vizmini2<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>install/setup.bash
 ros2<span class="w"> </span>run<span class="w"> </span>vizmini2<span class="w"> </span>vizmini2
 </pre></div>
 </div>
@@ -461,7 +464,7 @@ muestra lo que imprime: redirígelo a un fichero, por ejemplo en PowerShell:</p>
     </dl>
     <dl>
       <dt>VizMini2</dt>
-      <dd>v1.0.0</dd>
+      <dd>v1.1.0</dd>
     </dl>
   </div>
 </div><script>
